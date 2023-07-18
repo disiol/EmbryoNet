@@ -4,39 +4,24 @@ using System.IO;
 using System;
 using System.Runtime.InteropServices;
 using System.Text;
+using SFB;
 using TMPro;
 
 public class FileExplorer : MonoBehaviour
 {
     public TMP_Text statusText;
     public Button loadButton;
-    public TMP_Text folderPathText;
+    // public TMP_Text folderPathText;
     public ScrollRect folderListScrollRect;
     public GameObject folderButtonPrefab;
     public GameObject jsonButtonPrefab;
     public Transform contentTransform;
+    private string _path;
+    private string _imageFolderPath;
 
     private const int MAX_PATH = 260;
-
-    [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
-    private static extern IntPtr SHBrowseForFolder(ref BROWSEINFO lpbi);
-
-    [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
-    private static extern bool SHGetPathFromIDList(IntPtr pidl, [MarshalAs(UnmanagedType.LPWStr)] StringBuilder pszPath);
-
-    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
-    private struct BROWSEINFO
-    {
-        public IntPtr hwndOwner;
-        public IntPtr pidlRoot;
-        public IntPtr pszDisplayName;
-        [MarshalAs(UnmanagedType.LPWStr)]
-        public string lpszTitle;
-        public uint ulFlags;
-        public IntPtr lpfn;
-        public IntPtr lParam;
-        public int iImage;
-    }
+    
+   
 
     private void Start()
     {
@@ -45,41 +30,29 @@ public class FileExplorer : MonoBehaviour
 
     private void OnLoadButtonClicked()
     {
-        string folderPath = ShowFolderPickerDialog();
-        if (!string.IsNullOrEmpty(folderPath))
+        
+        StandaloneFileBrowser.OpenFolderPanelAsync("Select Folder", "", true, (string[] paths) =>
         {
-            ShowFoldersAndJSONFiles(folderPath);
-        }
-    }
-
-    private string ShowFolderPickerDialog()
-    {
-        BROWSEINFO bi = new BROWSEINFO();
-        bi.hwndOwner = IntPtr.Zero;
-        bi.pidlRoot = IntPtr.Zero;
-        bi.lpszTitle = "Select a folder";
-        bi.ulFlags = 0x0001 | 0x0010; // BIF_NEWDIALOGSTYLE | BIF_RETURNONLYFSDIRS
-
-        IntPtr pidl = SHBrowseForFolder(ref bi);
-        if (pidl != IntPtr.Zero)
-        {
-            StringBuilder buffer = new StringBuilder(MAX_PATH);
-            if (SHGetPathFromIDList(pidl, buffer))
+            WriteResult(paths);
+            if (!string.IsNullOrEmpty(_path))
             {
-                return buffer.ToString();
+                ShowFoldersAndJSONFiles(_path);
             }
-        }
-
-        return null;
+            
+        });
+        
     }
 
+  
     private void ShowFoldersAndJSONFiles(string folderPath)
     {
-        folderPathText.text = "Selected Folder: " + folderPath;
+        Debug.Log("Selected Folder: " + folderPath);
+        statusText.text = "Selected Folder: " + folderPath;
 
-        string imageFolderPath = Path.Combine(folderPath, "image");
-        if (!Directory.Exists(imageFolderPath))
+        _imageFolderPath = Path.Combine(folderPath, "image");
+        if (!Directory.Exists(_imageFolderPath))
         {
+        
             statusText.text = "Image directory not found.";
             ClearButtons();
             return;
@@ -88,10 +61,12 @@ public class FileExplorer : MonoBehaviour
         statusText.text = "";
         ClearButtons();
 
-        string[] subFolders = Directory.GetDirectories(imageFolderPath);
+        string[] subFolders = Directory.GetDirectories(folderPath);
         foreach (string folder in subFolders)
         {
+            folderButtonPrefab.GetComponent<PatchContainer>().patch = folder;
             GameObject folderButton = Instantiate(folderButtonPrefab, contentTransform);
+            
             TMP_Text buttonText = folderButton.GetComponentInChildren<TMP_Text>();
             buttonText.text = Path.GetFileName(folder);
             Button folderBtn = folderButton.GetComponent<Button>();
@@ -117,10 +92,8 @@ public class FileExplorer : MonoBehaviour
 
     private void FindImageByName(string imageName)
     {
-        string folderPath = folderPathText.text.Substring("Selected Folder: ".Length);
-        string imageFolderPath = Path.Combine(folderPath, "image");
 
-        string imagePath = Path.Combine(imageFolderPath, imageName + ".png");
+        string imagePath = Path.Combine(_imageFolderPath, imageName + ".png");
         if (File.Exists(imagePath))
         {
             // Open the image or do something with it
@@ -137,5 +110,25 @@ public class FileExplorer : MonoBehaviour
         {
             Destroy(button.gameObject);
         }
+    }
+    
+    
+    public void WriteResult(string[] paths)
+    {
+        if (paths.Length == 0)
+        {
+            return;
+        }
+
+        _path = "";
+        foreach (var p in paths)
+        {
+            _path += p + "\n";
+        }
+    }
+
+    public void WriteResult(string path)
+    {
+        _path = path;
     }
 }
