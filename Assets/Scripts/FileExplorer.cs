@@ -18,6 +18,8 @@ public class FileExplorer : MonoBehaviour
     [SerializeField] private GameObject folderButtonPrefab;
     [SerializeField] private GameObject jsonButtonPrefab;
     [SerializeField] private Transform contentTransform;
+    [SerializeField] private Image imageObject;
+
     private string _path;
     private string _imageFolderPath;
 
@@ -104,9 +106,7 @@ public class FileExplorer : MonoBehaviour
         string imagePath = Path.Combine(_imageFolderPath, imageName + ".jpg");
         if (File.Exists(imagePath))
         {
-            Debug.Log("Open the image: " + imagePath);
-
-            
+            OpenImage(imagePath);
             // Open the image or do something with it
         }
         else
@@ -114,6 +114,21 @@ public class FileExplorer : MonoBehaviour
             statusText.text = "Image not found: " + imageName;
             Debug.Log("Image not found: " + imagePath);
 
+        }
+    }
+
+    private void OpenImage(string imagePath)
+    {
+        Debug.Log("Open the image: " + imagePath);
+
+        if (!string.IsNullOrEmpty(imagePath))
+        {
+            byte[] imageData = File.ReadAllBytes(imagePath);
+            Texture2D texture = new Texture2D(2, 2);
+            texture.LoadImage(imageData);
+
+            Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+            imageObject.sprite = sprite;
         }
     }
 

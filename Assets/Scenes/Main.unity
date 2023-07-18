@@ -1041,6 +1041,7 @@ MonoBehaviour:
   folderButtonPrefab: {fileID: 5785943572306036152, guid: f04a7b3c24f7fbe36a6cbb1569e353da, type: 3}
   jsonButtonPrefab: {fileID: 5785943572306036152, guid: f04a7b3c24f7fbe36a6cbb1569e353da, type: 3}
   contentTransform: {fileID: 1556234913}
+  imageObject: {fileID: 1528224198}
 --- !u!1 &755331878
 GameObject:
   m_ObjectHideFlags: 0
