@@ -1034,6 +1034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8a5eda3d00ff6e79f0b7d66d73bb41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imagesFolderName: images
   statusText: {fileID: 1731582143}
   loadButton: {fileID: 1507283200}
   folderListScrollRect: {fileID: 1569463570}
@@ -1124,7 +1125,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 833591405}
   m_Direction: 0
   m_Value: 1
-  m_Size: 0.99999994
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

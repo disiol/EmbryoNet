@@ -9,13 +9,15 @@ using TMPro;
 
 public class FileExplorer : MonoBehaviour
 {
+    [SerializeField] private string imagesFolderName;
+
     public TMP_Text statusText;
     public Button loadButton;
     // public TMP_Text folderPathText;
-    public ScrollRect folderListScrollRect;
-    public GameObject folderButtonPrefab;
-    public GameObject jsonButtonPrefab;
-    public Transform contentTransform;
+    [SerializeField] private ScrollRect folderListScrollRect;
+    [SerializeField] private GameObject folderButtonPrefab;
+    [SerializeField] private GameObject jsonButtonPrefab;
+    [SerializeField] private Transform contentTransform;
     private string _path;
     private string _imageFolderPath;
 
@@ -49,10 +51,11 @@ public class FileExplorer : MonoBehaviour
         Debug.Log("Selected Folder: " + folderPath);
         statusText.text = "Selected Folder: " + folderPath;
 
-        _imageFolderPath = Path.Combine(folderPath, "image");
+        _imageFolderPath = Path.Combine(folderPath, imagesFolderName);
         if (!Directory.Exists(_imageFolderPath))
         {
-        
+            Debug.Log("_imageFolderPath: " + _imageFolderPath);
+
             statusText.text = "Image directory not found.";
             ClearButtons();
             return;
@@ -123,7 +126,7 @@ public class FileExplorer : MonoBehaviour
         _path = "";
         foreach (var p in paths)
         {
-            _path += p + "\n";
+            _path += p;
         }
     }
 
