@@ -67,13 +67,18 @@ public class FileExplorer : MonoBehaviour
         string[] subFolders = Directory.GetDirectories(folderPath);
         foreach (string folder in subFolders)
         {
-            folderButtonPrefab.GetComponent<PatchContainer>().patch = folder;
-            GameObject folderButton = Instantiate(folderButtonPrefab, contentTransform);
+            if (!folderPath.Contains(imagesFolderName))
+            {
+                GameObject folderButton = Instantiate(folderButtonPrefab, contentTransform);
+                folderButton.GetComponent<PatchContainer>().patch = folder;
+
             
-            TMP_Text buttonText = folderButton.GetComponentInChildren<TMP_Text>();
-            buttonText.text = Path.GetFileName(folder);
-            Button folderBtn = folderButton.GetComponent<Button>();
-            folderBtn.onClick.AddListener(() => ShowJSONFilesInFolder(folder));
+                TMP_Text buttonText = folderButton.GetComponentInChildren<TMP_Text>();
+                buttonText.text = Path.GetFileName(folder);
+              
+                Button folderBtn = folderButton.GetComponent<Button>();
+                folderBtn.onClick.AddListener(() => ShowJSONFilesInFolder(folderButton.GetComponent<PatchContainer>().patch));
+            }
         }
     }
 
@@ -99,11 +104,16 @@ public class FileExplorer : MonoBehaviour
         string imagePath = Path.Combine(_imageFolderPath, imageName + ".png");
         if (File.Exists(imagePath))
         {
+            Debug.Log("Open the image: " + imagePath);
+
+            
             // Open the image or do something with it
         }
         else
         {
             statusText.text = "Image not found: " + imageName;
+            Debug.Log("Image not found: " + imagePath);
+
         }
     }
 
