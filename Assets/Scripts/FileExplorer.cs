@@ -101,7 +101,7 @@ public class FileExplorer : MonoBehaviour
     private void FindImageByName(string imageName)
     {
 
-        string imagePath = Path.Combine(_imageFolderPath, imageName + ".png");
+        string imagePath = Path.Combine(_imageFolderPath, imageName + ".jpg");
         if (File.Exists(imagePath))
         {
             Debug.Log("Open the image: " + imagePath);
