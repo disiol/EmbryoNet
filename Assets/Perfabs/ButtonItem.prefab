@@ -17,6 +17,14 @@ GameObject:
   - component: {fileID: 9198809280339361253}
   - component: {fileID: 7957093156960545105}
   - component: {fileID: 4153024674252971980}
+  - component: {fileID: 8035231880234035603}
+  - component: {fileID: 7624382518115396125}
+  - component: {fileID: 7944006765991622329}
+  - component: {fileID: 8367320028911574352}
+  - component: {fileID: 6473137906275971940}
+  - component: {fileID: 999272888939212911}
+  - component: {fileID: 8986773778424186075}
+  - component: {fileID: 7073293023087352575}
   m_Layer: 5
   m_Name: ButtonItem
   m_TagString: Untagged
@@ -153,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageTexture: {fileID: 0}
-  jsonFile: {fileID: 0}
+  jsonFilePath: 
 --- !u!114 &9198809280339361253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageTexture: {fileID: 0}
-  jsonFile: {fileID: 0}
+  jsonFilePath: 
 --- !u!114 &7957093156960545105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageTexture: {fileID: 0}
-  jsonFile: {fileID: 0}
+  jsonFilePath: 
 --- !u!114 &4153024674252971980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,7 +203,157 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageTexture: {fileID: 0}
-  jsonFile: {fileID: 0}
+  jsonFilePath: 
+--- !u!114 &8035231880234035603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5785943572306036152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a537d9b9c39d1a0daf00865ca70e657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageTexture: {fileID: 0}
+  jsonFilePath: /home/denis/IT/unity/work/Matvey/C001/5_json/-C001--PO01--LO005--CO6--SL001--PX32500--PW0100--IN0100--TM280--X014252--Y052789--Z190000--T1992871765--WE00013.json
+--- !u!212 &7624382518115396125
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5785943572306036152}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 20.48, y: 20.48}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &7944006765991622329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5785943572306036152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a537d9b9c39d1a0daf00865ca70e657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageTexture: {fileID: 0}
+  jsonFilePath: /home/denis/IT/unity/work/Matvey/C001/Classified_result_1_json/-C001--PO01--LO005--CO6--SL001--PX32500--PW0100--IN0100--TM280--X014252--Y052789--Z190000--T1992871765--WE00013.json
+--- !u!114 &8367320028911574352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5785943572306036152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a537d9b9c39d1a0daf00865ca70e657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageTexture: {fileID: 0}
+  jsonFilePath: /home/denis/IT/unity/work/Matvey/C001/Classified_result_1_json/-C001--PO01--LO003--CO6--SL001--PX32500--PW0100--IN0100--TM282--X014252--Y052789--Z190000--T1992631881--WE00013.json
+--- !u!114 &6473137906275971940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5785943572306036152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a537d9b9c39d1a0daf00865ca70e657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageTexture: {fileID: 0}
+  jsonFilePath: /home/denis/IT/unity/work/Matvey/C001/Classified_result_1_json/-C001--PO01--LO001--CO6--SL001--PX32500--PW0100--IN0100--TM274--X014252--Y052789--Z190000--T1992397967--WE00013.json
+--- !u!114 &999272888939212911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5785943572306036152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a537d9b9c39d1a0daf00865ca70e657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageTexture: {fileID: 0}
+  jsonFilePath: /home/denis/IT/unity/work/Matvey/C001/Classified_result_1_json/-C001--PO01--LO008--CO6--SL001--PX32500--PW0100--IN0100--TM280--X014252--Y052789--Z190000--T1993231775--WE00013.json
+--- !u!114 &8986773778424186075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5785943572306036152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a537d9b9c39d1a0daf00865ca70e657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageTexture: {fileID: 0}
+  jsonFilePath: /home/denis/IT/unity/work/Matvey/C001/Classified_result_1_json/-C001--PO01--LO012--CO6--SL001--PX32500--PW0100--IN0100--TM280--X014252--Y052789--Z190000--T1993711790--WE00013.json
+--- !u!114 &7073293023087352575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5785943572306036152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a537d9b9c39d1a0daf00865ca70e657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageTexture: {fileID: 0}
+  jsonFilePath: /home/denis/IT/unity/work/Matvey/C001/Classified_result_1_json/-C001--PO01--LO013--CO6--SL001--PX32500--PW0100--IN0100--TM280--X014252--Y052789--Z190000--T1993831914--WE00013.json
 --- !u!1 &5785943573306408152
 GameObject:
   m_ObjectHideFlags: 0
