@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 303265650238499200}
   - component: {fileID: 2527929214807313756}
   - component: {fileID: 2207327367791603190}
+  - component: {fileID: 2207795543599681277}
+  - component: {fileID: 6050155772405394145}
   m_Layer: 5
   m_Name: FrameButtonPrefab
   m_TagString: Untagged
@@ -121,3 +123,35 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2207795543599681277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7008213947407287012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fd56daba844f45865c5a6711d38d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetID: 
+  jsonFilePath: 
+  rotationManager: {fileID: 0}
+--- !u!114 &6050155772405394145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7008213947407287012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3147f8d53d49446b984d3827590f5dd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  records: []
+  menuPanel: {fileID: 0}
+  menuXInput: {fileID: 0}
+  menuYInput: {fileID: 0}
+  menuZInput: {fileID: 0}

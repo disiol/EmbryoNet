@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ObjectDetection : MonoBehaviour
 {
-    private Image imageObject; // Assign the Image component to this field in the Inspector
+    private Image _imageObject; // Assign the Image component to this field in the Inspector
     [HideInInspector] public string jsonFilePath; // Set the path to the JSON file in the Inspector
     [SerializeField] private GameObject buttonPrefab;
 
@@ -28,11 +28,11 @@ public class ObjectDetection : MonoBehaviour
 
     public void DrawFrames()
     {
-        imageObject = GetComponent<Image>();
+        _imageObject = GetComponent<Image>();
 
-        if (imageObject != null && imageObject.sprite != null)
+        if (_imageObject != null && _imageObject.sprite != null)
         {
-            Texture2D imageTexture = imageObject.sprite.texture;
+            Texture2D imageTexture = _imageObject.sprite.texture;
 
             // Load the JSON data from the file path
             string jsonFileContent = File.ReadAllText(jsonFilePath);
@@ -76,6 +76,9 @@ public class ObjectDetection : MonoBehaviour
         // Create the button on top of the frame
         GameObject button = Instantiate(buttonPrefab, frame.transform);
         button.name = "ButtonRotation_" + detection.id;
+        button.GetComponent<ButtonData>().targetID = detection.id.ToString();
+        button.GetComponent<ButtonData>().jsonFilePath = jsonFilePath;
+        
 
 // Access the RectTransform of the button
         RectTransform buttonRect = button.GetComponent<RectTransform>();
@@ -93,53 +96,8 @@ public class ObjectDetection : MonoBehaviour
             // Set the button's rotation to match the frame's rotation
             button.transform.rotation = Quaternion.Euler(detectionRotation);
         }
-        else
-        {
-            SaveDetectionDataToJson(detection.id);
-        }
+      
     }
     
-    private DetectionData LoadJSONDataFromPath()
-    {
-        string jsonFileContent = File.ReadAllText(jsonFilePath);
-        DetectionData detectionData = JsonUtility.FromJson<DetectionData>(jsonFileContent);
-        return detectionData;
-    }
-
-    public void SaveDetectionDataToJson(int targetID)
-    {
-        DetectionData detectionData = LoadJSONDataFromPath();
-        // Find the record by ID
-        Detection targetDetection = null;
-
-
-        foreach (Detection detection in detectionData.detection_list)
-        {
-            if (detection.id == targetID)
-            {
-                targetDetection = detection;
-                break;
-            }
-
-            // Add the new field
-            if (targetDetection != null)
-            {
-                targetDetection.rotation = new Vector3(1f, 2f, 3f);
-            }
-
-            // Save changes back to the file
-            SaveDataToFile();
-        }
-    }
-
-    private void SaveDataToFile()
-    {
-        // Convert the data to JSON format
-        string jsonData = JsonUtility.ToJson(this);
-
-        // Write the JSON data to the file
-        File.WriteAllText(jsonFilePath, jsonData);
-
-        Debug.Log("Changes saved to file: " + jsonFilePath);
-    }
+  
 }
