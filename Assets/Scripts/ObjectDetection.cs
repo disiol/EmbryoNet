@@ -76,7 +76,8 @@ public class ObjectDetection : MonoBehaviour
         // Create the button on top of the frame
         GameObject button = Instantiate(buttonPrefab, frame.transform);
         button.name = "ButtonRotation_" + detection.id;
-        button.GetComponent<ButtonData>().targetID = detection.id.ToString();
+      
+        button.GetComponent<ButtonData>().targetID = detection.id;
         button.GetComponent<ButtonData>().jsonFilePath = jsonFilePath;
         
 

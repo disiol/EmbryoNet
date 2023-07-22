@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class ButtonData : MonoBehaviour
 {
-    [HideInInspector] public string targetID;
+    [HideInInspector] public int targetID;
     [HideInInspector] public string jsonFilePath; // Set the path to the JSON file in the Inspector
 
     private RotationManager _rotationManager;

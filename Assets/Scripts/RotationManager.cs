@@ -17,7 +17,7 @@ public class MyRecord
 
 public class RotationManager : MonoBehaviour
 {
-    private MyRecord[] _records;
+    private ObjectDetection.DetectionData _records;
     private string _dataFilePath;
 
     private GameObject _rotationMenu;
@@ -28,8 +28,8 @@ public class RotationManager : MonoBehaviour
     private InputField _menuZInput;
 
     private bool _isMenuVisible = false;
-    private MyRecord _targetRecord;
-    private string _targetID;
+    private ObjectDetection.Detection _targetRecord;
+    private int _targetID;
 
 
     public void ShowMenu()
@@ -38,13 +38,15 @@ public class RotationManager : MonoBehaviour
         _isMenuVisible = !_isMenuVisible;
         _rotationMenu.SetActive(_isMenuVisible);
 
+        LoadDataFromFile();
+
+
         if (_isMenuVisible && _targetRecord != null)
         {
             _saveChangesButton = _rotationMenu.transform.Find("ButtonSafe").GetComponent<Button>();
 
             _saveChangesButton.onClick.AddListener(SaveChanges);
 
-            LoadDataFromFile();
 
             // Show the current rotation values in the menu
             _menuXInput = _rotationMenu.transform.Find("RotationX").transform.Find("InputFieldX")
@@ -90,9 +92,9 @@ public class RotationManager : MonoBehaviour
         }
     }
 
-    private MyRecord FindRecordById(string targetID)
+    private ObjectDetection.Detection FindRecordById(int targetID)
     {
-        foreach (MyRecord record in _records)
+        foreach (ObjectDetection.Detection record in _records.detection_list)
         {
             if (record.id == targetID)
             {
@@ -119,15 +121,20 @@ public class RotationManager : MonoBehaviour
         // Read JSON data from the file
         if (File.Exists(_dataFilePath))
         {
-            string jsonData = File.ReadAllText(_dataFilePath);
-
-            // Deserialize JSON data into the script fields
-            JsonUtility.FromJsonOverwrite(jsonData, this);
+            // Load the JSON data from the file path
+            // Load the JSON data from the file path
+            string jsonFileContent = File.ReadAllText(_dataFilePath);
+            _records = JsonUtility.FromJson<ObjectDetection.DetectionData>(jsonFileContent);
 
             // Optionally, set the initial target record
             _targetRecord = FindRecordById(_targetID);
-            Vector3 targetRecordRotation = _targetRecord.rotation;
-            transform.rotation = Quaternion.Euler(targetRecordRotation);
+            Vector3 recordRotation = _targetRecord.rotation;
+
+            if (recordRotation != null)
+            {
+                Vector3 targetRecordRotation = recordRotation;
+                transform.rotation = Quaternion.Euler(targetRecordRotation);
+            }
         }
         else
         {
@@ -135,7 +142,7 @@ public class RotationManager : MonoBehaviour
         }
     }
 
-    public void SetTargetID(string targetID)
+    public void SetTargetID(int targetID)
     {
         this._targetID = targetID;
     }
