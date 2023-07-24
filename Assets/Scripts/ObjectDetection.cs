@@ -17,6 +17,7 @@ public class ObjectDetection : MonoBehaviour
 
         if (_imageObject != null && _imageObject.sprite != null)
         {
+            DestroyAllChildrenImageObject();
             Texture2D imageTexture = _imageObject.sprite.texture;
 
             // Load the JSON data from the file path
@@ -27,6 +28,7 @@ public class ObjectDetection : MonoBehaviour
             Vector2 pivotOffset = new Vector2(0.5f, 0.5f); // Pivot offset for the frame image
 
             var detectionDataDetectionList = detectionData.detection_list;
+          
             foreach (ParserModel.DetectionList detection in detectionDataDetectionList)
             {
                 DrawFrame(detection, imageTexture, pivotOffset);
@@ -82,6 +84,17 @@ public class ObjectDetection : MonoBehaviour
         {
             // Set the button's rotation to match the frame's rotation
             button.transform.rotation = Quaternion.Euler(detectionRotation);
+        }
+    }
+    
+    
+    public void DestroyAllChildrenImageObject()
+    {
+        int childCount = _imageObject.transform.childCount;
+        for (int i = childCount - 1; i >= 0; i--)
+        {
+            Transform child = _imageObject.transform.GetChild(i);
+            Destroy(child.gameObject);
         }
     }
 }
