@@ -55,6 +55,7 @@ public class ObjectDetection : MonoBehaviour
 
     void DrawFrame(Detection detection, Texture2D imageTexture, Vector2 pivotOffset)
     {
+        //TODO clear ObgektImage
         // Calculate the position and size of the frame
         Vector2 position = new Vector2(detection.brx - (detection.brx - detection.tlx) * 0.5f,
             detection.bry - (detection.bry - detection.tly) * 0.5f);

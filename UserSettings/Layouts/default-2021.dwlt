@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 136
+  controlID: 123
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Window
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -68,14 +68,14 @@ MonoBehaviour:
     y: 0
     width: 379
     height: 761
-  m_MinSize: {x: 100, y: 100}
+  m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -121,8 +121,8 @@ MonoBehaviour:
     y: 451
     width: 1221
     height: 310
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 13}
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 137
+  controlID: 124
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 138
+  controlID: 125
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -312,8 +312,8 @@ MonoBehaviour:
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
   currentStatusEntriesHasUpdate: 0
-  repositoryProgressHasUpdate: 0
-  appManagerProgressHasUpdate: 0
+  repositoryProgressHasUpdate: 1
+  appManagerProgressHasUpdate: 1
   changeTab: 3
   activeTab: 3
   initProjectView:
@@ -399,8 +399,8 @@ MonoBehaviour:
     remoteBranches: []
   changesView:
     currentBranchHasUpdate: 0
-    currentStatusEntriesHasUpdate: 0
-    currentLocksHasUpdate: 0
+    currentStatusEntriesHasUpdate: 1
+    currentLocksHasUpdate: 1
     commitBody: 
     commitMessage: 
     currentBranch: '[main]'
@@ -409,8 +409,13 @@ MonoBehaviour:
       assets:
         keys:
         - 00000000000000001000000000000000
+        - 9bf89b82565c68f3fbb6a8f1249e3c34
+        - 8d432bdfc3265a16e98b46c1f7bca9f7
+        - d05a2c727a6c983119c150d31e5f7440
+        - 9fc0d4010bbf28b4594072e72b8655ab
         - 4bbfe0c52a2b9f4099e4ac06b5fcc5ea
-        - dd8a5eda3d00ff6e79f0b7d66d73bb41
+        - 7a537d9b9c39d1a0daf00865ca70e657
+        - 3147f8d53d49446b984d3827590f5dd9
         values:
         - path: Assets
           label: Assets
@@ -430,6 +435,78 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
+        - path: Assets/Perfabs
+          label: Perfabs
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets/Perfabs/RotationMenu.prefab
+          label: RotationMenu.prefab
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets/Perfabs/RotationMenu.prefab
+            fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/RotationMenu.prefab
+            projectPath: Assets/Perfabs/RotationMenu.prefab
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets/Scenes
+          label: Scenes
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets/Scenes/Main.unity
+          label: Main.unity
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets/Scenes/Main.unity
+            fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+            projectPath: Assets/Scenes/Main.unity
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
         - path: Assets/Scripts
           label: Scripts
           level: 1
@@ -448,8 +525,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets/Scripts/FileExplorer.cs
-          label: FileExplorer.cs
+        - path: Assets/Scripts/ObjectDetection.cs
+          label: ObjectDetection.cs
           level: 2
           isFolder: 0
           isContainer: 0
@@ -460,20 +537,76 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets/Scripts/FileExplorer.cs
-            fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
-            projectPath: Assets/Scripts/FileExplorer.cs
+            path: Assets/Scripts/ObjectDetection.cs
+            fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
+            projectPath: Assets/Scripts/ObjectDetection.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets/Scripts/RotationManager.cs
+          label: RotationManager.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets/Scripts/RotationManager.cs
+            fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager.cs
+            projectPath: Assets/Scripts/RotationManager.cs
             originalPath: 
             indexStatus: 0
             workTreeStatus: 3
       folders:
         keys:
         - Assets
+        - Assets/Perfabs
+        - Assets/Scenes
         - Assets/Scripts
         values:
         - path: Assets
           label: Assets
           level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets/Perfabs
+          label: Perfabs
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets/Scenes
+          label: Scenes
+          level: 1
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -553,6 +686,78 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: Assets/Perfabs
+        label: Perfabs
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets/Perfabs/RotationMenu.prefab
+        label: RotationMenu.prefab
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets/Perfabs/RotationMenu.prefab
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/RotationMenu.prefab
+          projectPath: Assets/Perfabs/RotationMenu.prefab
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets/Scenes
+        label: Scenes
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets/Scenes/Main.unity
+        label: Main.unity
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
       - path: Assets/Scripts
         label: Scripts
         level: 1
@@ -571,8 +776,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets/Scripts/FileExplorer.cs
-        label: FileExplorer.cs
+      - path: Assets/Scripts/ObjectDetection.cs
+        label: ObjectDetection.cs
         level: 2
         isFolder: 0
         isContainer: 0
@@ -583,9 +788,27 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets/Scripts/FileExplorer.cs
-          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
-          projectPath: Assets/Scripts/FileExplorer.cs
+          path: Assets/Scripts/ObjectDetection.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
+          projectPath: Assets/Scripts/ObjectDetection.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets/Scripts/RotationManager.cs
+        label: RotationManager.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets/Scripts/RotationManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager.cs
+          projectPath: Assets/Scripts/RotationManager.cs
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
@@ -609,21 +832,39 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
-    - path: Assets/Scripts/FileExplorer.cs
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
-      projectPath: Assets/Scripts/FileExplorer.cs
+    - path: Assets/Perfabs/RotationMenu.prefab
+      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/RotationMenu.prefab
+      projectPath: Assets/Perfabs/RotationMenu.prefab
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    changedFilesText: 1 changed file
+    - path: Assets/Scenes/Main.unity
+      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+      projectPath: Assets/Scenes/Main.unity
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets/Scripts/ObjectDetection.cs
+      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
+      projectPath: Assets/Scripts/ObjectDetection.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets/Scripts/RotationManager.cs
+      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager.cs
+      projectPath: Assets/Scripts/RotationManager.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    changedFilesText: 4 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-07-19T00:00:46.868+03:00
+      updatedTimeString: 2023-07-24T15:12:50.257+03:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-07-19T00:24:13.710+03:00
+      updatedTimeString: 2023-07-24T15:44:14.815+03:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2023-07-24T15:44:17.796+03:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -3296,13 +3537,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2023-07-19T00:00:46.868+03:00
+    updatedTimeString: 2023-07-24T15:12:50.257+03:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-07-19T00:22:37.031+03:00
+    updatedTimeString: 2023-07-24T15:12:50.332+03:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-07-19T00:24:13.710+03:00
+    updatedTimeString: 2023-07-24T15:21:34.736+03:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -3368,22 +3609,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/StandaloneFileBrowser
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/StandaloneFileBrowser
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: 86590000
-    m_LastClickedID: 22918
-    m_ExpandedIDs: 000000007859000000ca9a3bffffff7f
+    m_SelectedIDs: 985a0000
+    m_LastClickedID: 23192
+    m_ExpandedIDs: 00000000645a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3411,7 +3652,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000078590000
+    m_ExpandedIDs: 00000000645a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3436,8 +3677,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 60560000
+    m_LastClickedInstanceID: 22112
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -3482,7 +3723,7 @@ MonoBehaviour:
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Inspector
+    m_Text: Debug
     m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
@@ -3505,7 +3746,7 @@ MonoBehaviour:
   m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
-  m_InspectorMode: 0
+  m_InspectorMode: 1
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
@@ -3543,23 +3784,23 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: aaf7ffff06f8ffff22f9ffff30fbffffbe5a0000d65a0000
+      m_ExpandedIDs: f6fcfdff4045feff5a45feff30fbffff6e580000845800009c580000e6580000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: ButtonRotation_2
+        m_OriginalName: ButtonRotation_2
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -113356
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 4}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -3821,14 +4062,14 @@ MonoBehaviour:
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 0
+  m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: 594.3343, y: 185.1661, z: -1.2341951}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: 594.3343, y: 185.1661, z: -1.2341951}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -3875,17 +4116,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 9.959541
+    m_Target: 258.19144
     speed: 2
-    m_Value: 9.959541
+    m_Value: 258.19144
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -3899,7 +4140,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -3941,7 +4182,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 727, y: 409}
+  m_TargetSize: {x: 1920, y: 1080}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -3950,16 +4191,16 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 01000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -363.5
-    m_HBaseRangeMax: 363.5
-    m_VBaseRangeMin: -204.5
-    m_VBaseRangeMax: 204.5
+    m_HBaseRangeMin: -960
+    m_HBaseRangeMax: 960
+    m_VBaseRangeMin: -540
+    m_VBaseRangeMax: 540
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -3979,7 +4220,7 @@ MonoBehaviour:
       y: 21
       width: 918
       height: 409
-    m_Scale: {x: 1, y: 1}
+    m_Scale: {x: 0.3787037, y: 0.3787037}
     m_Translation: {x: 459, y: 204.5}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -3987,12 +4228,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -459
-      y: -204.5
-      width: 918
-      height: 409
+      x: -1212.0293
+      y: -540
+      width: 2424.0586
+      height: 1080
     m_MinimalGUI: 1
-  m_defaultScale: 1
+  m_defaultScale: 0.3787037
   m_LastWindowPixelSize: {x: 918, y: 430}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1

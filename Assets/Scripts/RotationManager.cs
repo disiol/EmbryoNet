@@ -1,32 +1,27 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.Serialization;
 
 [System.Serializable]
-public class MyRecord
-{
-    public string id;
-    public int tlx;
-    public int tly;
-    public int brx;
-    public int bry;
-    public Vector3 rotation; // Add rotation information
-}
-
 public class RotationManager : MonoBehaviour
 {
     private ObjectDetection.DetectionData _records;
     private string _dataFilePath;
 
     private GameObject _rotationMenu;
+
+    private TMP_InputField _menuXInput;
+    private TMP_InputField _menuYInput;
+    private TMP_InputField _menuZInput;
+
     private Button _saveChangesButton;
+    private Button _buttonCancel;
 
-    private InputField _menuXInput;
-    private InputField _menuYInput;
-    private InputField _menuZInput;
 
+  
     private bool _isMenuVisible = false;
     private ObjectDetection.Detection _targetRecord;
     private int _targetID;
@@ -35,6 +30,7 @@ public class RotationManager : MonoBehaviour
     public void ShowMenu()
     {
         _rotationMenu = GameObject.Find("Canvas").transform.Find("RotationMenu").gameObject;
+
         _isMenuVisible = !_isMenuVisible;
         _rotationMenu.SetActive(_isMenuVisible);
 
@@ -43,27 +39,46 @@ public class RotationManager : MonoBehaviour
 
         if (_isMenuVisible && _targetRecord != null)
         {
-            _saveChangesButton = _rotationMenu.transform.Find("ButtonSafe").GetComponent<Button>();
-
-            _saveChangesButton.onClick.AddListener(SaveChanges);
+            ButtonSafe();
+            ButtonCancel();
 
 
             // Show the current rotation values in the menu
-            _menuXInput = _rotationMenu.transform.Find("RotationX").transform.Find("InputFieldX")
-                .GetComponent<InputField>();
-            _menuXInput.text = _targetRecord.rotation.x.ToString();
-
-            _menuYInput = _rotationMenu.transform.Find("RotationY").transform.Find("InputFieldY")
-                .GetComponent<InputField>();
-            _menuYInput.text = _targetRecord.rotation.y.ToString();
-
-            _menuZInput = _rotationMenu.transform.Find("RotationZ").transform.Find("InputFieldZ")
-                .GetComponent<InputField>();
-            _menuZInput.text = _targetRecord.rotation.z.ToString();
+            ShowCurrentRotationValuesInTheMenu();
         }
     }
 
-    private void HideMenu()
+    private void ButtonCancel()
+    {
+        _buttonCancel = _rotationMenu.transform.Find("ButtonCancel").GetComponent<Button>();
+        _buttonCancel.onClick.AddListener(HideMenu);
+    }
+
+    private void ButtonSafe()
+    {
+        _saveChangesButton = _rotationMenu.transform.Find("ButtonSafe").GetComponent<Button>();
+        _saveChangesButton.onClick.AddListener(SaveChanges);
+    }
+
+    private void ShowCurrentRotationValuesInTheMenu()
+    {
+        Transform rotationX = _rotationMenu.transform.Find("RotationX");
+        GameObject inputFieldX = rotationX.transform.Find("InputFieldX").gameObject;
+        _menuXInput = inputFieldX.GetComponent<TMP_InputField>();
+
+        float x = _targetRecord.rotation.x;
+        _menuXInput.text = x.ToString();
+
+        _menuYInput = _rotationMenu.transform.Find("RotationY").transform.Find("InputFieldY").gameObject
+            .GetComponent<TMP_InputField>();
+        _menuYInput.text = _targetRecord.rotation.y.ToString();
+
+        _menuZInput = _rotationMenu.transform.Find("RotationZ").GameObject().transform.Find("InputFieldZ").gameObject
+            .GetComponent<TMP_InputField>();
+        _menuZInput.text = _targetRecord.rotation.z.ToString();
+    }
+
+    public void HideMenu()
     {
         _rotationMenu.SetActive(false);
         _isMenuVisible = false;
@@ -94,6 +109,7 @@ public class RotationManager : MonoBehaviour
 
     private ObjectDetection.Detection FindRecordById(int targetID)
     {
+        Debug.Log("targetID = " + targetID);
         foreach (ObjectDetection.Detection record in _records.detection_list)
         {
             if (record.id == targetID)
@@ -121,7 +137,6 @@ public class RotationManager : MonoBehaviour
         // Read JSON data from the file
         if (File.Exists(_dataFilePath))
         {
-            // Load the JSON data from the file path
             // Load the JSON data from the file path
             string jsonFileContent = File.ReadAllText(_dataFilePath);
             _records = JsonUtility.FromJson<ObjectDetection.DetectionData>(jsonFileContent);
