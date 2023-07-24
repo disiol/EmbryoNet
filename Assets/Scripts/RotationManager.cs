@@ -1,6 +1,8 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using System.Text.RegularExpressions;
 using Models;
 using TMPro;
 using Unity.VisualScripting;
@@ -97,14 +99,22 @@ public class RotationManager : MonoBehaviour
         {
             _inputFieldEnterFolderNameForSafeNewData = _rotationMenu.transform
                 .Find("InputFieldEnterFolderNameForSafeNewData").GetComponent<TMP_InputField>();
-
             string inputFieldEnterFolderNameForSafeNewDataText = _inputFieldEnterFolderNameForSafeNewData.text;
+
             if (!inputFieldEnterFolderNameForSafeNewDataText.Equals(""))
             {
                 _newFolderName = inputFieldEnterFolderNameForSafeNewDataText;
             }
 
-            string newDataFilePath = _dataFilePath.Replace(_fileName, "");
+            
+            string originalString = "This is a sample phrase to remove.";
+            string phraseToRemove = "sample ";
+
+            string newDataFilePath = originalString.Replace(phraseToRemove, "");
+            Debug.Log(newDataFilePath); // Output: "This is a phrase to remove."
+
+
+
             string folderPath = Path.Combine(newDataFilePath, _newFolderName);
 
             _newFilePath = Path.Combine(folderPath, _fileName);
@@ -117,14 +127,31 @@ public class RotationManager : MonoBehaviour
             Vector3 targetRecordRotation = new Vector3(x, y, z);
             _targetRecord.rotation = targetRecordRotation;
 
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+
             // Save changes back to the file
-            SaveDataToFile();
+            try
+            {
+                SaveDataToFile();
+            }
+            catch (Exception e)
+            {
+                Debug.LogError("Error saving file _newFilePath: " + e.Message);
+            }
 
             transform.rotation = Quaternion.Euler(targetRecordRotation);
 
 
             // Hide the menu after saving changes
             HideMenu();
+        }
+        else
+        {
+            //TODO exephen show
+            Debug.Log("_targetRecord = " + _targetRecord);
         }
     }
 
@@ -149,6 +176,8 @@ public class RotationManager : MonoBehaviour
         File.WriteAllText(_newFilePath, updatedJsonString);
 
         Debug.Log("Changes saved to file: " + _newFilePath);
+        
+        //TODO open ne file dadata _newFilePath
     }
 
     private void LoadDataFromFile()

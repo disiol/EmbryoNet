@@ -4,6 +4,7 @@ using System.IO;
 using System;
 using System.Runtime.InteropServices;
 using System.Text;
+using Models;
 using SFB;
 using TMPro;
 
@@ -94,6 +95,7 @@ public class FileExplorer : MonoBehaviour
             TMP_Text buttonText = jsonButton.GetComponentInChildren<TMP_Text>();
 
             string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(file);
+
             buttonText.text = fileNameWithoutExtension;
 
             jsonButton.GetComponent<PatchContainer>().patch = file;
@@ -101,19 +103,25 @@ public class FileExplorer : MonoBehaviour
 
             Button jsonBtn = jsonButton.GetComponent<Button>();
             jsonBtn.onClick.AddListener(() =>
-                FindImageByName(fileNameWithoutExtension, jsonButton.GetComponent<PatchContainer>().patch));
+                FindImageByName(jsonButton.GetComponent<PatchContainer>().patch));
         }
     }
 
-    private void FindImageByName(string imageName, string jsonfileName)
+    private void FindImageByName(string jsonfilePath)
+
     {
+        
+        string jsonFileContent = File.ReadAllText(jsonfilePath);
+        ParserModel.Root records = JsonUtility.FromJson<ParserModel.Root>(jsonFileContent);
+
+        string imageName = records.source_name;
         string imagePath =
             Path.Combine(_imageFolderPath,
-                imageName + ".jpg"); //TODO Картинки могут иметь расширения jpg jpeg png bmp ge from source_name
+                imageName); //TODO Картинки могут иметь расширения jpg jpeg png bmp ge from source_name
 
         if (File.Exists(imagePath))
         {
-            OpenImage(jsonfileName, imagePath);
+            OpenImage(jsonfilePath, imagePath);
             // Open the image or do something with it
         }
         else
@@ -137,6 +145,7 @@ public class FileExplorer : MonoBehaviour
             texture.LoadImage(imageData);
 
             objectDetection.jsonFilePath = jsonfilePath;
+
             CrateSprite(texture);
             objectDetection.DrawFrames();
         }
