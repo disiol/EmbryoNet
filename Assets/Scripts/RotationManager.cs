@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using Models;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.Serialization;
@@ -8,7 +9,7 @@ using UnityEngine.Serialization;
 [System.Serializable]
 public class RotationManager : MonoBehaviour
 {
-    private ObjectDetection.DetectionData _records;
+    private ParserModel.Root _records;
     private string _dataFilePath;
 
     private GameObject _rotationMenu;
@@ -21,10 +22,16 @@ public class RotationManager : MonoBehaviour
     private Button _buttonCancel;
 
 
-  
+    private string _newFolderName = "new_Data_with_rotations";
+    private string _fileName;
+
+
     private bool _isMenuVisible = false;
-    private ObjectDetection.Detection _targetRecord;
+    private ParserModel.DetectionList _targetRecord;
     private int _targetID;
+    private string _newFilePath;
+
+    private TMP_InputField _inputFieldEnterFolderNameForSafeNewData;
 
 
     public void ShowMenu()
@@ -88,6 +95,20 @@ public class RotationManager : MonoBehaviour
     {
         if (_targetRecord != null)
         {
+            _inputFieldEnterFolderNameForSafeNewData = _rotationMenu.transform
+                .Find("InputFieldEnterFolderNameForSafeNewData").GetComponent<TMP_InputField>();
+
+            string inputFieldEnterFolderNameForSafeNewDataText = _inputFieldEnterFolderNameForSafeNewData.text;
+            if (!inputFieldEnterFolderNameForSafeNewDataText.Equals(""))
+            {
+                _newFolderName = inputFieldEnterFolderNameForSafeNewDataText;
+            }
+
+            string newDataFilePath = _dataFilePath.Replace(_fileName, "");
+            string folderPath = Path.Combine(newDataFilePath, _newFolderName);
+
+            _newFilePath = Path.Combine(folderPath, _fileName);
+
             // Update the rotation in the target record
             float x = float.Parse(_menuXInput.text);
             float y = float.Parse(_menuYInput.text);
@@ -107,10 +128,10 @@ public class RotationManager : MonoBehaviour
         }
     }
 
-    private ObjectDetection.Detection FindRecordById(int targetID)
+    private ParserModel.DetectionList FindRecordById(int targetID)
     {
         Debug.Log("targetID = " + targetID);
-        foreach (ObjectDetection.Detection record in _records.detection_list)
+        foreach (ParserModel.DetectionList record in _records.detection_list)
         {
             if (record.id == targetID)
             {
@@ -125,9 +146,9 @@ public class RotationManager : MonoBehaviour
     {
         // Save the modified data back to the JSON file
         string updatedJsonString = JsonUtility.ToJson(_records, true);
-        File.WriteAllText(_dataFilePath, updatedJsonString);
+        File.WriteAllText(_newFilePath, updatedJsonString);
 
-        Debug.Log("Changes saved to file: " + _dataFilePath);
+        Debug.Log("Changes saved to file: " + _newFilePath);
     }
 
     private void LoadDataFromFile()
@@ -137,7 +158,9 @@ public class RotationManager : MonoBehaviour
         {
             // Load the JSON data from the file path
             string jsonFileContent = File.ReadAllText(_dataFilePath);
-            _records = JsonUtility.FromJson<ObjectDetection.DetectionData>(jsonFileContent);
+            _records = JsonUtility.FromJson<ParserModel.Root>(jsonFileContent);
+
+            _fileName = _records.source_name;
 
             // Optionally, set the initial target record
             _targetRecord = FindRecordById(_targetID);

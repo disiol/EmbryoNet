@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using Models;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,22 +10,6 @@ public class ObjectDetection : MonoBehaviour
     [HideInInspector] public string jsonFilePath; // Set the path to the JSON file in the Inspector
     [SerializeField] private GameObject buttonPrefab;
 
-    [System.Serializable]
-    public class Detection
-    {
-        public int id;
-        public int tlx;
-        public int tly;
-        public int brx;
-        public int bry;
-        public Vector3 rotation;
-    }
-
-    [System.Serializable]
-    public class DetectionData
-    {
-        public List<Detection> detection_list;
-    }
 
     public void DrawFrames()
     {
@@ -36,13 +21,13 @@ public class ObjectDetection : MonoBehaviour
 
             // Load the JSON data from the file path
             string jsonFileContent = File.ReadAllText(jsonFilePath);
-            DetectionData detectionData = JsonUtility.FromJson<DetectionData>(jsonFileContent);
+            ParserModel.Root detectionData = JsonUtility.FromJson<ParserModel.Root>(jsonFileContent);
 
             // Draw frames around the detected objects
             Vector2 pivotOffset = new Vector2(0.5f, 0.5f); // Pivot offset for the frame image
 
             var detectionDataDetectionList = detectionData.detection_list;
-            foreach (Detection detection in detectionDataDetectionList)
+            foreach (ParserModel.DetectionList detection in detectionDataDetectionList)
             {
                 DrawFrame(detection, imageTexture, pivotOffset);
             }
@@ -53,7 +38,7 @@ public class ObjectDetection : MonoBehaviour
         }
     }
 
-    void DrawFrame(Detection detection, Texture2D imageTexture, Vector2 pivotOffset)
+    void DrawFrame(ParserModel.DetectionList detection, Texture2D imageTexture, Vector2 pivotOffset)
     {
         //TODO clear ObgektImage
         // Calculate the position and size of the frame
@@ -77,14 +62,14 @@ public class ObjectDetection : MonoBehaviour
         // Create the button on top of the frame
         GameObject button = Instantiate(buttonPrefab, frame.transform);
         button.name = "ButtonRotation_" + detection.id;
-      
+
         button.GetComponent<ButtonData>().targetID = detection.id;
         button.GetComponent<ButtonData>().jsonFilePath = jsonFilePath;
-        
+
 
 // Access the RectTransform of the button
         RectTransform buttonRect = button.GetComponent<RectTransform>();
-        
+
 
 // Set the size of the button
         buttonRect.sizeDelta = size;
@@ -98,8 +83,5 @@ public class ObjectDetection : MonoBehaviour
             // Set the button's rotation to match the frame's rotation
             button.transform.rotation = Quaternion.Euler(detectionRotation);
         }
-      
     }
-    
-  
 }

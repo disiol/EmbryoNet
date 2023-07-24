@@ -105,12 +105,15 @@ public class FileExplorer : MonoBehaviour
         }
     }
 
-    private void FindImageByName(string imageName,string jsonfileName)
+    private void FindImageByName(string imageName, string jsonfileName)
     {
-        string imagePath = Path.Combine(_imageFolderPath, imageName + ".jpg");
+        string imagePath =
+            Path.Combine(_imageFolderPath,
+                imageName + ".jpg"); //TODO Картинки могут иметь расширения jpg jpeg png bmp ge from source_name
+
         if (File.Exists(imagePath))
         {
-            OpenImage(jsonfileName,imagePath);
+            OpenImage(jsonfileName, imagePath);
             // Open the image or do something with it
         }
         else
@@ -132,8 +135,8 @@ public class FileExplorer : MonoBehaviour
             byte[] imageData = File.ReadAllBytes(imagePath);
             Texture2D texture = new Texture2D(2, 2);
             texture.LoadImage(imageData);
-          
-            objectDetection.jsonFilePath =jsonfilePath;
+
+            objectDetection.jsonFilePath = jsonfilePath;
             CrateSprite(texture);
             objectDetection.DrawFrames();
         }
