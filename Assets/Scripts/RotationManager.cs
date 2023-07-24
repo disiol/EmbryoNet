@@ -106,13 +106,9 @@ public class RotationManager : MonoBehaviour
                 _newFolderName = inputFieldEnterFolderNameForSafeNewDataText;
             }
 
-            
-            string originalString = "This is a sample phrase to remove.";
-            string phraseToRemove = "sample ";
 
-            string newDataFilePath = originalString.Replace(phraseToRemove, "");
+            string newDataFilePath = _dataFilePath.Replace(_fileName, "");
             Debug.Log(newDataFilePath); // Output: "This is a phrase to remove."
-
 
 
             string folderPath = Path.Combine(newDataFilePath, _newFolderName);
@@ -176,7 +172,7 @@ public class RotationManager : MonoBehaviour
         File.WriteAllText(_newFilePath, updatedJsonString);
 
         Debug.Log("Changes saved to file: " + _newFilePath);
-        
+
         //TODO open ne file dadata _newFilePath
     }
 
@@ -188,8 +184,7 @@ public class RotationManager : MonoBehaviour
             // Load the JSON data from the file path
             string jsonFileContent = File.ReadAllText(_dataFilePath);
             _records = JsonUtility.FromJson<ParserModel.Root>(jsonFileContent);
-
-            _fileName = _records.source_name;
+            _fileName = Path.GetFileName(_dataFilePath);
 
             // Optionally, set the initial target record
             _targetRecord = FindRecordById(_targetID);

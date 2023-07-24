@@ -110,14 +110,13 @@ public class FileExplorer : MonoBehaviour
     private void FindImageByName(string jsonfilePath)
 
     {
-        
         string jsonFileContent = File.ReadAllText(jsonfilePath);
         ParserModel.Root records = JsonUtility.FromJson<ParserModel.Root>(jsonFileContent);
 
         string imageName = records.source_name;
         string imagePath =
             Path.Combine(_imageFolderPath,
-                imageName); //TODO Картинки могут иметь расширения jpg jpeg png bmp ge from source_name
+                imageName);
 
         if (File.Exists(imagePath))
         {
