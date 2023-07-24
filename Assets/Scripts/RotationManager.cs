@@ -115,7 +115,7 @@ public class RotationManager : MonoBehaviour
 
             string folderPath = Path.Combine(newDataFilePath, _newFolderName);
 
-            _newFilePath = Path.Combine(folderPath, _fileName);
+            _newFilePath = Path.Combine(folderPath, _newFileName);
 
             // Update the rotation in the target record
             float x = float.Parse(_menuXInput.text);
