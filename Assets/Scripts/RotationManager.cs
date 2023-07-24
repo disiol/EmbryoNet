@@ -123,11 +123,9 @@ public class RotationManager : MonoBehaviour
 
     private void SaveDataToFile()
     {
-        // Convert the data to JSON format
-        string jsonData = JsonUtility.ToJson(this);
-
-        // Write the JSON data to the file
-        File.WriteAllText(_dataFilePath, jsonData);
+        // Save the modified data back to the JSON file
+        string updatedJsonString = JsonUtility.ToJson(_records, true);
+        File.WriteAllText(_dataFilePath, updatedJsonString);
 
         Debug.Log("Changes saved to file: " + _dataFilePath);
     }
