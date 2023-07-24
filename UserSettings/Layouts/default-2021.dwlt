@@ -19,117 +19,12 @@ MonoBehaviour:
     width: 1600
     height: 811
   m_ShowMode: 4
-  m_Title: Game
-  m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 300}
+  m_Title: Console
+  m_RootView: {fileID: 2}
+  m_MinSize: {x: 875, y: 492}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 9}
-  - {fileID: 3}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 30
-    width: 1600
-    height: 761
-  m_MinSize: {x: 300, y: 200}
-  m_MaxSize: {x: 24288, y: 16192}
-  vertical: 0
-  controlID: 123
---- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 1221
-    y: 0
-    width: 379
-    height: 761
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 14}
-  m_Panes:
-  - {fileID: 14}
-  - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &4
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 301
-    height: 451
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 15}
-  m_Panes:
-  - {fileID: 15}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &5
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 451
-    width: 1221
-    height: 310
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 18}
-  m_Panes:
-  - {fileID: 13}
-  - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
---- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,9 +37,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 7}
-  - {fileID: 2}
-  - {fileID: 8}
+  - {fileID: 3}
+  - {fileID: 4}
+  - {fileID: 5}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -157,7 +52,7 @@ MonoBehaviour:
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &7
+--- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,8 +73,35 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: 
---- !u!114 &8
+  m_LastLoadedLayoutName: 2 by 3
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 6}
+  - {fileID: 7}
+  - {fileID: 8}
+  - {fileID: 9}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 1600
+    height: 761
+  m_MinSize: {x: 400, y: 200}
+  m_MaxSize: {x: 32384, y: 16192}
+  vertical: 0
+  controlID: 11282
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,7 +122,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &9
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,17 +136,96 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 10}
-  - {fileID: 5}
+  - {fileID: 11}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1221
+    width: 928
     height: 761
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 16192, y: 16192}
+  m_MinSize: {x: 100, y: 200}
+  m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 124
+  controlID: 11283
+--- !u!114 &7
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 928
+    y: 0
+    width: 122
+    height: 761
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 14}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &8
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1050
+    y: 0
+    width: 141
+    height: 761
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 16}
+  m_Panes:
+  - {fileID: 16}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &9
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: Window
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1191
+    y: 0
+    width: 409
+    height: 761
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 12}
+  m_Panes:
+  - {fileID: 15}
+  - {fileID: 12}
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,22 +235,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 4}
-  - {fileID: 11}
+  m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1221
-    height: 451
-  m_MinSize: {x: 200, y: 100}
-  m_MaxSize: {x: 16192, y: 8096}
-  vertical: 0
-  controlID: 125
+    width: 928
+    height: 187
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 18}
+  m_Panes:
+  - {fileID: 18}
+  m_Selected: 0
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -260,21 +262,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 301
-    y: 0
-    width: 920
-    height: 451
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 17}
+    x: 0
+    y: 187
+    width: 928
+    height: 574
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 13}
   m_Panes:
-  - {fileID: 16}
   - {fileID: 17}
+  - {fileID: 13}
   m_Selected: 1
   m_LastSelected: 0
 --- !u!114 &12
@@ -297,9 +299,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1221
+    x: 1191
     y: 119
-    width: 378
+    width: 408
     height: 740
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -312,8 +314,8 @@ MonoBehaviour:
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
   currentStatusEntriesHasUpdate: 0
-  repositoryProgressHasUpdate: 1
-  appManagerProgressHasUpdate: 1
+  repositoryProgressHasUpdate: 0
+  appManagerProgressHasUpdate: 0
   changeTab: 3
   activeTab: 3
   initProjectView:
@@ -399,22 +401,18 @@ MonoBehaviour:
     remoteBranches: []
   changesView:
     currentBranchHasUpdate: 0
-    currentStatusEntriesHasUpdate: 1
-    currentLocksHasUpdate: 1
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
     commitBody: 
-    commitMessage: 
+    commitMessage: Mace safe  ne e fale to ne folder
     currentBranch: '[main]'
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
         keys:
         - 00000000000000001000000000000000
-        - 9bf89b82565c68f3fbb6a8f1249e3c34
-        - 8d432bdfc3265a16e98b46c1f7bca9f7
-        - d05a2c727a6c983119c150d31e5f7440
-        - 9fc0d4010bbf28b4594072e72b8655ab
         - 4bbfe0c52a2b9f4099e4ac06b5fcc5ea
-        - 7a537d9b9c39d1a0daf00865ca70e657
+        - dd8a5eda3d00ff6e79f0b7d66d73bb41
         - 3147f8d53d49446b984d3827590f5dd9
         values:
         - path: Assets
@@ -426,7 +424,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -435,78 +433,6 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets/Perfabs
-          label: Perfabs
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets/Perfabs/RotationMenu.prefab
-          label: RotationMenu.prefab
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets/Perfabs/RotationMenu.prefab
-            fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/RotationMenu.prefab
-            projectPath: Assets/Perfabs/RotationMenu.prefab
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets/Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets/Scenes/Main.unity
-          label: Main.unity
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets/Scenes/Main.unity
-            fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
-            projectPath: Assets/Scenes/Main.unity
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
         - path: Assets/Scripts
           label: Scripts
           level: 1
@@ -516,7 +442,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -525,8 +451,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets/Scripts/ObjectDetection.cs
-          label: ObjectDetection.cs
+        - path: Assets/Scripts/FileExplorer.cs
+          label: FileExplorer.cs
           level: 2
           isFolder: 0
           isContainer: 0
@@ -534,12 +460,12 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
-            path: Assets/Scripts/ObjectDetection.cs
-            fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
-            projectPath: Assets/Scripts/ObjectDetection.cs
+            path: Assets/Scripts/FileExplorer.cs
+            fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+            projectPath: Assets/Scripts/FileExplorer.cs
             originalPath: 
             indexStatus: 0
             workTreeStatus: 3
@@ -552,7 +478,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: Assets/Scripts/RotationManager.cs
@@ -564,8 +490,6 @@ MonoBehaviour:
       folders:
         keys:
         - Assets
-        - Assets/Perfabs
-        - Assets/Scenes
         - Assets/Scripts
         values:
         - path: Assets
@@ -577,43 +501,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets/Perfabs
-          label: Perfabs
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets/Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -631,7 +519,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -641,8 +529,46 @@ MonoBehaviour:
             indexStatus: 0
             workTreeStatus: 0
       checkedFileNodes:
-        keys: []
-        values: []
+        keys:
+        - Assets/Scripts/FileExplorer.cs
+        - Assets/Scripts/RotationManager.cs
+        values:
+        - path: Assets/Scripts/FileExplorer.cs
+          label: FileExplorer.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets/Scripts/FileExplorer.cs
+            fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+            projectPath: Assets/Scripts/FileExplorer.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets/Scripts/RotationManager.cs
+          label: RotationManager.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets/Scripts/RotationManager.cs
+            fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager.cs
+            projectPath: Assets/Scripts/RotationManager.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
       title: 
       pathSeparator: /
       displayRootNode: 0
@@ -659,7 +585,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: 
@@ -677,7 +603,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: 
@@ -686,78 +612,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets/Perfabs
-        label: Perfabs
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets/Perfabs/RotationMenu.prefab
-        label: RotationMenu.prefab
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets/Perfabs/RotationMenu.prefab
-          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/RotationMenu.prefab
-          projectPath: Assets/Perfabs/RotationMenu.prefab
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets/Scenes
-        label: Scenes
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets/Scenes/Main.unity
-        label: Main.unity
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets/Scenes/Main.unity
-          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
-          projectPath: Assets/Scenes/Main.unity
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
       - path: Assets/Scripts
         label: Scripts
         level: 1
@@ -767,7 +621,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: 
@@ -776,8 +630,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets/Scripts/ObjectDetection.cs
-        label: ObjectDetection.cs
+      - path: Assets/Scripts/FileExplorer.cs
+        label: FileExplorer.cs
         level: 2
         isFolder: 0
         isContainer: 0
@@ -785,12 +639,12 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
-          path: Assets/Scripts/ObjectDetection.cs
-          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
-          projectPath: Assets/Scripts/ObjectDetection.cs
+          path: Assets/Scripts/FileExplorer.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+          projectPath: Assets/Scripts/FileExplorer.cs
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
@@ -803,7 +657,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
           path: Assets/Scripts/RotationManager.cs
@@ -832,21 +686,9 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
-    - path: Assets/Perfabs/RotationMenu.prefab
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/RotationMenu.prefab
-      projectPath: Assets/Perfabs/RotationMenu.prefab
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets/Scenes/Main.unity
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
-      projectPath: Assets/Scenes/Main.unity
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets/Scripts/ObjectDetection.cs
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
-      projectPath: Assets/Scripts/ObjectDetection.cs
+    - path: Assets/Scripts/FileExplorer.cs
+      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+      projectPath: Assets/Scripts/FileExplorer.cs
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
@@ -856,20 +698,883 @@ MonoBehaviour:
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    changedFilesText: 4 changed files
+    changedFilesText: 2 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-07-24T15:12:50.257+03:00
+      updatedTimeString: 2023-07-24T15:56:36.980+03:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-07-24T15:44:14.815+03:00
+      updatedTimeString: 2023-07-25T02:15:28.964+03:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2023-07-24T15:44:17.796+03:00
+      updatedTimeString: 2023-07-25T02:13:40.769+03:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
+    - commitID: 68a78e5024cc677384f8c530f78f19fd50ea93ec
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: mace new ParserModel
+      description: 
+      timeString: 2023-07-24T22:17:15.000+03:00
+      commitTimeString: 2023-07-24T22:17:15.000+03:00
+      changes:
+      - path: Assets/Scripts/Models.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Models.meta
+        projectPath: Assets/Scripts/Models.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Scripts/Models/ParserModel.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Models/ParserModel.cs
+        projectPath: Assets/Scripts/Models/ParserModel.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Scripts/Models/ParserModel.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Models/ParserModel.cs.meta
+        projectPath: Assets/Scripts/Models/ParserModel.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: 3b7eab8ef39a227ccbdd80883ccc617be86cddb4
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: mace ne ParserModel
+      description: 
+      timeString: 2023-07-24T22:17:03.000+03:00
+      commitTimeString: 2023-07-24T22:17:03.000+03:00
+      changes:
+      - path: Assets/Perfabs/RotationMenu.prefab
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/RotationMenu.prefab
+        projectPath: Assets/Perfabs/RotationMenu.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scenes/Main.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+        projectPath: Assets/Scenes/Main.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/FileExplorer.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+        projectPath: Assets/Scripts/FileExplorer.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/ObjectDetection.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
+        projectPath: Assets/Scripts/ObjectDetection.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/RotationManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager.cs
+        projectPath: Assets/Scripts/RotationManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF
+          - Fallback.asset
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/TextMesh
+          Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+        projectPath: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans
+          SDF - Fallback.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: c8bba0697df4186b7746818678b953993904afe6
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: Mace safe rotation
+      description: 
+      timeString: 2023-07-24T19:41:55.000+03:00
+      commitTimeString: 2023-07-24T19:41:55.000+03:00
+      changes:
+      - path: Assets/Scripts/RotationManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager.cs
+        projectPath: Assets/Scripts/RotationManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 436dad942725499412a5fe7d467de7ffc4c641e7
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: TMP_InputField
+      description: 
+      timeString: 2023-07-24T18:17:43.000+03:00
+      commitTimeString: 2023-07-24T18:17:43.000+03:00
+      changes:
+      - path: Assets/Perfabs/RotationMenu.prefab
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/RotationMenu.prefab
+        projectPath: Assets/Perfabs/RotationMenu.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scenes/Main.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+        projectPath: Assets/Scenes/Main.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/ObjectDetection.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
+        projectPath: Assets/Scripts/ObjectDetection.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/RotationManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager.cs
+        projectPath: Assets/Scripts/RotationManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings/Layouts/default-2021.dwlt
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/UserSettings/Layouts/default-2021.dwlt
+        projectPath: UserSettings/Layouts/default-2021.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 6b03d8e0797932a8f158573b32cfa95eee2c6242
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: fix LoadDataFromFile
+      description: 
+      timeString: 2023-07-23T01:10:06.000+03:00
+      commitTimeString: 2023-07-23T01:10:06.000+03:00
+      changes:
+      - path: Assets/Scripts/ButtonData.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ButtonData.cs
+        projectPath: Assets/Scripts/ButtonData.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/ObjectDetection.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
+        projectPath: Assets/Scripts/ObjectDetection.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/RotationManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager.cs
+        projectPath: Assets/Scripts/RotationManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: db75faffb2639a7e1cc4cfc4e0c695c11b893028
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: add RotationMenu
+      description: 
+      timeString: 2023-07-22T23:28:32.000+03:00
+      commitTimeString: 2023-07-22T23:28:32.000+03:00
+      changes:
+      - path: Assets/Scripts/ButtonData.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ButtonData.cs
+        projectPath: Assets/Scripts/ButtonData.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Scripts/ButtonData.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ButtonData.cs.meta
+        projectPath: Assets/Scripts/ButtonData.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Scripts/RotationManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager.cs
+        projectPath: Assets/Scripts/RotationManager.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Scripts/RotationManager.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager.cs.meta
+        projectPath: Assets/Scripts/RotationManager.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: e794612ee3ca7df4ad90fabada76552f3e7a247c
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: add RotationMenu
+      description: 
+      timeString: 2023-07-22T23:28:23.000+03:00
+      commitTimeString: 2023-07-22T23:28:23.000+03:00
+      changes:
+      - path: Assets/Perfabs/FrameButtonPrefab.prefab
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/FrameButtonPrefab.prefab
+        projectPath: Assets/Perfabs/FrameButtonPrefab.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Perfabs/RotationMenu.prefab
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/RotationMenu.prefab
+        projectPath: Assets/Perfabs/RotationMenu.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Perfabs/RotationMenu.prefab.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/RotationMenu.prefab.meta
+        projectPath: Assets/Perfabs/RotationMenu.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Scenes/Main.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+        projectPath: Assets/Scenes/Main.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/ObjectDetection.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
+        projectPath: Assets/Scripts/ObjectDetection.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: fd321ed6ec0d463b75b1ff48575b4f58913e907b
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: Mace drow batons rotations
+      description: 
+      timeString: 2023-07-22T17:17:44.000+03:00
+      commitTimeString: 2023-07-22T17:17:44.000+03:00
+      changes:
+      - path: Assets/Perfabs/ButtonItem.prefab
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/ButtonItem.prefab
+        projectPath: Assets/Perfabs/ButtonItem.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Perfabs/FrameButtonPrefab.prefab
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/FrameButtonPrefab.prefab
+        projectPath: Assets/Perfabs/FrameButtonPrefab.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Perfabs/FrameButtonPrefab.prefab.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/FrameButtonPrefab.prefab.meta
+        projectPath: Assets/Perfabs/FrameButtonPrefab.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Perfabs/New Material.mat
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/New
+          Material.mat
+        projectPath: Assets/Perfabs/New Material.mat
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Perfabs/New Material.mat.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/New
+          Material.mat.meta
+        projectPath: Assets/Perfabs/New Material.mat.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Scenes/Main.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+        projectPath: Assets/Scenes/Main.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/ObjectDetection.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
+        projectPath: Assets/Scripts/ObjectDetection.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Sprites.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Sprites.meta
+        projectPath: Assets/Sprites.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Sprites/pngwing.com.png
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Sprites/pngwing.com.png
+        projectPath: Assets/Sprites/pngwing.com.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Sprites/pngwing.com.png.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Sprites/pngwing.com.png.meta
+        projectPath: Assets/Sprites/pngwing.com.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: 00476ddb1d0c9e14da439451147b38e043884246
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: DrawFrames
+      description: 
+      timeString: 2023-07-19T04:22:11.000+03:00
+      commitTimeString: 2023-07-19T04:22:11.000+03:00
+      changes:
+      - path: Assets/Perfabs/ButtonItem.prefab
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/ButtonItem.prefab
+        projectPath: Assets/Perfabs/ButtonItem.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/FileExplorer.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+        projectPath: Assets/Scripts/FileExplorer.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/ObjectDetection.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
+        projectPath: Assets/Scripts/ObjectDetection.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 7eef9f1935ac4a71d7e719d8daacea0e1be0db9b
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: mace ObjectDetection
+      description: 
+      timeString: 2023-07-19T03:08:06.000+03:00
+      commitTimeString: 2023-07-19T03:08:06.000+03:00
+      changes:
+      - path: Assets/Perfabs/ButtonItem.prefab
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/ButtonItem.prefab
+        projectPath: Assets/Perfabs/ButtonItem.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/FileExplorer.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+        projectPath: Assets/Scripts/FileExplorer.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/ObjectDetection.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
+        projectPath: Assets/Scripts/ObjectDetection.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Scripts/ObjectDetection.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs.meta
+        projectPath: Assets/Scripts/ObjectDetection.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: 41d3649cff975458768ed22e3a6083d58c43f561
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: mace Open the image
+      description: 
+      timeString: 2023-07-19T01:05:03.000+03:00
+      commitTimeString: 2023-07-19T01:05:03.000+03:00
+      changes:
+      - path: Assets/Scenes/Main.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+        projectPath: Assets/Scenes/Main.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/FileExplorer.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+        projectPath: Assets/Scripts/FileExplorer.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 090d4b006512dec385a1b6790c078cbef0cc6035
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: mace FindImageByName
+      description: 
+      timeString: 2023-07-19T00:56:15.000+03:00
+      commitTimeString: 2023-07-19T00:56:15.000+03:00
+      changes:
+      - path: Assets/Scripts/FileExplorer.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+        projectPath: Assets/Scripts/FileExplorer.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 62bd147875930a81269ce4564c23475d117e0a00
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: Mace show list os jason fales
+      description: 
+      timeString: 2023-07-19T00:52:56.000+03:00
+      commitTimeString: 2023-07-19T00:52:56.000+03:00
+      changes:
+      - path: Assets/Perfabs/ButtonItem.prefab
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/ButtonItem.prefab
+        projectPath: Assets/Perfabs/ButtonItem.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scenes/Main.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+        projectPath: Assets/Scenes/Main.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/FileExplorer.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+        projectPath: Assets/Scripts/FileExplorer.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 3995c9332eafb708e9785db5a088b781da45460f
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: Mace how list of Foleders
+      description: 
+      timeString: 2023-07-19T00:37:52.000+03:00
+      commitTimeString: 2023-07-19T00:37:52.000+03:00
+      changes:
+      - path: Assets/Scenes/Main.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+        projectPath: Assets/Scenes/Main.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/FileExplorer.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+        projectPath: Assets/Scripts/FileExplorer.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings/Layouts/default-2021.dwlt
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/UserSettings/Layouts/default-2021.dwlt
+        projectPath: UserSettings/Layouts/default-2021.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 98527552644bf429e840644c110077a58e4de7d4
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: ' add StandaloneFileBrowser'
+      description: 
+      timeString: 2023-07-19T00:19:05.000+03:00
+      commitTimeString: 2023-07-19T00:19:05.000+03:00
+      changes:
+      - path: .idea/.idea.EmbryoNet/.idea/indexLayout.xml
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/.idea/.idea.EmbryoNet/.idea/indexLayout.xml
+        projectPath: .idea/.idea.EmbryoNet/.idea/indexLayout.xml
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: .idea/.idea.EmbryoNet/.idea/vcs.xml
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/.idea/.idea.EmbryoNet/.idea/vcs.xml
+        projectPath: .idea/.idea.EmbryoNet/.idea/vcs.xml
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Perfabs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs.meta
+        projectPath: Assets/Perfabs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Perfabs/ButtonItem.prefab
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/ButtonItem.prefab
+        projectPath: Assets/Perfabs/ButtonItem.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Perfabs/ButtonItem.prefab.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/ButtonItem.prefab.meta
+        projectPath: Assets/Perfabs/ButtonItem.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Scenes/Main.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+        projectPath: Assets/Scenes/Main.unity
+        originalPath: Assets/Scenes/SampleScene.unity
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets/Scenes/Main.unity.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity.meta
+        projectPath: Assets/Scenes/Main.unity.meta
+        originalPath: Assets/Scenes/SampleScene.unity.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets/Scripts/FileExplorer.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+        projectPath: Assets/Scripts/FileExplorer.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/PatchContainer.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/PatchContainer.cs
+        projectPath: Assets/Scripts/PatchContainer.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Scripts/PatchContainer.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/PatchContainer.cs.meta
+        projectPath: Assets/Scripts/PatchContainer.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser.meta
+        projectPath: Assets/StandaloneFileBrowser.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs
+        projectPath: Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs.meta
+        projectPath: Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Plugins.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins.meta
+        projectPath: Assets/StandaloneFileBrowser/Plugins.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Plugins/Linux.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/Linux.meta
+        projectPath: Assets/StandaloneFileBrowser/Plugins/Linux.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Plugins/Linux/x86_64.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/Linux/x86_64.meta
+        projectPath: Assets/StandaloneFileBrowser/Plugins/Linux/x86_64.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so
+        projectPath: Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so.meta
+        projectPath: Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll
+        projectPath: Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll.meta
+        projectPath: Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle.meta
+        projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents.meta
+        projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist
+        projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist.meta
+        projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS.meta
+        projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser
+        projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser.meta
+        projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib
+        projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib.meta
+        projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll
+        projectPath: Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll.meta
+        projectPath: Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Sample.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample.meta
+        projectPath: Assets/StandaloneFileBrowser/Sample.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Sample/BasicSample.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/BasicSample.cs
+        projectPath: Assets/StandaloneFileBrowser/Sample/BasicSample.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Sample/BasicSample.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/BasicSample.cs.meta
+        projectPath: Assets/StandaloneFileBrowser/Sample/BasicSample.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity
+        projectPath: Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity.meta
+        projectPath: Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs
+        projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs.meta
+        projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs
+        projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs.meta
+        projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs
+        projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs.meta
+        projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs
+        projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs.meta
+        projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs
+        projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs.meta
+        projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity
+        projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity.meta
+        projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs
+        projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs.meta
+        projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs
+        projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs.meta
+        projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs
+        projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs.meta
+        projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs
+        projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs.meta
+        projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs
+        projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs.meta
+        projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings/EditorBuildSettings.asset
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/ProjectSettings/EditorBuildSettings.asset
+        projectPath: ProjectSettings/EditorBuildSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings/EditorUserSettings.asset
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/UserSettings/EditorUserSettings.asset
+        projectPath: UserSettings/EditorUserSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
     - commitID: de216c2a3d178a25ef7b34e8910c5ab7644ecd02
       mergeA: 
       mergeB: 
@@ -1943,14 +2648,877 @@ MonoBehaviour:
         workTreeStatus: 0
     statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 2023-07-19T00:18:36.180+03:00
+      updatedTimeString: 2023-07-25T01:46:24.706+03:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
       updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 5
     historyControl:
-      scroll: {x: 0, y: 0}
+      scroll: {x: 0, y: 3}
       entries:
+      - commitID: 68a78e5024cc677384f8c530f78f19fd50ea93ec
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: mace new ParserModel
+        description: 
+        timeString: 2023-07-24T22:17:15.000+03:00
+        commitTimeString: 2023-07-24T22:17:15.000+03:00
+        changes:
+        - path: Assets/Scripts/Models.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Models.meta
+          projectPath: Assets/Scripts/Models.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Scripts/Models/ParserModel.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Models/ParserModel.cs
+          projectPath: Assets/Scripts/Models/ParserModel.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Scripts/Models/ParserModel.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Models/ParserModel.cs.meta
+          projectPath: Assets/Scripts/Models/ParserModel.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: 3b7eab8ef39a227ccbdd80883ccc617be86cddb4
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: mace ne ParserModel
+        description: 
+        timeString: 2023-07-24T22:17:03.000+03:00
+        commitTimeString: 2023-07-24T22:17:03.000+03:00
+        changes:
+        - path: Assets/Perfabs/RotationMenu.prefab
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/RotationMenu.prefab
+          projectPath: Assets/Perfabs/RotationMenu.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/FileExplorer.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+          projectPath: Assets/Scripts/FileExplorer.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/ObjectDetection.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
+          projectPath: Assets/Scripts/ObjectDetection.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/RotationManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager.cs
+          projectPath: Assets/Scripts/RotationManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF
+            - Fallback.asset
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/TextMesh
+            Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+          projectPath: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans
+            SDF - Fallback.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: c8bba0697df4186b7746818678b953993904afe6
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: Mace safe rotation
+        description: 
+        timeString: 2023-07-24T19:41:55.000+03:00
+        commitTimeString: 2023-07-24T19:41:55.000+03:00
+        changes:
+        - path: Assets/Scripts/RotationManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager.cs
+          projectPath: Assets/Scripts/RotationManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 436dad942725499412a5fe7d467de7ffc4c641e7
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: TMP_InputField
+        description: 
+        timeString: 2023-07-24T18:17:43.000+03:00
+        commitTimeString: 2023-07-24T18:17:43.000+03:00
+        changes:
+        - path: Assets/Perfabs/RotationMenu.prefab
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/RotationMenu.prefab
+          projectPath: Assets/Perfabs/RotationMenu.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/ObjectDetection.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
+          projectPath: Assets/Scripts/ObjectDetection.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/RotationManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager.cs
+          projectPath: Assets/Scripts/RotationManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings/Layouts/default-2021.dwlt
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/UserSettings/Layouts/default-2021.dwlt
+          projectPath: UserSettings/Layouts/default-2021.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 6b03d8e0797932a8f158573b32cfa95eee2c6242
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: fix LoadDataFromFile
+        description: 
+        timeString: 2023-07-23T01:10:06.000+03:00
+        commitTimeString: 2023-07-23T01:10:06.000+03:00
+        changes:
+        - path: Assets/Scripts/ButtonData.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ButtonData.cs
+          projectPath: Assets/Scripts/ButtonData.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/ObjectDetection.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
+          projectPath: Assets/Scripts/ObjectDetection.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/RotationManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager.cs
+          projectPath: Assets/Scripts/RotationManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: db75faffb2639a7e1cc4cfc4e0c695c11b893028
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: add RotationMenu
+        description: 
+        timeString: 2023-07-22T23:28:32.000+03:00
+        commitTimeString: 2023-07-22T23:28:32.000+03:00
+        changes:
+        - path: Assets/Scripts/ButtonData.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ButtonData.cs
+          projectPath: Assets/Scripts/ButtonData.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Scripts/ButtonData.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ButtonData.cs.meta
+          projectPath: Assets/Scripts/ButtonData.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Scripts/RotationManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager.cs
+          projectPath: Assets/Scripts/RotationManager.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Scripts/RotationManager.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager.cs.meta
+          projectPath: Assets/Scripts/RotationManager.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: e794612ee3ca7df4ad90fabada76552f3e7a247c
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: add RotationMenu
+        description: 
+        timeString: 2023-07-22T23:28:23.000+03:00
+        commitTimeString: 2023-07-22T23:28:23.000+03:00
+        changes:
+        - path: Assets/Perfabs/FrameButtonPrefab.prefab
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/FrameButtonPrefab.prefab
+          projectPath: Assets/Perfabs/FrameButtonPrefab.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Perfabs/RotationMenu.prefab
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/RotationMenu.prefab
+          projectPath: Assets/Perfabs/RotationMenu.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Perfabs/RotationMenu.prefab.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/RotationMenu.prefab.meta
+          projectPath: Assets/Perfabs/RotationMenu.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/ObjectDetection.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
+          projectPath: Assets/Scripts/ObjectDetection.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: fd321ed6ec0d463b75b1ff48575b4f58913e907b
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: Mace drow batons rotations
+        description: 
+        timeString: 2023-07-22T17:17:44.000+03:00
+        commitTimeString: 2023-07-22T17:17:44.000+03:00
+        changes:
+        - path: Assets/Perfabs/ButtonItem.prefab
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/ButtonItem.prefab
+          projectPath: Assets/Perfabs/ButtonItem.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Perfabs/FrameButtonPrefab.prefab
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/FrameButtonPrefab.prefab
+          projectPath: Assets/Perfabs/FrameButtonPrefab.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Perfabs/FrameButtonPrefab.prefab.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/FrameButtonPrefab.prefab.meta
+          projectPath: Assets/Perfabs/FrameButtonPrefab.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Perfabs/New Material.mat
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/New
+            Material.mat
+          projectPath: Assets/Perfabs/New Material.mat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Perfabs/New Material.mat.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/New
+            Material.mat.meta
+          projectPath: Assets/Perfabs/New Material.mat.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/ObjectDetection.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
+          projectPath: Assets/Scripts/ObjectDetection.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Sprites.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Sprites.meta
+          projectPath: Assets/Sprites.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Sprites/pngwing.com.png
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Sprites/pngwing.com.png
+          projectPath: Assets/Sprites/pngwing.com.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Sprites/pngwing.com.png.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Sprites/pngwing.com.png.meta
+          projectPath: Assets/Sprites/pngwing.com.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: 00476ddb1d0c9e14da439451147b38e043884246
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: DrawFrames
+        description: 
+        timeString: 2023-07-19T04:22:11.000+03:00
+        commitTimeString: 2023-07-19T04:22:11.000+03:00
+        changes:
+        - path: Assets/Perfabs/ButtonItem.prefab
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/ButtonItem.prefab
+          projectPath: Assets/Perfabs/ButtonItem.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/FileExplorer.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+          projectPath: Assets/Scripts/FileExplorer.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/ObjectDetection.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
+          projectPath: Assets/Scripts/ObjectDetection.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 7eef9f1935ac4a71d7e719d8daacea0e1be0db9b
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: mace ObjectDetection
+        description: 
+        timeString: 2023-07-19T03:08:06.000+03:00
+        commitTimeString: 2023-07-19T03:08:06.000+03:00
+        changes:
+        - path: Assets/Perfabs/ButtonItem.prefab
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/ButtonItem.prefab
+          projectPath: Assets/Perfabs/ButtonItem.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/FileExplorer.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+          projectPath: Assets/Scripts/FileExplorer.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/ObjectDetection.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs
+          projectPath: Assets/Scripts/ObjectDetection.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Scripts/ObjectDetection.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/ObjectDetection.cs.meta
+          projectPath: Assets/Scripts/ObjectDetection.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: 41d3649cff975458768ed22e3a6083d58c43f561
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: mace Open the image
+        description: 
+        timeString: 2023-07-19T01:05:03.000+03:00
+        commitTimeString: 2023-07-19T01:05:03.000+03:00
+        changes:
+        - path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/FileExplorer.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+          projectPath: Assets/Scripts/FileExplorer.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 090d4b006512dec385a1b6790c078cbef0cc6035
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: mace FindImageByName
+        description: 
+        timeString: 2023-07-19T00:56:15.000+03:00
+        commitTimeString: 2023-07-19T00:56:15.000+03:00
+        changes:
+        - path: Assets/Scripts/FileExplorer.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+          projectPath: Assets/Scripts/FileExplorer.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 62bd147875930a81269ce4564c23475d117e0a00
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: Mace show list os jason fales
+        description: 
+        timeString: 2023-07-19T00:52:56.000+03:00
+        commitTimeString: 2023-07-19T00:52:56.000+03:00
+        changes:
+        - path: Assets/Perfabs/ButtonItem.prefab
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/ButtonItem.prefab
+          projectPath: Assets/Perfabs/ButtonItem.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/FileExplorer.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+          projectPath: Assets/Scripts/FileExplorer.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 3995c9332eafb708e9785db5a088b781da45460f
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: Mace how list of Foleders
+        description: 
+        timeString: 2023-07-19T00:37:52.000+03:00
+        commitTimeString: 2023-07-19T00:37:52.000+03:00
+        changes:
+        - path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/FileExplorer.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+          projectPath: Assets/Scripts/FileExplorer.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings/Layouts/default-2021.dwlt
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/UserSettings/Layouts/default-2021.dwlt
+          projectPath: UserSettings/Layouts/default-2021.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 98527552644bf429e840644c110077a58e4de7d4
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: ' add StandaloneFileBrowser'
+        description: 
+        timeString: 2023-07-19T00:19:05.000+03:00
+        commitTimeString: 2023-07-19T00:19:05.000+03:00
+        changes:
+        - path: .idea/.idea.EmbryoNet/.idea/indexLayout.xml
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/.idea/.idea.EmbryoNet/.idea/indexLayout.xml
+          projectPath: .idea/.idea.EmbryoNet/.idea/indexLayout.xml
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: .idea/.idea.EmbryoNet/.idea/vcs.xml
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/.idea/.idea.EmbryoNet/.idea/vcs.xml
+          projectPath: .idea/.idea.EmbryoNet/.idea/vcs.xml
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Perfabs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs.meta
+          projectPath: Assets/Perfabs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Perfabs/ButtonItem.prefab
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/ButtonItem.prefab
+          projectPath: Assets/Perfabs/ButtonItem.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Perfabs/ButtonItem.prefab.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/ButtonItem.prefab.meta
+          projectPath: Assets/Perfabs/ButtonItem.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: Assets/Scenes/SampleScene.unity
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets/Scenes/Main.unity.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity.meta
+          projectPath: Assets/Scenes/Main.unity.meta
+          originalPath: Assets/Scenes/SampleScene.unity.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets/Scripts/FileExplorer.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+          projectPath: Assets/Scripts/FileExplorer.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/PatchContainer.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/PatchContainer.cs
+          projectPath: Assets/Scripts/PatchContainer.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Scripts/PatchContainer.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/PatchContainer.cs.meta
+          projectPath: Assets/Scripts/PatchContainer.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser.meta
+          projectPath: Assets/StandaloneFileBrowser.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs
+          projectPath: Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs.meta
+          projectPath: Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Plugins.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins.meta
+          projectPath: Assets/StandaloneFileBrowser/Plugins.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Plugins/Linux.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/Linux.meta
+          projectPath: Assets/StandaloneFileBrowser/Plugins/Linux.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Plugins/Linux/x86_64.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/Linux/x86_64.meta
+          projectPath: Assets/StandaloneFileBrowser/Plugins/Linux/x86_64.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so
+          projectPath: Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so.meta
+          projectPath: Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll
+          projectPath: Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll.meta
+          projectPath: Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle.meta
+          projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents.meta
+          projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist
+          projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist.meta
+          projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS.meta
+          projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser
+          projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser.meta
+          projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib
+          projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib.meta
+          projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll
+          projectPath: Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll.meta
+          projectPath: Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Sample.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample.meta
+          projectPath: Assets/StandaloneFileBrowser/Sample.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Sample/BasicSample.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/BasicSample.cs
+          projectPath: Assets/StandaloneFileBrowser/Sample/BasicSample.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Sample/BasicSample.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/BasicSample.cs.meta
+          projectPath: Assets/StandaloneFileBrowser/Sample/BasicSample.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity
+          projectPath: Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity.meta
+          projectPath: Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs
+          projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs.meta
+          projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs
+          projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs.meta
+          projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs
+          projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs.meta
+          projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs
+          projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs.meta
+          projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs
+          projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs.meta
+          projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity
+          projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity.meta
+          projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs
+          projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs.meta
+          projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs
+          projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs.meta
+          projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs
+          projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs.meta
+          projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs
+          projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs.meta
+          projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs
+          projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs.meta
+          projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings/EditorBuildSettings.asset
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/ProjectSettings/EditorBuildSettings.asset
+          projectPath: ProjectSettings/EditorBuildSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings/EditorUserSettings.asset
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/UserSettings/EditorUserSettings.asset
+          projectPath: UserSettings/EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
       - commitID: de216c2a3d178a25ef7b34e8910c5ab7644ecd02
         mergeA: 
         mergeB: 
@@ -3129,388 +4697,41 @@ MonoBehaviour:
         gitFileStatus: 0
         lockedAt: 1 Jan 0001, 02:02
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2023-07-19T00:00:46.868+03:00
+      updatedTimeString: 2023-07-24T15:56:36.980+03:00
       cacheType: 1
     lastLocksChangedEvent:
-      updatedTimeString: 2023-07-19T00:18:34.352+03:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 7
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-07-19T00:18:24.099+03:00
+      updatedTimeString: 2023-07-25T01:46:34.947+03:00
       cacheType: 6
     lockedFiles: []
     gitStatusEntries:
-    - path: .idea/.idea.EmbryoNet/.idea/indexLayout.xml
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/.idea/.idea.EmbryoNet/.idea/indexLayout.xml
-      projectPath: .idea/.idea.EmbryoNet/.idea/indexLayout.xml
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: .idea/.idea.EmbryoNet/.idea/vcs.xml
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/.idea/.idea.EmbryoNet/.idea/vcs.xml
-      projectPath: .idea/.idea.EmbryoNet/.idea/vcs.xml
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/Perfabs.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs.meta
-      projectPath: Assets/Perfabs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/Perfabs/ButtonItem.prefab
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/ButtonItem.prefab
-      projectPath: Assets/Perfabs/ButtonItem.prefab
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/Perfabs/ButtonItem.prefab.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/ButtonItem.prefab.meta
-      projectPath: Assets/Perfabs/ButtonItem.prefab.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
     - path: Assets/Scenes/Main.unity
       fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
       projectPath: Assets/Scenes/Main.unity
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/Scenes/Main.unity.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity.meta
-      projectPath: Assets/Scenes/Main.unity.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/Scenes/SampleScene.unity
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/SampleScene.unity
-      projectPath: Assets/Scenes/SampleScene.unity
-      originalPath: 
       indexStatus: 0
-      workTreeStatus: 5
-    - path: Assets/Scenes/SampleScene.unity.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/SampleScene.unity.meta
-      projectPath: Assets/Scenes/SampleScene.unity.meta
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 5
+      workTreeStatus: 3
     - path: Assets/Scripts/FileExplorer.cs
       fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
       projectPath: Assets/Scripts/FileExplorer.cs
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    - path: Assets/Scripts/PatchContainer.cs
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/PatchContainer.cs
-      projectPath: Assets/Scripts/PatchContainer.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/Scripts/PatchContainer.cs.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/PatchContainer.cs.meta
-      projectPath: Assets/Scripts/PatchContainer.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser.meta
-      projectPath: Assets/StandaloneFileBrowser.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs
-      projectPath: Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs.meta
-      projectPath: Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Plugins.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins.meta
-      projectPath: Assets/StandaloneFileBrowser/Plugins.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Plugins/Linux.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/Linux.meta
-      projectPath: Assets/StandaloneFileBrowser/Plugins/Linux.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Plugins/Linux/x86_64.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/Linux/x86_64.meta
-      projectPath: Assets/StandaloneFileBrowser/Plugins/Linux/x86_64.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so
-      projectPath: Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so.meta
-      projectPath: Assets/StandaloneFileBrowser/Plugins/Linux/x86_64/libStandaloneFileBrowser.so.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll
-      projectPath: Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll.meta
-      projectPath: Assets/StandaloneFileBrowser/Plugins/Ookii.Dialogs.dll.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle.meta
-      projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents.meta
-      projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist
-      projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist.meta
-      projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/Info.plist.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS.meta
-      projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser
-      projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser.meta
-      projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.bundle/Contents/MacOS/StandaloneFileBrowser.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib
-      projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib.meta
-      projectPath: Assets/StandaloneFileBrowser/Plugins/StandaloneFileBrowser.jslib.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll
-      projectPath: Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll.meta
-      projectPath: Assets/StandaloneFileBrowser/Plugins/System.Windows.Forms.dll.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Sample.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample.meta
-      projectPath: Assets/StandaloneFileBrowser/Sample.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Sample/BasicSample.cs
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/BasicSample.cs
-      projectPath: Assets/StandaloneFileBrowser/Sample/BasicSample.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Sample/BasicSample.cs.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/BasicSample.cs.meta
-      projectPath: Assets/StandaloneFileBrowser/Sample/BasicSample.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity
-      projectPath: Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity.meta
-      projectPath: Assets/StandaloneFileBrowser/Sample/BasicSampleScene.unity.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs
-      projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs.meta
-      projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs
-      projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs.meta
-      projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileText.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs
-      projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs.meta
-      projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileTextMultiple.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs
-      projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs.meta
-      projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileImage.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs
-      projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs.meta
-      projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleSaveFileText.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity
-      projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity.meta
-      projectPath: Assets/StandaloneFileBrowser/Sample/CanvasSampleScene.unity.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs
-      projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs.meta
-      projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs
-      projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs.meta
-      projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserEditor.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs
-      projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs.meta
-      projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs
-      projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs.meta
-      projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserMac.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs
-      projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs.meta
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs.meta
-      projectPath: Assets/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings/EditorBuildSettings.asset
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/ProjectSettings/EditorBuildSettings.asset
-      projectPath: ProjectSettings/EditorBuildSettings.asset
+    - path: Assets/Scripts/RotationManager.cs
+      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager.cs
+      projectPath: Assets/Scripts/RotationManager.cs
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    - path: UserSettings/EditorUserSettings.asset
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/UserSettings/EditorUserSettings.asset
-      projectPath: UserSettings/EditorUserSettings.asset
+    - path: This is a phrase to remove./new_Data_with_rotations/-C001--PO01--LO005--CO6--SL001--PX32500--PW0100--IN0100--TM280--X014252--Y052789--Z190000--T1992871765--WE00013.jpg
+      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/This is a phrase to
+        remove./new_Data_with_rotations/-C001--PO01--LO005--CO6--SL001--PX32500--PW0100--IN0100--TM280--X014252--Y052789--Z190000--T1992871765--WE00013.jpg
+      projectPath: This is a phrase to remove./new_Data_with_rotations/-C001--PO01--LO005--CO6--SL001--PX32500--PW0100--IN0100--TM280--X014252--Y052789--Z190000--T1992871765--WE00013.jpg
       originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
+      indexStatus: 1
+      workTreeStatus: 1
     currentUsername: 
     unlockFileMenuContent:
       m_Text: Release Lock
@@ -3537,13 +4758,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2023-07-24T15:12:50.257+03:00
+    updatedTimeString: 2023-07-24T15:56:36.980+03:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-07-24T15:12:50.332+03:00
+    updatedTimeString: 2023-07-25T01:52:56.638+03:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-07-24T15:21:34.736+03:00
+    updatedTimeString: 2023-07-25T02:15:28.964+03:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -3575,6 +4796,135 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Console
+    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 306
+    width: 927
+    height: 553
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Hierarchy
+    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 928
+    y: 119
+    width: 120
+    height: 740
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_SceneHierarchy:
+    m_TreeViewState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 0290f9ffea7cfcffb2770000c8770000e07700002a780000
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_ExpandedScenes: []
+    m_CurrenRootInstanceID: 0
+    m_LockTracker:
+      m_IsLocked: 0
+    m_CurrentSortingName: TransformSorting
+  m_WindowGUID: 1190ba8634769add296a9643d298501c
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1191
+    y: 119
+    width: 408
+    height: 740
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_PreviewResizer:
+    m_CachedPref: -160
+    m_ControlHash: -371814159
+    m_PrefName: Preview_InspectorPreview
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0
+  m_GlobalObjectId: 
+  m_InspectorMode: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewWindow: {fileID: 0}
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -3587,10 +4937,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 570
-    width: 1220
-    height: 289
+    x: 1050
+    y: 119
+    width: 139
+    height: 740
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3609,22 +4959,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: 985a0000
-    m_LastClickedID: 23192
-    m_ExpandedIDs: 00000000645a000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 605a0000
+    m_LastClickedID: 23136
+    m_ExpandedIDs: 00000000605a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3640,7 +4990,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 0}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -3652,7 +5002,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000645a0000
+    m_ExpandedIDs: 00000000605a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3677,10 +5027,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 60560000
-    m_LastClickedInstanceID: 22112
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3707,8 +5057,8 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 207
---- !u!114 &14
+  m_DirectoriesAreaWidth: 50
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3717,98 +5067,91 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Debug
-    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 1221
-    y: 119
-    width: 378
-    height: 740
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  m_ObjectsLockedBeforeSerialization: []
-  m_InstanceIDsLockedBeforeSerialization: 
-  m_PreviewResizer:
-    m_CachedPref: 160
-    m_ControlHash: -371814159
-    m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
-  m_GlobalObjectId: 
-  m_InspectorMode: 1
-  m_LockTracker:
-    m_IsLocked: 0
-  m_PreviewWindow: {fileID: 0}
---- !u!114 &15
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Hierarchy
-    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000, type: 0}
+    m_Text: Game
+    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 119
-    width: 300
-    height: 430
+    y: 306
+    width: 927
+    height: 553
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  m_SceneHierarchy:
-    m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: f6fcfdff4045feff5a45feff30fbffff6e580000845800009c580000e6580000
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: ButtonRotation_2
-        m_OriginalName: ButtonRotation_2
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: -113356
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 0
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 4}
-      m_SearchString: 
-    m_ExpandedScenes: []
-    m_CurrenRootInstanceID: 0
-    m_LockTracker:
-      m_IsLocked: 0
-    m_CurrentSortingName: TransformSorting
-  m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &16
+  m_SerializedViewNames: []
+  m_SerializedViewValues: []
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 1920, y: 1080}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_EnterPlayModeBehavior: 0
+  m_UseMipMap: 0
+  m_VSyncEnabled: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -960
+    m_HBaseRangeMax: 960
+    m_VBaseRangeMin: -540
+    m_VBaseRangeMax: 540
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 0
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 927
+      height: 532
+    m_Scale: {x: 0.4828125, y: 0.48281246}
+    m_Translation: {x: 463.5, y: 266}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -960
+      y: -550.93854
+      width: 1920
+      height: 1101.8771
+    m_MinimalGUI: 1
+  m_defaultScale: 0.4828125
+  m_LastWindowPixelSize: {x: 927, y: 553}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3828,10 +5171,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 301
+    x: 0
     y: 119
-    width: 918
-    height: 430
+    width: 927
+    height: 166
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3853,7 +5196,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: -141, y: 149}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: -9}
       snapCorner: 1
       id: unity-grid-and-snap-toolbar
       index: 1
@@ -3907,9 +5250,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 67.5, y: 86}
+      snapOffset: {x: 67.5, y: -123}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 2
       id: Orientation
       index: 0
       layout: 4
@@ -4057,19 +5400,19 @@ MonoBehaviour:
       index: 12
       layout: 4
     m_OverlaysVisible: 1
-  m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
+  m_WindowGUID: d93f6d1fb9103d7658465fe179ac453f
   m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 1
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 594.3343, y: 185.1661, z: -1.2341951}
+    m_Target: {x: 960, y: 661.3345, z: 0}
     speed: 2
-    m_Value: {x: 594.3343, y: 185.1661, z: -1.2341951}
+    m_Value: {x: 960, y: 661.3345, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -4120,17 +5463,17 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 258.19144
+    m_Target: 1047.3208
     speed: 2
-    m_Value: 258.19144
+    m_Value: 1047.3208
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
-    m_SpeedMin: 0.001
+    m_SpeedMin: 0.01
     m_SpeedMax: 2
     m_EasingEnabled: 1
     m_EasingDuration: 0.4
@@ -4140,132 +5483,10 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &17
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Game
-    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 301
-    y: 119
-    width: 918
-    height: 430
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  m_SerializedViewNames: []
-  m_SerializedViewValues: []
-  m_PlayModeViewName: GameView
-  m_ShowGizmos: 0
-  m_TargetDisplay: 0
-  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1920, y: 1080}
-  m_TextureFilterMode: 0
-  m_TextureHideFlags: 61
-  m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 0
-  m_UseMipMap: 0
-  m_VSyncEnabled: 0
-  m_Gizmos: 0
-  m_Stats: 0
-  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
-  m_ZoomArea:
-    m_HRangeLocked: 0
-    m_VRangeLocked: 0
-    hZoomLockedByDefault: 0
-    vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -960
-    m_HBaseRangeMax: 960
-    m_VBaseRangeMin: -540
-    m_VBaseRangeMax: 540
-    m_HAllowExceedBaseRangeMin: 1
-    m_HAllowExceedBaseRangeMax: 1
-    m_VAllowExceedBaseRangeMin: 1
-    m_VAllowExceedBaseRangeMax: 1
-    m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
-    m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
-    m_EnableSliderZoomHorizontal: 0
-    m_EnableSliderZoomVertical: 0
-    m_UniformScale: 1
-    m_UpDirection: 1
-    m_DrawArea:
-      serializedVersion: 2
-      x: 0
-      y: 21
-      width: 918
-      height: 409
-    m_Scale: {x: 0.3787037, y: 0.3787037}
-    m_Translation: {x: 459, y: 204.5}
-    m_MarginLeft: 0
-    m_MarginRight: 0
-    m_MarginTop: 0
-    m_MarginBottom: 0
-    m_LastShownAreaInsideMargins:
-      serializedVersion: 2
-      x: -1212.0293
-      y: -540
-      width: 2424.0586
-      height: 1080
-    m_MinimalGUI: 1
-  m_defaultScale: 0.3787037
-  m_LastWindowPixelSize: {x: 918, y: 430}
-  m_ClearInEditMode: 1
-  m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
-  m_XRRenderMode: 0
-  m_RenderTexture: {fileID: 0}
---- !u!114 &18
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Console
-    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 570
-    width: 1220
-    height: 289
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1

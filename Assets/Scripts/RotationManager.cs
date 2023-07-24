@@ -25,7 +25,9 @@ public class RotationManager : MonoBehaviour
 
 
     private string _newFolderName = "new_Data_with_rotations";
+   
     private string _fileName;
+    private string _newFileName;
 
 
     private bool _isMenuVisible = false;
@@ -185,6 +187,8 @@ public class RotationManager : MonoBehaviour
             string jsonFileContent = File.ReadAllText(_dataFilePath);
             _records = JsonUtility.FromJson<ParserModel.Root>(jsonFileContent);
             _fileName = Path.GetFileName(_dataFilePath);
+            
+            _newFileName = Path.GetFileNameWithoutExtension(_dataFilePath)+"3d_cods.json";
 
             // Optionally, set the initial target record
             _targetRecord = FindRecordById(_targetID);
