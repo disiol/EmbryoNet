@@ -18,6 +18,7 @@ public class ButtonData : MonoBehaviour
 
     private void OnButtonClick()
     {
+        //TODO увеличить скале
         _rotationManager.SetTargetID(targetID);
         _rotationManager.SetDataFilePath(jsonFilePath);
         _rotationManager.ShowMenu();

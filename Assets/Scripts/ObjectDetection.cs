@@ -17,13 +17,19 @@ public class ObjectDetection : MonoBehaviour
 
         if (_imageObject != null && _imageObject.sprite != null)
         {
+            BoundingBoxDrawer boundingBox = _imageObject.GetComponent<BoundingBoxDrawer>();
             var imageTexture = DestroyAllChildrenImageObjectAndGetimageObjectTexture();
 
             // Load the JSON data from the file path
-            var detectionData = LoadTheJSOnData();
+            ParserModel.Root detectionData = LoadTheJSOnData();
+
+            boundingBox.imageTexture = imageTexture;
+            boundingBox.imageData = detectionData;
+            boundingBox.DrawBoundingBoxes();
+
 
             // Draw frames around the detected objects
-            DrawFramesAroundTheDetectedObjects(detectionData, imageTexture);
+            // DrawFramesAroundTheDetectedObjects(detectionData, imageTexture);
         }
         else
         {
@@ -76,13 +82,15 @@ public class ObjectDetection : MonoBehaviour
         return position;
     }
 
-    private void CreateButtonOnTopOfTheFrame(ParserModel.DetectionList detection, GameObject frame, Vector2 size, Vector2 position)
+    private void CreateButtonOnTopOfTheFrame(ParserModel.DetectionList detection, GameObject frame, Vector2 size,
+        Vector2 position)
     {
         // Create the button on top of the frame
         GameObject button = Instantiate(buttonPrefab, frame.transform);
         button.name = "ButtonRotation_" + detection.id;
         button.GetComponent<ButtonData>().targetID = detection.id;
         button.GetComponent<ButtonData>().jsonFilePath = jsonFilePath;
+
 
 // Access the RectTransform of the button
         RectTransform buttonRect = button.GetComponent<RectTransform>();
@@ -101,16 +109,35 @@ public class ObjectDetection : MonoBehaviour
         }
     }
 
-    private GameObject CreateGameObjectForEachFrame(ParserModel.DetectionList detection, Texture2D imageTexture, Vector2 pivotOffset,
+    private GameObject CreateGameObjectForEachFrame(ParserModel.DetectionList detection, Texture2D imageTexture,
+        Vector2 pivotOffset,
         Vector2 size, Vector2 position)
     {
+        int tlx = detection.tlx;
+        int tly = detection.tly;
+        int brx = detection.brx;
+        int bry = detection.bry;
+
+        // Convert image coordinates to Unity's normalized coordinates (0 to 1)
+        float normalizedTlx = tlx / (float)imageTexture.width;
+        float normalizedTly = (imageTexture.height - tly) / (float)imageTexture.height;
+        float normalizedBrx = brx / (float)imageTexture.width;
+        float normalizedBry = (imageTexture.height - bry) / (float)imageTexture.height;
+
+        // Calculate the width and height of the bounding box
+        float boxWidth = normalizedBrx - normalizedTlx;
+        float boxHeight = normalizedTly - normalizedBry;
+
+        // Create a Rect representing the bounding box
+        Rect boundingBoxRect = new Rect(normalizedTlx, normalizedTly, boxWidth, boxHeight);
+
         GameObject frame = new GameObject("Frame_" + detection.id);
         frame.transform.SetParent(transform);
 
         // Add an Image component to the frame GameObject
         Image frameImage = frame.AddComponent<Image>();
         frameImage.sprite = Sprite.Create(imageTexture,
-            new Rect(detection.tlx, imageTexture.height - detection.bry, size.x, size.y), pivotOffset);
+            boundingBoxRect, pivotOffset);
         frameImage.rectTransform.sizeDelta = size;
         // Position the frame correctly
         frame.transform.position = position;

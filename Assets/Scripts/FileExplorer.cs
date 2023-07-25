@@ -12,9 +12,9 @@ public class FileExplorer : MonoBehaviour
 {
     [SerializeField] private string imagesFolderName;
 
-    public TMP_Text statusText;
+    [SerializeField] private TMP_Text statusText;
 
-    public Button loadButton;
+    [SerializeField] private   Button loadButton;
 
     // public TMP_Text folderPathText;
     [SerializeField] private ScrollRect folderListScrollRect;
@@ -53,7 +53,7 @@ public class FileExplorer : MonoBehaviour
         statusText.text = "Selected Folder: " + folderPath;
 
         _imageFolderPath = Path.Combine(folderPath, imagesFolderName);
-      
+
         if (!Directory.Exists(_imageFolderPath))
         {
             Debug.Log("_imageFolderPath: " + _imageFolderPath);
@@ -68,6 +68,7 @@ public class FileExplorer : MonoBehaviour
         ClearButtons();
 
         string[] subFolders = Directory.GetDirectories(folderPath);
+
         foreach (string folder in subFolders)
         {
             if (!folderPath.Contains(imagesFolderName))
@@ -88,9 +89,10 @@ public class FileExplorer : MonoBehaviour
 
     private void ShowJSONFilesInFolder(string folderPath)
     {
+        //TODO зробити масив даних з jsonFiles, та правити їх.
+        //коли нажимаеш на кноку сафе створюется нова пака з файлами
         ClearButtons();
-
-        string[] jsonFiles = Directory.GetFiles(folderPath, "*.json");
+        string[] jsonFiles = Directory.GetFiles(folderPath);
         foreach (string file in jsonFiles)
         {
             GameObject jsonButton = Instantiate(jsonButtonPrefab, contentTransform);
@@ -107,6 +109,7 @@ public class FileExplorer : MonoBehaviour
             jsonBtn.onClick.AddListener(() =>
                 FindImageByName(jsonButton.GetComponent<PatchContainer>().patch));
         }
+
     }
 
     private void FindImageByName(string jsonfilePath)

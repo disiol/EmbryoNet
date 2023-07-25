@@ -192,7 +192,7 @@ public class RotationManager : MonoBehaviour
             _records = JsonUtility.FromJson<ParserModel.Root>(jsonFileContent);
             _fileName = Path.GetFileName(_dataFilePath);
             
-            _newFileName = Path.GetFileNameWithoutExtension(_dataFilePath)+"_3d_cods.json";
+            _newFileName = Path.GetFileNameWithoutExtension(_dataFilePath)+"_3d_cods.json";//TODO folder C10
 
             // Optionally, set the initial target record
             _targetRecord = FindRecordById(_targetID);
