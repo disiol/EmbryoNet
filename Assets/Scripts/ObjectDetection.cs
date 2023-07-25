@@ -17,22 +17,13 @@ public class ObjectDetection : MonoBehaviour
 
         if (_imageObject != null && _imageObject.sprite != null)
         {
-            DestroyAllChildrenImageObject();
-            Texture2D imageTexture = _imageObject.sprite.texture;
+            var imageTexture = DestroyAllChildrenImageObjectAndGetimageObjectTexture();
 
             // Load the JSON data from the file path
-            string jsonFileContent = File.ReadAllText(jsonFilePath);
-            ParserModel.Root detectionData = JsonUtility.FromJson<ParserModel.Root>(jsonFileContent);
+            var detectionData = LoadTheJSOnData();
 
             // Draw frames around the detected objects
-            Vector2 pivotOffset = new Vector2(0.5f, 0.5f); // Pivot offset for the frame image
-
-            var detectionDataDetectionList = detectionData.detection_list;
-          
-            foreach (ParserModel.DetectionList detection in detectionDataDetectionList)
-            {
-                DrawFrame(detection, imageTexture, pivotOffset);
-            }
+            DrawFramesAroundTheDetectedObjects(detectionData, imageTexture);
         }
         else
         {
@@ -40,37 +31,61 @@ public class ObjectDetection : MonoBehaviour
         }
     }
 
+    private Texture2D DestroyAllChildrenImageObjectAndGetimageObjectTexture()
+    {
+        DestroyAllChildrenImageObject();
+        Texture2D imageTexture = _imageObject.sprite.texture;
+        return imageTexture;
+    }
+
+    private ParserModel.Root LoadTheJSOnData()
+    {
+        string jsonFileContent = File.ReadAllText(jsonFilePath);
+        ParserModel.Root detectionData = JsonUtility.FromJson<ParserModel.Root>(jsonFileContent);
+        return detectionData;
+    }
+
+    private void DrawFramesAroundTheDetectedObjects(ParserModel.Root detectionData, Texture2D imageTexture)
+    {
+        Vector2 pivotOffset = new Vector2(0.5f, 0.5f); // Pivot offset for the frame image
+
+        var detectionDataDetectionList = detectionData.detection_list;
+
+        foreach (ParserModel.DetectionList detection in detectionDataDetectionList)
+        {
+            DrawFrame(detection, imageTexture, pivotOffset);
+        }
+    }
+
     void DrawFrame(ParserModel.DetectionList detection, Texture2D imageTexture, Vector2 pivotOffset)
     {
         // TODO Calculate the position and size of the frame
-        Vector2 position = new Vector2(detection.brx - (detection.brx - detection.tlx) * 0.5f,
-            detection.bry - (detection.bry - detection.tly) * 0.5f);
-        Vector2 size = new Vector2(detection.brx - detection.tlx, detection.bry - detection.tly);
+        var position = CalculatePositionAndSize(detection, out var size);
 
         // Create a new GameObject for each frame
-        GameObject frame = new GameObject("Frame_" + detection.id);
-        frame.transform.SetParent(transform);
+        var frame = CreateGameObjectForEachFrame(detection, imageTexture, pivotOffset, size, position);
 
-        // Add an Image component to the frame GameObject
-        Image frameImage = frame.AddComponent<Image>();
-        frameImage.sprite = Sprite.Create(imageTexture,
-            new Rect(detection.tlx, imageTexture.height - detection.bry, size.x, size.y), pivotOffset);
-        frameImage.rectTransform.sizeDelta = size;
+        CreateButtonOnTopOfTheFrame(detection, frame, size, position);
+    }
 
-        // Position the frame correctly
-        frame.transform.position = position;
+    private static Vector2 CalculatePositionAndSize(ParserModel.DetectionList detection, out Vector2 size)
+    {
+        Vector2 position = new Vector2(detection.brx - (detection.brx - detection.tlx) * 0.5f,
+            detection.bry - (detection.bry - detection.tly) * 0.5f);
+        size = new Vector2(detection.brx - detection.tlx, detection.bry - detection.tly);
+        return position;
+    }
 
+    private void CreateButtonOnTopOfTheFrame(ParserModel.DetectionList detection, GameObject frame, Vector2 size, Vector2 position)
+    {
         // Create the button on top of the frame
         GameObject button = Instantiate(buttonPrefab, frame.transform);
         button.name = "ButtonRotation_" + detection.id;
-
         button.GetComponent<ButtonData>().targetID = detection.id;
         button.GetComponent<ButtonData>().jsonFilePath = jsonFilePath;
 
-
 // Access the RectTransform of the button
         RectTransform buttonRect = button.GetComponent<RectTransform>();
-
 
 // Set the size of the button
         buttonRect.sizeDelta = size;
@@ -85,9 +100,25 @@ public class ObjectDetection : MonoBehaviour
             button.transform.rotation = Quaternion.Euler(detectionRotation);
         }
     }
-    
-    
-    public void DestroyAllChildrenImageObject()
+
+    private GameObject CreateGameObjectForEachFrame(ParserModel.DetectionList detection, Texture2D imageTexture, Vector2 pivotOffset,
+        Vector2 size, Vector2 position)
+    {
+        GameObject frame = new GameObject("Frame_" + detection.id);
+        frame.transform.SetParent(transform);
+
+        // Add an Image component to the frame GameObject
+        Image frameImage = frame.AddComponent<Image>();
+        frameImage.sprite = Sprite.Create(imageTexture,
+            new Rect(detection.tlx, imageTexture.height - detection.bry, size.x, size.y), pivotOffset);
+        frameImage.rectTransform.sizeDelta = size;
+        // Position the frame correctly
+        frame.transform.position = position;
+        return frame;
+    }
+
+
+    private void DestroyAllChildrenImageObject()
     {
         int childCount = _imageObject.transform.childCount;
         for (int i = childCount - 1; i >= 0; i--)
