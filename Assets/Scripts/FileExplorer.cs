@@ -53,10 +53,12 @@ public class FileExplorer : MonoBehaviour
         statusText.text = "Selected Folder: " + folderPath;
 
         _imageFolderPath = Path.Combine(folderPath, imagesFolderName);
+      
         if (!Directory.Exists(_imageFolderPath))
         {
             Debug.Log("_imageFolderPath: " + _imageFolderPath);
 
+            //TODO exephen show
             statusText.text = "Image directory not found.";
             ClearButtons();
             return;

@@ -36,6 +36,7 @@ public class RotationManager : MonoBehaviour
     private string _newFilePath;
 
     private TMP_InputField _inputFieldEnterFolderNameForSafeNewData;
+    private ObjectDetection _objectDetection;
 
 
     public void ShowMenu()
@@ -131,14 +132,10 @@ public class RotationManager : MonoBehaviour
             }
 
             // Save changes back to the file
-            try
-            {
+           
                 SaveDataToFile();
-            }
-            catch (Exception e)
-            {
-                Debug.LogError("Error saving file _newFilePath: " + e.Message);
-            }
+            
+            
 
             transform.rotation = Quaternion.Euler(targetRecordRotation);
 
@@ -175,7 +172,14 @@ public class RotationManager : MonoBehaviour
 
         Debug.Log("Changes saved to file: " + _newFilePath);
 
-        //TODO open ne file dadata _newFilePath
+        OpenNewFile();
+    }
+
+    private void OpenNewFile()
+    {
+        _objectDetection = GameObject.Find("Canvas/Panel/LeftSide/Image").GetComponent<ObjectDetection>();
+        _objectDetection.jsonFilePath = _newFilePath;
+        _objectDetection.DrawFrames();
     }
 
     private void LoadDataFromFile()
