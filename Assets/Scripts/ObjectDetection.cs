@@ -9,6 +9,7 @@ public class ObjectDetection : MonoBehaviour
     private Image _imageObject; // Assign the Image component to this field in the Inspector
     [HideInInspector] public string jsonFilePath; // Set the path to the JSON file in the Inspector
     [SerializeField] private GameObject buttonPrefab;
+    private static int _revesConst;
 
 
     public void DrawFrames()
@@ -17,19 +18,13 @@ public class ObjectDetection : MonoBehaviour
 
         if (_imageObject != null && _imageObject.sprite != null)
         {
-            BoundingBoxDrawer boundingBox = _imageObject.GetComponent<BoundingBoxDrawer>();
             var imageTexture = DestroyAllChildrenImageObjectAndGetimageObjectTexture();
 
             // Load the JSON data from the file path
             ParserModel.Root detectionData = LoadTheJSOnData();
 
-            boundingBox.imageTexture = imageTexture;
-            boundingBox.imageData = detectionData;
-            boundingBox.DrawBoundingBoxes();
-
-
             // Draw frames around the detected objects
-            // DrawFramesAroundTheDetectedObjects(detectionData, imageTexture);
+            DrawFramesAroundTheDetectedObjects(detectionData, imageTexture);
         }
         else
         {
@@ -76,9 +71,12 @@ public class ObjectDetection : MonoBehaviour
 
     private static Vector2 CalculatePositionAndSize(ParserModel.DetectionList detection, out Vector2 size)
     {
-        Vector2 position = new Vector2(detection.brx - (detection.brx - detection.tlx) * 0.5f,
-            detection.bry - (detection.bry - detection.tly) * 0.5f);
-        size = new Vector2(detection.brx - detection.tlx, detection.bry - detection.tly);
+        _revesConst = 1000;
+        Vector2 position = new Vector2((detection.brx - (detection.brx - detection.tlx) * 0.5f) / 2,
+            _revesConst-(detection.bry - (detection.bry - detection.tly) * 0.5f) / 2);
+
+
+        size = new Vector2(detection.brx - detection.tlx, detection.bry - detection.tly) / 2;
         return position;
     }
 
