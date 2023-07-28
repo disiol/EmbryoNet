@@ -9,8 +9,10 @@ public class FrameManager : MonoBehaviour
     private Image _imageObject; // Assign the Image component to this field in the Inspector
     [HideInInspector] public string jsonFilePath; // Set the path to the JSON file in the Inspector
     [SerializeField] private GameObject buttonPrefab;
+    [SerializeField]  private Color frameImageColor;
+
     private static int _revesConst;
-    private Color frameImageColor;
+    private static int _corectedScaleIndex;
 
 
     public void DrawFrames()
@@ -73,11 +75,12 @@ public class FrameManager : MonoBehaviour
     private static Vector2 CalculatePositionAndSize(ParserModel.DetectionList detection, out Vector2 size)
     {
         _revesConst = 1000;
-        Vector2 position = new Vector2((detection.brx - (detection.brx - detection.tlx) * 0.5f) / 2,
-            _revesConst - (detection.bry - (detection.bry - detection.tly) * 0.5f) / 2);
+        _corectedScaleIndex = 2;
+        Vector2 position = new Vector2((detection.brx - (detection.brx - detection.tlx) * 0.5f) / _corectedScaleIndex,
+            _revesConst - (detection.bry - (detection.bry - detection.tly) * 0.5f) / _corectedScaleIndex);
 
 
-        size = new Vector2(detection.brx - detection.tlx, detection.bry - detection.tly) / 2;
+        size = new Vector2(detection.brx - detection.tlx, detection.bry - detection.tly) / _corectedScaleIndex;
         return position;
     }
 
