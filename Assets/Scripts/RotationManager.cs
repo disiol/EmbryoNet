@@ -23,8 +23,8 @@ public class RotationManager : MonoBehaviour
     private Button _buttonCancel;
 
 
-    private string _newFolderName = "new_Data_with_rotations";
-   
+    private readonly string _newFolderName = "new_Data_with_rotations";
+
     private string _fileName;
     private string _newFileName;
 
@@ -36,11 +36,20 @@ public class RotationManager : MonoBehaviour
 
     private TMP_InputField _inputFieldEnterFolderNameForSafeNewData;
     private FrameManager _frameManager;
+    private Transform _panel;
+    private Transform _rightSide;
+    private Transform _infoPanel;
 
 
     public void ShowMenu()
     {
-        _rotationMenu = GameObject.Find("Canvas").transform.Find("RotationMenu").gameObject;
+        string canvasPanelInfopanelRightsideRotationmenu = "Canvas/Panel/RightSide/InfoPanel/RotationMenu";
+        GameObject canvens = GameObject.Find("Canvas");
+        _panel = canvens.transform.Find("Panel");
+        _rightSide = _panel.transform.Find("RightSide");
+        _infoPanel = _rightSide.transform.Find("InfoPanel");
+        _rotationMenu = _infoPanel.Find("RotationMenu").GameObject();
+
 
         _isMenuVisible = !_isMenuVisible;
         _rotationMenu.SetActive(_isMenuVisible);
@@ -51,7 +60,7 @@ public class RotationManager : MonoBehaviour
         if (_isMenuVisible && _targetRecord != null)
         {
             ButtonSafe();
-            ButtonCancel();
+            // ButtonCancel();
 
 
             // Show the current rotation values in the menu
@@ -59,15 +68,17 @@ public class RotationManager : MonoBehaviour
         }
     }
 
-    private void ButtonCancel()
-    {
-        _buttonCancel = _rotationMenu.transform.Find("ButtonCancel").GetComponent<Button>();
-        _buttonCancel.onClick.AddListener(HideMenu);
-    }
+    // private void ButtonCancel()
+    // {
+    //     _buttonCancel = _rotationMenu.transform.Find("Bottom/ButtonCancel").GetComponent<Button>();
+    //     _buttonCancel.onClick.AddListener(HideMenu);
+    // }
 
     private void ButtonSafe()
     {
-        _saveChangesButton = _rotationMenu.transform.Find("ButtonSafe").GetComponent<Button>();
+        Transform bottom = _rightSide.transform.Find("Bottom");
+        _saveChangesButton = bottom.transform.Find("ButtonSave").gameObject
+            .GetComponent<Button>();
         _saveChangesButton.onClick.AddListener(SaveChanges);
     }
 
@@ -99,14 +110,15 @@ public class RotationManager : MonoBehaviour
     {
         if (_targetRecord != null)
         {
-            _inputFieldEnterFolderNameForSafeNewData = _rotationMenu.transform
-                .Find("InputFieldEnterFolderNameForSafeNewData").GetComponent<TMP_InputField>();
-            string inputFieldEnterFolderNameForSafeNewDataText = _inputFieldEnterFolderNameForSafeNewData.text;
-
-            if (!inputFieldEnterFolderNameForSafeNewDataText.Equals(""))
-            {
-                _newFolderName = inputFieldEnterFolderNameForSafeNewDataText;
-            }
+            //TODO sow InputFieldEnterFolderNameForSafeNewData
+            // _inputFieldEnterFolderNameForSafeNewData = _rotationMenu.transform
+            //     .Find("InputFieldEnterFolderNameForSafeNewData").GetComponent<TMP_InputField>();
+            // string inputFieldEnterFolderNameForSafeNewDataText = _inputFieldEnterFolderNameForSafeNewData.text;
+            //
+            // if (!inputFieldEnterFolderNameForSafeNewDataText.Equals(""))
+            // {
+            //     _newFolderName = inputFieldEnterFolderNameForSafeNewDataText;
+            // }
 
 
             string newDataFilePath = _dataFilePath.Replace(_fileName, "");
@@ -131,10 +143,9 @@ public class RotationManager : MonoBehaviour
             }
 
             // Save changes back to the file
-           
-                SaveDataToFile();
-            
-            
+
+            SaveDataToFile();
+
 
             transform.rotation = Quaternion.Euler(targetRecordRotation);
 
@@ -190,8 +201,8 @@ public class RotationManager : MonoBehaviour
             string jsonFileContent = File.ReadAllText(_dataFilePath);
             _records = JsonUtility.FromJson<ParserModel.Root>(jsonFileContent);
             _fileName = Path.GetFileName(_dataFilePath);
-            
-            _newFileName = Path.GetFileNameWithoutExtension(_dataFilePath)+"_3d_cods.json";//TODO folder C10
+
+            _newFileName = Path.GetFileNameWithoutExtension(_dataFilePath) + "_3d_cods.json"; //TODO folder C10
 
             // Optionally, set the initial target record
             _targetRecord = FindRecordById(_targetID);

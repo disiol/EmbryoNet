@@ -74,6 +74,7 @@ public class FileExplorer : MonoBehaviour
             if (!folderPath.Contains(imagesFolderName))
             {
                 GameObject folderButton = Instantiate(folderButtonPrefab, contentTransform);
+                
                 folderButton.GetComponent<PatchContainer>().patch = folder;
 
 
