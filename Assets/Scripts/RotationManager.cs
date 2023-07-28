@@ -8,7 +8,6 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.Serialization;
 
-[System.Serializable]
 public class RotationManager : MonoBehaviour
 {
     private ParserModel.Root _records;
@@ -36,7 +35,7 @@ public class RotationManager : MonoBehaviour
     private string _newFilePath;
 
     private TMP_InputField _inputFieldEnterFolderNameForSafeNewData;
-    private ObjectDetection _objectDetection;
+    private FrameManager _frameManager;
 
 
     public void ShowMenu()
@@ -177,9 +176,9 @@ public class RotationManager : MonoBehaviour
 
     private void OpenNewFile()
     {
-        _objectDetection = GameObject.Find("Canvas/Panel/LeftSide/Image").GetComponent<ObjectDetection>();
-        _objectDetection.jsonFilePath = _newFilePath;
-        _objectDetection.DrawFrames();
+        _frameManager = GameObject.Find("Canvas/Panel/LeftSide/Image").GetComponent<FrameManager>();
+        _frameManager.jsonFilePath = _newFilePath;
+        _frameManager.DrawFrames();
     }
 
     private void LoadDataFromFile()

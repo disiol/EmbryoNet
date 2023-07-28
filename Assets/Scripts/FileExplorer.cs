@@ -142,16 +142,16 @@ public class FileExplorer : MonoBehaviour
 
         if (!string.IsNullOrEmpty(imagePath))
         {
-            ObjectDetection objectDetection = imageObject.GetComponent<ObjectDetection>();
+            FrameManager frameManager = imageObject.GetComponent<FrameManager>();
 
             byte[] imageData = File.ReadAllBytes(imagePath);
             Texture2D texture = new Texture2D(2, 2);
             texture.LoadImage(imageData);
 
-            objectDetection.jsonFilePath = jsonfilePath;
+            frameManager.jsonFilePath = jsonfilePath;
 
             CrateSprite(texture);
-            objectDetection.DrawFrames();
+            frameManager.DrawFrames();
         }
     }
 
