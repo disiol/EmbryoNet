@@ -2,36 +2,43 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 using Models;
 using SFB;
 using TMPro;
+using Tolls;
 
 public class FileExplorer : MonoBehaviour
 {
     [SerializeField] private string imagesFolderName;
 
-    [SerializeField] private TMP_Text statusText;
+    private TMP_Text _statusText;
 
-    [SerializeField] private   Button loadButton;
+    [SerializeField] private Button loadButton;
 
     // public TMP_Text folderPathText;
-    [SerializeField] private ScrollRect folderListScrollRect;
     [SerializeField] private GameObject folderButtonPrefab;
     [SerializeField] private GameObject jsonButtonPrefab;
     [SerializeField] private Transform contentTransform;
     [SerializeField] private Image imageObject;
 
     private string _path;
-    private string _imageFolderPath;
 
-    private const int MAX_PATH = 260;
+    private string _imageFolderPath;
+    private GameObject _popUpWindow;
+    private JasonManager _jasonManager;
 
 
     private void Start()
     {
         loadButton.onClick.AddListener(OnLoadButtonClicked);
+        _jasonManager = new JasonManager();
+
+        GameObject canvas = GameObject.Find("Canvas");
+        _popUpWindow = canvas.transform.Find("PopUpWindow").gameObject;
+        _statusText = _popUpWindow.transform.Find("StatusText").gameObject.GetComponent<TextMeshProUGUI>();
     }
 
     private void OnLoadButtonClicked()
@@ -41,16 +48,15 @@ public class FileExplorer : MonoBehaviour
             WriteResult(paths);
             if (!string.IsNullOrEmpty(_path))
             {
-                ShowFoldersAndJSONFiles(_path);
+                ShowFoldersAndJsonFiles(_path);
             }
         });
     }
 
 
-    private void ShowFoldersAndJSONFiles(string folderPath)
+    private void ShowFoldersAndJsonFiles(string folderPath)
     {
         Debug.Log("Selected Folder: " + folderPath);
-        statusText.text = "Selected Folder: " + folderPath;
 
         _imageFolderPath = Path.Combine(folderPath, imagesFolderName);
 
@@ -58,34 +64,38 @@ public class FileExplorer : MonoBehaviour
         {
             Debug.Log("_imageFolderPath: " + _imageFolderPath);
 
-            //TODO exephen show
-            statusText.text = "Image directory not found.";
+            PopUpWindowShow("Image directory not found.");
             ClearButtons();
             return;
         }
 
-        statusText.text = "";
         ClearButtons();
 
         string[] subFolders = Directory.GetDirectories(folderPath);
 
         foreach (string folder in subFolders)
         {
-            if (!folderPath.Contains(imagesFolderName))
+            string fileName = Path.GetFileName(folder);
+
+
+            if (fileName != imagesFolderName)
             {
                 GameObject folderButton = Instantiate(folderButtonPrefab, contentTransform);
-                
-                folderButton.GetComponent<PatchContainer>().patch = folder;
-
+                folderButton.GetComponent<PatchContainer>().folderPath = folder;
 
                 TMP_Text buttonText = folderButton.GetComponentInChildren<TMP_Text>();
-                buttonText.text = Path.GetFileName(folder);
-
+                buttonText.text = fileName;
                 Button folderBtn = folderButton.GetComponent<Button>();
                 folderBtn.onClick.AddListener(() =>
-                    ShowJSONFilesInFolder(folderButton.GetComponent<PatchContainer>().patch));
+                    ShowJSONFilesInFolder(folderButton.GetComponent<PatchContainer>().folderPath));
             }
         }
+    }
+
+    private void PopUpWindowShow(string text)
+    {
+        _popUpWindow.SetActive(true);
+        _statusText.text = text;
     }
 
     private void ShowJSONFilesInFolder(string folderPath)
@@ -94,8 +104,10 @@ public class FileExplorer : MonoBehaviour
         //коли нажимаеш на кноку сафе створюется нова пака з файлами
         ClearButtons();
         string[] jsonFiles = Directory.GetFiles(folderPath);
-        foreach (string file in jsonFiles)
+
+        for (var index = 0; index < jsonFiles.Length; index++)
         {
+            var file = jsonFiles[index];
             GameObject jsonButton = Instantiate(jsonButtonPrefab, contentTransform);
             TMP_Text buttonText = jsonButton.GetComponentInChildren<TMP_Text>();
 
@@ -103,21 +115,21 @@ public class FileExplorer : MonoBehaviour
 
             buttonText.text = fileNameWithoutExtension;
 
-            jsonButton.GetComponent<PatchContainer>().patch = file;
+            jsonButton.GetComponent<PatchContainer>().order = index;
+            jsonButton.GetComponent<PatchContainer>().folderPath = folderPath;
+            _jasonManager.LoadDataFromJsonFiles(file);
 
 
             Button jsonBtn = jsonButton.GetComponent<Button>();
-            jsonBtn.onClick.AddListener(() =>
-                FindImageByName(jsonButton.GetComponent<PatchContainer>().patch));
+            jsonBtn.onClick.AddListener(() => FindImageByName(jsonButton.GetComponent<PatchContainer>().order));
         }
-
     }
 
-    private void FindImageByName(string jsonfilePath)
+
+    private void FindImageByName(int opderjsonfile)
 
     {
-        string jsonFileContent = File.ReadAllText(jsonfilePath);
-        ParserModel.Root records = JsonUtility.FromJson<ParserModel.Root>(jsonFileContent);
+        ParserModel.Root records = _jasonManager.dataList[opderjsonfile];
 
         string imageName = records.source_name;
         string imagePath =
@@ -126,20 +138,20 @@ public class FileExplorer : MonoBehaviour
 
         if (File.Exists(imagePath))
         {
-            OpenImage(jsonfilePath, imagePath);
+            OpenImage(records, imagePath);
             // Open the image or do something with it
         }
         else
         {
-            statusText.text = "Image not found: " + imageName;
+            _statusText.text = "Image not found: " + imageName;
             Debug.Log("Image not found: " + imagePath);
         }
     }
 
-    private void OpenImage(string jsonfilePath, string imagePath)
+
+    private void OpenImage(ParserModel.Root jsonfileDadta, string imagePath)
     {
         Debug.Log("Open the image: " + imagePath);
-        Debug.Log("Open the jsonfile: " + jsonfilePath);
 
         if (!string.IsNullOrEmpty(imagePath))
         {
@@ -149,7 +161,7 @@ public class FileExplorer : MonoBehaviour
             Texture2D texture = new Texture2D(2, 2);
             texture.LoadImage(imageData);
 
-            frameManager.jsonFilePath = jsonfilePath;
+            frameManager.detectionData = jsonfileDadta;
 
             CrateSprite(texture);
             frameManager.DrawFrames();

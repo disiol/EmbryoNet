@@ -6,5 +6,6 @@ using UnityEngine.Serialization;
 
 public class PatchContainer : MonoBehaviour
 {
-  [HideInInspector] public String patch;
+    [HideInInspector] public String folderPath;
+    [HideInInspector] public int order;
 }

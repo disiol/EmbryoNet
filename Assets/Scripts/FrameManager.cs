@@ -1,18 +1,22 @@
 using System.Collections.Generic;
 using System.IO;
 using Models;
+using RotationManager;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class FrameManager : MonoBehaviour
 {
     private Image _imageObject; // Assign the Image component to this field in the Inspector
-    [HideInInspector] public string jsonFilePath; // Set the path to the JSON file in the Inspector
+    [HideInInspector] public ParserModel.Root detectionData; // Set the path to the JSON file in the Inspector
     [SerializeField] private GameObject buttonPrefab;
-    [SerializeField]  private Color frameImageColor;
+    [SerializeField] private Color frameImageColor;
+    [SerializeField] private Color selectedFrameImageColor;
 
     private static int _revesConst;
     private static int _corectedScaleIndex;
+    [HideInInspector] public int selectedDetectionID;
 
 
     public void DrawFrames()
@@ -24,7 +28,6 @@ public class FrameManager : MonoBehaviour
             var imageTexture = DestroyAllChildrenImageObjectAndGetimageObjectTexture();
 
             // Load the JSON data from the file path
-            ParserModel.Root detectionData = LoadTheJSOnData();
 
             // Draw frames around the detected objects
             DrawFramesAroundTheDetectedObjects(detectionData, imageTexture);
@@ -42,32 +45,23 @@ public class FrameManager : MonoBehaviour
         return imageTexture;
     }
 
-    private ParserModel.Root LoadTheJSOnData()
-    {
-        string jsonFileContent = File.ReadAllText(jsonFilePath);
-        ParserModel.Root detectionData = JsonUtility.FromJson<ParserModel.Root>(jsonFileContent);
-        return detectionData;
-    }
-
     private void DrawFramesAroundTheDetectedObjects(ParserModel.Root detectionData, Texture2D imageTexture)
     {
-        Vector2 pivotOffset = new Vector2(0.5f, 0.5f); // Pivot offset for the frame image
-
         var detectionDataDetectionList = detectionData.detection_list;
 
         foreach (ParserModel.DetectionList detection in detectionDataDetectionList)
         {
-            DrawFrame(detection, imageTexture, pivotOffset);
+            DrawFrame(detection);
         }
     }
 
-    void DrawFrame(ParserModel.DetectionList detection, Texture2D imageTexture, Vector2 pivotOffset)
+    void DrawFrame(ParserModel.DetectionList detection)
     {
         // TODO Calculate the position and size of the frame
         var position = CalculatePositionAndSize(detection, out var size);
 
         // Create a new GameObject for each frame
-        var frame = CreateGameObjectForEachFrame(detection, imageTexture, pivotOffset, size, position);
+        var frame = CreateGameObjectForEachFrame(detection, size, position);
 
         CreateButtonOnTopOfTheFrame(detection, frame, size, position);
     }
@@ -90,8 +84,7 @@ public class FrameManager : MonoBehaviour
         // Create the button on top of the frame
         GameObject button = Instantiate(buttonPrefab, frame.transform);
         button.name = "ButtonRotation_" + detection.id;
-        button.GetComponent<ButtonData>().targetID = detection.id;
-        button.GetComponent<ButtonData>().jsonFilePath = jsonFilePath;
+        button.GetComponent<RotationManagerButtonData>().targetID = detection.id;
 
 
 // Access the RectTransform of the button
@@ -111,16 +104,24 @@ public class FrameManager : MonoBehaviour
         }
     }
 
-    private GameObject CreateGameObjectForEachFrame(ParserModel.DetectionList detection, Texture2D imageTexture,
-        Vector2 pivotOffset,
+    private GameObject CreateGameObjectForEachFrame(ParserModel.DetectionList detection,
         Vector2 size, Vector2 position)
     {
-        GameObject frame = new GameObject("Frame_" + detection.id);
+        int detectionID = detection.id;
+        GameObject frame = new GameObject("Frame_" + detectionID);
         frame.transform.SetParent(transform);
 
         // Add an Image component to the frame GameObject
         Image frameImage = frame.AddComponent<Image>();
-        frameImage.color = frameImageColor;
+
+        if (detectionID.Equals(selectedDetectionID))
+        {
+            frameImage.color = selectedFrameImageColor;
+        }
+        else
+        {
+            frameImage.color = frameImageColor;
+        }
 
         frameImage.rectTransform.sizeDelta = size;
         // Position the frame correctly

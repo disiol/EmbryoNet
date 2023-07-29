@@ -43,7 +43,6 @@ public class RotationManager : MonoBehaviour
 
     public void ShowMenu()
     {
-        string canvasPanelInfopanelRightsideRotationmenu = "Canvas/Panel/RightSide/InfoPanel/RotationMenu";
         GameObject canvens = GameObject.Find("Canvas");
         _panel = canvens.transform.Find("Panel");
         _rightSide = _panel.transform.Find("RightSide");
@@ -176,21 +175,22 @@ public class RotationManager : MonoBehaviour
 
     private void SaveDataToFile()
     {
+      //  TODO зберегти масив даних з jsonFiles, та правити їх.
         // Save the modified data back to the JSON file
         string updatedJsonString = JsonUtility.ToJson(_records, true);
         File.WriteAllText(_newFilePath, updatedJsonString);
 
         Debug.Log("Changes saved to file: " + _newFilePath);
 
-        OpenNewFile();
+        // OpenNewFile();
     }
 
-    private void OpenNewFile()
-    {
-        _frameManager = GameObject.Find("Canvas/Panel/LeftSide/Image").GetComponent<FrameManager>();
-        _frameManager.jsonFilePath = _newFilePath;
-        _frameManager.DrawFrames();
-    }
+    // private void OpenNewFile()
+    // {
+    //     _frameManager = GameObject.Find("Canvas/Panel/LeftSide/Image").GetComponent<FrameManager>();
+    //     _frameManager.detectionData = _newFilePath;
+    //     _frameManager.DrawFrames();
+    // }
 
     private void LoadDataFromFile()
     {
