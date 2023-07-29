@@ -16,7 +16,7 @@ public class FrameManager : MonoBehaviour
 
     private static int _revesConst;
     private static int _corectedScaleIndex;
-    [HideInInspector] public int selectedDetectionID;
+    public int selectedDetectionID;
 
 
     public void DrawFrames()
@@ -114,6 +114,16 @@ public class FrameManager : MonoBehaviour
         // Add an Image component to the frame GameObject
         Image frameImage = frame.AddComponent<Image>();
 
+        SetColorFrame(detectionID, frameImage);
+
+        frameImage.rectTransform.sizeDelta = size;
+        // Position the frame correctly
+        frame.transform.position = position;
+        return frame;
+    }
+
+    private void SetColorFrame(int detectionID, Image frameImage)
+    {
         if (detectionID.Equals(selectedDetectionID))
         {
             frameImage.color = selectedFrameImageColor;
@@ -122,11 +132,6 @@ public class FrameManager : MonoBehaviour
         {
             frameImage.color = frameImageColor;
         }
-
-        frameImage.rectTransform.sizeDelta = size;
-        // Position the frame correctly
-        frame.transform.position = position;
-        return frame;
     }
 
 
