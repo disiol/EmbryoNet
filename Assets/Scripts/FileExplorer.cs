@@ -34,7 +34,7 @@ public class FileExplorer : MonoBehaviour
     private void Start()
     {
         loadButton.onClick.AddListener(OnLoadButtonClicked);
-        _jasonManager = new JasonManager();
+        _jasonManager = transform.GetComponent<JasonManager>();
 
         GameObject canvas = GameObject.Find("Canvas");
         _popUpWindow = canvas.transform.Find("PopUpWindow").gameObject;
@@ -117,6 +117,7 @@ public class FileExplorer : MonoBehaviour
 
             jsonButton.GetComponent<PatchContainer>().order = index;
             jsonButton.GetComponent<PatchContainer>().folderPath = folderPath;
+          
             _jasonManager.LoadDataFromJsonFiles(file);
 
 

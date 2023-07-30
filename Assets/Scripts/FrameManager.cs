@@ -84,8 +84,10 @@ public class FrameManager : MonoBehaviour
         // Create the button on top of the frame
         GameObject button = Instantiate(buttonPrefab, frame.transform);
         button.name = "ButtonRotation_" + detection.id;
-        button.GetComponent<RotationManagerButtonData>().targetID = detection.id;
-
+        RotationManagerButtonData rotationManagerButtonData = button.GetComponent<RotationManagerButtonData>();
+        rotationManagerButtonData.targetID = detection.id;
+        rotationManagerButtonData.detection = detection;
+        
 
 // Access the RectTransform of the button
         RectTransform buttonRect = button.GetComponent<RectTransform>();

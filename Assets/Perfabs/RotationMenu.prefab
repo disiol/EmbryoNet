@@ -126,14 +126,14 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 0
+  m_ContentType: 3
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 3
   m_RegexValue: 
   m_GlobalPointSize: 14
   m_CharacterLimit: 0
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 4479318635372447175}
   - component: {fileID: 4479318635372447168}
   m_Layer: 5
-  m_Name: Minus
+  m_Name: MinusX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -491,14 +491,14 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 0
+  m_ContentType: 3
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 3
   m_RegexValue: 
   m_GlobalPointSize: 14
   m_CharacterLimit: 0
@@ -1732,14 +1732,14 @@ GameObject:
   - component: {fileID: 4479318636149976095}
   - component: {fileID: 4479318636149976092}
   - component: {fileID: 4479318636149976093}
-  - component: {fileID: 4479318636149976094}
+  - component: {fileID: 1939019248}
   m_Layer: 5
   m_Name: RotationMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4479318636149976095
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1802,32 +1802,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4479318636149976094
+--- !u!114 &1939019248
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4479318636149976088}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Script: {fileID: 11500000, guid: c1214541120248f2ac13c5898c22eb66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 4
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
+  increaseXButton: {fileID: 4479318637083906892}
+  decreaseXButton: {fileID: 0}
+  increaseYButton: {fileID: 0}
+  decreaseYButton: {fileID: 0}
+  increaseZButton: {fileID: 0}
+  decreaseZButton: {fileID: 0}
+  currentRotationStep: 0
+  minRotation: 0
+  maxRotation: 0
 --- !u!1 &4479318636292252064
 GameObject:
   m_ObjectHideFlags: 0
@@ -2385,7 +2380,7 @@ GameObject:
   - component: {fileID: 4479318636779694063}
   - component: {fileID: 4479318636779694056}
   m_Layer: 5
-  m_Name: Plus
+  m_Name: PlusZ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2645,7 +2640,7 @@ GameObject:
   - component: {fileID: 4479318636937274386}
   - component: {fileID: 4479318636937274387}
   m_Layer: 5
-  m_Name: Minus
+  m_Name: MinusY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2820,7 +2815,7 @@ GameObject:
   - component: {fileID: 4479318637083906867}
   - component: {fileID: 4479318637083906892}
   m_Layer: 5
-  m_Name: Plus
+  m_Name: PlusX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2942,7 +2937,7 @@ GameObject:
   - component: {fileID: 4479318637225621862}
   - component: {fileID: 4479318637225621863}
   m_Layer: 5
-  m_Name: Minus
+  m_Name: MinusZ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3064,7 +3059,7 @@ GameObject:
   - component: {fileID: 4479318637247542796}
   - component: {fileID: 4479318637247542797}
   m_Layer: 5
-  m_Name: Plus
+  m_Name: PlusY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3782,14 +3777,14 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 0
+  m_ContentType: 3
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 3
   m_RegexValue: 
   m_GlobalPointSize: 14
   m_CharacterLimit: 0

@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Models;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -7,12 +9,16 @@ namespace RotationManager
     public class RotationManagerButtonData : MonoBehaviour
     {
         [HideInInspector] public int targetID;
-        [HideInInspector] public string jsonFilePath; // Set the path to the JSON file in the Inspector
-         private  RotationManager _rotationManager;
-         private FrameManager _frameManager;
-         private Transform _transformParentFrame;
+        [HideInInspector] public string jsonFilePath;
+        [HideInInspector] public ParserModel.DetectionList detection;
 
-         private void Start()
+
+        // Set the path to the JSON file in the Inspector
+        private RotationManager _rotationManager;
+        private FrameManager _frameManager;
+        private Transform _transformParentFrame;
+
+        private void Start()
         {
             _rotationManager = transform.GetComponent<RotationManager>();
             transform.GetComponent<Button>().onClick.AddListener(OnButtonClick);
@@ -27,6 +33,7 @@ namespace RotationManager
             _rotationManager.SetTargetID(targetID);
             _frameManager.DrawFrames();
             _rotationManager.SetDataFilePath(jsonFilePath);
+            _rotationManager.SetCurrentDetection(detection);
             _rotationManager.ShowMenu();
         }
     }
