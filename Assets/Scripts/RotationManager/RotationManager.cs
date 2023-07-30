@@ -12,6 +12,8 @@ namespace RotationManager
 {
     public class RotationManager : MonoBehaviour
     {
+        private GameObject _rotationButton;
+
         private ParserModel.Root _records;
         private string _dataFilePath;
 
@@ -45,7 +47,6 @@ namespace RotationManager
         private Transform _rightSide;
         private Transform _infoPanel;
         private JasonManager _jasonManager;
-      
 
 
         public void ShowMenu()
@@ -87,7 +88,7 @@ namespace RotationManager
             GetRotationMenuFileds();
 
             float x = _targetRecord.rotation.x;
-            
+
             _menuXInput.text = x.ToString();
 
 
@@ -123,7 +124,22 @@ namespace RotationManager
             _jasonManager = _panel.GetComponent<JasonManager>();
             _dataList = _jasonManager.dataList;
 
-            
+
+            var image = _panel.transform.Find("LeftSide").transform.Find("Image").transform;
+
+            for (int i = 0; i < image.childCount; i++)
+            {
+                Transform childTransform = image.GetChild(i);
+
+                GameObject rotationButton = childTransform.transform.Find("ButtonRotation_" + _targetID).GameObject();
+                if (rotationButton !=null)
+                {
+                    _rotationButton = rotationButton;
+                }
+            }
+
+
+
             GetRotationMenuFileds();
 
             if (_dataList != null)
@@ -139,12 +155,10 @@ namespace RotationManager
                 float z = float.Parse(_menuZInput.text);
 
 
-              
-
                 UpdateRotationInDataList(x, y, z);
                 ShowCurrentRotationValuesInTheMenu();
                 _jasonManager.dataList = _dataList;
-                
+
                 SetNewRotation(x, y, z);
 
 
@@ -161,7 +175,7 @@ namespace RotationManager
         private void SetNewRotation(float x, float y, float z)
         {
             Vector3 newTargetRecordRotation = new Vector3(x, y, z);
-            transform.rotation = Quaternion.Euler(newTargetRecordRotation);
+            _rotationButton.transform.rotation = Quaternion.Euler(newTargetRecordRotation);
         }
 
         private void UpdateRotationInDataList(float x, float y, float z)
@@ -185,10 +199,9 @@ namespace RotationManager
 
 
                         _targetRecord.rotation = new Vector3(recordOldRotation.x + deltaAngleX,
-                                recordOldRotation.y + deltaAngleY,
-                                recordOldRotation.z + deltaAngleZ);
+                            recordOldRotation.y + deltaAngleY,
+                            recordOldRotation.z + deltaAngleZ);
                     }
-                 
                 }
             }
         }
@@ -251,7 +264,7 @@ namespace RotationManager
             {
                 // Load the JSON data from the file path
 
-              
+
                 //TODO _fileName = Path.GetFileName(_dataFilePath);
                 // _newFileName = Path.GetFileNameWithoutExtension(_dataFilePath) + "_3d_cods.json"; //TODO folder C10
 
