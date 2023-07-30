@@ -124,6 +124,8 @@ public class FileExplorer : MonoBehaviour
             Button jsonBtn = jsonButton.GetComponent<Button>();
             jsonBtn.onClick.AddListener(() => FindImageByName(jsonButton.GetComponent<PatchContainer>().order));
         }
+
+        _jasonManager.dataFilePath = folderPath;
     }
 
 

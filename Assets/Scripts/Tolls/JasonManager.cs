@@ -8,7 +8,8 @@ namespace Tolls
 {
     public class JasonManager : MonoBehaviour
     {
-        public List<ParserModel.Root> dataList = new List<ParserModel.Root>();
+        [HideInInspector] public List<ParserModel.Root> dataList = new List<ParserModel.Root>();
+        [HideInInspector] public string dataFilePath;
 
         private ParserModel.Root OpenJasonFile(string jsonfilePath)
         {

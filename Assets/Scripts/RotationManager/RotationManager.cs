@@ -32,9 +32,6 @@ namespace RotationManager
 
         private readonly string _newFolderName = "new_Data_with_rotations";
 
-        private string _fileName;
-        private string _newFileName;
-
 
         private bool _isMenuVisible = false;
         private ParserModel.DetectionList _targetRecord;
@@ -64,7 +61,7 @@ namespace RotationManager
             _isMenuVisible = !_isMenuVisible;
             _rotationMenu.SetActive(_isMenuVisible);
 
-            // LoadData();
+            LoadData();
 
             if (_targetRecord != null)
             {
@@ -77,8 +74,9 @@ namespace RotationManager
 
         private void ButtonSafe()
         {
-            Transform bottom = _rightSide.transform.Find("Bottom");
-            _saveChangesButton = bottom.transform.Find("ButtonSave").gameObject
+            Transform buttonSave = _rotationMenu.transform.Find("ButtonSave");
+
+            _saveChangesButton = buttonSave
                 .GetComponent<Button>();
             _saveChangesButton.onClick.AddListener(SaveDataToFile);
         }
@@ -132,12 +130,11 @@ namespace RotationManager
                 Transform childTransform = image.GetChild(i);
 
                 GameObject rotationButton = childTransform.transform.Find("ButtonRotation_" + _targetID).GameObject();
-                if (rotationButton !=null)
+                if (rotationButton != null)
                 {
                     _rotationButton = rotationButton;
                 }
             }
-
 
 
             GetRotationMenuFileds();
@@ -168,7 +165,7 @@ namespace RotationManager
             else
             {
                 //TODO exephen show
-                Debug.Log("_targetRecord = " + _targetRecord);
+                Debug.Log("_exephen targetRecord = " + _targetRecord);
             }
         }
 
@@ -223,6 +220,8 @@ namespace RotationManager
 
         private void SaveDataToFile()
         {
+            Debug.Log("SaveDataToFile: " + _newFilePath);
+
             //TODO sow InputFieldEnterFolderNameForSafeNewData
             // _inputFieldEnterFolderNameForSafeNewData = _rotationMenu.transform
             //     .Find("InputFieldEnterFolderNameForSafeNewData").GetComponent<TMP_InputField>();
@@ -234,23 +233,23 @@ namespace RotationManager
             // }
 
 
-            string newDataFilePath = _dataFilePath.Replace(_fileName, "");
-            Debug.Log(newDataFilePath); // Output: "This is a phrase to remove."
+            string folderPath = Path.Combine(_dataFilePath, _newFolderName);
 
-
-            string folderPath = Path.Combine(newDataFilePath, _newFolderName);
-
-            _newFilePath = Path.Combine(folderPath, _newFileName);
+            _newFilePath = folderPath;
 
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
             }
 
-            //  TODO зберегти масив даних з jsonFiles, та правити їх.
             // Save the modified data back to the JSON file
-            string updatedJsonString = JsonUtility.ToJson(_records, true);
-            File.WriteAllText(_newFilePath, updatedJsonString);
+
+            foreach (var root in _jasonManager.dataList)
+            {
+                string updatedJsonString = JsonUtility.ToJson(root, true);
+                File.WriteAllText(_newFilePath, updatedJsonString);
+            }
+
 
             Debug.Log("Changes saved to file: " + _newFilePath);
 
@@ -259,30 +258,45 @@ namespace RotationManager
 
         private void LoadData()
         {
+            GameObject canvens = GameObject.Find("Canvas");
+            _panel = canvens.transform.Find("Panel");
+            _jasonManager = _panel.GetComponent<JasonManager>();
+
+            string newFilePath = DeleteLastWord(_jasonManager.dataFilePath);
+            _dataFilePath = newFilePath;
             // Read JSON data from the file
-            if (File.Exists(_dataFilePath))
+
+            // Load the JSON data from the file path
+
+
+            // _newFileName = Path.GetFileNameWithoutExtension(_dataFilePath) + "_3d_cods.json"; //TODO folder C10
+
+            // Optionally, set the initial target record
+            // _records = _targetRecord
+            // _targetRecord = FindRecordById(_targetID, _records.detection_list);
+
+
+            Vector3 recordRotation = _targetRecord.rotation;
+
+            if (recordRotation != null)
             {
-                // Load the JSON data from the file path
-
-
-                //TODO _fileName = Path.GetFileName(_dataFilePath);
-                // _newFileName = Path.GetFileNameWithoutExtension(_dataFilePath) + "_3d_cods.json"; //TODO folder C10
-
-                // Optionally, set the initial target record
-                _targetRecord = FindRecordById(_targetID, _records.detection_list);
-
-                Vector3 recordRotation = _targetRecord.rotation;
-
-                if (recordRotation != null)
-                {
-                    Vector3 targetRecordRotation = recordRotation;
-                    transform.rotation = Quaternion.Euler(targetRecordRotation);
-                }
+                Vector3 targetRecordRotation = recordRotation;
+                transform.rotation = Quaternion.Euler(targetRecordRotation);
             }
-            else
-            {
-                Debug.LogWarning("JSON data file not found: " + _dataFilePath);
-            }
+        }
+
+        static string DeleteLastWord(string input)
+        {
+            int lastSpaceIndex = input.LastIndexOf(' ');
+
+            // If there is no space or the string is empty, return the input as is
+            if (lastSpaceIndex == -1 || string.IsNullOrWhiteSpace(input))
+                return input;
+
+            // Remove the last word and any subsequent whitespace characters
+            string modifiedString = input.Substring(0, lastSpaceIndex);
+
+            return modifiedString;
         }
 
         public void SetTargetID(int targetID)
