@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Models;
+using SafeDadta;
 using TMPro;
 using Tolls;
 using Unity.VisualScripting;
@@ -15,7 +16,7 @@ namespace RotationManager
     {
         private GameObject _rotationButton;
 
-        private ParserModel.Root _records; 
+        private ParserModel.Root _records;
         public string dataFilePath;
 
         private Dictionary<string, ParserModel.Root> _dataList;
@@ -36,17 +37,30 @@ namespace RotationManager
         private string _newFileName;
 
         private bool _isMenuVisible = false;
-        [FormerlySerializedAs("_targetRecord")] public ParserModel.DetectionList targetRecord;
-        public int targetID;
+        public ParserModel.DetectionList targetRecord;
+        private int _targetID;
+
+        public int TargetID
+        {
+            set
+            {
+                // Значение можно будет установить
+                this._targetID = value;
+                // При установке значения также будем выводить текст в консоль
+                Console.Write("Hello, " + this.name);
+            }
+        }
+
         private string _newFilePath;
 
         private TMP_InputField _inputFieldEnterFolderNameForSafeNewData;
-        
+
         private Transform _panel;
         private Transform _rightSide;
         private Transform _infoPanel;
-        
+
         private JasonManager _jasonManager;
+        private SafeAndLoadData _safeAndLoadData;
 
         private void Start()
         {
@@ -69,8 +83,6 @@ namespace RotationManager
             _rotationMenu.SetActive(_isMenuVisible);
             ButtonSafe();
             GetRotationMenuFileds();
-
-           
         }
 
 
@@ -84,19 +96,22 @@ namespace RotationManager
         {
             GetRotationMenuFileds();
 
-            float x = targetRecord.rotation.x;
+            Vector3 targetRecordRotation = targetRecord.rotation;
+            float x = targetRecordRotation.x;
 
             _menuXInput.text = x.ToString();
 
 
-            _menuYInput.text = targetRecord.rotation.y.ToString();
+            _menuYInput.text = targetRecordRotation.y.ToString();
 
 
-            _menuZInput.text = targetRecord.rotation.z.ToString();
+            _menuZInput.text = targetRecordRotation.z.ToString();
         }
 
         private void GetRotationMenuFileds()
         {
+            Debug.Log("GetRotationMenuFileds");
+
             _menuXInput = _rotationMenu.transform.Find("RotationX").transform.Find("InputFieldX").gameObject
                 .GetComponent<TMP_InputField>();
 
@@ -116,30 +131,27 @@ namespace RotationManager
 
         public void UpdateRotation()
         {
+            //TODO refactoring
+            _safeAndLoadData = gameObject.AddComponent<SafeAndLoadData>();
+
+            _targetID = _safeAndLoadData.LoadCurrentId();
+            Debug.Log("UpdateRotation");
+
             GameObject canvens = GameObject.Find("Canvas");
             _panel = canvens.transform.Find("Panel");
             _jasonManager = _panel.GetComponent<JasonManager>();
             _dataList = _jasonManager.dataList;
             ButtonSafe();
 
-            var image = _panel.transform.Find("LeftSide").transform.Find("Image").transform;
-
-            for (int i = 0; i < image.childCount; i++)
-            {
-                Transform childTransform = image.GetChild(i);
-
-                GameObject rotationButton = childTransform.transform.Find("ButtonRotation_" + targetID).GameObject();
-                if (rotationButton != null)
-                {
-                    _rotationButton = rotationButton;
-                }
-            }
+            Debug.Log("UpdateRotation");
 
 
             GetRotationMenuFileds();
 
             if (_dataList != null)
             {
+                _jasonManager = _panel.GetComponent<JasonManager>();
+
                 // Update the rotation in the target record
                 //TODO логика: ты стоишь на фрейме 10 и у тебя ротации 0 0 0. Ты на фрейме 10 ставишь 5 5 0.
                 //Программа смотрит что было в предыдущем состоянии - видит было 0 0 0.
@@ -152,9 +164,11 @@ namespace RotationManager
 
 
                 UpdateRotationInDataList(x, y, z);
-                ShowCurrentRotationValuesInTheMenu();
                 _jasonManager.dataList = _dataList;
 
+//TODO
+                UpdateTargetRecord();
+                ShowCurrentRotationValuesInTheMenu();
                 SetNewRotation(x, y, z);
 
 
@@ -168,21 +182,43 @@ namespace RotationManager
             }
         }
 
+        private void GetCurentRotationButton()
+        {
+            Debug.Log("GetCurentRotationButton");
+
+            var image = _panel.transform.Find("LeftSide").transform.Find("Image").transform;
+
+            for (int i = 0; i < image.childCount; i++)
+            {
+                Transform childTransform = image.GetChild(i);
+
+                GameObject rotationButton = childTransform.transform.Find("ButtonRotation_" + _targetID).GameObject();
+                if (rotationButton != null)
+                {
+                    _rotationButton = rotationButton;
+                }
+            }
+        }
+
         private void SetNewRotation(float x, float y, float z)
         {
+            Debug.Log("SetNewRotation");
+            GetCurentRotationButton();
             Vector3 newTargetRecordRotation = new Vector3(x, y, z);
             _rotationButton.transform.rotation = Quaternion.Euler(newTargetRecordRotation);
         }
 
         private void UpdateRotationInDataList(float x, float y, float z)
         {
+            Debug.Log("UpdateRotationInDataList");
+
             foreach (var data in _dataList)
             {
                 List<ParserModel.DetectionList> detectionList = data.Value.detection_list;
 
                 if (_dataList.Count > 0)
                 {
-                    targetRecord = FindRecordById(targetID, detectionList);
+                    targetRecord = FindRecordById(_targetID, detectionList);
 
 
                     if (targetRecord != null)
@@ -198,6 +234,22 @@ namespace RotationManager
                             recordOldRotation.y + deltaAngleY,
                             recordOldRotation.z + deltaAngleZ);
                     }
+                }
+            }
+        }
+
+        private void UpdateTargetRecord()
+        {
+            Debug.Log("UpdateTargetRecord");
+            _dataList = _jasonManager.dataList;
+
+            foreach (var data in _dataList)
+            {
+                List<ParserModel.DetectionList> detectionList = data.Value.detection_list;
+
+                if (_dataList.Count > 0)
+                {
+                    targetRecord = FindRecordById(_targetID, detectionList);
                 }
             }
         }
@@ -220,6 +272,8 @@ namespace RotationManager
 
         private void SaveDataToFile()
         {
+            _jasonManager = _panel.GetComponent<JasonManager>();
+
             Debug.Log("SaveDataToFile: " + _newFilePath);
 
             //TODO sow InputFieldEnterFolderNameForSafeNewData
@@ -266,7 +320,9 @@ namespace RotationManager
             Debug.Log(" SaveDataToFile newDataFilePath" + newDataFilePath); // Output: "This is a phrase to remove."
 
 
-            string folderPath = Path.Combine(_newFilePath, directoryName + _newFolderName);
+            string folderPath = Path.Combine(newDataFilePath, directoryName + _newFolderName);
+            
+            Debug.Log(" SaveDataToFile folderPath" + folderPath); // Output: "This is a phrase to remove."
 
             // _newFilePath = folderPath;
 
@@ -280,13 +336,13 @@ namespace RotationManager
 
         public void LoadData()
         {
-            
+            Debug.Log("LoadData");
             if (targetRecord != null)
             {
                 // Show the current rotation values in the menu
                 ShowCurrentRotationValuesInTheMenu();
             }
-            
+
             GameObject canvens = GameObject.Find("Canvas");
             _panel = canvens.transform.Find("Panel");
             _jasonManager = _panel.GetComponent<JasonManager>();
@@ -326,7 +382,5 @@ namespace RotationManager
 
             return modifiedString;
         }
-
-        
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Models;
+using SafeDadta;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -9,17 +10,18 @@ namespace RotationManager
     public class RotationManagerButtonData : MonoBehaviour
     {
         public int targetID;
-        [HideInInspector] public string dataFilePath;
-        [HideInInspector] public ParserModel.DetectionList detection;
 
 
         // Set the path to the JSON filePath in the Inspector
         private RotationManager _rotationManager;
         private FrameManager _frameManager;
         private Transform _transformParentFrame;
+        private SafeAndLoadData _safeAndLoadData;
 
         private void Start()
         {
+            _safeAndLoadData = gameObject.AddComponent<SafeAndLoadData>();
+          
             _rotationManager = transform.GetComponent<RotationManager>();
             transform.GetComponent<Button>().onClick.AddListener(OnButtonClick);
             _transformParentFrame = transform.parent;
@@ -29,11 +31,8 @@ namespace RotationManager
 
         private void OnButtonClick()
         {
-            _frameManager.selectedDetectionID = targetID;
+            _safeAndLoadData.SafeCurrentId(targetID);
             _frameManager.DrawFrames();
-
-
-            _rotationManager.ShowMenu();
             _rotationManager.LoadData();
         }
     }

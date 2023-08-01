@@ -4,6 +4,7 @@ using System.IO;
 using System.Net.Mime;
 using Models;
 using RotationManager;
+using SafeDadta;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -20,13 +21,17 @@ public class FrameManager : MonoBehaviour
     private static int _revesConst;
     private static int _corectedScaleIndex; 
     
-    public int selectedDetectionID;
+    private int _selectedDetectionID;
     public string dataFilePath;
+    private SafeAndLoadData _safeAndLoadData;
 
 
     public void DrawFrames()
     {
         _imageObject = GetComponent<Image>();
+        _safeAndLoadData = gameObject.AddComponent<SafeAndLoadData>();
+        _selectedDetectionID = _safeAndLoadData.LoadCurrentId();
+
 
         if (_imageObject != null && _imageObject.sprite != null)
         {
@@ -92,17 +97,12 @@ public class FrameManager : MonoBehaviour
 
         RotationManagerButtonData rotationManagerButtonData = button.GetComponent<RotationManagerButtonData>();
         rotationManagerButtonData.targetID = detection.id;
-        rotationManagerButtonData.detection = detection;
       
         RotationManager.RotationManager rotationManager = button.GetComponent<RotationManager.RotationManager>();
         rotationManager.dataFilePath = dataFilePath;
         rotationManager.targetRecord = detection;
 
-        if (detection.id.Equals(selectedDetectionID))
-        {
-            rotationManager.targetID = detection.id;
-        }
-
+        
 
 // Access the RectTransform of the button
         RectTransform buttonRect = button.GetComponent<RectTransform>();
@@ -141,7 +141,7 @@ public class FrameManager : MonoBehaviour
 
     private void SetColorFrame(int detectionID, Image frameImage)
     {
-        if (detectionID.Equals(selectedDetectionID))
+        if (detectionID.Equals(_selectedDetectionID))
         {
             frameImage.color = selectedFrameImageColor;
         }
