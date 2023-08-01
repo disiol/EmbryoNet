@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net.Mime;
 using Models;
 using RotationManager;
 using UnityEngine;
@@ -9,14 +11,17 @@ using UnityEngine.UI;
 public class FrameManager : MonoBehaviour
 {
     private Image _imageObject; // Assign the Image component to this field in the Inspector
-    [HideInInspector] public ParserModel.Root detectionData; // Set the path to the JSON file in the Inspector
+    [HideInInspector] public ParserModel.Root detectionData; // Set the path to the JSON filePath in the Inspector
+    
     [SerializeField] private GameObject buttonPrefab;
     [SerializeField] private Color frameImageColor;
     [SerializeField] private Color selectedFrameImageColor;
 
     private static int _revesConst;
-    private static int _corectedScaleIndex;
+    private static int _corectedScaleIndex; 
+    
     public int selectedDetectionID;
+    public string dataFilePath;
 
 
     public void DrawFrames()
@@ -27,7 +32,7 @@ public class FrameManager : MonoBehaviour
         {
             var imageTexture = DestroyAllChildrenImageObjectAndGetimageObjectTexture();
 
-            // Load the JSON data from the file path
+            // Load the JSON data from the filePath path
 
             // Draw frames around the detected objects
             DrawFramesAroundTheDetectedObjects(detectionData, imageTexture);
@@ -84,10 +89,20 @@ public class FrameManager : MonoBehaviour
         // Create the button on top of the frame
         GameObject button = Instantiate(buttonPrefab, frame.transform);
         button.name = "ButtonRotation_" + detection.id;
+
         RotationManagerButtonData rotationManagerButtonData = button.GetComponent<RotationManagerButtonData>();
         rotationManagerButtonData.targetID = detection.id;
         rotationManagerButtonData.detection = detection;
-        
+      
+        RotationManager.RotationManager rotationManager = button.GetComponent<RotationManager.RotationManager>();
+        rotationManager.dataFilePath = dataFilePath;
+        rotationManager.targetRecord = detection;
+
+        if (detection.id.Equals(selectedDetectionID))
+        {
+            rotationManager.targetID = detection.id;
+        }
+
 
 // Access the RectTransform of the button
         RectTransform buttonRect = button.GetComponent<RectTransform>();
@@ -135,6 +150,8 @@ public class FrameManager : MonoBehaviour
             frameImage.color = frameImageColor;
         }
     }
+
+ 
 
 
     private void DestroyAllChildrenImageObject()

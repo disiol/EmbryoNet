@@ -6,6 +6,7 @@ using TMPro;
 using Tolls;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace RotationManager
@@ -14,10 +15,10 @@ namespace RotationManager
     {
         private GameObject _rotationButton;
 
-        private ParserModel.Root _records;
-        private string _dataFilePath;
+        private ParserModel.Root _records; 
+        public string dataFilePath;
 
-        private List<ParserModel.Root> _dataList;
+        private Dictionary<string, ParserModel.Root> _dataList;
 
 
         private GameObject _rotationMenu;
@@ -27,24 +28,30 @@ namespace RotationManager
         private TMP_InputField _menuZInput;
 
         private Button _saveChangesButton;
-        private Button _buttonCancel;
 
 
-        private readonly string _newFolderName = "new_Data_with_rotations";
+        private readonly string _newFolderName = "_new_Data_with_rotations";
 
+        private string _fileName;
+        private string _newFileName;
 
         private bool _isMenuVisible = false;
-        private ParserModel.DetectionList _targetRecord;
-        private int _targetID;
+        [FormerlySerializedAs("_targetRecord")] public ParserModel.DetectionList targetRecord;
+        public int targetID;
         private string _newFilePath;
 
         private TMP_InputField _inputFieldEnterFolderNameForSafeNewData;
-        private FrameManager _frameManager;
+        
         private Transform _panel;
         private Transform _rightSide;
         private Transform _infoPanel;
+        
         private JasonManager _jasonManager;
 
+        private void Start()
+        {
+            ShowMenu();
+        }
 
         public void ShowMenu()
         {
@@ -60,24 +67,16 @@ namespace RotationManager
 
             _isMenuVisible = !_isMenuVisible;
             _rotationMenu.SetActive(_isMenuVisible);
+            ButtonSafe();
+            GetRotationMenuFileds();
 
-            LoadData();
-
-            if (_targetRecord != null)
-            {
-                ButtonSafe();
-                // Show the current rotation values in the menu
-                ShowCurrentRotationValuesInTheMenu();
-            }
+           
         }
 
 
         private void ButtonSafe()
         {
-            Transform buttonSave = _rotationMenu.transform.Find("ButtonSave");
-
-            _saveChangesButton = buttonSave
-                .GetComponent<Button>();
+            _saveChangesButton = _rotationMenu.transform.Find("ButtonSave").GetComponent<Button>();
             _saveChangesButton.onClick.AddListener(SaveDataToFile);
         }
 
@@ -85,15 +84,15 @@ namespace RotationManager
         {
             GetRotationMenuFileds();
 
-            float x = _targetRecord.rotation.x;
+            float x = targetRecord.rotation.x;
 
             _menuXInput.text = x.ToString();
 
 
-            _menuYInput.text = _targetRecord.rotation.y.ToString();
+            _menuYInput.text = targetRecord.rotation.y.ToString();
 
 
-            _menuZInput.text = _targetRecord.rotation.z.ToString();
+            _menuZInput.text = targetRecord.rotation.z.ToString();
         }
 
         private void GetRotationMenuFileds()
@@ -121,7 +120,7 @@ namespace RotationManager
             _panel = canvens.transform.Find("Panel");
             _jasonManager = _panel.GetComponent<JasonManager>();
             _dataList = _jasonManager.dataList;
-
+            ButtonSafe();
 
             var image = _panel.transform.Find("LeftSide").transform.Find("Image").transform;
 
@@ -129,7 +128,7 @@ namespace RotationManager
             {
                 Transform childTransform = image.GetChild(i);
 
-                GameObject rotationButton = childTransform.transform.Find("ButtonRotation_" + _targetID).GameObject();
+                GameObject rotationButton = childTransform.transform.Find("ButtonRotation_" + targetID).GameObject();
                 if (rotationButton != null)
                 {
                     _rotationButton = rotationButton;
@@ -165,7 +164,7 @@ namespace RotationManager
             else
             {
                 //TODO exephen show
-                Debug.Log("_exephen targetRecord = " + _targetRecord);
+                Debug.Log("_exephen targetRecord = " + targetRecord);
             }
         }
 
@@ -177,25 +176,25 @@ namespace RotationManager
 
         private void UpdateRotationInDataList(float x, float y, float z)
         {
-            for (int i = 0; i < _dataList.Count; i++)
+            foreach (var data in _dataList)
             {
-                List<ParserModel.DetectionList> detectionList = _dataList[i].detection_list;
+                List<ParserModel.DetectionList> detectionList = data.Value.detection_list;
 
                 if (_dataList.Count > 0)
                 {
-                    _targetRecord = FindRecordById(_targetID, detectionList);
+                    targetRecord = FindRecordById(targetID, detectionList);
 
 
-                    if (_targetRecord != null)
+                    if (targetRecord != null)
                     {
-                        Vector3 recordOldRotation = _targetRecord.rotation;
+                        Vector3 recordOldRotation = targetRecord.rotation;
 
                         var deltaAngleX = Mathf.DeltaAngle(recordOldRotation.x, x);
                         var deltaAngleY = Mathf.DeltaAngle(recordOldRotation.y, y);
                         var deltaAngleZ = Mathf.DeltaAngle(recordOldRotation.z, z);
 
 
-                        _targetRecord.rotation = new Vector3(recordOldRotation.x + deltaAngleX,
+                        targetRecord.rotation = new Vector3(recordOldRotation.x + deltaAngleX,
                             recordOldRotation.y + deltaAngleY,
                             recordOldRotation.z + deltaAngleZ);
                     }
@@ -203,7 +202,8 @@ namespace RotationManager
             }
         }
 
-        public ParserModel.DetectionList FindRecordById(int targetID,
+
+        private ParserModel.DetectionList FindRecordById(int targetID,
             List<ParserModel.DetectionList> recordsDetectionList)
         {
             Debug.Log("targetID = " + targetID);
@@ -233,40 +233,68 @@ namespace RotationManager
             // }
 
 
-            string folderPath = Path.Combine(_dataFilePath, _newFolderName);
+            string folderPath = null;
 
-            _newFilePath = folderPath;
+
+            // Save the modified data back to the JSON filePath
+
+            foreach (var root in _jasonManager.dataList)
+            {
+                _fileName = Path.GetFileName(root.Key);
+
+                _newFileName = _fileName + "_3d_cods.json";
+                folderPath = CrateNewDataFilePathAndDirectory();
+
+
+                string updatedJsonString = JsonUtility.ToJson(root.Value, true);
+                File.WriteAllText(folderPath + _newFileName, updatedJsonString);
+            }
+
+
+            Debug.Log("Changes saved to filePath: " + folderPath);
+
+            // OpenNewFile();
+        }
+
+        private string CrateNewDataFilePathAndDirectory()
+        {
+            string newDataFilePath = dataFilePath.Replace(_fileName, "");
+            string directoryName = Path.GetDirectoryName(newDataFilePath);
+
+            if (directoryName != null) newDataFilePath = newDataFilePath.Replace(directoryName, "");
+
+            Debug.Log(" SaveDataToFile newDataFilePath" + newDataFilePath); // Output: "This is a phrase to remove."
+
+
+            string folderPath = Path.Combine(_newFilePath, directoryName + _newFolderName);
+
+            // _newFilePath = folderPath;
 
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
             }
 
-            // Save the modified data back to the JSON file
-
-            foreach (var root in _jasonManager.dataList)
-            {
-                string updatedJsonString = JsonUtility.ToJson(root, true);
-                File.WriteAllText(_newFilePath, updatedJsonString);
-            }
-
-
-            Debug.Log("Changes saved to file: " + _newFilePath);
-
-            // OpenNewFile();
+            return folderPath;
         }
 
-        private void LoadData()
+        public void LoadData()
         {
+            
+            if (targetRecord != null)
+            {
+                // Show the current rotation values in the menu
+                ShowCurrentRotationValuesInTheMenu();
+            }
+            
             GameObject canvens = GameObject.Find("Canvas");
             _panel = canvens.transform.Find("Panel");
             _jasonManager = _panel.GetComponent<JasonManager>();
 
-            string newFilePath = DeleteLastWord(_jasonManager.dataFilePath);
-            _dataFilePath = newFilePath;
-            // Read JSON data from the file
+            dataFilePath = _jasonManager.dataFilePath;
+            // Read JSON data from the filePath
 
-            // Load the JSON data from the file path
+            // Load the JSON data from the filePath path
 
 
             // _newFileName = Path.GetFileNameWithoutExtension(_dataFilePath) + "_3d_cods.json"; //TODO folder C10
@@ -276,7 +304,7 @@ namespace RotationManager
             // _targetRecord = FindRecordById(_targetID, _records.detection_list);
 
 
-            Vector3 recordRotation = _targetRecord.rotation;
+            Vector3 recordRotation = targetRecord.rotation;
 
             if (recordRotation != null)
             {
@@ -299,19 +327,6 @@ namespace RotationManager
             return modifiedString;
         }
 
-        public void SetTargetID(int targetID)
-        {
-            this._targetID = targetID;
-        }
-
-        public void SetDataFilePath(string jsonFilePath)
-        {
-            this._dataFilePath = jsonFilePath;
-        }
-
-        public void SetCurrentDetection(ParserModel.DetectionList detection)
-        {
-            _targetRecord = detection;
-        }
+        
     }
 }

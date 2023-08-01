@@ -115,24 +115,25 @@ public class FileExplorer : MonoBehaviour
 
             buttonText.text = fileNameWithoutExtension;
 
-            jsonButton.GetComponent<PatchContainer>().order = index;
+            jsonButton.GetComponent<PatchContainer>().filePath = file;
             jsonButton.GetComponent<PatchContainer>().folderPath = folderPath;
           
             _jasonManager.LoadDataFromJsonFiles(file);
 
 
             Button jsonBtn = jsonButton.GetComponent<Button>();
-            jsonBtn.onClick.AddListener(() => FindImageByName(jsonButton.GetComponent<PatchContainer>().order));
+            jsonBtn.onClick.AddListener(() => FindImageByName(jsonButton.GetComponent<PatchContainer>().filePath));
         }
 
         _jasonManager.dataFilePath = folderPath;
     }
 
 
-    private void FindImageByName(int opderjsonfile)
+    private void FindImageByName(string opderjsonfile)
 
     {
-        ParserModel.Root records = _jasonManager.dataList[opderjsonfile];
+        Dictionary<string,ParserModel.Root> jasonManagerDataList = _jasonManager.dataList;
+        ParserModel.Root records = jasonManagerDataList[opderjsonfile];
 
         string imageName = records.source_name;
         string imagePath =
@@ -165,6 +166,7 @@ public class FileExplorer : MonoBehaviour
             texture.LoadImage(imageData);
 
             frameManager.detectionData = jsonfileDadta;
+            frameManager.dataFilePath = _jasonManager.dataFilePath;
 
             CrateSprite(texture);
             frameManager.DrawFrames();

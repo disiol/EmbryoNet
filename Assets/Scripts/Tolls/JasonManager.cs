@@ -8,8 +8,10 @@ namespace Tolls
 {
     public class JasonManager : MonoBehaviour
     {
-        [HideInInspector] public List<ParserModel.Root> dataList = new List<ParserModel.Root>();
-        [HideInInspector] public string dataFilePath;
+        public string dataFilePath;
+
+        [HideInInspector]
+        public Dictionary<string, ParserModel.Root> dataList = new Dictionary<string, ParserModel.Root>();
 
         private ParserModel.Root OpenJasonFile(string jsonfilePath)
         {
@@ -21,7 +23,7 @@ namespace Tolls
         public void LoadDataFromJsonFiles(string jsonfilePath)
         {
             ParserModel.Root data = OpenJasonFile(jsonfilePath);
-            dataList.Add(data);
+            dataList.Add(jsonfilePath, data);
         }
     }
 }

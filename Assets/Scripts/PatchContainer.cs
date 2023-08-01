@@ -7,5 +7,5 @@ using UnityEngine.Serialization;
 public class PatchContainer : MonoBehaviour
 {
     [HideInInspector] public String folderPath;
-    [HideInInspector] public int order;
+    [FormerlySerializedAs("file")] [HideInInspector] public string filePath;
 }
