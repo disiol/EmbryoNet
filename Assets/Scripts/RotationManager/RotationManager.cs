@@ -31,7 +31,7 @@ namespace RotationManager
         private Button _saveChangesButton;
 
 
-        private readonly string _newFolderName = "_new_Data_with_rotations";
+        private string _newFolderName = "_new_Data_with_rotations";
 
         private string _fileName;
         private string _newFileName;
@@ -259,15 +259,16 @@ namespace RotationManager
             _jasonManager = _panel.GetComponent<JasonManager>();
 
 
-            //TODO sow InputFieldEnterFolderNameForSafeNewData
-            // _inputFieldEnterFolderNameForSafeNewData = _rotationMenu.transform
-            //     .Find("InputFieldEnterFolderNameForSafeNewData").GetComponent<TMP_InputField>();
-            // string inputFieldEnterFolderNameForSafeNewDataText = _inputFieldEnterFolderNameForSafeNewData.text;
+            // TODO sow InputFieldEnterFolderNameForSafeNewData
+            
+            
+            // _inputFieldEnterFolderNameForSafeNewData = _rotationMenu.transform.Find("InputFieldEnterFolderNameForSafeNewData").GetComponent<TMP_InputField>();
+            //  string inputFieldEnterFolderNameForSafeNewDataText = _inputFieldEnterFolderNameForSafeNewData.text;
             //
-            // if (!inputFieldEnterFolderNameForSafeNewDataText.Equals(""))
-            // {
-            //     _newFolderName = inputFieldEnterFolderNameForSafeNewDataText;
-            // }
+            //  if (!inputFieldEnterFolderNameForSafeNewDataText.Equals(""))
+            //  {
+            //      _newFolderName = inputFieldEnterFolderNameForSafeNewDataText;
+            //  }
 
             
 
