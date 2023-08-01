@@ -39,19 +39,9 @@ namespace RotationManager
         private bool _isMenuVisible = false;
         public ParserModel.DetectionList targetRecord;
         private int _targetID;
+        
 
-        public int TargetID
-        {
-            set
-            {
-                // Значение можно будет установить
-                this._targetID = value;
-                // При установке значения также будем выводить текст в консоль
-                Console.Write("Hello, " + this.name);
-            }
-        }
-
-        private string _newFilePath;
+        // private string _newFilePath;
 
         private TMP_InputField _inputFieldEnterFolderNameForSafeNewData;
 
@@ -151,12 +141,7 @@ namespace RotationManager
             if (_dataList != null)
             {
                 _jasonManager = _panel.GetComponent<JasonManager>();
-
-                // Update the rotation in the target record
-                //TODO логика: ты стоишь на фрейме 10 и у тебя ротации 0 0 0. Ты на фрейме 10 ставишь 5 5 0.
-                //Программа смотрит что было в предыдущем состоянии - видит было 0 0 0.
-                //Значит дельта 5 5 0. Она эту дельту приплюсовывает к каждой ротации от 10 - конец.
-                //Если больше чем 360, то вычитает 360.
+                
 
                 float x = float.Parse(_menuXInput.text);
                 float y = float.Parse(_menuYInput.text);
@@ -166,7 +151,6 @@ namespace RotationManager
                 UpdateRotationInDataList(x, y, z);
                 _jasonManager.dataList = _dataList;
 
-//TODO
                 UpdateTargetRecord();
                 ShowCurrentRotationValuesInTheMenu();
                 SetNewRotation(x, y, z);
@@ -274,7 +258,6 @@ namespace RotationManager
         {
             _jasonManager = _panel.GetComponent<JasonManager>();
 
-            Debug.Log("SaveDataToFile: " + _newFilePath);
 
             //TODO sow InputFieldEnterFolderNameForSafeNewData
             // _inputFieldEnterFolderNameForSafeNewData = _rotationMenu.transform
@@ -286,6 +269,7 @@ namespace RotationManager
             //     _newFolderName = inputFieldEnterFolderNameForSafeNewDataText;
             // }
 
+            
 
             string folderPath = null;
 
@@ -294,7 +278,7 @@ namespace RotationManager
 
             foreach (var root in _jasonManager.dataList)
             {
-                _fileName = Path.GetFileName(root.Key);
+                _fileName = Path.GetFileNameWithoutExtension(root.Key);
 
                 _newFileName = _fileName + "_3d_cods.json";
                 folderPath = CrateNewDataFilePathAndDirectory();
@@ -312,15 +296,9 @@ namespace RotationManager
 
         private string CrateNewDataFilePathAndDirectory()
         {
-            string newDataFilePath = dataFilePath.Replace(_fileName, "");
-            string directoryName = Path.GetDirectoryName(newDataFilePath);
+            
 
-            if (directoryName != null) newDataFilePath = newDataFilePath.Replace(directoryName, "");
-
-            Debug.Log(" SaveDataToFile newDataFilePath" + newDataFilePath); // Output: "This is a phrase to remove."
-
-
-            string folderPath = Path.Combine(newDataFilePath, directoryName + _newFolderName);
+            string folderPath =dataFilePath + _newFolderName;
             
             Debug.Log(" SaveDataToFile folderPath" + folderPath); // Output: "This is a phrase to remove."
 

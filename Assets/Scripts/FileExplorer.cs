@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 using Models;
+using SafeDadta;
 using SFB;
 using TMPro;
 using Tolls;
@@ -29,6 +30,7 @@ public class FileExplorer : MonoBehaviour
     private string _imageFolderPath;
     private GameObject _popUpWindow;
     private JasonManager _jasonManager;
+    private SafeAndLoadData _safeAndLoadData;
 
 
     private void Start()
@@ -39,6 +41,8 @@ public class FileExplorer : MonoBehaviour
         GameObject canvas = GameObject.Find("Canvas");
         _popUpWindow = canvas.transform.Find("PopUpWindow").gameObject;
         _statusText = _popUpWindow.transform.Find("StatusText").gameObject.GetComponent<TextMeshProUGUI>();
+
+        _safeAndLoadData = gameObject.AddComponent<SafeAndLoadData>();
     }
 
     private void OnLoadButtonClicked()
@@ -100,8 +104,7 @@ public class FileExplorer : MonoBehaviour
 
     private void ShowJSONFilesInFolder(string folderPath)
     {
-        //TODO зробити масив даних з jsonFiles, та правити їх.
-        //коли нажимаеш на кноку сафе створюется нова пака з файлами
+        _safeAndLoadData.SafeCurrentId(0);
         ClearButtons();
         string[] jsonFiles = Directory.GetFiles(folderPath);
 
@@ -117,7 +120,7 @@ public class FileExplorer : MonoBehaviour
 
             jsonButton.GetComponent<PatchContainer>().filePath = file;
             jsonButton.GetComponent<PatchContainer>().folderPath = folderPath;
-          
+
             _jasonManager.LoadDataFromJsonFiles(file);
 
 
@@ -132,7 +135,7 @@ public class FileExplorer : MonoBehaviour
     private void FindImageByName(string opderjsonfile)
 
     {
-        Dictionary<string,ParserModel.Root> jasonManagerDataList = _jasonManager.dataList;
+        Dictionary<string, ParserModel.Root> jasonManagerDataList = _jasonManager.dataList;
         ParserModel.Root records = jasonManagerDataList[opderjsonfile];
 
         string imageName = records.source_name;
