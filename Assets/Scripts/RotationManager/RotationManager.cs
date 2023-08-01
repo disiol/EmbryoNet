@@ -53,6 +53,7 @@ namespace RotationManager
         private SafeAndLoadData _safeAndLoadData;
         private GameObject _popSafeUpWindow;
         private GameObject _popUpWindow;
+        private string _inputFieldEnterFolderNameForSafeNewDataText;
 
         private void Start()
         {
@@ -67,13 +68,12 @@ namespace RotationManager
             _infoPanel = _rightSide.transform.Find("InfoPanel");
 
             _rotationMenu = _infoPanel.Find("RotationMenu").GameObject();
-            
+
             _rotationMenu.GetComponent<RotationController>().rotationManager =
                 transform.GetComponent<RotationManager>();
-            
+
             _popSafeUpWindow = canvens.transform.Find("PopSafeUpWindow").GameObject();
             _popUpWindow = canvens.transform.Find("PopUpWindow").GameObject();
-
 
 
             _isMenuVisible = !_isMenuVisible;
@@ -266,7 +266,10 @@ namespace RotationManager
             _jasonManager = _panel.GetComponent<JasonManager>();
 
 
-            // TODO sow InputFieldEnterFolderNameForSafeNewData
+            if (!_inputFieldEnterFolderNameForSafeNewDataText.Equals(""))
+            {
+                _newFolderName = _inputFieldEnterFolderNameForSafeNewDataText;
+            }
 
 
             string folderPath = null;
@@ -303,12 +306,8 @@ namespace RotationManager
                 .Find("InputFieldEnterFolderNameForSafeNewData")
                 .GetComponent<TMP_InputField>();
 
-            string inputFieldEnterFolderNameForSafeNewDataText = _inputFieldEnterFolderNameForSafeNewData.text;
+            _inputFieldEnterFolderNameForSafeNewDataText = _inputFieldEnterFolderNameForSafeNewData.text;
 
-            if (!inputFieldEnterFolderNameForSafeNewDataText.Equals(""))
-            {
-                _newFolderName = inputFieldEnterFolderNameForSafeNewDataText;
-            }
 
             Button buttonOk = _popSafeUpWindow.transform.Find("ButtonOk").GetComponent<Button>();
             buttonOk.onClick.AddListener(SaveDataToFile);
@@ -321,13 +320,16 @@ namespace RotationManager
             TextMeshProUGUI statusText = _popUpWindow.transform
                 .Find("StatusText")
                 .GetComponent<TextMeshProUGUI>();
-          
+
             statusText.text = text;
         }
 
         private string CrateNewDataFilePathAndDirectory()
         {
-            string folderPath = dataFilePath + _newFolderName;
+            string folderPath = "";
+           
+            folderPath = SetFolderName();
+
 
             Debug.Log(" SaveDataToFile folderPath" + folderPath); // Output: "This is a phrase to remove."
 
@@ -336,6 +338,23 @@ namespace RotationManager
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
+            }
+
+            return folderPath;
+        }
+
+        private string SetFolderName()
+        {
+            string folderPath;
+            if (!_inputFieldEnterFolderNameForSafeNewDataText.Equals(""))
+            {
+                _newFolderName = _inputFieldEnterFolderNameForSafeNewDataText;
+
+                folderPath = DeleteLastWord(dataFilePath) + _newFolderName;
+            }
+            else
+            {
+                folderPath = dataFilePath + _newFolderName;
             }
 
             return folderPath;
