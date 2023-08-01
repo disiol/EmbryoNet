@@ -39,7 +39,7 @@ namespace RotationManager
         private bool _isMenuVisible = false;
         public ParserModel.DetectionList targetRecord;
         private int _targetID;
-        
+
 
         // private string _newFilePath;
 
@@ -51,6 +51,8 @@ namespace RotationManager
 
         private JasonManager _jasonManager;
         private SafeAndLoadData _safeAndLoadData;
+        private GameObject _popSafeUpWindow;
+        private GameObject _popUpWindow;
 
         private void Start()
         {
@@ -65,8 +67,13 @@ namespace RotationManager
             _infoPanel = _rightSide.transform.Find("InfoPanel");
 
             _rotationMenu = _infoPanel.Find("RotationMenu").GameObject();
+            
             _rotationMenu.GetComponent<RotationController>().rotationManager =
                 transform.GetComponent<RotationManager>();
+            
+            _popSafeUpWindow = canvens.transform.Find("PopSafeUpWindow").GameObject();
+            _popUpWindow = canvens.transform.Find("PopUpWindow").GameObject();
+
 
 
             _isMenuVisible = !_isMenuVisible;
@@ -79,7 +86,7 @@ namespace RotationManager
         private void ButtonSafe()
         {
             _saveChangesButton = _rotationMenu.transform.Find("ButtonSave").GetComponent<Button>();
-            _saveChangesButton.onClick.AddListener(SaveDataToFile);
+            _saveChangesButton.onClick.AddListener(ShowPopSafeUpWindow);
         }
 
         private void ShowCurrentRotationValuesInTheMenu()
@@ -141,7 +148,7 @@ namespace RotationManager
             if (_dataList != null)
             {
                 _jasonManager = _panel.GetComponent<JasonManager>();
-                
+
 
                 float x = float.Parse(_menuXInput.text);
                 float y = float.Parse(_menuYInput.text);
@@ -260,17 +267,7 @@ namespace RotationManager
 
 
             // TODO sow InputFieldEnterFolderNameForSafeNewData
-            
-            
-            // _inputFieldEnterFolderNameForSafeNewData = _rotationMenu.transform.Find("InputFieldEnterFolderNameForSafeNewData").GetComponent<TMP_InputField>();
-            //  string inputFieldEnterFolderNameForSafeNewDataText = _inputFieldEnterFolderNameForSafeNewData.text;
-            //
-            //  if (!inputFieldEnterFolderNameForSafeNewDataText.Equals(""))
-            //  {
-            //      _newFolderName = inputFieldEnterFolderNameForSafeNewDataText;
-            //  }
 
-            
 
             string folderPath = null;
 
@@ -290,17 +287,48 @@ namespace RotationManager
             }
 
 
-            Debug.Log("Changes saved to filePath: " + folderPath);
+            string changesSavedToFilepath = "Changes saved to filePath: " + folderPath;
+            Debug.Log(changesSavedToFilepath);
+
+            PopUpWindowShow(changesSavedToFilepath);
+
 
             // OpenNewFile();
         }
 
+        private void ShowPopSafeUpWindow()
+        {
+            _popSafeUpWindow.SetActive(true);
+            _inputFieldEnterFolderNameForSafeNewData = _popSafeUpWindow.transform
+                .Find("InputFieldEnterFolderNameForSafeNewData")
+                .GetComponent<TMP_InputField>();
+
+            string inputFieldEnterFolderNameForSafeNewDataText = _inputFieldEnterFolderNameForSafeNewData.text;
+
+            if (!inputFieldEnterFolderNameForSafeNewDataText.Equals(""))
+            {
+                _newFolderName = inputFieldEnterFolderNameForSafeNewDataText;
+            }
+
+            Button buttonOk = _popSafeUpWindow.transform.Find("ButtonOk").GetComponent<Button>();
+            buttonOk.onClick.AddListener(SaveDataToFile);
+        }
+
+
+        private void PopUpWindowShow(string text)
+        {
+            _popUpWindow.SetActive(true);
+            TextMeshProUGUI statusText = _popUpWindow.transform
+                .Find("StatusText")
+                .GetComponent<TextMeshProUGUI>();
+          
+            statusText.text = text;
+        }
+
         private string CrateNewDataFilePathAndDirectory()
         {
-            
+            string folderPath = dataFilePath + _newFolderName;
 
-            string folderPath =dataFilePath + _newFolderName;
-            
             Debug.Log(" SaveDataToFile folderPath" + folderPath); // Output: "This is a phrase to remove."
 
             // _newFilePath = folderPath;
