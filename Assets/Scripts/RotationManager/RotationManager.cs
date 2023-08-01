@@ -301,7 +301,7 @@ namespace RotationManager
 
 
                 string updatedJsonString = JsonUtility.ToJson(root.Value, true);
-                File.WriteAllText(folderPath + _newFileName, updatedJsonString);
+                File.WriteAllText(Path.Combine(folderPath, _newFileName), updatedJsonString);
             }
 
 
