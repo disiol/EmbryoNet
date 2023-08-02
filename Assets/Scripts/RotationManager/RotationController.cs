@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -34,7 +35,6 @@ namespace RotationManager
 
         private void Start()
         {
-            // Add click listeners to the buttons
             increaseXButton.onClick.AddListener(IncreaseXRotation);
             decreaseXButton.onClick.AddListener(DecreaseXRotation);
 
@@ -43,19 +43,45 @@ namespace RotationManager
 
             increaseZButton.onClick.AddListener(IncreaseZRotation);
             decreaseZButton.onClick.AddListener(DecreaseZRotation);
+            
+            menuXInput.onValueChanged.AddListener(OnXValueChanged);
+            menuYInput.onValueChanged.AddListener(OnYValueChanged);
+            menuZInput.onValueChanged.AddListener(OnZValueChanged);
+        }
+        
+        
+        // Handle X, Y, and Z rotation value changes
+        private void OnXValueChanged(string newValue)
+        {
+            float.TryParse(newValue, out float xValue);
+            currentRotation.x = xValue;
+            UpdateRotation();
+        }
+
+        private void OnYValueChanged(string newValue)
+        {
+            float.TryParse(newValue, out float yValue);
+            currentRotation.y = yValue;
+            UpdateRotation();
+        }
+
+        private void OnZValueChanged(string newValue)
+        {
+            float.TryParse(newValue, out float zValue);
+            currentRotation.z = zValue;
+            UpdateRotation();
         }
 
         // Update rotation values for each axis
         private void IncreaseXRotation()
         {
             currentRotation.x += currentRotationStep;
-            UpdateRotation();
         }
 
         private void DecreaseXRotation()
         {
             currentRotation.x -= currentRotationStep;
-            UpdateRotation();
+            
         }
 
         private void IncreaseYRotation()
@@ -81,6 +107,8 @@ namespace RotationManager
             currentRotation.z -= currentRotationStep;
             UpdateRotation();
         }
+        
+      
 
         // Apply the 0-360 degree constraint and update the object's rotation
         private void UpdateRotation()
@@ -93,8 +121,10 @@ namespace RotationManager
 
             currentRotation.z = Mathf.Clamp(currentRotation.z, minRotation, maxRotation);
             menuZInput.text = currentRotation.z.ToString();
-            
+
             rotationManager.UpdateRotation();
-        }
+        } 
+        
+       
     }
 }

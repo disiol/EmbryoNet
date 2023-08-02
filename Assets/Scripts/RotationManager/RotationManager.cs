@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using Models;
@@ -7,7 +6,6 @@ using TMPro;
 using Tolls;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace RotationManager
@@ -54,6 +52,7 @@ namespace RotationManager
         private GameObject _popSafeUpWindow;
         private GameObject _popUpWindow;
         private string _inputFieldEnterFolderNameForSafeNewDataText;
+        private string _folderPath;
 
         private void Start()
         {
@@ -264,15 +263,7 @@ namespace RotationManager
         private void SaveDataToFile()
         {
             _jasonManager = _panel.GetComponent<JasonManager>();
-
-
-            if (!_inputFieldEnterFolderNameForSafeNewDataText.Equals(""))
-            {
-                _newFolderName = _inputFieldEnterFolderNameForSafeNewDataText;
-            }
-
-
-            string folderPath = null;
+            
 
 
             // Save the modified data back to the JSON filePath
@@ -282,18 +273,19 @@ namespace RotationManager
                 _fileName = Path.GetFileNameWithoutExtension(root.Key);
 
                 _newFileName = _fileName + "_3d_cods.json";
-                folderPath = CrateNewDataFilePathAndDirectory();
+                _folderPath = CrateNewDataFilePathAndDirectory();
 
 
                 string updatedJsonString = JsonUtility.ToJson(root.Value, true);
-                File.WriteAllText(Path.Combine(folderPath, _newFileName), updatedJsonString);
+                File.WriteAllText(Path.Combine(_folderPath, _newFileName), updatedJsonString);
             }
 
 
-            string changesSavedToFilepath = "Changes saved to filePath: " + folderPath;
+            string changesSavedToFilepath = "Changes saved to filePath: " + _folderPath;
             Debug.Log(changesSavedToFilepath);
 
             PopUpWindowShow(changesSavedToFilepath);
+            
 
 
             // OpenNewFile();
@@ -306,7 +298,9 @@ namespace RotationManager
                 .Find("InputFieldEnterFolderNameForSafeNewData")
                 .GetComponent<TMP_InputField>();
 
+
             _inputFieldEnterFolderNameForSafeNewDataText = _inputFieldEnterFolderNameForSafeNewData.text;
+            
 
 
             Button buttonOk = _popSafeUpWindow.transform.Find("ButtonOk").GetComponent<Button>();
@@ -327,7 +321,7 @@ namespace RotationManager
         private string CrateNewDataFilePathAndDirectory()
         {
             string folderPath = "";
-           
+
             folderPath = SetFolderName();
 
 
@@ -351,6 +345,7 @@ namespace RotationManager
                 _newFolderName = _inputFieldEnterFolderNameForSafeNewDataText;
 
                 folderPath = DeleteLastWord(dataFilePath) + _newFolderName;
+
             }
             else
             {
@@ -386,12 +381,15 @@ namespace RotationManager
             // _targetRecord = FindRecordById(_targetID, _records.detection_list);
 
 
-            Vector3 recordRotation = targetRecord.rotation;
-
-            if (recordRotation != null)
+            if (targetRecord != null)
             {
-                Vector3 targetRecordRotation = recordRotation;
-                transform.rotation = Quaternion.Euler(targetRecordRotation);
+                Vector3 recordRotation = targetRecord.rotation;
+
+                if (recordRotation != null)
+                {
+                    Vector3 targetRecordRotation = recordRotation;
+                    transform.rotation = Quaternion.Euler(targetRecordRotation);
+                }
             }
         }
 
