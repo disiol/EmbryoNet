@@ -29,7 +29,7 @@ public class FrameManager : MonoBehaviour
     public void DrawFrames()
     {
         _imageObject = GetComponent<Image>();
-        _safeAndLoadData = gameObject.AddComponent<SafeAndLoadData>();
+        _safeAndLoadData = gameObject.GetComponent<SafeAndLoadData>();
         _selectedDetectionID = _safeAndLoadData.LoadCurrentId();
 
 
@@ -78,7 +78,7 @@ public class FrameManager : MonoBehaviour
 
     private static Vector2 CalculatePositionAndSize(ParserModel.DetectionList detection, out Vector2 size)
     {
-        _revesConst = 1000;
+        _revesConst = 1048;
         _corectedScaleIndex = 2;
         Vector2 position = new Vector2((detection.brx - (detection.brx - detection.tlx) * 0.5f) / _corectedScaleIndex,
             _revesConst - (detection.bry - (detection.bry - detection.tly) * 0.5f) / _corectedScaleIndex);

@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -10,6 +11,7 @@ using SafeDadta;
 using SFB;
 using TMPro;
 using Tolls;
+using UnityEngine.Serialization;
 
 public class FileExplorer : MonoBehaviour
 {
@@ -23,6 +25,7 @@ public class FileExplorer : MonoBehaviour
     [SerializeField] private GameObject folderButtonPrefab;
     [SerializeField] private GameObject jsonButtonPrefab;
     [SerializeField] private Transform contentTransform;
+    [SerializeField] private GameObject panelProgressBar;
     [SerializeField] private Image imageObject;
 
     private string _path;
@@ -47,6 +50,8 @@ public class FileExplorer : MonoBehaviour
 
     private void OnLoadButtonClicked()
     {
+        panelProgressBar.SetActive(true);
+
         StandaloneFileBrowser.OpenFolderPanelAsync("Select Folder", "", true, (string[] paths) =>
         {
             WriteResult(paths);
@@ -84,16 +89,25 @@ public class FileExplorer : MonoBehaviour
 
             if (fileName != imagesFolderName)
             {
-                GameObject folderButton = Instantiate(folderButtonPrefab, contentTransform);
-                folderButton.GetComponent<PatchContainer>().folderPath = folder;
-
-                TMP_Text buttonText = folderButton.GetComponentInChildren<TMP_Text>();
-                buttonText.text = fileName;
-                Button folderBtn = folderButton.GetComponent<Button>();
-                folderBtn.onClick.AddListener(() =>
-                    ShowJSONFilesInFolder(folderButton.GetComponent<PatchContainer>().folderPath));
+                StartCoroutine(ShowFolders(folder, fileName));
             }
         }
+    }
+
+    private IEnumerator ShowFolders(string folder, string fileName)
+    {
+        panelProgressBar.SetActive(true);
+        GameObject folderButton = Instantiate(folderButtonPrefab, contentTransform);
+        folderButton.GetComponent<PatchContainer>().folderPath = folder;
+
+        TMP_Text buttonText = folderButton.GetComponentInChildren<TMP_Text>();
+        buttonText.text = fileName;
+        Button folderBtn = folderButton.GetComponent<Button>();
+        folderBtn.onClick.AddListener(() =>
+            StartCoroutine(ShowJsonFilesInFolder(folderButton.GetComponent<PatchContainer>().folderPath)));
+        panelProgressBar.SetActive(false);
+
+        yield return null;
     }
 
     private void PopUpWindowShow(string text)
@@ -102,8 +116,9 @@ public class FileExplorer : MonoBehaviour
         _statusText.text = text;
     }
 
-    private void ShowJSONFilesInFolder(string folderPath)
+    private IEnumerator ShowJsonFilesInFolder(string folderPath)
     {
+        panelProgressBar.SetActive(true);
         _safeAndLoadData.SafeCurrentId(0);
         ClearButtons();
         string[] jsonFiles = Directory.GetFiles(folderPath);
@@ -129,6 +144,10 @@ public class FileExplorer : MonoBehaviour
         }
 
         _jasonManager.dataFilePath = folderPath;
+
+        panelProgressBar.SetActive(false);
+
+        yield return null;
     }
 
 
@@ -145,8 +164,8 @@ public class FileExplorer : MonoBehaviour
 
         if (File.Exists(imagePath))
         {
-            OpenImage(records, imagePath);
             // Open the image or do something with it
+            StartCoroutine(OpenImage(records, imagePath));
         }
         else
         {
@@ -156,8 +175,10 @@ public class FileExplorer : MonoBehaviour
     }
 
 
-    private void OpenImage(ParserModel.Root jsonfileDadta, string imagePath)
+    private IEnumerator OpenImage(ParserModel.Root jsonfileDadta, string imagePath)
     {
+        panelProgressBar.SetActive(true);
+
         Debug.Log("Open the image: " + imagePath);
 
         if (!string.IsNullOrEmpty(imagePath))
@@ -174,6 +195,9 @@ public class FileExplorer : MonoBehaviour
             CrateSprite(texture);
             frameManager.DrawFrames();
         }
+
+        panelProgressBar.SetActive(false);
+        yield return null;
     }
 
     private void CrateSprite(Texture2D texture)

@@ -136,20 +136,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetID: 0
-  jsonFilePath: 
-  detection:
-    brx: 0
-    bry: 0
-    classId: 0
-    className: 
-    confidence: 0
-    id: 0
-    oldProbs: []
-    prob: []
-    severe: 0
-    tlx: 0
-    tly: 0
-    rotation: {x: 0, y: 0, z: 0}
 --- !u!114 &6050155772405394145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,4 +148,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3147f8d53d49446b984d3827590f5dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationButton: {fileID: 2207327367791603190}
+  dataFilePath: 
+  targetRecord:
+    brx: 0
+    bry: 0
+    classId: 0
+    className: 
+    confidence: 0
+    id: 0
+    oldProbs: []
+    prob: []
+    severe: 0
+    tlx: 0
+    tly: 0
+    rotation: {x: 0, y: 0, z: 0}

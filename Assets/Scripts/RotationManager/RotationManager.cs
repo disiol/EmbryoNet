@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using Models;
@@ -154,7 +155,8 @@ namespace RotationManager
                 float z = float.Parse(_menuZInput.text);
 
 
-                UpdateRotationInDataList(x, y, z);
+                StartCoroutine(UpdateRotationInDataList(x, y, z));
+             
                 _jasonManager.dataList = _dataList;
 
                 UpdateTargetRecord();
@@ -198,7 +200,7 @@ namespace RotationManager
             _rotationButton.transform.rotation = Quaternion.Euler(newTargetRecordRotation);
         }
 
-        private void UpdateRotationInDataList(float x, float y, float z)
+        private IEnumerator UpdateRotationInDataList(float x, float y, float z)
         {
             Debug.Log("UpdateRotationInDataList");
 
@@ -226,6 +228,8 @@ namespace RotationManager
                     }
                 }
             }
+
+            yield return null;
         }
 
         private void UpdateTargetRecord()
@@ -263,11 +267,24 @@ namespace RotationManager
         private void SaveDataToFile()
         {
             _jasonManager = _panel.GetComponent<JasonManager>();
-            
 
 
             // Save the modified data back to the JSON filePath
 
+            StartCoroutine(CrateFilesFromData());
+
+
+            string changesSavedToFilepath = "Changes saved to filePath: " + _folderPath;
+            Debug.Log(changesSavedToFilepath);
+
+            PopUpWindowShow(changesSavedToFilepath);
+
+
+            // OpenNewFile();
+        }
+
+        private IEnumerator CrateFilesFromData()
+        {
             foreach (var root in _jasonManager.dataList)
             {
                 _fileName = Path.GetFileNameWithoutExtension(root.Key);
@@ -280,15 +297,45 @@ namespace RotationManager
                 File.WriteAllText(Path.Combine(_folderPath, _newFileName), updatedJsonString);
             }
 
+            yield return null;
+        }
 
-            string changesSavedToFilepath = "Changes saved to filePath: " + _folderPath;
-            Debug.Log(changesSavedToFilepath);
+        public void LoadData()
+        {
+            Debug.Log("LoadData");
+            if (targetRecord != null)
+            {
+                // Show the current rotation values in the menu
+                ShowCurrentRotationValuesInTheMenu();
+            }
 
-            PopUpWindowShow(changesSavedToFilepath);
-            
+            GameObject canvens = GameObject.Find("Canvas");
+            _panel = canvens.transform.Find("Panel");
+            _jasonManager = _panel.GetComponent<JasonManager>();
+
+            dataFilePath = _jasonManager.dataFilePath;
+            // Read JSON data from the filePath
+
+            // Load the JSON data from the filePath path
 
 
-            // OpenNewFile();
+            // _newFileName = Path.GetFileNameWithoutExtension(_dataFilePath) + "_3d_cods.json"; //TODO folder C10
+
+            // Optionally, set the initial target record
+            // _records = _targetRecord
+            // _targetRecord = FindRecordById(_targetID, _records.detection_list);
+
+
+            if (targetRecord != null)
+            {
+                Vector3 recordRotation = targetRecord.rotation;
+
+                if (recordRotation != null)
+                {
+                    Vector3 targetRecordRotation = recordRotation;
+                    transform.rotation = Quaternion.Euler(targetRecordRotation);
+                }
+            }
         }
 
         private void ShowPopSafeUpWindow()
@@ -300,7 +347,6 @@ namespace RotationManager
 
 
             _inputFieldEnterFolderNameForSafeNewDataText = _inputFieldEnterFolderNameForSafeNewData.text;
-            
 
 
             Button buttonOk = _popSafeUpWindow.transform.Find("ButtonOk").GetComponent<Button>();
@@ -345,7 +391,6 @@ namespace RotationManager
                 _newFolderName = _inputFieldEnterFolderNameForSafeNewDataText;
 
                 folderPath = DeleteLastWord(dataFilePath) + _newFolderName;
-
             }
             else
             {
@@ -355,43 +400,6 @@ namespace RotationManager
             return folderPath;
         }
 
-        public void LoadData()
-        {
-            Debug.Log("LoadData");
-            if (targetRecord != null)
-            {
-                // Show the current rotation values in the menu
-                ShowCurrentRotationValuesInTheMenu();
-            }
-
-            GameObject canvens = GameObject.Find("Canvas");
-            _panel = canvens.transform.Find("Panel");
-            _jasonManager = _panel.GetComponent<JasonManager>();
-
-            dataFilePath = _jasonManager.dataFilePath;
-            // Read JSON data from the filePath
-
-            // Load the JSON data from the filePath path
-
-
-            // _newFileName = Path.GetFileNameWithoutExtension(_dataFilePath) + "_3d_cods.json"; //TODO folder C10
-
-            // Optionally, set the initial target record
-            // _records = _targetRecord
-            // _targetRecord = FindRecordById(_targetID, _records.detection_list);
-
-
-            if (targetRecord != null)
-            {
-                Vector3 recordRotation = targetRecord.rotation;
-
-                if (recordRotation != null)
-                {
-                    Vector3 targetRecordRotation = recordRotation;
-                    transform.rotation = Quaternion.Euler(targetRecordRotation);
-                }
-            }
-        }
 
         static string DeleteLastWord(string input)
         {
