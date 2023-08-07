@@ -10,8 +10,8 @@ namespace Tolls
     {
         public string dataFilePath;
 
-        [HideInInspector]
-        public Dictionary<string, ParserModel.Root> dataList = new Dictionary<string, ParserModel.Root>();
+        [HideInInspector] public List<JasonFilePathAndDataModel> dataList = new List<JasonFilePathAndDataModel>();
+         public int currentOrderJsonFile;
 
         private ParserModel.Root OpenJasonFile(string jsonfilePath)
         {
@@ -23,7 +23,7 @@ namespace Tolls
         public void LoadDataFromJsonFiles(string jsonfilePath)
         {
             ParserModel.Root data = OpenJasonFile(jsonfilePath);
-            dataList.Add(jsonfilePath, data);
+            dataList.Add(new JasonFilePathAndDataModel(jsonfilePath, data));
         }
     }
 }

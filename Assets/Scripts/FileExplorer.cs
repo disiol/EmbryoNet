@@ -133,14 +133,16 @@ public class FileExplorer : MonoBehaviour
 
             buttonText.text = fileNameWithoutExtension;
 
-            jsonButton.GetComponent<PatchContainer>().filePath = file;
-            jsonButton.GetComponent<PatchContainer>().folderPath = folderPath;
+            PatchContainer patchContainer = jsonButton.GetComponent<PatchContainer>();
+            patchContainer.filePath = file;
+            patchContainer.folderPath = folderPath;
+            patchContainer.fileOrder = index;
 
             _jasonManager.LoadDataFromJsonFiles(file);
 
 
             Button jsonBtn = jsonButton.GetComponent<Button>();
-            jsonBtn.onClick.AddListener(() => FindImageByName(jsonButton.GetComponent<PatchContainer>().filePath));
+            jsonBtn.onClick.AddListener(() => FindImageByName(patchContainer.fileOrder));
         }
 
         _jasonManager.dataFilePath = folderPath;
@@ -151,11 +153,11 @@ public class FileExplorer : MonoBehaviour
     }
 
 
-    private void FindImageByName(string opderjsonfile)
+    private void FindImageByName(int opderJsonFile)
 
     {
-        Dictionary<string, ParserModel.Root> jasonManagerDataList = _jasonManager.dataList;
-        ParserModel.Root records = jasonManagerDataList[opderjsonfile];
+        List<JasonFilePathAndDataModel> jasonManagerDataList = _jasonManager.dataList;
+        ParserModel.Root records = jasonManagerDataList[opderJsonFile].data;
 
         string imageName = records.source_name;
         string imagePath =
@@ -164,6 +166,7 @@ public class FileExplorer : MonoBehaviour
 
         if (File.Exists(imagePath))
         {
+            _jasonManager.currentOrderJsonFile = opderJsonFile;
             // Open the image or do something with it
             StartCoroutine(OpenImage(records, imagePath));
         }

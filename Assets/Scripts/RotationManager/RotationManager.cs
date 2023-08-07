@@ -19,7 +19,7 @@ namespace RotationManager
         private ParserModel.Root _records;
         public string dataFilePath;
 
-        private Dictionary<string, ParserModel.Root> _dataList;
+        private List<JasonFilePathAndDataModel> _dataList;
 
 
         private GameObject _rotationMenu;
@@ -56,6 +56,7 @@ namespace RotationManager
         private string _inputFieldEnterFolderNameForSafeNewDataText;
         private string _folderPath;
         private GameObject _panelProgressBar;
+        private int _jasonManagerCurrentOrderJsonFile;
 
         private void Start()
         {
@@ -161,6 +162,8 @@ namespace RotationManager
             if (_dataList != null)
             {
                 _jasonManager = _panel.GetComponent<JasonManager>();
+                _jasonManagerCurrentOrderJsonFile = _jasonManager.currentOrderJsonFile;
+
 
 
                 float x = float.Parse(_menuXInput.text);
@@ -230,9 +233,9 @@ namespace RotationManager
         {
             Debug.Log("UpdateRotationInDataList");
 
-            foreach (var data in _dataList)
+            for (int i = _jasonManagerCurrentOrderJsonFile; i < _dataList.Count; i++)
             {
-                List<ParserModel.DetectionList> detectionList = data.Value.detection_list;
+                List<ParserModel.DetectionList> detectionList = _dataList[i].data.detection_list;
 
                 if (_dataList.Count > 0)
                 {
@@ -248,9 +251,12 @@ namespace RotationManager
                         var deltaAngleZ = Mathf.DeltaAngle(recordOldRotation.z, z);
 
 
-                        targetRecord.rotation = new Vector3(recordOldRotation.x + deltaAngleX,
+                        Vector3 newTargetRecordRotation = new Vector3(recordOldRotation.x + deltaAngleX,
                             recordOldRotation.y + deltaAngleY,
                             recordOldRotation.z + deltaAngleZ);
+                        targetRecord.rotation = newTargetRecordRotation;
+
+                        detectionList[0].rotation = newTargetRecordRotation;
                     }
                 }
             }
@@ -263,7 +269,7 @@ namespace RotationManager
 
             foreach (var data in _dataList)
             {
-                List<ParserModel.DetectionList> detectionList = data.Value.detection_list;
+                List<ParserModel.DetectionList> detectionList = data.data.detection_list;
 
                 if (_dataList.Count > 0)
                 {
@@ -311,13 +317,13 @@ namespace RotationManager
         {
             foreach (var root in _jasonManager.dataList)
             {
-                _fileName = Path.GetFileNameWithoutExtension(root.Key);
+                _fileName = Path.GetFileNameWithoutExtension(root.jsonFilePath);
 
                 _newFileName = _fileName + "_3d_cods.json";
                 _folderPath = CrateNewDataFilePathAndDirectory();
 
 
-                string updatedJsonString = JsonUtility.ToJson(root.Value, true);
+                string updatedJsonString = JsonUtility.ToJson(root.jsonFilePath, true);
                 File.WriteAllText(Path.Combine(_folderPath, _newFileName), updatedJsonString);
             }
 

@@ -1258,8 +1258,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataFilePath: 
-  currentFileOrder: 0
   dataList: []
+  currentOrderJsonFile: 0
 --- !u!114 &747444578
 MonoBehaviour:
   m_ObjectHideFlags: 0
