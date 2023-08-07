@@ -29,7 +29,7 @@ public class FrameManager : MonoBehaviour
     public void DrawFrames()
     {
         _imageObject = GetComponent<Image>();
-        _safeAndLoadData = gameObject.GetComponent<SafeAndLoadData>();
+        _safeAndLoadData = GameObject.Find("Canvas/Panel").GetComponent<SafeAndLoadData>();
         _selectedDetectionID = _safeAndLoadData.LoadCurrentId();
 
 

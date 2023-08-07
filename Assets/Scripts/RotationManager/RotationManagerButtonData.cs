@@ -20,8 +20,9 @@ namespace RotationManager
 
         private void Start()
         {
-            _safeAndLoadData = gameObject.AddComponent<SafeAndLoadData>();
-          
+            _safeAndLoadData = GameObject.Find("Canvas/Panel").GetComponent<SafeAndLoadData>();
+
+
             _rotationManager = transform.GetComponent<RotationManager>();
             transform.GetComponent<Button>().onClick.AddListener(OnButtonClick);
             _transformParentFrame = transform.parent;

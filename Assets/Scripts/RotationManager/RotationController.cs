@@ -43,13 +43,13 @@ namespace RotationManager
 
             increaseZButton.onClick.AddListener(IncreaseZRotation);
             decreaseZButton.onClick.AddListener(DecreaseZRotation);
-            
+
             menuXInput.onValueChanged.AddListener(OnXValueChanged);
             menuYInput.onValueChanged.AddListener(OnYValueChanged);
             menuZInput.onValueChanged.AddListener(OnZValueChanged);
         }
-        
-        
+
+
         // Handle X, Y, and Z rotation value changes
         private void OnXValueChanged(string newValue)
         {
@@ -76,12 +76,13 @@ namespace RotationManager
         private void IncreaseXRotation()
         {
             currentRotation.x += currentRotationStep;
+            UpdateRotation();
         }
 
         private void DecreaseXRotation()
         {
             currentRotation.x -= currentRotationStep;
-            
+            UpdateRotation();
         }
 
         private void IncreaseYRotation()
@@ -107,8 +108,7 @@ namespace RotationManager
             currentRotation.z -= currentRotationStep;
             UpdateRotation();
         }
-        
-      
+
 
         // Apply the 0-360 degree constraint and update the object's rotation
         private void UpdateRotation()
@@ -122,9 +122,7 @@ namespace RotationManager
             currentRotation.z = Mathf.Clamp(currentRotation.z, minRotation, maxRotation);
             menuZInput.text = currentRotation.z.ToString();
 
-            rotationManager.UpdateRotation();
-        } 
-        
-       
+            StartCoroutine(rotationManager.UpdateRotation());
+        }
     }
 }

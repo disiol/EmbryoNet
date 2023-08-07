@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -54,6 +55,7 @@ namespace RotationManager
         private GameObject _popUpWindow;
         private string _inputFieldEnterFolderNameForSafeNewDataText;
         private string _folderPath;
+        private GameObject _panelProgressBar;
 
         private void Start()
         {
@@ -75,6 +77,8 @@ namespace RotationManager
             _popSafeUpWindow = canvens.transform.Find("PopSafeUpWindow").GameObject();
             _popUpWindow = canvens.transform.Find("PopUpWindow").GameObject();
 
+            _panelProgressBar = canvens.transform.Find("PanelProgressBar").GameObject();
+
 
             _isMenuVisible = !_isMenuVisible;
             _rotationMenu.SetActive(_isMenuVisible);
@@ -91,18 +95,26 @@ namespace RotationManager
 
         private void ShowCurrentRotationValuesInTheMenu()
         {
-            GetRotationMenuFileds();
+            try
+            {
+                GetRotationMenuFileds();
 
-            Vector3 targetRecordRotation = targetRecord.rotation;
-            float x = targetRecordRotation.x;
+                Vector3 targetRecordRotation = targetRecord.rotation;
+                float x = targetRecordRotation.x;
 
-            _menuXInput.text = x.ToString();
-
-
-            _menuYInput.text = targetRecordRotation.y.ToString();
+                _menuXInput.text = x.ToString();
 
 
-            _menuZInput.text = targetRecordRotation.z.ToString();
+                _menuYInput.text = targetRecordRotation.y.ToString();
+
+
+                _menuZInput.text = targetRecordRotation.z.ToString();
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e);
+                PopUpWindowStatusShow("Please select an embryo");
+            }
         }
 
         private void GetRotationMenuFileds()
@@ -126,8 +138,9 @@ namespace RotationManager
             _isMenuVisible = false;
         }
 
-        public void UpdateRotation()
+        public IEnumerator UpdateRotation()
         {
+            _panelProgressBar.SetActive(true);
             //TODO refactoring
             _safeAndLoadData = gameObject.AddComponent<SafeAndLoadData>();
 
@@ -155,23 +168,28 @@ namespace RotationManager
                 float z = float.Parse(_menuZInput.text);
 
 
-                StartCoroutine(UpdateRotationInDataList(x, y, z));
-             
+                UpdateRotationInDataList(x, y, z);
+
                 _jasonManager.dataList = _dataList;
 
                 UpdateTargetRecord();
                 ShowCurrentRotationValuesInTheMenu();
                 SetNewRotation(x, y, z);
 
+                _panelProgressBar.SetActive(false);
 
                 // Hide the menu after saving changes
                 // HideMenu();
             }
             else
             {
+                _panelProgressBar.SetActive(false);
+
                 //TODO exephen show
                 Debug.Log("_exephen targetRecord = " + targetRecord);
             }
+
+            yield return null;
         }
 
         private void GetCurentRotationButton()
@@ -197,10 +215,18 @@ namespace RotationManager
             Debug.Log("SetNewRotation");
             GetCurentRotationButton();
             Vector3 newTargetRecordRotation = new Vector3(x, y, z);
-            _rotationButton.transform.rotation = Quaternion.Euler(newTargetRecordRotation);
+            try
+            {
+                _rotationButton.transform.rotation = Quaternion.Euler(newTargetRecordRotation);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e);
+                PopUpWindowStatusShow("Please select an embryo");
+            }
         }
 
-        private IEnumerator UpdateRotationInDataList(float x, float y, float z)
+        private void UpdateRotationInDataList(float x, float y, float z)
         {
             Debug.Log("UpdateRotationInDataList");
 
@@ -228,8 +254,6 @@ namespace RotationManager
                     }
                 }
             }
-
-            yield return null;
         }
 
         private void UpdateTargetRecord()
@@ -277,7 +301,7 @@ namespace RotationManager
             string changesSavedToFilepath = "Changes saved to filePath: " + _folderPath;
             Debug.Log(changesSavedToFilepath);
 
-            PopUpWindowShow(changesSavedToFilepath);
+            PopUpWindowStatusShow(changesSavedToFilepath);
 
 
             // OpenNewFile();
@@ -354,7 +378,7 @@ namespace RotationManager
         }
 
 
-        private void PopUpWindowShow(string text)
+        private void PopUpWindowStatusShow(string text)
         {
             _popUpWindow.SetActive(true);
             TextMeshProUGUI statusText = _popUpWindow.transform
