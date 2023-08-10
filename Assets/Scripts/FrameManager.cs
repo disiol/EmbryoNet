@@ -24,6 +24,7 @@ public class FrameManager : MonoBehaviour
     private int _selectedDetectionID;
     public string dataFilePath;
     private SafeAndLoadData _safeAndLoadData;
+    private GameObject _selectedButtonRotation;
 
 
     public void DrawFrames()
@@ -63,6 +64,12 @@ public class FrameManager : MonoBehaviour
         {
             DrawFrame(detection);
         }
+
+        // TODO if (_selectedButtonRotation != null)
+        // {
+        //     _selectedButtonRotation.GetComponent<RotationManager.RotationManager>().LoadData();
+        //
+        // }
     }
 
     void DrawFrame(ParserModel.DetectionList detection)
@@ -93,14 +100,17 @@ public class FrameManager : MonoBehaviour
     {
         // Create the button on top of the frame
         GameObject button = Instantiate(buttonPrefab, frame.transform);
-        button.name = "ButtonRotation_" + detection.id;
+        int detectionID = detection.id;
+        button.name = "ButtonRotation_" + detectionID;
 
         RotationManagerButtonData rotationManagerButtonData = button.GetComponent<RotationManagerButtonData>();
-        rotationManagerButtonData.targetID = detection.id;
+        rotationManagerButtonData.targetID = detectionID;
       
         RotationManager.RotationManager rotationManager = button.GetComponent<RotationManager.RotationManager>();
         rotationManager.dataFilePath = dataFilePath;
         rotationManager.targetRecord = detection;
+
+      
 
         
 
@@ -118,6 +128,13 @@ public class FrameManager : MonoBehaviour
         {
             // Set the button's rotation to match the frame's rotation
             button.transform.rotation = Quaternion.Euler(detectionRotation);
+        }
+        
+        if (_selectedDetectionID == detectionID)
+        {
+
+            _selectedButtonRotation = button;
+
         }
     }
 

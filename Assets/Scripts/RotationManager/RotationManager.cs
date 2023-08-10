@@ -63,7 +63,7 @@ namespace RotationManager
             ShowMenu();
         }
 
-        public void ShowMenu()
+        private void ShowMenu()
         {
             GameObject canvens = GameObject.Find("Canvas");
             _panel = canvens.transform.Find("Panel");
@@ -386,6 +386,8 @@ namespace RotationManager
 
         private void PopUpWindowStatusShow(string text)
         {
+            GameObject canvens = GameObject.Find("Canvas");
+            _popUpWindow = canvens.transform.Find("PopUpWindow").GameObject();
             _popUpWindow.SetActive(true);
             TextMeshProUGUI statusText = _popUpWindow.transform
                 .Find("StatusText")
