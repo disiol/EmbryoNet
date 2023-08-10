@@ -1,22 +1,34 @@
-Shader "Custom/RotatedArrowsFromCoordinates" {
-    Properties {
+Shader "Custom/RotatedArrowsFromCoordinates"
+{
+    Properties
+    {
         _MainTex ("Texture", 2D) = "white" {}
         _Coordinates ("Coordinates", Vector) = (0, 0, 0)
+        _Rotation("Rotation", Vector) = (0, 0, 90)
+
     }
 
-    SubShader {
-        Pass {
+    SubShader
+    {
+        Pass
+        {
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
             #include "UnityCG.cginc"
+            const float deg2rad = 0.01745329251; // This is equivalent to PI / 180.0            int ITERS = 64;
 
-            struct appdata_t {
+            uniform float3 _Rotation;
+
+
+            struct appdata_t
+            {
                 float4 vertex : POSITION;
                 float2 uv : TEXCOORD0;
             };
 
-            struct v2f {
+            struct v2f
+            {
                 float2 uv : TEXCOORD0;
                 float4 vertex : SV_POSITION;
             };
@@ -24,14 +36,20 @@ Shader "Custom/RotatedArrowsFromCoordinates" {
             sampler2D _MainTex;
             float3 _Coordinates;
 
-            v2f vert (appdata_t v) {
+
+        
+
+
+            v2f vert(appdata_t v)
+            {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = v.uv;
                 return o;
             }
 
-            fixed4 frag (v2f i) : SV_Target {
+            fixed4 frag(v2f i) : SV_Target
+            {
                 float2 uv = i.uv;
                 float2 center = float2(0.5, 0.5);
                 float axisThickness = 0.02;
@@ -78,13 +96,16 @@ Shader "Custom/RotatedArrowsFromCoordinates" {
                 float arrowWidth = axisThickness;
 
                 // Check if the pixel is inside an arrow
-                if (distX < arrowLength && distX < arrowWidth) {
+                if (distX < arrowLength && distX < arrowWidth)
+                {
                     return xColor;
                 }
-                if (distY < arrowLength && distY < arrowWidth) {
+                if (distY < arrowLength && distY < arrowWidth)
+                {
                     return yColor;
                 }
-                if (distZ < arrowLength && distZ < arrowWidth) {
+                if (distZ < arrowLength && distZ < arrowWidth)
+                {
                     return zColor;
                 }
 
