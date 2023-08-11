@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e09013f5-b8f2-4e92-b9ff-41ece921e44b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Shelders/ArrowRenderer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Shelders/ArrowShader.shader" afterDir="false" />
+    <list default="true" id="e09013f5-b8f2-4e92-b9ff-41ece921e44b" name="Changes" comment="Shader &quot;Custom/ArrowShader&quot;&#10;{">
+      <change afterPath="$PROJECT_DIR$/Assets/Shelders/ArrowRendering.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shelders/DrawArrow.compute" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EmbryoNet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EmbryoNet/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Perfabs/AxesShader.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/AxesShader.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shelders/3DCoordinates.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shelders/3DCoordinates.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/3DCoordinates.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/3DCoordinates.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/ArrowRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shelders/ArrowRenderer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/ArrowShader.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/ArrowShader.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +25,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/06/440a9b94/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/34/47892c02/Shader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/39/af6bd1c5/Debug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/3d/e9a6ba3a/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/6e/55c5793f/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
@@ -27,9 +33,11 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/da/fbc87ed8/RectTransform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/dc/0bb340a5/InvokableCall`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/df/52c06d9f/Material.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/fa/32a84019/ComputeShader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../UnityHub/2021.3.26f1/Editor/Data/CGIncludes/UnityCG.cginc" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="2TQrV0EQU1IRtWPOMgoEFYRDpwk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -41,11 +49,12 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.5377907&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/denis/IT/unity/work/Matvey/ArrowShader.shader&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propDebugger&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -83,10 +92,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="40547">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="88196">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="40547" />
+      <option name="pid" value="88196" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -114,13 +123,15 @@
       <workItem from="1691578760412" duration="2057000" />
       <workItem from="1691580922320" duration="22812000" />
       <workItem from="1691622111329" duration="3802000" />
-      <workItem from="1691670902835" duration="8645000" />
+      <workItem from="1691670902835" duration="25111000" />
+      <workItem from="1691755124023" duration="10285000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,11 +147,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Shader &quot;Custom/ArrowShader&quot;&#10;{" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shader &quot;Custom/ArrowShader&quot;&#10;{" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationController.cs</url>
           <line>43</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationController.cs" initialLine="89" containingFunctionPresentation="Method 'IncreaseYRotation'">
@@ -153,7 +166,7 @@
           </properties>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs</url>
           <line>335</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="335" containingFunctionPresentation="Method 'LoadData'">
@@ -166,7 +179,7 @@
           </properties>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs</url>
           <line>338</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="338" containingFunctionPresentation="Method 'LoadData'">
@@ -178,6 +191,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Shelders/ArrowRendering.cs</url>
+          <line>23</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Shelders/ArrowRendering.cs" initialLine="23" containingFunctionPresentation="Method 'Update'">
+            <startOffsets>
+              <option value="761" />
+            </startOffsets>
+            <endOffsets>
+              <option value="819" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -192,7 +218,12 @@
         <watch expression="_jasonManagerCurrentOrderJsonFile" />
         <watch expression="i" />
         <watch expression="newTargetRecordRotation" />
+        <watch expression="kernelIndex" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

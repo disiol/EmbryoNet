@@ -174,14 +174,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 26dab82dae2c940c3ac4ed77fda0ce20, type: 2}
-  m_Color: {r: 0.054901965, g: 0.74509805, b: 0.5319321, a: 1}
+  m_Color: {r: 0.3778932, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9aa5c33c48c356197a50e271251a3ae8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -208,7 +208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 375344238}
-  - component: {fileID: 375344237}
+  - component: {fileID: 375344239}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -216,20 +216,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &375344237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375344236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577e52445ec6440da374fa986e00cc8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arrowMaterial: {fileID: 2100000, guid: 26dab82dae2c940c3ac4ed77fda0ce20, type: 2}
-  arrowTexture: {fileID: 2800000, guid: 9aa5c33c48c356197a50e271251a3ae8, type: 3}
 --- !u!4 &375344238
 Transform:
   m_ObjectHideFlags: 0
@@ -245,6 +231,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &375344239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375344236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84267fe3202f1e750819465191bbbe2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowComputeShader: {fileID: 7200000, guid: 7827c2ea507ae6a148e40a0fb948c018, type: 3}
+  arrowRenderTexture: {fileID: 8400000, guid: 4203b6b22064ed01999aa2c1c1162e0b, type: 2}
+  displayMaterial: {fileID: 2100000, guid: 26dab82dae2c940c3ac4ed77fda0ce20, type: 2}
+  rotation: {x: 60, y: 70, z: 80, w: 1}
+  position: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &618695599
 GameObject:
   m_ObjectHideFlags: 0

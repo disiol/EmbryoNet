@@ -4,8 +4,11 @@ namespace Shelders
 {
     public class ArrowRenderer : MonoBehaviour
     {
+        public ComputeShader arrowComputeShader;
         public Material arrowMaterial;
         public Texture2D arrowTexture;
+        public RenderTexture renderTexture;
+
 
         private Vector2[] arrowPositions = new Vector2[]
         {
@@ -21,6 +24,7 @@ namespace Shelders
             new Vector3(0.0f, -30.0f, 0.0f)
         };
 
+
         private void Start()
         {
             RenderArrowsToTexture();
@@ -28,18 +32,19 @@ namespace Shelders
 
         private void RenderArrowsToTexture()
         {
-            RenderTexture renderTexture = new RenderTexture(Screen.width, Screen.height, 0);
+             renderTexture = new RenderTexture(Screen.width, Screen.height, 0);
             Graphics.SetRenderTarget(renderTexture);
             GL.Clear(true, true, Color.clear);
+            
 
             foreach (var arrowPosition in arrowPositions)
             {
                 for (int i = 0; i < arrowRotations.Length; i++)
                 {
-                    Material materialInstance = new Material(arrowMaterial);
-                    materialInstance.SetVector("_Position", arrowPosition);
-                    materialInstance.SetVector("_Rotation", arrowRotations[i]);
-                    Graphics.Blit(arrowTexture, renderTexture, materialInstance);
+                    arrowComputeShader.SetVector("_Position", arrowPosition);
+                    arrowComputeShader.SetVector("_Rotation", arrowRotations[i]);
+                    
+                    Graphics.Blit(arrowTexture, renderTexture, arrowMaterial);
                 }
             }
 
