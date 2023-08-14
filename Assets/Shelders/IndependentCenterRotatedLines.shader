@@ -4,9 +4,9 @@ Shader "Custom/IndependentCenterRotatedLines"
     {
         _MainTex ("Texture", 2D) = "white" {}
         _LineWidth ("Line Width", Range(0.001, 0.1)) = 0.01
-        _XRotationAngle ("X Rotation Angle", Range(0, 360)) = 45
-        _YRotationAngle ("Y Rotation Angle", Range(0, 360)) = 135
-        _ZRotationAngle ("Z Rotation Angle", Range(0, 360)) = 225
+        _XRotationAngle ("X Rotation Angle", Range(0, 360)) = 0
+        _YRotationAngle ("Y Rotation Angle", Range(0, 360)) = 0
+        _ZRotationAngle ("Z Rotation Angle", Range(0, 360)) = 0
     }
     SubShader
     {
@@ -56,7 +56,6 @@ Shader "Custom/IndependentCenterRotatedLines"
 
                 // Calculate UV coordinates relative to the center
                 float2 centeredUV = i.uv - 0.5;
-
                 // Apply rotations to UV coordinates
                 float cosX = cos(_XRotationAngle * 3.14159265 / 180.0);
                 float sinX = sin(_XRotationAngle * 3.14159265 / 180.0);
