@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e09013f5-b8f2-4e92-b9ff-41ece921e44b" name="Changes" comment="IndependentCenterRotatedLines">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EmbryoNet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EmbryoNet/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/AxesShader.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/AxesShader.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/Arow.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shelders/Arow.shader" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Shelders/IndependentCenterRotatedLines.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shelders/IndependentCenterRotatedLines.shader" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,12 +43,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "XThreadsFramesViewSplitterKey": "0.91133004",
-    "last_opened_file_path": "/home/denis/IT/unity/work/Matvey/draw_arrow.compute",
+    "last_opened_file_path": "/home/denis/IT/unity/work/Matvey/ArrowShader.shader",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "project.propDebugger",
+    "settings.editor.selected.configurable": "preferences.editor",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -117,7 +120,7 @@
       <workItem from="1691670902835" duration="25111000" />
       <workItem from="1691755124023" duration="10726000" />
       <workItem from="1691837856463" duration="6685000" />
-      <workItem from="1691857628424" duration="21375000" />
+      <workItem from="1691857628424" duration="44228000" />
     </task>
     <task id="LOCAL-00001" summary="Shader &quot;Custom/IndependentCenterRotatedLines&quot;">
       <option name="closed" value="true" />

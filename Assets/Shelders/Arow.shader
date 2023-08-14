@@ -1,59 +1,40 @@
-Shader "Unlit/Arow"
-{
-    Properties
-    {
-    _MainTex ("Texture", 2D) = "white" {}
+Shader "Custom/CenterToRightLine" {
+    Properties {
+        _MainTex ("Texture", 2D) = "white" {}
     }
-    SubShader
-    {
-        Tags
-        {
-            "RenderType"="Opaque"
-        }
-        LOD 100
 
-        Pass
-        {
+    SubShader {
+        Tags { "Queue"="Transparent" "RenderType"="Transparent" }
+        Pass {
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            // make fog work
-            #pragma multi_compile_fog
-
             #include "UnityCG.cginc"
 
-            struct appdata
-            {
+            struct appdata_t {
                 float4 vertex : POSITION;
-                float2 uv : TEXCOORD0;
             };
 
-            struct v2f
-            {
+            struct v2f {
                 float2 uv : TEXCOORD0;
-                UNITY_FOG_COORDS(1)
                 float4 vertex : SV_POSITION;
             };
 
             sampler2D _MainTex;
-            float4 _MainTex_ST;
 
-            v2f vert(appdata v)
-            {
+            v2f vert (appdata_t v) {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-                UNITY_TRANSFER_FOG(o, o.vertex);
+                o.uv = v.vertex.xy * 0.5 + 0.5; // Map vertex position to UV coordinates
                 return o;
             }
 
-            fixed4 frag(v2f i) : SV_Target
-            {
-                // sample the texture
-                fixed4 col = tex2D(_MainTex, i.uv);
-                // apply fog
-                UNITY_APPLY_FOG(i.fogCoord, col);
-                return col;
+            half4 frag (v2f i) : SV_Target {
+                half4 color = tex2D(_MainTex, i.uv);
+                if (i.uv.x < 0.5 && i.uv.y > 0.5) { // Draw the line starting from the center
+                    color = half4(1, 0, 0, 1); // Set line color to red
+                }
+                return color;
             }
             ENDCG
         }

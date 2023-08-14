@@ -1,9 +1,10 @@
-Shader "Custom/IndependentCenterRotatedLines"
+Shader "Custom/IndependentCenterRotatedLinesWithTrianglesAndLength"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
         _LineWidth ("Line Width", Range(0.001, 0.1)) = 0.01
+        _LineLength ("Line Length", Range(0.1, 1.0)) = 0.5
         _XRotationAngle ("X Rotation Angle", Range(0, 360)) = 0
         _YRotationAngle ("Y Rotation Angle", Range(0, 360)) = 0
         _ZRotationAngle ("Z Rotation Angle", Range(0, 360)) = 0
@@ -36,11 +37,11 @@ Shader "Custom/IndependentCenterRotatedLines"
             };
 
             float _LineWidth;
+            float _LineLength;
             float _XRotationAngle;
             float _YRotationAngle;
             float _ZRotationAngle;
             sampler2D _MainTex;
-
 
             v2f vert(appdata_t v)
             {
@@ -56,6 +57,7 @@ Shader "Custom/IndependentCenterRotatedLines"
 
                 // Calculate UV coordinates relative to the center
                 float2 centeredUV = i.uv - 0.5;
+
                 // Apply rotations to UV coordinates
                 float cosX = cos(_XRotationAngle * 3.14159265 / 180.0);
                 float sinX = sin(_XRotationAngle * 3.14159265 / 180.0);
@@ -83,7 +85,11 @@ Shader "Custom/IndependentCenterRotatedLines"
                 float yFlatness = abs(rotatedUVY.y);
                 float zFlatness = length(rotatedUVZ);
 
-                // Draw lines based on flatness
+                // Calculate distances from the center to the end of each line
+                float2 endUV = i.uv + centeredUV * _LineLength;
+                float endDistance = length(endUV - 0.5);
+
+                // Draw lines based on flatness and triangles at the end
                 half4 lineColor = texCol;
                 if (xFlatness < _LineWidth)
                 {
@@ -96,6 +102,10 @@ Shader "Custom/IndependentCenterRotatedLines"
                 else if (zFlatness < _LineWidth)
                 {
                     lineColor = half4(0, 0, 1, 1); // Line color for z rotation (blue)
+                }
+                else if (endDistance < _LineWidth)
+                {
+                    lineColor = half4(1, 1, 0, 1); // Line color for triangle end (yellow)
                 }
 
                 return lineColor;

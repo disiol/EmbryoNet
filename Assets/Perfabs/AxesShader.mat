@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AxesShader
-  m_Shader: {fileID: 4800000, guid: fb35d0f24bff49f9a9e47a908bcb7de5, type: 3}
+  m_Shader: {fileID: 4800000, guid: eaf5db8eddf017bc7acd2ffcfdf45476, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -21,14 +21,21 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 4e435f046c01c9a7083a91e9f71d978f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _LineWidth: 0.01
+    - _Length: 7.4093545e+20
+    - _LineLength: 5.22
+    - _LineLengthMultiplier: 0.1
+    - _LineWidth: 0.0053
+    - _MaxLength: 1
+    - _RotationAngle: 187
     - _XRotationAngle: 0
     - _YRotationAngle: 0
     - _ZRotationAngle: 0
-    m_Colors: []
+    m_Colors:
+    - _Color: {r: 1, g: 0.105516136, b: 0, a: 1}
+    - _LineColor: {r: 0.7923705, g: 0.9726406, b: 0.050797284, a: 1}
   m_BuildTextureStacks: []
