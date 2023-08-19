@@ -5,6 +5,7 @@ using System.Net.Mime;
 using Models;
 using RotationManager;
 using SafeDadta;
+using Shelders;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -13,14 +14,14 @@ public class FrameManager : MonoBehaviour
 {
     private Image _imageObject; // Assign the Image component to this field in the Inspector
     [HideInInspector] public ParserModel.Root detectionData; // Set the path to the JSON filePath in the Inspector
-    
+
     [SerializeField] private GameObject buttonPrefab;
     [SerializeField] private Color frameImageColor;
     [SerializeField] private Color selectedFrameImageColor;
 
     private static int _revesConst;
-    private static int _corectedScaleIndex; 
-    
+    private static int _corectedScaleIndex;
+
     private int _selectedDetectionID;
     public string dataFilePath;
     private SafeAndLoadData _safeAndLoadData;
@@ -105,14 +106,11 @@ public class FrameManager : MonoBehaviour
 
         RotationManagerButtonData rotationManagerButtonData = button.GetComponent<RotationManagerButtonData>();
         rotationManagerButtonData.targetID = detectionID;
-      
+
         RotationManager.RotationManager rotationManager = button.GetComponent<RotationManager.RotationManager>();
         rotationManager.dataFilePath = dataFilePath;
         rotationManager.targetRecord = detection;
 
-      
-
-        
 
 // Access the RectTransform of the button
         RectTransform buttonRect = button.GetComponent<RectTransform>();
@@ -129,12 +127,10 @@ public class FrameManager : MonoBehaviour
             // Set the button's rotation to match the frame's rotation
             button.transform.rotation = Quaternion.Euler(detectionRotation);
         }
-        
+
         if (_selectedDetectionID == detectionID)
         {
-
             _selectedButtonRotation = button;
-
         }
     }
 
@@ -167,8 +163,6 @@ public class FrameManager : MonoBehaviour
             frameImage.color = frameImageColor;
         }
     }
-
- 
 
 
     private void DestroyAllChildrenImageObject()

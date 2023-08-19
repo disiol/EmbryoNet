@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AxesShader
-  m_Shader: {fileID: 4800000, guid: 8a125b3659f5b714ab04f98f6fc4e785, type: 3}
+  m_Name: Rotations
+  m_Shader: {fileID: 4800000, guid: 9fc4991b2b8e47439266bcbcc1445155, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -26,10 +26,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Thickness: 0.001
-    - _XLineThickness: 5
-    - _XRotation: 0
-    - _YLineThickness: 5
-    - _YRotation: 0
-    m_Colors: []
+    - _Alpha: 0.65
+    - _LineThickness: 0.0422
+    - _Rotation: 0
+    m_Colors:
+    - _CenterPosition: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _LineColorX: {r: 1, g: 0, b: 0, a: 0}
+    - _LineColorY: {r: 0, g: 1, b: 0, a: 1}
+    - _LineColorZ: {r: 0, g: 0, b: 1, a: 1}
   m_BuildTextureStacks: []

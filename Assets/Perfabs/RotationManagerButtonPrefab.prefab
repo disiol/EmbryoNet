@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2207327367791603190}
   - component: {fileID: 2207795543599681277}
   - component: {fileID: 6050155772405394145}
+  - component: {fileID: 1347678146088675385}
+  - component: {fileID: 6339503778235732567}
   m_Layer: 5
   m_Name: RotationManagerButtonPrefab
   m_TagString: Untagged
@@ -61,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 01326b587f9ea79378604fa1a42e4ad9, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -69,7 +71,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 0c28e50141ff1d7af904db72dc735d38, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -162,3 +164,32 @@ MonoBehaviour:
     tlx: 0
     tly: 0
     rotation: {x: 0, y: 0, z: 0}
+--- !u!114 &1347678146088675385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7008213947407287012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1161407e85a4a9f91235725625b54f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 9fc4991b2b8e47439266bcbcc1445155, type: 3}
+  width: 0
+  height: 0
+  imageCenter: {x: 0, y: 0}
+--- !u!114 &6339503778235732567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7008213947407287012}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bfe4f646fbe422ab93b0c2a4659ff7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 2527929214807313756}

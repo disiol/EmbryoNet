@@ -5,23 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e09013f5-b8f2-4e92-b9ff-41ece921e44b" name="Changes" comment="IndependentCenterRotatedLines">
-      <change afterPath="$PROJECT_DIR$/Assets/Shelders/Rotations.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shelders/AxisLines3D2.shader" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EmbryoNet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EmbryoNet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/AxesShader.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/AxesShader.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/AxesShader.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/AxesShader.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Rotation 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/Rotation 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/RotationManagerButtonPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/RotationManagerButtonPrefab.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shelders/Arow.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shelders/Arow.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shelders/ArrowShader.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shelders/ArrowShader.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shelders/ArrowShaderExample.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shelders/ArrowShaderExample.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shelders/DrawLinesOnTexture.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shelders/DrawLinesOnTexture.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shelders/IndependentCenterRotatedLines.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shelders/IndependentCenterRotatedLines.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shelders/NewSurfaceShader.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shelders/NewSurfaceShader.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/pngwing.com~000.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/pngwing.com~000.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FrameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FrameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/Rotations.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/Rotations.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Textyre.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Textyre.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StandaloneFileBrowser.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +28,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4b47bfd1d2da45428b93f7ab9c258bac15a800/90/8c91dc8c/GL.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/06/440a9b94/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/34/47892c02/Shader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/39/af6bd1c5/Debug.cs" root0="SKIP_HIGHLIGHTING" />
@@ -44,7 +40,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/df/52c06d9f/Material.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/fa/32a84019/ComputeShader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../UnityHub/2021.3.26f1/Editor/Data/CGIncludes/UnityCG.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -64,7 +59,7 @@
     "WebServerToolWindowFactoryState": "false",
     "XThreadsFramesViewSplitterKey": "0.44047618",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/denis/IT/unity/work/Matvey/draw_arrow.compute",
+    "last_opened_file_path": "/home/denis/IT/unity/work/Matvey/draw_arrow.frag",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -144,7 +139,11 @@
       <workItem from="1691857628424" duration="48892000" />
       <workItem from="1692096753611" duration="2012000" />
       <workItem from="1692098793311" duration="7716000" />
-      <workItem from="1692212560658" duration="10992000" />
+      <workItem from="1692212560658" duration="11692000" />
+      <workItem from="1692267703303" duration="5592000" />
+      <workItem from="1692273536367" duration="10694000" />
+      <workItem from="1692441536327" duration="39000" />
+      <workItem from="1692441674657" duration="14760000" />
     </task>
     <task id="LOCAL-00001" summary="Shader &quot;Custom/IndependentCenterRotatedLines&quot;">
       <option name="closed" value="true" />
