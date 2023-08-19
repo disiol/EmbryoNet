@@ -64,7 +64,7 @@ Shader "Custom/AxisLines2D2"
 
 
                 float2 rotatedUV_Y = v.vertex.xy * 0.5 + 0.5;
-                rotatedUV_Y = rotateUV(rotatedUV_Y, _Rotation);
+                rotatedUV_Y = -rotateUV(rotatedUV_Y, _Rotation);
 
 
                 o.uv = rotatedUV_Y;
@@ -87,17 +87,17 @@ Shader "Custom/AxisLines2D2"
                     // Adjust the threshold for the center area
                     lineColor = texColor; // Preserve original color at the center
                 }
-                else if (abs(angle) < 0.05)
-                {
-                    lineColor = _LineColorX;
-                }
+                // else if (abs(angle) < 0.05)
+                // {
+                //     lineColor = _LineColorZ;
+                // }
                 else if (abs(angle - 2.57079633) < 0.05)
                 {
                     lineColor = _LineColorY;
                 }
                 else if (abs(angle + 2.57079633) < 0.05)
                 {
-                    lineColor = _LineColorZ;
+                    lineColor = _LineColorX;
                 }
 
                 // Apply transparency to lineColor based on _Alpha property
