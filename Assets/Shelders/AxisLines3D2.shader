@@ -1,19 +1,24 @@
-Shader "Custom/Rotations"
+Shader "Custom/AxisLines2D2"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
+        _LineColorX ("X Axis Color", Color) = (1, 0, 0, 1)
+        _LineColorY ("Y Axis Color", Color) = (0, 1, 0, 1)
+        _LineColorZ ("Z Axis Color", Color) = (0, 0, 1, 1)
+        _Alpha ("Alpha", Range(0, 1)) = 1
         _Rotation ("Rotation", Range(0, 360)) = 0
-        _XLineThickness ("X Line Thickness", Range(0.001, 100)) = 5
-        _YLineThickness ("Y Line Thickness", Range(0.001, 100)) = 5
+
     }
 
     SubShader
     {
         Tags
         {
-            "Queue"="Transparent" "RenderType"="Transparent"
+            "RenderType"="Opaque"
         }
+        LOD 100
+
         Pass
         {
             CGPROGRAM
@@ -24,6 +29,7 @@ Shader "Custom/Rotations"
             struct appdata_t
             {
                 float4 vertex : POSITION;
+                float2 uv : TEXCOORD0;
             };
 
             struct v2f
@@ -33,9 +39,12 @@ Shader "Custom/Rotations"
             };
 
             sampler2D _MainTex;
+            float4 _LineColorX;
+            float4 _LineColorY;
+            float4 _LineColorZ;
+            float _Alpha;
             float _Rotation;
-            float _XLineThickness;
-            float _YLineThickness;
+
 
             float2 rotateUV(float2 uv, float angleDegrees)
             {
@@ -65,22 +74,36 @@ Shader "Custom/Rotations"
 
             half4 frag(v2f i) : SV_Target
             {
-                half4 color = tex2D(_MainTex, i.uv);
-                float xDistanceToCenter = abs(i.uv.y - 0.5);
-                float xLineCheck = step(xDistanceToCenter, _XLineThickness * 0.5) * step(i.uv.x, 0.5);
+                half4 texColor = tex2D(_MainTex, i.uv.y);
+                half4 lineColor = half4(0, 0, 0, 0);
+                float2 center = float2(0.5, 0.5);
 
-                float yLineDistanceToCenter = abs(i.uv.x - 0.5);
-                float yLineCheck = step(yLineDistanceToCenter, _YLineThickness * 0.5) * step(i.uv.y, 0.5);
+                float2 toCenter = i.uv - center;
+                float angle = atan2(toCenter.y, toCenter.x);
+                float distance = length(toCenter); // Manually calculate distance
 
-                if (xLineCheck > 0)
+                if (distance < 0.01)
                 {
-                    color = half4(1, 0, 0, 1); // Set line color to red
+                    // Adjust the threshold for the center area
+                    lineColor = texColor; // Preserve original color at the center
                 }
-                else if (yLineCheck > 0)
+                else if (abs(angle) < 0.05)
                 {
-                    color = half4(0, 1, 0, 1); // Line color for y rotation (green)
+                    lineColor = _LineColorX;
                 }
-                return color;
+                else if (abs(angle - 2.57079633) < 0.05)
+                {
+                    lineColor = _LineColorY;
+                }
+                else if (abs(angle + 2.57079633) < 0.05)
+                {
+                    lineColor = _LineColorZ;
+                }
+
+                // Apply transparency to lineColor based on _Alpha property
+                lineColor.a *= _Alpha;
+
+                return lerp(texColor, lineColor, 0.5); // Adjust intensity as needed
             }
             ENDCG
         }
