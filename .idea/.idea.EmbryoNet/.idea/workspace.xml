@@ -5,18 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e09013f5-b8f2-4e92-b9ff-41ece921e44b" name="Changes" comment="IndependentCenterRotatedLines">
-      <change afterPath="$PROJECT_DIR$/Assets/Shelders/AxisLines3D2.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shelders/AxisLines3D3.shader.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EmbryoNet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EmbryoNet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/AxesShader.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/AxesShader.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Rotation 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/Rotation 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Render Texture.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Render Texture.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Render Texture.renderTexture" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Render Texture.renderTexture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/New Material.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Perfabs/RotationManagerButtonPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/RotationManagerButtonPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Rotations.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/Rotations.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FrameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FrameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shelders/Rotations.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shelders/Rotations.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Textyre.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Textyre.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StandaloneFileBrowser.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StandaloneFileBrowser.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/ArrowShader.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shelders/ArrowShader.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/ArrowShader.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/AxisLines3D2.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shelders/AxisLines3D2.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/AxisLines3D2.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shelders/AxisLines3D2.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/DrawLinesOnImage.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shelders/DrawLinesOnImage.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/ObjectSizeSetter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shelders/ObjectSizeSetter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/Rotations (copy).shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shelders/AxisLines3D3.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/Rotations (copy).shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,10 +37,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="GLSL Shader" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4b47bfd1d2da45428b93f7ab9c258bac15a800/35/65de38a2/Renderer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4b47bfd1d2da45428b93f7ab9c258bac15a800/90/8c91dc8c/GL.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/06/440a9b94/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/34/47892c02/Shader.cs" root0="SKIP_HIGHLIGHTING" />
@@ -40,7 +61,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/df/52c06d9f/Material.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/fa/32a84019/ComputeShader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../UnityHub/2021.3.29f1/Editor/Data/CGIncludes/UnityShaderVariables.cginc" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FrameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -52,30 +79,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "XThreadsFramesViewSplitterKey": "0.44047618",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/denis/IT/unity/work/Matvey/draw_arrow.frag",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.editor",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.44047618&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/denis/IT/unity/work/Matvey/draw_arrow.frag&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/home/denis/.config/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
-      "/home/denis/.config/JetBrains/Rider2023.2/resharper-host/SourcesCache",
-      "/home/denis/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/home/denis/.config/JetBrains/Rider2023.2/resharper-host/DecompilerCache&quot;,
+      &quot;/home/denis/.config/JetBrains/Rider2023.2/resharper-host/SourcesCache&quot;,
+      &quot;/home/denis/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/1.x86_64" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../../../../UnityHub/2021.3.29f1/Editor/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
@@ -143,7 +178,22 @@
       <workItem from="1692267703303" duration="5592000" />
       <workItem from="1692273536367" duration="10694000" />
       <workItem from="1692441536327" duration="39000" />
-      <workItem from="1692441674657" duration="14760000" />
+      <workItem from="1692441674657" duration="15167000" />
+      <workItem from="1692617587528" duration="2607000" />
+      <workItem from="1692620430598" duration="3383000" />
+      <workItem from="1692718941433" duration="8519000" />
+      <workItem from="1692782787803" duration="8060000" />
+      <workItem from="1692793877908" duration="915000" />
+      <workItem from="1692875274799" duration="4466000" />
+      <workItem from="1692913898175" duration="602000" />
+      <workItem from="1693054461245" duration="2865000" />
+      <workItem from="1693095201995" duration="2403000" />
+      <workItem from="1693168548561" duration="15592000" />
+      <workItem from="1693184783102" duration="41000" />
+      <workItem from="1693184843339" duration="11000" />
+      <workItem from="1693184865097" duration="158000" />
+      <workItem from="1693186624186" duration="10354000" />
+      <workItem from="1693197048685" duration="10559000" />
     </task>
     <task id="LOCAL-00001" summary="Shader &quot;Custom/IndependentCenterRotatedLines&quot;">
       <option name="closed" value="true" />
