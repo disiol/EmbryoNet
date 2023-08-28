@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e09013f5-b8f2-4e92-b9ff-41ece921e44b" name="Changes" comment="mace CameraArrows">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EmbryoNet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EmbryoNet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FrameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FrameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Arrows.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/Arrows.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/CameraArrows.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/CameraArrows.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,10 +115,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="35284">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="35284" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -170,7 +172,7 @@
       <workItem from="1693184865097" duration="158000" />
       <workItem from="1693186624186" duration="10354000" />
       <workItem from="1693197048685" duration="14496000" />
-      <workItem from="1693236394450" duration="2368000" />
+      <workItem from="1693236394450" duration="6534000" />
     </task>
     <task id="LOCAL-00001" summary="Shader &quot;Custom/IndependentCenterRotatedLines&quot;">
       <option name="closed" value="true" />
@@ -250,29 +252,68 @@
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs</url>
-          <line>335</line>
+          <line>337</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="335" containingFunctionPresentation="Method 'LoadData'">
             <startOffsets>
-              <option value="10414" />
+              <option value="10624" />
             </startOffsets>
             <endOffsets>
-              <option value="10439" />
+              <option value="10649" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs</url>
-          <line>338</line>
+          <line>340</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="338" containingFunctionPresentation="Method 'LoadData'">
             <startOffsets>
-              <option value="10534" />
+              <option value="10744" />
             </startOffsets>
             <endOffsets>
-              <option value="10571" />
+              <option value="10781" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs</url>
+          <line>229</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="229" containingFunctionPresentation="Method 'SetNewRotation'">
+            <startOffsets>
+              <option value="7140" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7225" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs</url>
+          <line>210</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="210" containingFunctionPresentation="Method 'GetCurentRotationArrows'">
+            <startOffsets>
+              <option value="6448" />
+            </startOffsets>
+            <endOffsets>
+              <option value="6529" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs</url>
+          <line>207</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="207" containingFunctionPresentation="Method 'GetCurentRotationArrows'">
+            <startOffsets>
+              <option value="6253" />
+            </startOffsets>
+            <endOffsets>
+              <option value="6359" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -286,8 +327,8 @@
         <watch expression="targetRecord" />
         <watch expression="_jasonManagerCurrentOrderJsonFile" />
         <watch expression="i" />
-        <watch expression="newTargetRecordRotation" />
-        <watch expression="kernelIndex" />
+        <watch expression="_rotationCameraArrows" />
+        <watch expression="rotationCameraArrows" />
       </configuration>
     </watches-manager>
   </component>
