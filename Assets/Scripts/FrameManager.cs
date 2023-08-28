@@ -39,12 +39,12 @@ public class FrameManager : MonoBehaviour
 
         if (_imageObject != null && _imageObject.sprite != null)
         {
-            var imageTexture = DestroyAllChildrenImageObjectAndGetimageObjectTexture();
+           DestroyAllChildrenImageObjectAndGetimageObjectTexture();
 
             // Load the JSON data from the filePath path
 
             // Draw frames around the detected objects
-            DrawFramesAroundTheDetectedObjects(detectionData, imageTexture);
+            DrawFramesAroundTheDetectedObjects(detectionData);
         }
         else
         {
@@ -52,14 +52,14 @@ public class FrameManager : MonoBehaviour
         }
     }
 
-    private Texture2D DestroyAllChildrenImageObjectAndGetimageObjectTexture()
+    private void DestroyAllChildrenImageObjectAndGetimageObjectTexture()
     {
+        DestroyAllChildrenСamersArrows();
         DestroyAllChildrenImageObject();
-        Texture2D imageTexture = _imageObject.sprite.texture;
-        return imageTexture;
+        
     }
 
-    private void DrawFramesAroundTheDetectedObjects(ParserModel.Root detectionData, Texture2D imageTexture)
+    private void DrawFramesAroundTheDetectedObjects(ParserModel.Root detectionData)
     {
         var detectionDataDetectionList = detectionData.detection_list;
 
@@ -86,7 +86,7 @@ public class FrameManager : MonoBehaviour
         CreateButtonOnTopOfTheFrame(detection, frame, size, position);
     }
 
-    private  Vector2 CalculatePositionAndSize(ParserModel.DetectionList detection, out Vector2 size)
+    private Vector2 CalculatePositionAndSize(ParserModel.DetectionList detection, out Vector2 size)
     {
         _revesConst = 1048;
         Sprite spriteObjectSprite = _imageObject.sprite;
@@ -120,16 +120,14 @@ public class FrameManager : MonoBehaviour
         // Add code here to work on the render texture
 
         // Release the hardware resources used by the render texture 
-        renderTexture.Release(); 
-        renderTexture.name= "RenderTexture_" + detectionID;
-        
+        renderTexture.Release();
+        renderTexture.name = "RenderTexture_" + detectionID;
+
         Camera cameraArrows = Instantiate(cameraArrowsPreab, camersArrows.transform);
-        cameraArrowsPreab.name  = "CameraArrows_" + detectionID;
+        cameraArrowsPreab.name = "CameraArrows_" + detectionID;
 
         button.GetComponent<RawImage>().texture = renderTexture;
         cameraArrows.targetTexture = renderTexture;
-        
-
 
 
 // Access the RectTransform of the button
@@ -191,6 +189,16 @@ public class FrameManager : MonoBehaviour
         for (int i = childCount - 1; i >= 0; i--)
         {
             Transform child = _imageObject.transform.GetChild(i);
+            Destroy(child.gameObject);
+        }
+    }
+
+    private void DestroyAllChildrenСamersArrows()
+    {
+        int childCount = camersArrows.transform.childCount;
+        for (int i = childCount - 1; i >= 0; i--)
+        {
+            Transform child = camersArrows.transform.GetChild(i);
             Destroy(child.gameObject);
         }
     }
