@@ -14,7 +14,7 @@ namespace RotationManager
 {
     public class RotationManager : MonoBehaviour
     {
-        private GameObject _rotationButton;
+        private GameObject _rotationCameraArrows;
 
         private ParserModel.Root _records;
         public string dataFilePath;
@@ -195,20 +195,20 @@ namespace RotationManager
             yield return null;
         }
 
-        private void GetCurentRotationButton()
+        private void GetCurentRotationArrows()
         {
-            Debug.Log("GetCurentRotationButton");
+            Debug.Log("GetCurentRotationArrows");
 
-            var image = _panel.transform.Find("LeftSide").transform.Find("Image").transform;
+            Transform findCamersArrows = GameObject.Find("CamersArrows").transform;
 
-            for (int i = 0; i < image.childCount; i++)
+            for (int i = 0; i < findCamersArrows.childCount; i++)
             {
-                Transform childTransform = image.GetChild(i);
+                Transform childTransform = findCamersArrows.GetChild(i);
 
-                GameObject rotationButton = childTransform.transform.Find("ButtonRotation_" + _targetID).GameObject();
-                if (rotationButton != null)
+                 GameObject rotationCameraArrows = childTransform.transform.Find("CameraArrows_" + _targetID).GameObject();
+                if (rotationCameraArrows != null)
                 {
-                    _rotationButton = rotationButton;
+                    _rotationCameraArrows = rotationCameraArrows.transform.Find("Arrows").gameObject;
                 }
             }
         }
@@ -216,17 +216,19 @@ namespace RotationManager
         private void SetNewRotation(float x, float y, float z)
         {
             Debug.Log("SetNewRotation");
-            GetCurentRotationButton();
+            GetCurentRotationArrows();
             Vector3 newTargetRecordRotation = new Vector3(x, y, z);
-            try
-            {
-                _rotationButton.transform.rotation = Quaternion.Euler(newTargetRecordRotation);
-            }
-            catch (Exception e)
-            {
-                Debug.LogError(e);
-                PopUpWindowStatusShow("Please select an embryo");
-            }
+            // try
+            // {
+            //     _rotationCameraArrows.transform.rotation = Quaternion.Euler(newTargetRecordRotation);
+            // }
+            // catch (Exception e)
+            // {
+            //     Debug.LogError(e);
+            //     PopUpWindowStatusShow("Please select an embryo");
+            // }
+            _rotationCameraArrows.transform.rotation = Quaternion.Euler(newTargetRecordRotation);
+
         }
 
         private void UpdateRotationInDataList(float x, float y, float z)

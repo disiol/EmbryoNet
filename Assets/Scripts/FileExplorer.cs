@@ -45,7 +45,7 @@ public class FileExplorer : MonoBehaviour
         _popUpWindow = canvas.transform.Find("PopUpWindow").gameObject;
         _statusText = _popUpWindow.transform.Find("StatusText").gameObject.GetComponent<TextMeshProUGUI>();
 
-        _safeAndLoadData = gameObject.AddComponent<SafeAndLoadData>();
+        _safeAndLoadData = gameObject.GetComponent<SafeAndLoadData>();
     }
 
     private void OnLoadButtonClicked()
