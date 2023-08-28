@@ -38,7 +38,7 @@ public class FrameManager : MonoBehaviour
 
         if (_imageObject != null && _imageObject.sprite != null)
         {
-           DestroyAllChildrenImageObjectAndGetimageObjectTexture();
+            DestroyAllChildrenImageObjectAndGetimageObjectTexture();
 
             // Load the JSON data from the filePath path
 
@@ -55,7 +55,6 @@ public class FrameManager : MonoBehaviour
     {
         DestroyAllChildrenСamersArrows();
         DestroyAllChildrenImageObject();
-        
     }
 
     private void DrawFramesAroundTheDetectedObjects(ParserModel.Root detectionData)
@@ -109,6 +108,51 @@ public class FrameManager : MonoBehaviour
         RotationManagerButtonData rotationManagerButtonData = button.GetComponent<RotationManagerButtonData>();
         rotationManagerButtonData.targetID = detectionID;
 
+        var renderTexture = CrateRenderTextureForButton(detection, button, detectionID);
+
+        CrateCameraArrowsAndSendTexrute(detectionID, button, renderTexture, detection);
+
+
+        // Access the RectTransform of the button
+        SetTheSizeOfTheButton(size, position, button);
+
+
+        if (_selectedDetectionID == detectionID)
+        {
+            _selectedButtonRotation = button;
+        }
+    }
+
+    private static void SetTheSizeOfTheButton(Vector2 size, Vector2 position, GameObject button)
+    {
+        RectTransform buttonRect = button.GetComponent<RectTransform>();
+// Set the size of the button
+        buttonRect.sizeDelta = size;
+        button.transform.position = position;
+    }
+
+    private void CrateCameraArrowsAndSendTexrute(int detectionID, GameObject button, RenderTexture renderTexture,
+        ParserModel.DetectionList detection)
+    {
+        Camera cameraArrows = Instantiate(cameraArrowsPreab, camersArrows.transform);
+        cameraArrows.name = "CameraArrows_" + detectionID;
+
+        button.GetComponent<RawImage>().texture = renderTexture;
+        cameraArrows.targetTexture = renderTexture;
+
+        // Handle button rotation based on the frame's rotation
+        Vector3 detectionRotation = detection.rotation;
+        if (detectionRotation != Vector3.zero)
+        {
+            // Set the Arrows rotation to match the frame's rotation
+            Transform find = cameraArrows.transform.Find("Arrows");
+            find.rotation = Quaternion.Euler(detectionRotation);
+        }
+    }
+
+    private RenderTexture CrateRenderTextureForButton(ParserModel.DetectionList detection, GameObject button,
+        int detectionID)
+    {
         RotationManager.RotationManager rotationManager = button.GetComponent<RotationManager.RotationManager>();
         rotationManager.dataFilePath = dataFilePath;
         rotationManager.targetRecord = detection;
@@ -116,39 +160,10 @@ public class FrameManager : MonoBehaviour
         RenderTexture renderTexture = new RenderTexture(256, 256, 16, RenderTextureFormat.ARGB32);
         renderTexture.Create();
 
-        // Add code here to work on the render texture
-
         // Release the hardware resources used by the render texture 
         renderTexture.Release();
         renderTexture.name = "RenderTexture_" + detectionID;
-
-        Camera cameraArrows = Instantiate(cameraArrowsPreab, camersArrows.transform);
-        cameraArrowsPreab.name = "CameraArrows_" + detectionID;
-
-        button.GetComponent<RawImage>().texture = renderTexture;
-        cameraArrows.targetTexture = renderTexture;
-
-
-// Access the RectTransform of the button
-        RectTransform buttonRect = button.GetComponent<RectTransform>();
-
-// Set the size of the button
-        buttonRect.sizeDelta = size;
-        button.transform.position = position;
-
-
-// Handle button rotation based on the frame's rotation
-        Vector3 detectionRotation = detection.rotation;
-        if (detectionRotation != Vector3.zero)
-        {
-            // Set the button's rotation to match the frame's rotation
-            button.transform.rotation = Quaternion.Euler(detectionRotation);
-        }
-
-        if (_selectedDetectionID == detectionID)
-        {
-            _selectedButtonRotation = button;
-        }
+        return renderTexture;
     }
 
     private GameObject CreateGameObjectForEachFrame(ParserModel.DetectionList detection,
