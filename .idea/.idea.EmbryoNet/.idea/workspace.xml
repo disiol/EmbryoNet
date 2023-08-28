@@ -5,24 +5,104 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e09013f5-b8f2-4e92-b9ff-41ece921e44b" name="Changes" comment="mace CameraArrows">
+      <change afterPath="$PROJECT_DIR$/Assets/Shelders/HalfTransparent.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shelders/HalfTransparent.shader.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EmbryoNet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EmbryoNet/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Rows/MaterialX.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Rows/MaterialX.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Rows/MaterialY 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Rows/MaterialY 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Rows/MaterialZ.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Rows/MaterialZ.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Arrows.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/Arrows.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Button.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Button.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Perfabs/CameraArrows.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/CameraArrows.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/New Material.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/New Material.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/RawImageButon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/RawImageButon.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Rotation 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Rotation 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/RotationManagerButtonPrefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/RotationManagerButtonPrefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/RotationMenu.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/RotationMenu.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Rotations.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Rotations.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/AsyncBridge.Net35.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/AsyncBridge.Net35.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/ExtensionLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/ExtensionLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Api.45.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Api.45.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Api.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Api.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Logging.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Logging.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Unity.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.Unity.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.UnityShim.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/GitHub.UnityShim.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/Mono.Posix.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/Mono.Posix.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/QuickGuide.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/QuickGuide.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/ReadOnlyCollectionsInterfaces.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/ReadOnlyCollectionsInterfaces.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/System.Threading.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/System.Threading.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/UnityAPIWrapper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/UnityAPIWrapper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/big-logo@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/big-logo@2x.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/credits.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/credits.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/eula.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/eula.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/libsfw.bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/libsfw.bundle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/libsfw.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/libsfw.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/sfw.net.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/sfw.net.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x64.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x64/pthreadVC2.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x64/pthreadVC2.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x64/sfw_x64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x64/sfw_x64.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x86.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x86/pthreadVC2.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x86/pthreadVC2.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x86/sfw_x86.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/GitHub/Editor/x86/sfw_x86.dll.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FrameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FrameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/2.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/2.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/Arows.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/Arows.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/ArrowRendering.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/ArrowRendering.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/ArrowShader.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/ArrowShader.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/ArrowShaderBecap.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/ArrowShaderBecap.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/AxisLines3D2.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/AxisLines3D2.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/AxisLines3D3.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/AxisLines3D3.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/CenterColorShader.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/CenterColorShader.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/CenterLineShader.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/CenterLineShader.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/CenterToEdgeLine.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/CenterToEdgeLine.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/DrawLinesOnImage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/DrawLinesOnImage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/DrowArrowShader.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/DrowArrowShader.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/NewComputeShader.compute" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/NewComputeShader.compute.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/ObjectSizeSetter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/ObjectSizeSetter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/Rotations (Becap).shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/Rotations (Becap).shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/Rotations.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/Rotations.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/draw_arrow.compute" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/draw_arrow.compute.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/sdfg.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shelders/sdfg.shader.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +265,8 @@
       <workItem from="1693184843339" duration="11000" />
       <workItem from="1693184865097" duration="158000" />
       <workItem from="1693186624186" duration="10354000" />
-      <workItem from="1693197048685" duration="13896000" />
+      <workItem from="1693197048685" duration="14496000" />
+      <workItem from="1693236394450" duration="1551000" />
     </task>
     <task id="LOCAL-00001" summary="Shader &quot;Custom/IndependentCenterRotatedLines&quot;">
       <option name="closed" value="true" />
