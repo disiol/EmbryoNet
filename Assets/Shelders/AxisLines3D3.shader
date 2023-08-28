@@ -1,4 +1,4 @@
-Shader "Custom/AxisLines2D2"
+Shader "Custom/AxisLines2D23"
 {
     Properties
     {
@@ -22,6 +22,8 @@ Shader "Custom/AxisLines2D2"
         Pass
         {
             CGPROGRAM
+// Upgrade NOTE: excluded shader from DX11; has structs without semantics (struct v2f members vertex)
+#pragma exclude_renderers d3d11
             #pragma vertex vert
             #pragma fragment frag
             #include "UnityCG.cginc"
@@ -63,7 +65,7 @@ Shader "Custom/AxisLines2D2"
                 o.vertex = UnityObjectToClipPos(v.vertex);
 
 
-                float2 rotatedUV_Y = v.vertex.xy * 0.5 + 0.5;
+                float2 rotatedUV_Y = v.vertex.xyz * 0.5 + 0.5;
                 rotatedUV_Y = -rotateUV(rotatedUV_Y, _Rotation);
 
 
@@ -74,7 +76,7 @@ Shader "Custom/AxisLines2D2"
 
             half4 frag(v2f i) : SV_Target
             {
-                half4 texColor;
+                half4 texColor = tex2D(_MainTex, i.uv.y);
                 half4 lineColor = half4(0, 0, 0, 0);
                 float2 center = float2(0.5, 0.5);
 
@@ -91,11 +93,11 @@ Shader "Custom/AxisLines2D2"
                 {
                     lineColor = _LineColorZ;
                 }
-                else if (abs(angle - 2.57079633) < 0.05)
+                else if (abs(angle - 2.57079633) < 0.5)
                 {
                     lineColor = _LineColorY;
                 }
-                else if (abs(angle + 2.57079633) < 0.05)
+                else if (abs(angle + 2.57079633) < 0.5)
                 {
                     lineColor = _LineColorX;
                 }
@@ -103,7 +105,7 @@ Shader "Custom/AxisLines2D2"
                 // Apply transparency to lineColor based on _Alpha property
                 lineColor.a *= _Alpha;
 
-                return  lineColor; // Adjust intensity as needed
+                return lerp(texColor, lineColor, 0.5); // Adjust intensity as needed
             }
             ENDCG
         }

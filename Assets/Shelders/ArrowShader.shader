@@ -3,7 +3,7 @@ Shader "Custom/ArrowShader"
 
     Properties
     {
-        _MainTex ("Texture", 2D) = "white" {}
+        _MainTex("Arrow Texture", 2D) = "white" {}
         _Rotation("Rotation", Vector) = (0, 0, 90)
         _Position("Position", Vector) = (400, 225, 0)
         _Resolution("Resolution", Vector) = (800, 450, 0)
@@ -13,7 +13,8 @@ Shader "Custom/ArrowShader"
     {
         Tags
         {
-            "RenderType"="Opaque"
+            "Queue"="Transparent" "RenderType"="Transparent"
+
         }
         LOD 100
 
@@ -34,6 +35,7 @@ Shader "Custom/ArrowShader"
             float PI = 3.1415926;
             const float deg2rad = 0.01745329251; // This is equivalent to PI / 180.0            int ITERS = 64;
             int AA = 4;
+
             sampler2D _MainTex;
 
 
@@ -121,8 +123,8 @@ Shader "Custom/ArrowShader"
             float2 draw_axes(float3 ray_hit)
             {
                 float3x3 R = eulerToMat3(_Rotation.x * deg2rad,
-                    _Rotation.y * deg2rad,
-                    _Rotation.z * deg2rad);
+                                         _Rotation.y * deg2rad,
+                                         _Rotation.z * deg2rad);
 
                 float2 aX = draw_arrow(ray_hit, mul(R, float3(1.0, 0.0, 0.0)), 0.0);
                 float2 aY = draw_arrow(ray_hit, mul(R, float3(0.0, -1.0, 0.0)), 1.0);
@@ -233,14 +235,17 @@ Shader "Custom/ArrowShader"
                         }
 
                         // Gamma correction, just a beauty touch
-                        col.rgb = pow(col.rgb, fixed3(0.4545, 0.4545, 0.4545));
+                        col.rgb = pow(col.rgb, fixed4(0.4545, 0.4545, 0.4545,0.0));
                         tot += col;
                     }
                 }
 
-                half4 lineColor = tot / (AA * AA);
-                half4 texColor = tex2D(_MainTex, i.uv);
-                return lerp(texColor, lineColor, 0.5);
+                half4 color = tex2D(_MainTex, i.uv);
+
+                half4 x = tot / (AA * AA);
+                color += half4(1.0, 0.0, 0.0,0.0);
+
+                  return color;
             }
             ENDCG
         }

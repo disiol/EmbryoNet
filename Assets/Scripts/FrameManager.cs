@@ -16,11 +16,13 @@ public class FrameManager : MonoBehaviour
     [HideInInspector] public ParserModel.Root detectionData; // Set the path to the JSON filePath in the Inspector
 
     [SerializeField] private GameObject buttonPrefab;
+    [SerializeField] private GameObject camersArrows;
+    [SerializeField] private Camera cameraArrowsPreab;
     [SerializeField] private Color frameImageColor;
     [SerializeField] private Color selectedFrameImageColor;
 
     private static int _revesConst;
-    private static int _corectedScaleIndex;
+    private static float _corectedScaleIndex;
 
     private int _selectedDetectionID;
     public string dataFilePath;
@@ -84,9 +86,10 @@ public class FrameManager : MonoBehaviour
         CreateButtonOnTopOfTheFrame(detection, frame, size, position);
     }
 
-    private static Vector2 CalculatePositionAndSize(ParserModel.DetectionList detection, out Vector2 size)
+    private  Vector2 CalculatePositionAndSize(ParserModel.DetectionList detection, out Vector2 size)
     {
         _revesConst = 1048;
+        Sprite spriteObjectSprite = _imageObject.sprite;
         _corectedScaleIndex = 2;
         Vector2 position = new Vector2((detection.brx - (detection.brx - detection.tlx) * 0.5f) / _corectedScaleIndex,
             _revesConst - (detection.bry - (detection.bry - detection.tly) * 0.5f) / _corectedScaleIndex);
@@ -110,6 +113,23 @@ public class FrameManager : MonoBehaviour
         RotationManager.RotationManager rotationManager = button.GetComponent<RotationManager.RotationManager>();
         rotationManager.dataFilePath = dataFilePath;
         rotationManager.targetRecord = detection;
+
+        RenderTexture renderTexture = new RenderTexture(256, 256, 16, RenderTextureFormat.ARGB32);
+        renderTexture.Create();
+
+        // Add code here to work on the render texture
+
+        // Release the hardware resources used by the render texture 
+        renderTexture.Release(); 
+        renderTexture.name= "RenderTexture_" + detectionID;
+        
+        Camera cameraArrows = Instantiate(cameraArrowsPreab, camersArrows.transform);
+        cameraArrowsPreab.name  = "CameraArrows_" + detectionID;
+
+        button.GetComponent<RawImage>().texture = renderTexture;
+        cameraArrows.targetTexture = renderTexture;
+        
+
 
 
 // Access the RectTransform of the button
@@ -146,7 +166,7 @@ public class FrameManager : MonoBehaviour
 
         SetColorFrame(detectionID, frameImage);
 
-        frameImage.rectTransform.sizeDelta = size;
+        frameImage.GetComponent<RectTransform>().sizeDelta = size;
         // Position the frame correctly
         frame.transform.position = position;
         return frame;
