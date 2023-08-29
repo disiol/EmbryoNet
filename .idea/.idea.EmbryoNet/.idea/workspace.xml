@@ -8,7 +8,68 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EmbryoNet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EmbryoNet/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Arrows.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/Arrows.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Perfabs/CameraArrows.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/CameraArrows.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/AsyncBridge.Net35.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/AsyncBridge.Net35.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/ExtensionLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/ExtensionLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/GitHub.Api.45.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/GitHub.Api.45.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/GitHub.Api.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/GitHub.Api.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/GitHub.Logging.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/GitHub.Logging.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/GitHub.Unity.45.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/GitHub.Unity.45.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/GitHub.Unity.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/GitHub.Unity.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/GitHub.UnityShim.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/GitHub.UnityShim.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/Mono.Posix.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/Mono.Posix.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/QuickGuide.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/QuickGuide.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/ReadOnlyCollectionsInterfaces.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/ReadOnlyCollectionsInterfaces.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/System.Threading.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/System.Threading.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/UnityAPIWrapper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/UnityAPIWrapper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/big-logo@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/big-logo@2x.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/credits.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/credits.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/eula.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/eula.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/libsfw.bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/libsfw.bundle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/libsfw.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/libsfw.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/sfw.net.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/sfw.net.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/x64.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/x64/pthreadVC2.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/x64/pthreadVC2.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/x64/sfw_x64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/x64/sfw_x64.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/x86.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/x86/pthreadVC2.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/x86/pthreadVC2.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/x86/sfw_x86.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Plugins/GitHub/Editor/x86/sfw_x86.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/RawImageButon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/RawImageButon.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FrameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FrameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManagerButtonData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManagerButtonData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/New Render Texture 1.renderTexture" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/New Render Texture 1.renderTexture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/New Render Texture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/New Render Texture.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/New Render Texture.renderTexture.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/New Render Texture.renderTexture.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +88,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4b47bfd1d2da45428b93f7ab9c258bac15a800/35/65de38a2/Renderer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4b47bfd1d2da45428b93f7ab9c258bac15a800/5f/18180fe8/Camera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4b47bfd1d2da45428b93f7ab9c258bac15a800/90/8c91dc8c/GL.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/06/440a9b94/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/34/47892c02/Shader.cs" root0="SKIP_HIGHLIGHTING" />
@@ -40,8 +102,11 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/abea95e9303e4cb391fe50f331fbf34c159c00/fa/32a84019/ComputeShader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../UnityHub/2021.3.29f1/Editor/Data/CGIncludes/UnityShaderVariables.cginc" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../EmbryoNet (copy)/Assets/Scripts/RotationManager/RotationManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FrameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FrameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FrameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -115,10 +180,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="35284">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="36857">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="35284" />
+      <option name="pid" value="36857" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -172,7 +237,8 @@
       <workItem from="1693184865097" duration="158000" />
       <workItem from="1693186624186" duration="10354000" />
       <workItem from="1693197048685" duration="14496000" />
-      <workItem from="1693236394450" duration="6534000" />
+      <workItem from="1693236394450" duration="12660000" />
+      <workItem from="1693311146725" duration="12617000" />
     </task>
     <task id="LOCAL-00001" summary="Shader &quot;Custom/IndependentCenterRotatedLines&quot;">
       <option name="closed" value="true" />
@@ -215,6 +281,17 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -252,83 +329,77 @@
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs</url>
-          <line>337</line>
+          <line>339</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="335" containingFunctionPresentation="Method 'LoadData'">
             <startOffsets>
-              <option value="10624" />
+              <option value="10778" />
             </startOffsets>
             <endOffsets>
-              <option value="10649" />
+              <option value="10803" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs</url>
-          <line>340</line>
+          <line>342</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="338" containingFunctionPresentation="Method 'LoadData'">
             <startOffsets>
-              <option value="10744" />
+              <option value="10898" />
             </startOffsets>
             <endOffsets>
-              <option value="10781" />
+              <option value="10935" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs</url>
-          <line>229</line>
+          <line>232</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="229" containingFunctionPresentation="Method 'SetNewRotation'">
             <startOffsets>
-              <option value="7140" />
+              <option value="7295" />
             </startOffsets>
             <endOffsets>
-              <option value="7225" />
+              <option value="7380" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs</url>
-          <line>210</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="210" containingFunctionPresentation="Method 'GetCurentRotationArrows'">
+          <line>213</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="213" containingFunctionPresentation="Method 'GetCurentRotationArrows'">
             <startOffsets>
-              <option value="6448" />
+              <option value="6603" />
             </startOffsets>
             <endOffsets>
-              <option value="6529" />
+              <option value="6684" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="37" />
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs</url>
-          <line>207</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="207" containingFunctionPresentation="Method 'GetCurentRotationArrows'">
+          <line>209</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="209" containingFunctionPresentation="Method 'GetCurentRotationArrows'">
             <startOffsets>
-              <option value="6253" />
+              <option value="6432" />
             </startOffsets>
             <endOffsets>
-              <option value="6359" />
+              <option value="6492" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="38" />
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
-        <watch expression="currentRotation" />
-        <watch expression="menuXInput" />
-        <watch expression="_panelProgressBar" />
-        <watch expression="detectionList" />
-        <watch expression="_dataList" />
-        <watch expression="targetRecord" />
-        <watch expression="_jasonManagerCurrentOrderJsonFile" />
-        <watch expression="i" />
-        <watch expression="_rotationCameraArrows" />
+        <watch expression="cameraArrows" />
         <watch expression="rotationCameraArrows" />
+        <watch expression="childTransform" />
+        <watch expression="_rotationCameraArrows" />
       </configuration>
     </watches-manager>
   </component>

@@ -27,6 +27,7 @@ public class FrameManager : MonoBehaviour
     public string dataFilePath;
     private SafeAndLoadData _safeAndLoadData;
     private GameObject _selectedButtonRotation;
+    [SerializeField] private RenderTexture renderTexture;
 
 
     public void DrawFrames()
@@ -107,8 +108,13 @@ public class FrameManager : MonoBehaviour
 
         RotationManagerButtonData rotationManagerButtonData = button.GetComponent<RotationManagerButtonData>();
         rotationManagerButtonData.targetID = detectionID;
+       
+        RotationManager.RotationManager rotationManager = button.GetComponent<RotationManager.RotationManager>();
+        rotationManager.dataFilePath = dataFilePath;
+        rotationManager.targetRecord = detection;
 
-        var renderTexture = CrateRenderTextureForButton(detection, button, detectionID);
+
+        // var renderTexture = CrateRenderTextureForButton(detection, button, detectionID);
 
         CrateCameraArrowsAndSendTexrute(detectionID, button, renderTexture, detection);
 
@@ -153,10 +159,7 @@ public class FrameManager : MonoBehaviour
     private RenderTexture CrateRenderTextureForButton(ParserModel.DetectionList detection, GameObject button,
         int detectionID)
     {
-        RotationManager.RotationManager rotationManager = button.GetComponent<RotationManager.RotationManager>();
-        rotationManager.dataFilePath = dataFilePath;
-        rotationManager.targetRecord = detection;
-
+       
         RenderTexture renderTexture = new RenderTexture(256, 256, 16, RenderTextureFormat.ARGB32);
         renderTexture.Create();
 

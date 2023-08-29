@@ -20,6 +20,8 @@ namespace RotationManager
 
         private void Start()
         {
+            Debug.Log("GetCurentRotationArrows");
+
             _safeAndLoadData = GameObject.Find("Canvas/Panel").GetComponent<SafeAndLoadData>();
 
 

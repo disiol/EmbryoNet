@@ -145,7 +145,9 @@ namespace RotationManager
             //TODO refactoring
             _safeAndLoadData = gameObject.AddComponent<SafeAndLoadData>();
 
+            _safeAndLoadData = GameObject.Find("/Canvas/Panel").GetComponent<SafeAndLoadData>();
             _targetID = _safeAndLoadData.LoadCurrentId();
+
             Debug.Log("UpdateRotation");
 
             GameObject canvens = GameObject.Find("Canvas");
@@ -163,7 +165,6 @@ namespace RotationManager
             {
                 _jasonManager = _panel.GetComponent<JasonManager>();
                 _jasonManagerCurrentOrderJsonFile = _jasonManager.currentOrderJsonFile;
-
 
 
                 float x = float.Parse(_menuXInput.text);
@@ -199,14 +200,16 @@ namespace RotationManager
         {
             Debug.Log("GetCurentRotationArrows");
 
-            Transform findCamersArrows = GameObject.Find("CamersArrows").transform;
+            Transform findCamersArrows = GameObject.Find("CamerasArrows").transform;
 
             for (int i = 0; i < findCamersArrows.childCount; i++)
             {
-                Transform childTransform = findCamersArrows.GetChild(i);
+                Transform rotationCameraArrows = findCamersArrows.GetChild(i);
 
-                 GameObject rotationCameraArrows = childTransform.transform.Find("CameraArrows_" + _targetID).GameObject();
-                if (rotationCameraArrows != null)
+                String currentCameraArrowsName = rotationCameraArrows.name;
+                String targetCameraArrowsName = "CameraArrows_" + _targetID;
+
+                if (targetCameraArrowsName == currentCameraArrowsName)
                 {
                     _rotationCameraArrows = rotationCameraArrows.transform.Find("Arrows").gameObject;
                 }
@@ -228,7 +231,6 @@ namespace RotationManager
             //     PopUpWindowStatusShow("Please select an embryo");
             // }
             _rotationCameraArrows.transform.rotation = Quaternion.Euler(newTargetRecordRotation);
-
         }
 
         private void UpdateRotationInDataList(float x, float y, float z)
