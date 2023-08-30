@@ -15,8 +15,8 @@ public class FrameManager : MonoBehaviour
     [HideInInspector] public ParserModel.Root detectionData; // Set the path to the JSON filePath in the Inspector
 
     [SerializeField] private GameObject buttonPrefab;
-    [SerializeField] private GameObject camersArrows;
-    [SerializeField] private Camera cameraArrowsPreab;
+    [SerializeField] private GameObject cameraArrows;
+    [SerializeField] private GameObject arrowsPreab;
     [SerializeField] private Color frameImageColor;
     [SerializeField] private Color selectedFrameImageColor;
 
@@ -108,7 +108,7 @@ public class FrameManager : MonoBehaviour
 
         RotationManagerButtonData rotationManagerButtonData = button.GetComponent<RotationManagerButtonData>();
         rotationManagerButtonData.targetID = detectionID;
-       
+
         RotationManager.RotationManager rotationManager = button.GetComponent<RotationManager.RotationManager>();
         rotationManager.dataFilePath = dataFilePath;
         rotationManager.targetRecord = detection;
@@ -116,7 +116,7 @@ public class FrameManager : MonoBehaviour
 
         // var renderTexture = CrateRenderTextureForButton(detection, button, detectionID);
 
-        CrateCameraArrowsAndSendTexrute(detectionID, button, renderTexture, detection);
+        CrateArrows(detection,position,size);
 
 
         // Access the RectTransform of the button
@@ -137,29 +137,33 @@ public class FrameManager : MonoBehaviour
         button.transform.position = position;
     }
 
-    private void CrateCameraArrowsAndSendTexrute(int detectionID, GameObject button, RenderTexture renderTexture,
-        ParserModel.DetectionList detection)
+    private void CrateArrows(ParserModel.DetectionList detection, Vector2 position, Vector3 size)
     {
-        Camera cameraArrows = Instantiate(cameraArrowsPreab, camersArrows.transform);
-        cameraArrows.name = "CameraArrows_" + detectionID;
+        var trideCorectedScaleIndex = 100;
+        GameObject arrows = Instantiate(arrowsPreab);
+        arrows.name = "Arrows_" + detection.id;
+ 
+        Transform arrowsTransform = arrows.transform;
+  
+        arrowsTransform.position =
+            new Vector3(position.x / trideCorectedScaleIndex, position.y / trideCorectedScaleIndex, 10);
+ 
+        arrowsTransform.localScale = new Vector3(size.x / trideCorectedScaleIndex, size.y / trideCorectedScaleIndex,
+            size.y / trideCorectedScaleIndex);
 
-        button.GetComponent<RawImage>().texture = renderTexture;
-        cameraArrows.targetTexture = renderTexture;
 
         // Handle button rotation based on the frame's rotation
         Vector3 detectionRotation = detection.rotation;
         if (detectionRotation != Vector3.zero)
         {
             // Set the Arrows rotation to match the frame's rotation
-            Transform find = cameraArrows.transform.Find("Arrows");
-            find.rotation = Quaternion.Euler(detectionRotation);
+            arrows.transform.rotation = Quaternion.Euler(detectionRotation);
         }
     }
 
     private RenderTexture CrateRenderTextureForButton(ParserModel.DetectionList detection, GameObject button,
         int detectionID)
     {
-       
         RenderTexture renderTexture = new RenderTexture(256, 256, 16, RenderTextureFormat.ARGB32);
         renderTexture.Create();
 
@@ -212,10 +216,10 @@ public class FrameManager : MonoBehaviour
 
     private void DestroyAllChildrenСamersArrows()
     {
-        int childCount = camersArrows.transform.childCount;
+        int childCount = cameraArrows.transform.childCount;
         for (int i = childCount - 1; i >= 0; i--)
         {
-            Transform child = camersArrows.transform.GetChild(i);
+            Transform child = cameraArrows.transform.GetChild(i);
             Destroy(child.gameObject);
         }
     }

@@ -2711,8 +2711,8 @@ MonoBehaviour:
     labeler: 
     source_name: 
   buttonPrefab: {fileID: 1086152922838733349, guid: c1651d005b0ef2b35abc2be0fc7f4621, type: 3}
-  camersArrows: {fileID: 3659200463748993252}
-  cameraArrowsPreab: {fileID: 6683480480651149778, guid: 3cb34ca061ea97039b41405d564f2106, type: 3}
+  cameraArrows: {fileID: 3659200463748993252}
+  arrowsPreab: {fileID: 1729035227708477549, guid: 3dd4cb4e5572e6de09d61aa24ed76d8f, type: 3}
   frameImageColor: {r: 0, g: 0, b: 0, a: 0.2784314}
   selectedFrameImageColor: {r: 0.74499124, g: 0.054703593, b: 0.19197376, a: 0.5176471}
   dataFilePath: 
