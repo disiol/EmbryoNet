@@ -27,7 +27,8 @@ namespace RotationManager
         [SerializeField] private TMP_InputField menuZInput;
         [SerializeField] private Button decreaseZButton;
 
-        [Header("Rotation")] [SerializeField] private float currentRotationStep;
+        [Header("Rotation")] 
+        [SerializeField] private float currentRotationStep;
         [SerializeField] private float minRotation;
         [SerializeField] private float maxRotation;
 
