@@ -83,6 +83,8 @@ public class FrameManager : MonoBehaviour
         var frame = CreateGameObjectForEachFrame(detection, size, position);
 
         CreateButtonOnTopOfTheFrame(detection, frame, size, position);
+        CrateArrows(detection,frame.transform.localPosition,size);
+
     }
 
     private Vector2 CalculatePositionAndSize(ParserModel.DetectionList detection, out Vector2 size)
@@ -116,7 +118,6 @@ public class FrameManager : MonoBehaviour
 
         // var renderTexture = CrateRenderTextureForButton(detection, button, detectionID);
 
-        CrateArrows(detection,position,size);
 
 
         // Access the RectTransform of the button
