@@ -166,6 +166,8 @@ public class FileExplorer : MonoBehaviour
 
         if (File.Exists(imagePath))
         {
+            _safeAndLoadData.SafeCurrentId(0);
+
             _jasonManager.currentOrderJsonFile = opderJsonFile;
             // Open the image or do something with it
             StartCoroutine(OpenImage(records, imagePath));
