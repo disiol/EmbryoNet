@@ -2710,13 +2710,13 @@ MonoBehaviour:
     detection_list: []
     labeler: 
     source_name: 
-  buttonPrefab: {fileID: 1086152922838733349, guid: c1651d005b0ef2b35abc2be0fc7f4621, type: 3}
+  buttonPrefab: {fileID: 8617279262102592723, guid: 81068cbe9149be3ba8d93bc3a02a995d, type: 3}
   cameraArrows: {fileID: 3659200463748993252}
   arrowsPreab: {fileID: 1729035227708477549, guid: 3dd4cb4e5572e6de09d61aa24ed76d8f, type: 3}
+  arrowsRawImage: {fileID: 706011116}
   frameImageColor: {r: 0, g: 0, b: 0, a: 0.2784314}
   selectedFrameImageColor: {r: 0.74499124, g: 0.054703593, b: 0.19197376, a: 0.5176471}
   dataFilePath: 
-  renderTexture: {fileID: 8400000, guid: 1424bc4a417a11d7eb547ff6b21a1f61, type: 2}
 --- !u!1 &1556234912
 GameObject:
   m_ObjectHideFlags: 0

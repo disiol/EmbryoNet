@@ -17,6 +17,8 @@ public class FrameManager : MonoBehaviour
     [SerializeField] private GameObject buttonPrefab;
     [SerializeField] private GameObject cameraArrows;
     [SerializeField] private GameObject arrowsPreab;
+     [SerializeField] private RawImage arrowsRawImage;
+
     [SerializeField] private Color frameImageColor;
     [SerializeField] private Color selectedFrameImageColor;
 
@@ -27,7 +29,6 @@ public class FrameManager : MonoBehaviour
     public string dataFilePath;
     private SafeAndLoadData _safeAndLoadData;
     private GameObject _selectedButtonRotation;
-    [SerializeField] private RenderTexture renderTexture;
 
 
     public void DrawFrames()
@@ -104,7 +105,7 @@ public class FrameManager : MonoBehaviour
         Vector2 position)
     {
         // Create the button on top of the frame
-        GameObject button = Instantiate(buttonPrefab, frame.transform);
+        GameObject button = Instantiate(buttonPrefab, arrowsRawImage.transform);
         int detectionID = detection.id;
         button.name = "ButtonRotation_" + detectionID;
 

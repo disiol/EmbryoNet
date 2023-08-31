@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e09013f5-b8f2-4e92-b9ff-41ece921e44b" name="Changes" comment="mace CameraArrows">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EmbryoNet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EmbryoNet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Arrows.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/Arrows.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FrameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FrameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/New Render Texture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/New Render Texture.renderTexture" afterDir="false" />
-    </list>
+    <list default="true" id="e09013f5-b8f2-4e92-b9ff-41ece921e44b" name="Changes" comment="mace CameraArrows" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,7 +172,7 @@
       <workItem from="1693197048685" duration="14496000" />
       <workItem from="1693236394450" duration="12660000" />
       <workItem from="1693311146725" duration="16156000" />
-      <workItem from="1693364099956" duration="11114000" />
+      <workItem from="1693364099956" duration="21057000" />
     </task>
     <task id="LOCAL-00001" summary="Shader &quot;Custom/IndependentCenterRotatedLines&quot;">
       <option name="closed" value="true" />
@@ -333,30 +327,17 @@
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/FrameManager.cs</url>
-          <line>76</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/FrameManager.cs" initialLine="76" containingFunctionPresentation="Method 'DrawFramesAroundTheDetectedObjects'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManagerButtonData.cs</url>
+          <line>37</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManagerButtonData.cs" initialLine="37" containingFunctionPresentation="Method 'OnButtonClick'">
             <startOffsets>
-              <option value="2522" />
+              <option value="1139" />
             </startOffsets>
             <endOffsets>
-              <option value="2619" />
+              <option value="1166" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/FrameManager.cs</url>
-          <line>66</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/FrameManager.cs" initialLine="66" containingFunctionPresentation="Method 'DrawFramesAroundTheDetectedObjects'">
-            <startOffsets>
-              <option value="2168" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2189" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="49" />
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
