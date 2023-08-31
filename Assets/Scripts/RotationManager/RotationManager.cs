@@ -327,7 +327,7 @@ namespace RotationManager
                 _folderPath = CrateNewDataFilePathAndDirectory();
 
 
-                string updatedJsonString = JsonUtility.ToJson(root);
+                string updatedJsonString = JsonUtility.ToJson(root.data);
                 string filePath = Path.Combine(_folderPath, _newFileName);
                 File.WriteAllText(filePath, updatedJsonString);
             }

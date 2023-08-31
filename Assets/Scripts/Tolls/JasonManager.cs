@@ -10,7 +10,7 @@ namespace Tolls
     {
         public string dataFilePath;
 
-        [HideInInspector] public List<JasonFilePathAndDataModel> dataList = new List<JasonFilePathAndDataModel>();
+        public List<JasonFilePathAndDataModel> dataList = new List<JasonFilePathAndDataModel>();
         [HideInInspector] public int currentOrderJsonFile;
 
         private ParserModel.Root OpenJasonFile(string jsonfilePath)
