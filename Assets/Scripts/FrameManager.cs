@@ -55,8 +55,9 @@ public class FrameManager : MonoBehaviour
 
     private void DestroyAllChildrenImageObjectAndGetimageObjectTexture()
     {
-        DestroyAllChildrenСamersArrows();
-        DestroyAllChildrenImageObject();
+        DestroyAllChildrenImageObject(_arrows.transform);
+        DestroyAllChildrenImageObject(_imageObject.transform);
+        DestroyAllChildrenImageObject(arrowsRawImage.transform);
     }
 
     private void DrawFramesAroundTheDetectedObjects(ParserModel.Root detectionData)
@@ -140,7 +141,7 @@ public class FrameManager : MonoBehaviour
     private void CrateArrows(ParserModel.DetectionList detection, Vector2 position, Vector3 size)
     {
         var trideCorectedScaleIndex = 100;
-        GameObject arrows = Instantiate(arrowsPreab,_arrows.transform);
+        GameObject arrows = Instantiate(arrowsPreab, _arrows.transform);
         arrows.name = "Arrows_" + detection.id;
 
         Transform arrowsTransform = arrows.transform;
@@ -204,22 +205,12 @@ public class FrameManager : MonoBehaviour
     }
 
 
-    private void DestroyAllChildrenImageObject()
+    private void DestroyAllChildrenImageObject(Transform objectTransform)
     {
-        int childCount = _imageObject.transform.childCount;
+        int childCount = objectTransform.childCount;
         for (int i = childCount - 1; i >= 0; i--)
         {
-            Transform child = _imageObject.transform.GetChild(i);
-            Destroy(child.gameObject);
-        }
-    }
-
-    private void DestroyAllChildrenСamersArrows()
-    {
-        int childCount = _arrows.transform.childCount;
-        for (int i = childCount - 1; i >= 0; i--)
-        {
-            Transform child = _arrows.transform.GetChild(i);
+            Transform child = objectTransform.GetChild(i);
             Destroy(child.gameObject);
         }
     }
