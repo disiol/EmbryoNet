@@ -7,9 +7,9 @@ namespace SafeDadta
       private readonly string _currentId = "CurrentId";
 
  
-        public void SafeCurrentId(int levelNumber )
+        public void SafeCurrentId(int currentId )
         {
-            PlayerPrefs.SetInt(this._currentId, levelNumber);
+            PlayerPrefs.SetInt(this._currentId, currentId);
             PlayerPrefs.Save();
         }
 

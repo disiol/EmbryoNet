@@ -2,7 +2,7 @@ namespace SafeDadta
 {
     public interface ISafe
     {
-        public void SafeCurrentId(int levelNumber);
+        public void SafeCurrentId(int currentId);
         public int LoadCurrentId();
     }
 }
