@@ -174,11 +174,11 @@ namespace RotationManager
 
                 UpdateRotationInDataList(x, y, z);
 
-                _jasonManager.dataList = _dataList;
 
                 UpdateTargetRecord();
                 ShowCurrentRotationValuesInTheMenu();
                 SetNewRotation(x, y, z);
+                _jasonManager.dataList = _dataList;
 
                 _panelProgressBar.SetActive(false);
 
@@ -318,6 +318,7 @@ namespace RotationManager
 
         private IEnumerator CrateFilesFromData()
         {
+            //TODO ad adata ty failes
             foreach (var root in _jasonManager.dataList)
             {
                 _fileName = Path.GetFileNameWithoutExtension(root.jsonFilePath);
@@ -326,8 +327,9 @@ namespace RotationManager
                 _folderPath = CrateNewDataFilePathAndDirectory();
 
 
-                string updatedJsonString = JsonUtility.ToJson(root.jsonFilePath, true);
-                File.WriteAllText(Path.Combine(_folderPath, _newFileName), updatedJsonString);
+                string updatedJsonString = JsonUtility.ToJson(root);
+                string filePath = Path.Combine(_folderPath, _newFileName);
+                File.WriteAllText(filePath, updatedJsonString);
             }
 
             yield return null;
