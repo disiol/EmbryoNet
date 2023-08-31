@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e09013f5-b8f2-4e92-b9ff-41ece921e44b" name="Changes" comment="mace CameraArrows" />
+    <list default="true" id="e09013f5-b8f2-4e92-b9ff-41ece921e44b" name="Changes" comment="mace CameraArrows">
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,7 +175,7 @@
       <workItem from="1693197048685" duration="14496000" />
       <workItem from="1693236394450" duration="12660000" />
       <workItem from="1693311146725" duration="16156000" />
-      <workItem from="1693364099956" duration="21057000" />
+      <workItem from="1693364099956" duration="24223000" />
     </task>
     <task id="LOCAL-00001" summary="Shader &quot;Custom/IndependentCenterRotatedLines&quot;">
       <option name="closed" value="true" />
@@ -263,81 +266,81 @@
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs</url>
-          <line>339</line>
+          <line>338</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="335" containingFunctionPresentation="Method 'LoadData'">
             <startOffsets>
-              <option value="10778" />
+              <option value="10615" />
             </startOffsets>
             <endOffsets>
-              <option value="10803" />
+              <option value="10640" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs</url>
-          <line>342</line>
+          <line>341</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="338" containingFunctionPresentation="Method 'LoadData'">
             <startOffsets>
-              <option value="10898" />
+              <option value="10735" />
             </startOffsets>
             <endOffsets>
-              <option value="10935" />
+              <option value="10772" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs</url>
-          <line>232</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="229" containingFunctionPresentation="Method 'SetNewRotation'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManagerButtonData.cs</url>
+          <line>36</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManagerButtonData.cs" initialLine="37" containingFunctionPresentation="Method 'OnButtonClick'">
             <startOffsets>
-              <option value="7295" />
+              <option value="1093" />
             </startOffsets>
             <endOffsets>
-              <option value="7380" />
+              <option value="1120" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="36" />
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManagerButtonData.cs</url>
+          <line>35</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManagerButtonData.cs" initialLine="36" containingFunctionPresentation="Method 'OnButtonClick'">
+            <startOffsets>
+              <option value="1039" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1080" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs</url>
-          <line>213</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="213" containingFunctionPresentation="Method 'GetCurentRotationArrows'">
+          <line>208</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="208" containingFunctionPresentation="Method 'GetCurentRotationArrows'">
             <startOffsets>
-              <option value="6603" />
+              <option value="6349" />
             </startOffsets>
             <endOffsets>
-              <option value="6684" />
+              <option value="6408" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="45" />
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs</url>
           <line>209</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" initialLine="209" containingFunctionPresentation="Method 'GetCurentRotationArrows'">
             <startOffsets>
-              <option value="6432" />
+              <option value="6425" />
             </startOffsets>
             <endOffsets>
-              <option value="6492" />
+              <option value="6479" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManagerButtonData.cs</url>
-          <line>37</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManagerButtonData.cs" initialLine="37" containingFunctionPresentation="Method 'OnButtonClick'">
-            <startOffsets>
-              <option value="1139" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1166" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="51" />
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
