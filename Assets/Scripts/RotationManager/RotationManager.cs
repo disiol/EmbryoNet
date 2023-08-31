@@ -221,16 +221,15 @@ namespace RotationManager
             Debug.Log("SetNewRotation");
             GetCurentRotationArrows();
             Vector3 newTargetRecordRotation = new Vector3(x, y, z);
-            // try
-            // {
-            //     _rotationCameraArrows.transform.rotation = Quaternion.Euler(newTargetRecordRotation);
-            // }
-            // catch (Exception e)
-            // {
-            //     Debug.LogError(e);
-            //     PopUpWindowStatusShow("Please select an embryo");
-            // }
-            _rotationCameraArrows.transform.rotation = Quaternion.Euler(newTargetRecordRotation);
+            try
+            {
+                _rotationCameraArrows.transform.rotation = Quaternion.Euler(newTargetRecordRotation);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e);
+                PopUpWindowStatusShow("Please select an embryo");
+            }
         }
 
         private void UpdateRotationInDataList(float x, float y, float z)
