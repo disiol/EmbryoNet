@@ -6,7 +6,6 @@ using Models;
 using RotationManager;
 using SafeDadta;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class FrameManager : MonoBehaviour
@@ -15,9 +14,8 @@ public class FrameManager : MonoBehaviour
     [HideInInspector] public ParserModel.Root detectionData; // Set the path to the JSON filePath in the Inspector
 
     [SerializeField] private GameObject buttonPrefab;
-    [SerializeField] private GameObject cameraArrows;
     [SerializeField] private GameObject arrowsPreab;
-     [SerializeField] private RawImage arrowsRawImage;
+    [SerializeField] private RawImage arrowsRawImage;
 
     [SerializeField] private Color frameImageColor;
     [SerializeField] private Color selectedFrameImageColor;
@@ -29,6 +27,7 @@ public class FrameManager : MonoBehaviour
     public string dataFilePath;
     private SafeAndLoadData _safeAndLoadData;
     private GameObject _selectedButtonRotation;
+    private GameObject _arrows;
 
 
     public void DrawFrames()
@@ -36,6 +35,7 @@ public class FrameManager : MonoBehaviour
         _imageObject = GetComponent<Image>();
         _safeAndLoadData = GameObject.Find("Canvas/Panel").GetComponent<SafeAndLoadData>();
         _selectedDetectionID = _safeAndLoadData.LoadCurrentId();
+        _arrows = GameObject.Find("Arrows");
 
 
         if (_imageObject != null && _imageObject.sprite != null)
@@ -84,8 +84,7 @@ public class FrameManager : MonoBehaviour
         var frame = CreateGameObjectForEachFrame(detection, size, position);
 
         CreateButtonOnTopOfTheFrame(detection, frame, size, position);
-        CrateArrows(detection,frame.transform.localPosition,size);
-
+        CrateArrows(detection, frame.transform.localPosition, size);
     }
 
     private Vector2 CalculatePositionAndSize(ParserModel.DetectionList detection, out Vector2 size)
@@ -120,7 +119,6 @@ public class FrameManager : MonoBehaviour
         // var renderTexture = CrateRenderTextureForButton(detection, button, detectionID);
 
 
-
         // Access the RectTransform of the button
         SetTheSizeOfTheButton(size, position, button);
 
@@ -142,14 +140,14 @@ public class FrameManager : MonoBehaviour
     private void CrateArrows(ParserModel.DetectionList detection, Vector2 position, Vector3 size)
     {
         var trideCorectedScaleIndex = 100;
-        GameObject arrows = Instantiate(arrowsPreab);
+        GameObject arrows = Instantiate(arrowsPreab,_arrows.transform);
         arrows.name = "Arrows_" + detection.id;
- 
+
         Transform arrowsTransform = arrows.transform;
-  
+
         arrowsTransform.position =
             new Vector3(position.x / trideCorectedScaleIndex, position.y / trideCorectedScaleIndex, 10);
- 
+
         arrowsTransform.localScale = new Vector3(size.x / trideCorectedScaleIndex, size.y / trideCorectedScaleIndex,
             size.y / trideCorectedScaleIndex);
 
@@ -218,10 +216,10 @@ public class FrameManager : MonoBehaviour
 
     private void DestroyAllChildrenСamersArrows()
     {
-        int childCount = cameraArrows.transform.childCount;
+        int childCount = _arrows.transform.childCount;
         for (int i = childCount - 1; i >= 0; i--)
         {
-            Transform child = cameraArrows.transform.GetChild(i);
+            Transform child = _arrows.transform.GetChild(i);
             Destroy(child.gameObject);
         }
     }

@@ -27,8 +27,7 @@ namespace RotationManager
 
             _rotationManager = transform.GetComponent<RotationManager>();
             transform.GetComponent<Button>().onClick.AddListener(OnButtonClick);
-            _transformParentFrame = transform.parent;
-            _frameManager = _transformParentFrame.transform.parent.GetComponent<FrameManager>();
+            _frameManager = GameObject.Find("Canvas/Panel/LeftSide/Image").GetComponent<FrameManager>();
         }
 
 

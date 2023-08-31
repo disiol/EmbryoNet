@@ -200,18 +200,18 @@ namespace RotationManager
         {
             Debug.Log("GetCurentRotationArrows");
 
-            Transform findCamersArrows = GameObject.Find("CamerasArrows").transform;
+            Transform findCamersArrows = GameObject.Find("Arrows").transform;
 
             for (int i = 0; i < findCamersArrows.childCount; i++)
             {
                 Transform rotationCameraArrows = findCamersArrows.GetChild(i);
 
                 String currentCameraArrowsName = rotationCameraArrows.name;
-                String targetCameraArrowsName = "CameraArrows_" + _targetID;
+                String targetCameraArrowsName = "Arrows_" + _targetID;
 
                 if (targetCameraArrowsName == currentCameraArrowsName)
                 {
-                    _rotationCameraArrows = rotationCameraArrows.transform.Find("Arrows").gameObject;
+                    _rotationCameraArrows = rotationCameraArrows.gameObject;
                 }
             }
         }
