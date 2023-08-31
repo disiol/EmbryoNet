@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e09013f5-b8f2-4e92-b9ff-41ece921e44b" name="Changes" comment="mace CameraArrows">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RotationManager/RotationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-    </list>
+    <list default="true" id="e09013f5-b8f2-4e92-b9ff-41ece921e44b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,7 +172,7 @@
       <workItem from="1693197048685" duration="14496000" />
       <workItem from="1693236394450" duration="12660000" />
       <workItem from="1693311146725" duration="16156000" />
-      <workItem from="1693364099956" duration="24223000" />
+      <workItem from="1693364099956" duration="24349000" />
     </task>
     <task id="LOCAL-00001" summary="Shader &quot;Custom/IndependentCenterRotatedLines&quot;">
       <option name="closed" value="true" />
@@ -209,7 +206,23 @@
       <option name="project" value="LOCAL" />
       <updated>1693213991123</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="                PopUpWindowStatusShow(&quot;Please select an embryo&quot;);">
+      <option name="closed" value="true" />
+      <created>1693445947068</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1693445947068</updated>
+    </task>
+    <task id="LOCAL-00006" summary="                PopUpWindowStatusShow(&quot;Please select an embryo&quot;);">
+      <option name="closed" value="true" />
+      <created>1693445975041</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1693445975041</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +259,8 @@
     <MESSAGE value="Shader &quot;Custom/IndependentCenterRotatedLines&quot;" />
     <MESSAGE value="IndependentCenterRotatedLines" />
     <MESSAGE value="mace CameraArrows" />
-    <option name="LAST_COMMIT_MESSAGE" value="mace CameraArrows" />
+    <MESSAGE value="                PopUpWindowStatusShow(&quot;Please select an embryo&quot;);" />
+    <option name="LAST_COMMIT_MESSAGE" value="                PopUpWindowStatusShow(&quot;Please select an embryo&quot;);" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
