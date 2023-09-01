@@ -11,7 +11,7 @@ using UnityEngine.UI;
 public class FrameManager : MonoBehaviour
 {
     private Image _imageObject; // Assign the Image component to this field in the Inspector
-    [HideInInspector] public ParserModel.Root detectionData; // Set the path to the JSON filePath in the Inspector
+    public ParserModel.Root detectionData; // Set the path to the JSON filePath in the Inspector
 
     [SerializeField] private GameObject buttonPrefab;
     [SerializeField] private GameObject arrowsPreab;

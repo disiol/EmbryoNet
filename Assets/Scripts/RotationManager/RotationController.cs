@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -108,6 +109,13 @@ namespace RotationManager
         {
             currentRotation.z -= currentRotationStep;
             UpdateRotation();
+        }
+
+        public void ResetData()
+        {
+            menuXInput.text = "0";
+            menuYInput.text = "0";
+            menuZInput.text = "0";
         }
 
 
