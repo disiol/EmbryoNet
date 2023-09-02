@@ -36,6 +36,7 @@ namespace RotationManager
         private string _fileName;
         private string _newFileName;
 
+        private bool _isMenuVisible = false;
         public ParserModel.DetectionList targetRecord;
         private int _targetID;
 
@@ -57,66 +58,34 @@ namespace RotationManager
         private GameObject _panelProgressBar;
         private int _jasonManagerCurrentOrderJsonFile;
 
-      
-            private void ShowMenu()
-            {
-                GameObject canvas = GameObject.Find("Canvas");
-                if (canvas != null)
-                {
-                    _panel = canvas.transform.Find("Panel");
-                    if (_panel != null)
-                    {
-                        _rightSide = _panel.transform.Find("RightSide");
-                        if (_rightSide != null)
-                        {
-                            _infoPanel = _rightSide.transform.Find("InfoPanel");
-                            if (_infoPanel != null)
-                            {
-                                _rotationMenu = _infoPanel.Find("RotationMenu").GameObject();
-                                if (_rotationMenu != null)
-                                {
-                                    RotationController rotationController =
-                                        _rotationMenu.GetComponent<RotationController>();
-                                    if (rotationController != null)
-                                    {
-                                        rotationController.rotationManager = transform.GetComponent<RotationManager>();
-                                        
-                                        ButtonSafe();
-                                        GetRotationMenuFileds();
-                                        _rotationMenu.SetActive(true);
-                                    }
-                                    else
-                                    {
-                                        Debug.LogError("RotationController component not found on _rotationMenu.");
-                                    }
-                                }
-                                else
-                                {
-                                    Debug.LogError("RotationMenu not found under InfoPanel.");
-                                }
-                            }
-                            else
-                            {
-                                Debug.LogError("InfoPanel not found under RightSide.");
-                            }
-                        }
-                        else
-                        {
-                            Debug.LogError("RightSide not found under Panel.");
-                        }
-                    }
-                    else
-                    {
-                        Debug.LogError("Panel not found under Canvas.");
-                    }
-                }
-                else
-                {
-                    Debug.LogError("Canvas not found in the scene.");
-                }
-            }
+        private void Start()
+        {
+            ShowMenu();
+        }
 
-        
+        private void ShowMenu()
+        {
+            GameObject canvens = GameObject.Find("Canvas");
+            _panel = canvens.transform.Find("Panel");
+            _rightSide = _panel.transform.Find("RightSide");
+            _infoPanel = _rightSide.transform.Find("InfoPanel");
+
+            _rotationMenu = _infoPanel.Find("RotationMenu").GameObject();
+
+            _rotationMenu.GetComponent<RotationController>().rotationManager =
+                transform.GetComponent<RotationManager>();
+
+            _popSafeUpWindow = canvens.transform.Find("PopSafeUpWindow").GameObject();
+            _popUpWindow = canvens.transform.Find("PopUpWindow").GameObject();
+
+            _panelProgressBar = canvens.transform.Find("PanelProgressBar").GameObject();
+
+
+            _isMenuVisible = !_isMenuVisible;
+            _rotationMenu.SetActive(_isMenuVisible);
+            ButtonSafe();
+            GetRotationMenuFileds();
+        }
 
 
         private void ButtonSafe()
@@ -129,7 +98,8 @@ namespace RotationManager
         {
             try
             {
-                ShowMenu();
+                GetRotationMenuFileds();
+
                 Vector3 targetRecordRotation = targetRecord.rotation;
                 float x = targetRecordRotation.x;
 
@@ -144,7 +114,7 @@ namespace RotationManager
             catch (Exception e)
             {
                 Debug.LogError(e);
-                // PopUpWindowStatusShow("Please select an embryo");
+                PopUpWindowStatusShow("Please select an embryo");
             }
         }
 
@@ -165,19 +135,16 @@ namespace RotationManager
 
         public void HideMenu()
         {
-            GameObject canvens = GameObject.Find("Canvas");
-            _panel = canvens.transform.Find("Panel");
-            _rightSide = _panel.transform.Find("RightSide");
-            _infoPanel = _rightSide.transform.Find("InfoPanel");
-            _rotationMenu = _infoPanel.Find("RotationMenu").GameObject();
             _rotationMenu.SetActive(false);
+            _isMenuVisible = false;
         }
 
         public IEnumerator UpdateRotation()
         {
-            _panelProgressBar = GameObject.Find("Canvas").transform.Find("PanelProgressBar").GameObject();
             _panelProgressBar.SetActive(true);
             //TODO refactoring
+            _safeAndLoadData = gameObject.AddComponent<SafeAndLoadData>();
+
             _safeAndLoadData = GameObject.Find("/Canvas/Panel").GetComponent<SafeAndLoadData>();
             _targetID = _safeAndLoadData.LoadCurrentId();
 
@@ -189,6 +156,7 @@ namespace RotationManager
             _dataList = _jasonManager.dataList;
             ButtonSafe();
 
+            Debug.Log("UpdateRotation");
 
 
             GetRotationMenuFileds();
@@ -213,6 +181,9 @@ namespace RotationManager
                 _jasonManager.dataList = _dataList;
 
                 _panelProgressBar.SetActive(false);
+
+                // Hide the menu after saving changes
+                // HideMenu();
             }
             else
             {
@@ -223,9 +194,6 @@ namespace RotationManager
             }
 
             yield return null;
-            
-            Debug.Log("UpdateRotation end");
-
         }
 
         private void GetCurentRotationArrows()
@@ -291,7 +259,6 @@ namespace RotationManager
                             recordOldRotation.z + deltaAngleZ);
                         targetRecord.rotation = newTargetRecordRotation;
 
-                       // detectionList[i].rotation = newTargetRecordRotation;
                     }
                 }
             }
@@ -317,13 +284,11 @@ namespace RotationManager
         private ParserModel.DetectionList FindRecordById(int targetID,
             List<ParserModel.DetectionList> recordsDetectionList)
         {
-            Debug.Log("FindRecordById targetID = " + targetID);
+            Debug.Log("targetID = " + targetID);
             foreach (ParserModel.DetectionList record in recordsDetectionList)
             {
                 if (record.id == targetID)
                 {
-                    Debug.Log("FindRecordById record.id = " + record.id);
-
                     return record;
                 }
             }
@@ -361,7 +326,7 @@ namespace RotationManager
                 _folderPath = CrateNewDataFilePathAndDirectory();
 
 
-                string updatedJsonString = JsonUtility.ToJson(root.data);
+                string updatedJsonString = JsonUtility.ToJson(root);
                 string filePath = Path.Combine(_folderPath, _newFileName);
                 File.WriteAllText(filePath, updatedJsonString);
             }
