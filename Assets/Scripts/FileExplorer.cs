@@ -17,14 +17,15 @@ public class FileExplorer : MonoBehaviour
 {
     [SerializeField] private string imagesFolderName;
 
-    private TMP_Text _statusText;
+    private TMP_Text _popUpWindowStatusText;
 
     [SerializeField] private Button loadButton;
 
     // public TMP_Text folderPathText;
     [SerializeField] private GameObject folderButtonPrefab;
     [SerializeField] private GameObject jsonButtonPrefab;
-    [SerializeField] private Transform contentTransform;
+    [SerializeField] private Transform filesList;
+
     [SerializeField] private GameObject panelProgressBar;
     [SerializeField] private Image imageObject;
 
@@ -43,7 +44,7 @@ public class FileExplorer : MonoBehaviour
 
         GameObject canvas = GameObject.Find("Canvas");
         _popUpWindow = canvas.transform.Find("PopUpWindow").gameObject;
-        _statusText = _popUpWindow.transform.Find("StatusText").gameObject.GetComponent<TextMeshProUGUI>();
+        _popUpWindowStatusText = _popUpWindow.transform.Find("StatusText").gameObject.GetComponent<TextMeshProUGUI>();
 
         _safeAndLoadData = gameObject.GetComponent<SafeAndLoadData>();
     }
@@ -97,7 +98,7 @@ public class FileExplorer : MonoBehaviour
     private IEnumerator ShowFolders(string folder, string fileName)
     {
         panelProgressBar.SetActive(true);
-        GameObject folderButton = Instantiate(folderButtonPrefab, contentTransform);
+        GameObject folderButton = Instantiate(folderButtonPrefab, filesList);
         folderButton.GetComponent<PatchContainer>().folderPath = folder;
 
         TMP_Text buttonText = folderButton.GetComponentInChildren<TMP_Text>();
@@ -113,20 +114,21 @@ public class FileExplorer : MonoBehaviour
     private void PopUpWindowShow(string text)
     {
         _popUpWindow.SetActive(true);
-        _statusText.text = text;
+        _popUpWindowStatusText.text = text;
     }
 
     private IEnumerator ShowJsonFilesInFolder(string folderPath)
     {
         panelProgressBar.SetActive(true);
-        _safeAndLoadData.SafeCurrentId(0);
-        ClearButtons();
+
+        ResetData();
+
         string[] jsonFiles = Directory.GetFiles(folderPath);
 
         for (var index = 0; index < jsonFiles.Length; index++)
         {
             var file = jsonFiles[index];
-            GameObject jsonButton = Instantiate(jsonButtonPrefab, contentTransform);
+            GameObject jsonButton = Instantiate(jsonButtonPrefab, filesList);
             TMP_Text buttonText = jsonButton.GetComponentInChildren<TMP_Text>();
 
             string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(file);
@@ -152,6 +154,12 @@ public class FileExplorer : MonoBehaviour
         yield return null;
     }
 
+    private void ResetData()
+    {
+        _safeAndLoadData.SafeCurrentId(0);
+        ClearButtons();
+    }
+
 
     private void FindImageByName(int opderJsonFile)
 
@@ -166,17 +174,22 @@ public class FileExplorer : MonoBehaviour
 
         if (File.Exists(imagePath))
         {
-            _safeAndLoadData.SafeCurrentId(0);
+            SaveCurrentOrderJsonFile(opderJsonFile);
+            SetColorOfSelectedButton();
 
-            _jasonManager.currentOrderJsonFile = opderJsonFile;
             // Open the image or do something with it
             StartCoroutine(OpenImage(records, imagePath));
         }
         else
         {
-            _statusText.text = "Image not found: " + imageName;
+            PopUpWindowShow("Image not found: " + imageName);
             Debug.Log("Image not found: " + imagePath);
         }
+    }
+
+    private void SaveCurrentOrderJsonFile(int opderJsonFile)
+    {
+        _jasonManager.currentOrderJsonFile = opderJsonFile;
     }
 
 
@@ -193,16 +206,20 @@ public class FileExplorer : MonoBehaviour
             byte[] imageData = File.ReadAllBytes(imagePath);
             Texture2D texture = new Texture2D(2, 2);
             texture.LoadImage(imageData);
-
-            frameManager.detectionData = jsonfileDadta;
-            frameManager.dataFilePath = _jasonManager.dataFilePath;
-
             CrateSprite(texture);
-            frameManager.DrawFrames();
+
+            DrawFrames(jsonfileDadta, frameManager);
         }
 
         panelProgressBar.SetActive(false);
         yield return null;
+    }
+
+    private void DrawFrames(ParserModel.Root jsonfileDadta, FrameManager frameManager)
+    {
+        frameManager.detectionData = jsonfileDadta;
+        frameManager.dataFilePath = _jasonManager.dataFilePath;
+        frameManager.DrawFrames();
     }
 
     private void CrateSprite(Texture2D texture)
@@ -212,9 +229,30 @@ public class FileExplorer : MonoBehaviour
         imageObject.sprite = sprite;
     }
 
+    private void SetColorOfSelectedButton()
+    {
+        for (int i = 0; i < filesList.childCount; i++)
+        {
+            Button button = filesList.GetChild(i).GetComponent<Button>();
+
+            int fileOrder = button.GetComponent<PatchContainer>().fileOrder;
+
+            Image buttonImage = button.GetComponentInChildren<Image>();
+
+            if (fileOrder.Equals(_jasonManager.currentOrderJsonFile))
+            {
+                buttonImage.color = Color.red;
+            }
+            else
+            {
+                buttonImage.color = Color.white;
+            }
+        }
+    }
+
     private void ClearButtons()
     {
-        foreach (Transform button in contentTransform)
+        foreach (Transform button in filesList)
         {
             Destroy(button.gameObject);
         }

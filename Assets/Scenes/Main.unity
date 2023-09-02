@@ -1384,7 +1384,7 @@ MonoBehaviour:
   loadButton: {fileID: 1507283200}
   folderButtonPrefab: {fileID: 5785943572306036152, guid: f04a7b3c24f7fbe36a6cbb1569e353da, type: 3}
   jsonButtonPrefab: {fileID: 5785943572306036152, guid: f04a7b3c24f7fbe36a6cbb1569e353da, type: 3}
-  contentTransform: {fileID: 1556234913}
+  filesList: {fileID: 1556234913}
   panelProgressBar: {fileID: 357549391}
   imageObject: {fileID: 1528224198}
 --- !u!114 &747444577
@@ -3115,8 +3115,8 @@ MonoBehaviour:
   m_VerticalScrollbar: {fileID: 1822663334}
   m_HorizontalScrollbarVisibility: 2
   m_VerticalScrollbarVisibility: 2
-  m_HorizontalScrollbarSpacing: -3
-  m_VerticalScrollbarSpacing: -3
+  m_HorizontalScrollbarSpacing: 1
+  m_VerticalScrollbarSpacing: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3378,7 +3378,7 @@ MonoBehaviour:
   m_Direction: 2
   m_Value: 1
   m_Size: 1
-  m_NumberOfSteps: 0
+  m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3568,7 +3568,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 639.3252, y: -431.07275}
+  m_AnchoredPosition: {x: 545.0383, y: -431.07275}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2042735378
@@ -4221,7 +4221,7 @@ RectTransform:
   m_GameObject: {fileID: 8576001832092829961}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7072, y: 1.7072, z: 1.7072}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8576001832106165468}
@@ -4231,8 +4231,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 368, y: -766}
-  m_SizeDelta: {x: 1278.6504, y: 568.097}
+  m_AnchoredPosition: {x: 17.9667, y: -546}
+  m_SizeDelta: {x: 1090.0767, y: 568.097}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8576001832092829967
 MonoBehaviour:
@@ -4275,9 +4275,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8576001832106165471}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5857544, y: 0.5857544, z: 0.5857544}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8576001832092829966}
@@ -4285,8 +4285,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 639.3252, y: -147.02425}
-  m_SizeDelta: {x: 500, y: 50}
+  m_AnchoredPosition: {x: 545.0383, y: -147.02425}
+  m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8576001832106165469
 MonoBehaviour:
@@ -4308,7 +4308,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: /home/denis/IT/unity/work/Matvey/C001/images/-C001--PO01--LO011--CO6--SL001--PX32500--PW0100--IN0100--TM280--X014252--Y052789--Z190000--T1993591861--WE00013.jpg
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4342,7 +4342,7 @@ MonoBehaviour:
   m_fontSizeMin: 50
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
