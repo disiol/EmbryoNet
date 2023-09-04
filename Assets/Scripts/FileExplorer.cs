@@ -164,6 +164,8 @@ public class FileExplorer : MonoBehaviour
     private void FindImageByName(int opderJsonFile)
 
     {
+        ResetCurrentId();
+        
         List<JasonFilePathAndDataModel> jasonManagerDataList = _jasonManager.dataList;
         ParserModel.Root records = jasonManagerDataList[opderJsonFile].data;
 
@@ -185,6 +187,11 @@ public class FileExplorer : MonoBehaviour
             PopUpWindowShow("Image not found: " + imageName);
             Debug.Log("Image not found: " + imagePath);
         }
+    }
+
+    private void ResetCurrentId()
+    {
+        _safeAndLoadData.SafeCurrentId(0);
     }
 
     private void SaveCurrentOrderJsonFile(int opderJsonFile)

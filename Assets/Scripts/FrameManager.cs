@@ -26,7 +26,6 @@ public class FrameManager : MonoBehaviour
     private int _selectedDetectionID;
     public string dataFilePath;
     private SafeAndLoadData _safeAndLoadData;
-    private GameObject _selectedButtonRotation;
     private GameObject _arrows;
 
 
@@ -68,12 +67,7 @@ public class FrameManager : MonoBehaviour
         {
             DrawFrame(detection);
         }
-
-        // TODO if (_selectedButtonRotation != null)
-        // {
-        //     _selectedButtonRotation.GetComponent<RotationManager.RotationManager>().LoadData();
-        //
-        // }
+        
     }
 
     void DrawFrame(ParserModel.DetectionList detection)
@@ -124,10 +118,7 @@ public class FrameManager : MonoBehaviour
         SetTheSizeOfTheButton(size, position, button);
 
 
-        if (_selectedDetectionID == detectionID)
-        {
-            _selectedButtonRotation = button;
-        }
+       
     }
 
     private static void SetTheSizeOfTheButton(Vector2 size, Vector2 position, GameObject button)

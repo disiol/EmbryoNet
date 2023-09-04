@@ -143,8 +143,6 @@ namespace RotationManager
         {
             _panelProgressBar.SetActive(true);
             //TODO refactoring
-            _safeAndLoadData = gameObject.AddComponent<SafeAndLoadData>();
-
             _safeAndLoadData = GameObject.Find("/Canvas/Panel").GetComponent<SafeAndLoadData>();
             _targetID = _safeAndLoadData.LoadCurrentId();
 
@@ -181,9 +179,7 @@ namespace RotationManager
                 _jasonManager.dataList = _dataList;
 
                 _panelProgressBar.SetActive(false);
-
-                // Hide the menu after saving changes
-                // HideMenu();
+                
             }
             else
             {
@@ -348,17 +344,7 @@ namespace RotationManager
             _jasonManager = _panel.GetComponent<JasonManager>();
 
             dataFilePath = _jasonManager.dataFilePath;
-            // Read JSON data from the filePath
-
-            // Load the JSON data from the filePath path
-
-
-            // _newFileName = Path.GetFileNameWithoutExtension(_dataFilePath) + "_3d_cods.json"; //TODO folder C10
-
-            // Optionally, set the initial target record
-            // _records = _targetRecord
-            // _targetRecord = FindRecordById(_targetID, _records.detection_list);
-
+            
 
             if (targetRecord != null)
             {
