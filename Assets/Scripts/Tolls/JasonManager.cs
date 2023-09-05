@@ -8,7 +8,7 @@ namespace Tolls
 {
     public class JasonManager : MonoBehaviour
     {
-        public string dataFilePath;
+        [FormerlySerializedAs("dataFilePath")] public string curentFolderPath;
 
         public List<JasonFilePathAndDataModel> dataList = new List<JasonFilePathAndDataModel>();
         [HideInInspector] public int currentOrderJsonFile;

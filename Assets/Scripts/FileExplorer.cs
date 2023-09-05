@@ -147,7 +147,7 @@ public class FileExplorer : MonoBehaviour
             jsonBtn.onClick.AddListener(() => FindImageByName(patchContainer.fileOrder));
         }
 
-        _jasonManager.dataFilePath = folderPath;
+        _jasonManager.curentFolderPath = folderPath;
 
         panelProgressBar.SetActive(false);
 
@@ -225,7 +225,7 @@ public class FileExplorer : MonoBehaviour
     private void DrawFrames(ParserModel.Root jsonfileDadta, FrameManager frameManager)
     {
         frameManager.detectionData = jsonfileDadta;
-        frameManager.dataFilePath = _jasonManager.dataFilePath;
+        frameManager.dataFilePath = _jasonManager.curentFolderPath;
         frameManager.DrawFrames();
     }
 

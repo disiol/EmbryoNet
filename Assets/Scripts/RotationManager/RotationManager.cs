@@ -141,17 +141,22 @@ namespace RotationManager
 
         public IEnumerator UpdateRotation()
         {
+            Debug.Log("UpdateRotation");
+
+            GameObject canvens = GameObject.Find("Canvas");
+
+            _panelProgressBar = canvens.transform.Find("PanelProgressBar").GameObject();
+
             _panelProgressBar.SetActive(true);
             //TODO refactoring
             _safeAndLoadData = GameObject.Find("/Canvas/Panel").GetComponent<SafeAndLoadData>();
             _targetID = _safeAndLoadData.LoadCurrentId();
 
-            Debug.Log("UpdateRotation");
 
-            GameObject canvens = GameObject.Find("Canvas");
             _panel = canvens.transform.Find("Panel");
             _jasonManager = _panel.GetComponent<JasonManager>();
             _dataList = _jasonManager.dataList;
+
             ButtonSafe();
 
             Debug.Log("UpdateRotation");
@@ -179,7 +184,6 @@ namespace RotationManager
                 _jasonManager.dataList = _dataList;
 
                 _panelProgressBar.SetActive(false);
-                
             }
             else
             {
@@ -254,7 +258,6 @@ namespace RotationManager
                             recordOldRotation.y + deltaAngleY,
                             recordOldRotation.z + deltaAngleZ);
                         targetRecord.rotation = newTargetRecordRotation;
-
                     }
                 }
             }
@@ -305,6 +308,9 @@ namespace RotationManager
             string changesSavedToFilepath = "Changes saved to filePath: " + _folderPath;
             Debug.Log(changesSavedToFilepath);
 
+            _inputFieldEnterFolderNameForSafeNewData.text = "";
+
+
             PopUpWindowStatusShow(changesSavedToFilepath);
 
 
@@ -313,13 +319,14 @@ namespace RotationManager
 
         private IEnumerator CrateFilesFromData()
         {
-            //TODO ad adata ty failes
+            dataFilePath = _jasonManager.curentFolderPath;
+            _folderPath = CrateNewDataFilePathAndDirectory();
+
             foreach (var root in _jasonManager.dataList)
             {
                 _fileName = Path.GetFileNameWithoutExtension(root.jsonFilePath);
 
                 _newFileName = _fileName + "_3d_cods.json";
-                _folderPath = CrateNewDataFilePathAndDirectory();
 
 
                 string updatedJsonString = JsonUtility.ToJson(root.data);
@@ -343,8 +350,8 @@ namespace RotationManager
             _panel = canvens.transform.Find("Panel");
             _jasonManager = _panel.GetComponent<JasonManager>();
 
-            dataFilePath = _jasonManager.dataFilePath;
-            
+            dataFilePath = _jasonManager.curentFolderPath;
+
 
             if (targetRecord != null)
             {
@@ -408,11 +415,17 @@ namespace RotationManager
         private string SetFolderName()
         {
             string folderPath;
+            _inputFieldEnterFolderNameForSafeNewData = _popSafeUpWindow.transform
+                .Find("InputFieldEnterFolderNameForSafeNewData")
+                .GetComponent<TMP_InputField>();
+            _inputFieldEnterFolderNameForSafeNewDataText = _inputFieldEnterFolderNameForSafeNewData.text;
+
+
             if (!_inputFieldEnterFolderNameForSafeNewDataText.Equals(""))
             {
                 _newFolderName = _inputFieldEnterFolderNameForSafeNewDataText;
 
-                folderPath = DeleteLastWord(dataFilePath) + _newFolderName;
+                folderPath = CrateNewDataFilePath(dataFilePath,_newFolderName);
             }
             else
             {
@@ -423,18 +436,12 @@ namespace RotationManager
         }
 
 
-        static string DeleteLastWord(string input)
+        string CrateNewDataFilePath(string dataFilePath, string replacementWord)
         {
-            int lastSpaceIndex = input.LastIndexOf(' ');
+            string wordToReplace =Path.GetFileName(dataFilePath);
+            string result = dataFilePath.Replace(wordToReplace, replacementWord);
 
-            // If there is no space or the string is empty, return the input as is
-            if (lastSpaceIndex == -1 || string.IsNullOrWhiteSpace(input))
-                return input;
-
-            // Remove the last word and any subsequent whitespace characters
-            string modifiedString = input.Substring(0, lastSpaceIndex);
-
-            return modifiedString;
+            return result;
         }
     }
 }
