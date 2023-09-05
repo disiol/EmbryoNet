@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1600
     height: 811
   m_ShowMode: 4
-  m_Title: GitHub
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 492}
   m_MaxSize: {x: 10000, y: 10000}
@@ -141,7 +141,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 718
+    width: 604
     height: 761
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
@@ -162,9 +162,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 718
+    x: 604
     y: 0
-    width: 211
+    width: 305
     height: 761
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
@@ -188,9 +188,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 929
+    x: 909
     y: 0
-    width: 228
+    width: 279
     height: 761
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
@@ -209,23 +209,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Window
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1157
+    x: 1188
     y: 0
-    width: 443
+    width: 412
     height: 761
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,10 +243,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 718
+    width: 604
     height: 273
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 18}
@@ -270,7 +270,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 273
-    width: 718
+    width: 604
     height: 488
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
@@ -299,23 +299,23 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1157
+    x: 1141
     y: 119
-    width: 442
+    width: 458
     height: 740
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  progressMessageClearTime: 10374.414237395
+  progressMessageClearTime: -1
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
   currentStatusEntriesHasUpdate: 0
-  repositoryProgressHasUpdate: 0
-  appManagerProgressHasUpdate: 0
+  repositoryProgressHasUpdate: 1
+  appManagerProgressHasUpdate: 1
   changeTab: 3
   activeTab: 3
   initProjectView:
@@ -401,8 +401,8 @@ MonoBehaviour:
     remoteBranches: []
   changesView:
     currentBranchHasUpdate: 0
-    currentStatusEntriesHasUpdate: 0
-    currentLocksHasUpdate: 0
+    currentStatusEntriesHasUpdate: 1
+    currentLocksHasUpdate: 1
     commitBody: 
     commitMessage: 
     currentBranch: '[main]'
@@ -411,8 +411,6 @@ MonoBehaviour:
       assets:
         keys:
         - 00000000000000001000000000000000
-        - e6e025d44c15c1e5fa6aa816429e3fa6
-        - 327d36c60f62ae807a305747665d6367
         - 4bbfe0c52a2b9f4099e4ac06b5fcc5ea
         - 04efe745573c437fbebd902673ff14b4
         - 3147f8d53d49446b984d3827590f5dd9
@@ -435,42 +433,6 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets/Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets/Scenes/Main.unity
-          label: Main.unity
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets/Scenes/Main.unity
-            fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
-            projectPath: Assets/Scenes/Main.unity
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
         - path: Assets/Scripts
           label: Scripts
           level: 1
@@ -528,31 +490,14 @@ MonoBehaviour:
       folders:
         keys:
         - Assets
-        - Assets/Scenes
         - Assets/Scripts
         - Assets/Scripts/RotationManager
+        - UserSettings
+        - UserSettings/Layouts
         values:
         - path: Assets
           label: Assets
           level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets/Scenes
-          label: Scenes
-          level: 1
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -589,6 +534,42 @@ MonoBehaviour:
         - path: Assets/Scripts/RotationManager
           label: RotationManager
           level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings
+          label: UserSettings
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings/Layouts
+          label: Layouts
+          level: 1
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -650,42 +631,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets/Scenes
-        label: Scenes
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets/Scenes/Main.unity
-        label: Main.unity
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets/Scenes/Main.unity
-          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
-          projectPath: Assets/Scenes/Main.unity
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
       - path: Assets/Scripts
         label: Scripts
         level: 1
@@ -740,6 +685,60 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
+      - path: UserSettings
+        label: UserSettings
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings/Layouts
+        label: Layouts
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings/Layouts/default-2021.dwlt
+        label: default-2021.dwlt
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings/Layouts/default-2021.dwlt
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/UserSettings/Layouts/default-2021.dwlt
+          projectPath: UserSettings/Layouts/default-2021.dwlt
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
       selectedNode:
         path: 
         label: 
@@ -760,27 +759,27 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
-    - path: Assets/Scenes/Main.unity
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
-      projectPath: Assets/Scenes/Main.unity
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
     - path: Assets/Scripts/RotationManager/RotationManager.cs
       fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
       projectPath: Assets/Scripts/RotationManager/RotationManager.cs
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
+    - path: UserSettings/Layouts/default-2021.dwlt
+      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/UserSettings/Layouts/default-2021.dwlt
+      projectPath: UserSettings/Layouts/default-2021.dwlt
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
     changedFilesText: 2 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-09-02T00:28:13.749+03:00
+      updatedTimeString: 2023-09-04T17:44:23.831+03:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-09-02T03:20:47.676+03:00
+      updatedTimeString: 2023-09-05T05:10:56.221+03:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2023-09-05T05:07:11.068+03:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -15135,13 +15134,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2023-08-31T21:34:31.410+03:00
+    updatedTimeString: 2023-09-04T16:32:34.303+03:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-09-02T02:56:56.816+03:00
+    updatedTimeString: 2023-09-04T17:17:36.226+03:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-09-02T03:20:47.676+03:00
+    updatedTimeString: 2023-09-04T21:18:31.551+03:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -15159,8 +15158,8 @@ MonoBehaviour:
     m_Text: Fetch
     m_Image: {fileID: 0}
     m_Tooltip: 
-  repositoryProgressValue: 0.5
-  repositoryProgressMessage: Listing changed files...
+  repositoryProgressValue: 0
+  repositoryProgressMessage: 
   appManagerProgressValue: 1
   appManagerProgressMessage: Initialized
   connections: []
@@ -15187,7 +15186,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 119
-    width: 717
+    width: 603
     height: 252
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -15214,9 +15213,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 718
+    x: 604
     y: 119
-    width: 209
+    width: 303
     height: 740
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -15226,23 +15225,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: e2590000
       m_LastClickedID: 0
-      m_ExpandedIDs: 7812fdff0674000014740000227400003474000046740000bc740000
+      m_ExpandedIDs: 96c0feffc6d7feff9469ffff1ec6ffff76c6fffff4ccffff00d7ffff52dcfffffc63000006640000146400002264000046640000dc640000e464000028750000367500005a750000f67500004a8b0000548b0000628b0000708b0000948b00000a8c0000308c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: RightSide
+        m_OriginalName: RightSide
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 25620
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 7}
       m_SearchString: 
@@ -15267,14 +15266,14 @@ MonoBehaviour:
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Debug
+    m_Text: Inspector
     m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1157
+    x: 1188
     y: 119
-    width: 442
+    width: 411
     height: 740
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -15290,7 +15289,7 @@ MonoBehaviour:
   m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
-  m_InspectorMode: 1
+  m_InspectorMode: 0
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
@@ -15314,9 +15313,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 929
+    x: 909
     y: 119
-    width: 226
+    width: 277
     height: 740
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -15348,9 +15347,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b85b0000
-    m_LastClickedID: 23480
-    m_ExpandedIDs: 00000000ac5b000000ca9a3b
+    m_SelectedIDs: b65b0000
+    m_LastClickedID: 23478
+    m_ExpandedIDs: 00000000aa5b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -15378,7 +15377,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ac5b0000
+    m_ExpandedIDs: 00000000aa5b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -15433,7 +15432,7 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 153
+  m_DirectoriesAreaWidth: 123
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -15456,7 +15455,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 392
-    width: 717
+    width: 603
     height: 467
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -15505,10 +15504,10 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 717
+      width: 603
       height: 446
-    m_Scale: {x: 0.3734375, y: 0.37343746}
-    m_Translation: {x: 358.5, y: 222.99998}
+    m_Scale: {x: 0.3140625, y: 0.3140625}
+    m_Translation: {x: 301.5, y: 223}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -15516,12 +15515,12 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -960
-      y: -597.15485
+      y: -710.04974
       width: 1920
-      height: 1194.3097
+      height: 1420.0995
     m_MinimalGUI: 1
-  m_defaultScale: 0.3734375
-  m_LastWindowPixelSize: {x: 717, y: 467}
+  m_defaultScale: 0.3140625
+  m_LastWindowPixelSize: {x: 603, y: 467}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -15549,8 +15548,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 119
-    width: 820
-    height: 327
+    width: 750
+    height: 252
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -15786,9 +15785,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 960, y: 272, z: 0}
+    m_Target: {x: 1895.6035, y: 807.2927, z: 0}
     speed: 2
-    m_Value: {x: 960, y: 272, z: 0}
+    m_Value: {x: 1895.6035, y: 807.2927, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -15817,17 +15816,17 @@ MonoBehaviour:
       m_Size: {x: 1, y: 1}
     yGrid:
       m_Fade:
-        m_Target: 0
+        m_Target: 1
         speed: 2
-        m_Value: 0
+        m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
-        m_Target: 1
+        m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -15839,13 +15838,13 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 565.8042
+    m_Target: 229.5053
     speed: 2
-    m_Value: 565.8042
+    m_Value: 229.5053
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
