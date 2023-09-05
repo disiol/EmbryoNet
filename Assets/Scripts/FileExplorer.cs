@@ -24,6 +24,8 @@ public class FileExplorer : MonoBehaviour
     // public TMP_Text folderPathText;
     [SerializeField] private GameObject folderButtonPrefab;
     [SerializeField] private GameObject jsonButtonPrefab;
+    [SerializeField]private Color colorOfSelectedButton;
+
     [SerializeField] private Transform filesList;
 
     [SerializeField] private GameObject panelProgressBar;
@@ -60,6 +62,10 @@ public class FileExplorer : MonoBehaviour
             {
                 ShowFoldersAndJsonFiles(_path);
             }
+            else
+            {
+                panelProgressBar.SetActive(false);
+            }
         });
     }
 
@@ -90,6 +96,7 @@ public class FileExplorer : MonoBehaviour
 
             if (fileName != imagesFolderName)
             {
+                panelProgressBar.SetActive(true);
                 StartCoroutine(ShowFolders(folder, fileName));
             }
         }
@@ -97,7 +104,6 @@ public class FileExplorer : MonoBehaviour
 
     private IEnumerator ShowFolders(string folder, string fileName)
     {
-        panelProgressBar.SetActive(true);
         GameObject folderButton = Instantiate(folderButtonPrefab, filesList);
         folderButton.GetComponent<PatchContainer>().folderPath = folder;
 
@@ -248,7 +254,7 @@ public class FileExplorer : MonoBehaviour
 
             if (fileOrder.Equals(_jasonManager.currentOrderJsonFile))
             {
-                buttonImage.color = Color.red;
+                buttonImage.color = colorOfSelectedButton;
             }
             else
             {

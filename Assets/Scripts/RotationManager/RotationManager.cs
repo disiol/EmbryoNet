@@ -297,6 +297,8 @@ namespace RotationManager
 
         private void SaveDataToFile()
         {
+          
+
             _jasonManager = _panel.GetComponent<JasonManager>();
 
 
@@ -307,14 +309,16 @@ namespace RotationManager
 
             string changesSavedToFilepath = "Changes saved to filePath: " + _folderPath;
             Debug.Log(changesSavedToFilepath);
+
             PopUpWindowStatusShow(changesSavedToFilepath);
-
-
-            // OpenNewFile();
         }
 
         private IEnumerator CrateFilesFromData()
         {
+            Debug.Log("CrateFilesFromData");
+            _popSafeUpWindow.SetActive(false);
+            _panelProgressBar.SetActive(true);
+            
             dataFilePath = _jasonManager.curentFolderPath;
 
             foreach (var root in _jasonManager.dataList)
@@ -374,7 +378,16 @@ namespace RotationManager
 
 
             Button buttonOk = _popSafeUpWindow.transform.Find("ButtonOk").GetComponent<Button>();
+            Button buttonCansel = _popSafeUpWindow.transform.Find("ButtonCansel").GetComponent<Button>();
             buttonOk.onClick.AddListener(SaveDataToFile);
+            buttonCansel.onClick.AddListener(ClosepopSafeUpWindow);
+                
+        }
+
+        private void ClosepopSafeUpWindow()
+        {
+            _popSafeUpWindow.SetActive(false);
+            _panelProgressBar.SetActive(false);
         }
 
 
@@ -388,6 +401,9 @@ namespace RotationManager
                 .GetComponent<TextMeshProUGUI>();
 
             statusText.text = text;
+            
+            _panelProgressBar.SetActive(false);
+
         }
 
         private string CrateNewDataFilePathAndDirectory()
@@ -422,7 +438,7 @@ namespace RotationManager
             {
                 _newFolderName = _inputFieldEnterFolderNameForSafeNewDataText;
 
-                folderPath = CrateNewDataFilePath(dataFilePath,_newFolderName);
+                folderPath = CrateNewDataFilePath(dataFilePath, _newFolderName);
             }
             else
             {
@@ -435,7 +451,7 @@ namespace RotationManager
 
         string CrateNewDataFilePath(string dataFilePath, string replacementWord)
         {
-            string wordToReplace =Path.GetFileName(dataFilePath);
+            string wordToReplace = Path.GetFileName(dataFilePath);
             string result = dataFilePath.Replace(wordToReplace, replacementWord);
 
             return result;
