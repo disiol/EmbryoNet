@@ -307,10 +307,6 @@ namespace RotationManager
 
             string changesSavedToFilepath = "Changes saved to filePath: " + _folderPath;
             Debug.Log(changesSavedToFilepath);
-
-            _inputFieldEnterFolderNameForSafeNewData.text = "";
-
-
             PopUpWindowStatusShow(changesSavedToFilepath);
 
 
@@ -320,10 +316,11 @@ namespace RotationManager
         private IEnumerator CrateFilesFromData()
         {
             dataFilePath = _jasonManager.curentFolderPath;
-            _folderPath = CrateNewDataFilePathAndDirectory();
 
             foreach (var root in _jasonManager.dataList)
             {
+                _folderPath = CrateNewDataFilePathAndDirectory();
+
                 _fileName = Path.GetFileNameWithoutExtension(root.jsonFilePath);
 
                 _newFileName = _fileName + "_3d_cods.json";
