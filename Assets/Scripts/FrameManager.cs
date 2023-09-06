@@ -84,8 +84,9 @@ public class FrameManager : MonoBehaviour
 
     private Vector2 CalculatePositionAndSize(ParserModel.DetectionList detection, out Vector2 size)
     {
-        _revesConst = 1048;
         Sprite spriteObjectSprite = _imageObject.sprite;
+
+        _revesConst = 1048;
         _corectedScaleIndex = 2;
         Vector2 position = new Vector2((detection.brx - (detection.brx - detection.tlx) * 0.5f) / _corectedScaleIndex,
             _revesConst - (detection.bry - (detection.bry - detection.tly) * 0.5f) / _corectedScaleIndex);

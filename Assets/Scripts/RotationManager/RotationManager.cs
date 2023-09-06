@@ -304,20 +304,22 @@ namespace RotationManager
 
             // Save the modified data back to the JSON filePath
 
+            _panelProgressBar.SetActive(true);
+
             StartCoroutine(CrateFilesFromData());
+            
+            
 
 
-            string changesSavedToFilepath = "Changes saved to filePath: " + _folderPath;
-            Debug.Log(changesSavedToFilepath);
-
-            PopUpWindowStatusShow(changesSavedToFilepath);
+          
         }
 
         private IEnumerator CrateFilesFromData()
         {
+            yield return null;
+            
             Debug.Log("CrateFilesFromData");
             _popSafeUpWindow.SetActive(false);
-            _panelProgressBar.SetActive(true);
             
             dataFilePath = _jasonManager.curentFolderPath;
 
@@ -334,6 +336,10 @@ namespace RotationManager
                 string filePath = Path.Combine(_folderPath, _newFileName);
                 File.WriteAllText(filePath, updatedJsonString);
             }
+            
+            string changesSavedToFilepath = "Changes saved to filePath: " + _folderPath;
+            Debug.Log(changesSavedToFilepath);
+            PopUpWindowStatusShow(changesSavedToFilepath);
 
             yield return null;
         }
@@ -402,7 +408,7 @@ namespace RotationManager
 
             statusText.text = text;
             
-            _panelProgressBar.SetActive(false);
+             _panelProgressBar.SetActive(false);
 
         }
 

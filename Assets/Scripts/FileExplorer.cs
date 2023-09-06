@@ -96,14 +96,18 @@ public class FileExplorer : MonoBehaviour
 
             if (fileName != imagesFolderName)
             {
-                panelProgressBar.SetActive(true);
                 StartCoroutine(ShowFolders(folder, fileName));
             }
         }
+        
+        panelProgressBar.SetActive(false);
+
     }
 
     private IEnumerator ShowFolders(string folder, string fileName)
     {
+        yield return null;
+
         GameObject folderButton = Instantiate(folderButtonPrefab, filesList);
         folderButton.GetComponent<PatchContainer>().folderPath = folder;
 
@@ -112,7 +116,6 @@ public class FileExplorer : MonoBehaviour
         Button folderBtn = folderButton.GetComponent<Button>();
         folderBtn.onClick.AddListener(() =>
             StartCoroutine(ShowJsonFilesInFolder(folderButton.GetComponent<PatchContainer>().folderPath)));
-        panelProgressBar.SetActive(false);
 
         yield return null;
     }
