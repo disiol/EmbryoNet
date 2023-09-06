@@ -24,7 +24,7 @@ public class FileExplorer : MonoBehaviour
     // public TMP_Text folderPathText;
     [SerializeField] private GameObject folderButtonPrefab;
     [SerializeField] private GameObject jsonButtonPrefab;
-    [SerializeField]private Color colorOfSelectedButton;
+    [SerializeField] private Color colorOfSelectedButton;
 
     [SerializeField] private Transform filesList;
 
@@ -89,25 +89,32 @@ public class FileExplorer : MonoBehaviour
 
         string[] subFolders = Directory.GetDirectories(folderPath);
 
+        panelProgressBar.SetActive(true);
+    
+        StartCoroutine(ShowFolders(subFolders));
+
+        panelProgressBar.SetActive(false);
+    }
+
+    private IEnumerator ShowFolders(string[] subFolders)
+    {
+        yield return null;
+
         foreach (string folder in subFolders)
         {
             string fileName = Path.GetFileName(folder);
 
-
             if (fileName != imagesFolderName)
             {
-                StartCoroutine(ShowFolders(folder, fileName));
+                ShowFolder(folder, fileName);
             }
         }
-        
-        panelProgressBar.SetActive(false);
 
+        yield return null;
     }
 
-    private IEnumerator ShowFolders(string folder, string fileName)
+    private void ShowFolder(string folder, string fileName)
     {
-        yield return null;
-
         GameObject folderButton = Instantiate(folderButtonPrefab, filesList);
         folderButton.GetComponent<PatchContainer>().folderPath = folder;
 
@@ -116,19 +123,19 @@ public class FileExplorer : MonoBehaviour
         Button folderBtn = folderButton.GetComponent<Button>();
         folderBtn.onClick.AddListener(() =>
             StartCoroutine(ShowJsonFilesInFolder(folderButton.GetComponent<PatchContainer>().folderPath)));
-
-        yield return null;
     }
 
     private void PopUpWindowShow(string text)
     {
         _popUpWindow.SetActive(true);
         _popUpWindowStatusText.text = text;
+        panelProgressBar.SetActive(false);
     }
 
     private IEnumerator ShowJsonFilesInFolder(string folderPath)
     {
         panelProgressBar.SetActive(true);
+        yield return null;
 
         ResetData();
 
@@ -174,7 +181,7 @@ public class FileExplorer : MonoBehaviour
 
     {
         ResetCurrentId();
-        
+
         List<JasonFilePathAndDataModel> jasonManagerDataList = _jasonManager.dataList;
         ParserModel.Root records = jasonManagerDataList[opderJsonFile].data;
 
@@ -212,6 +219,8 @@ public class FileExplorer : MonoBehaviour
     private IEnumerator OpenImage(ParserModel.Root jsonfileDadta, string imagePath)
     {
         panelProgressBar.SetActive(true);
+        yield return null;
+
 
         Debug.Log("Open the image: " + imagePath);
 
