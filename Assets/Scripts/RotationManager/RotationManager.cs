@@ -147,7 +147,7 @@ namespace RotationManager
 
             _panelProgressBar = canvens.transform.Find("PanelProgressBar").GameObject();
 
-            _panelProgressBar.SetActive(true);
+            // _panelProgressBar.SetActive(true);
             yield return null;
  
             //TODO refactoring

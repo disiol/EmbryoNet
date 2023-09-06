@@ -115,7 +115,6 @@ public class FrameManager : MonoBehaviour
         rotationManager.targetRecord = detection;
 
 
-        // var renderTexture = CrateRenderTextureForButton(detection, button, detectionID);
 
 
         // Access the RectTransform of the button
@@ -156,18 +155,7 @@ public class FrameManager : MonoBehaviour
             arrows.transform.rotation = Quaternion.Euler(detectionRotation);
         }
     }
-
-    private RenderTexture CrateRenderTextureForButton(ParserModel.DetectionList detection, GameObject button,
-        int detectionID)
-    {
-        RenderTexture renderTexture = new RenderTexture(256, 256, 16, RenderTextureFormat.ARGB32);
-        renderTexture.Create();
-
-        // Release the hardware resources used by the render texture 
-        renderTexture.Release();
-        renderTexture.name = "RenderTexture_" + detectionID;
-        return renderTexture;
-    }
+    
 
     private GameObject CreateGameObjectForEachFrame(ParserModel.DetectionList detection,
         Vector2 size, Vector2 position)
