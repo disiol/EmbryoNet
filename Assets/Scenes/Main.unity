@@ -1390,6 +1390,7 @@ MonoBehaviour:
   filesList: {fileID: 1556234913}
   panelProgressBar: {fileID: 357549391}
   imageObject: {fileID: 1528224198}
+  frameManager: {fileID: 1528224200}
 --- !u!114 &747444577
 MonoBehaviour:
   m_ObjectHideFlags: 0

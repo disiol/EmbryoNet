@@ -54,6 +54,9 @@ public class FrameManager : MonoBehaviour
 
     public void DestroyAllChildrenImageObject()
     {
+        _arrows = GameObject.Find("Arrows");
+        _imageObject = GetComponent<Image>();
+
         DestroyAllChildrenImageObject(_arrows.transform);
         DestroyAllChildrenImageObject(_imageObject.transform);
         DestroyAllChildrenImageObject(arrowsRawImage.transform);

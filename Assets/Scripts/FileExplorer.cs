@@ -83,11 +83,11 @@ public class FileExplorer : MonoBehaviour
 
             PopUpWindowShow("Image directory not found.");
             ClearButtons();
-            frameManager.DestroyAllChildrenImageObject();
+           
             return;
         }
 
-        ClearButtons();
+        ClearUI();
 
         string[] subFolders = Directory.GetDirectories(folderPath);
 
@@ -96,6 +96,13 @@ public class FileExplorer : MonoBehaviour
         StartCoroutine(ShowFolders(subFolders));
 
         panelProgressBar.SetActive(false);
+    }
+
+    private void ClearUI()
+    {
+        ClearButtons();
+        frameManager.DestroyAllChildrenImageObject();
+        imageObject.sprite = null;
     }
 
     private IEnumerator ShowFolders(string[] subFolders)
