@@ -148,6 +148,8 @@ namespace RotationManager
             _panelProgressBar = canvens.transform.Find("PanelProgressBar").GameObject();
 
             _panelProgressBar.SetActive(true);
+            yield return null;
+ 
             //TODO refactoring
             _safeAndLoadData = GameObject.Find("/Canvas/Panel").GetComponent<SafeAndLoadData>();
             _targetID = _safeAndLoadData.LoadCurrentId();

@@ -39,7 +39,7 @@ public class FrameManager : MonoBehaviour
 
         if (_imageObject != null && _imageObject.sprite != null)
         {
-            DestroyAllChildrenImageObjectAndGetimageObjectTexture();
+            DestroyAllChildrenImageObject();
 
             // Load the JSON data from the filePath path
 
@@ -52,7 +52,7 @@ public class FrameManager : MonoBehaviour
         }
     }
 
-    private void DestroyAllChildrenImageObjectAndGetimageObjectTexture()
+    public void DestroyAllChildrenImageObject()
     {
         DestroyAllChildrenImageObject(_arrows.transform);
         DestroyAllChildrenImageObject(_imageObject.transform);

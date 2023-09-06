@@ -30,6 +30,7 @@ public class FileExplorer : MonoBehaviour
 
     [SerializeField] private GameObject panelProgressBar;
     [SerializeField] private Image imageObject;
+    [SerializeField] private FrameManager frameManager;
 
     private string _path;
 
@@ -82,6 +83,7 @@ public class FileExplorer : MonoBehaviour
 
             PopUpWindowShow("Image directory not found.");
             ClearButtons();
+            frameManager.DestroyAllChildrenImageObject();
             return;
         }
 
