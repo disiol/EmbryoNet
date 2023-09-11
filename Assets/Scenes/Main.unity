@@ -3275,7 +3275,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 20
   m_Viewport: {fileID: 300146093}
   m_HorizontalScrollbar: {fileID: 755331880}
   m_VerticalScrollbar: {fileID: 1822663334}
@@ -3361,7 +3361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollRect: {fileID: 1569463570}
-  scrollSpeed: 10
+  scrollSpeed: 5
 --- !u!1 &1572323118
 GameObject:
   m_ObjectHideFlags: 0
@@ -4371,10 +4371,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RotationMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 2208343587346752995, guid: 5170cc9f3ea42c911a252b546f6f25f8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2208343587556610732, guid: 5170cc9f3ea42c911a252b546f6f25f8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4458,18 +4454,6 @@ PrefabInstance:
     - target: {fileID: 2208343587556610732, guid: 5170cc9f3ea42c911a252b546f6f25f8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2208343587556610733, guid: 5170cc9f3ea42c911a252b546f6f25f8, type: 3}
-      propertyPath: currentRotationStep
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2208343587981963181, guid: 5170cc9f3ea42c911a252b546f6f25f8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2208343587981963181, guid: 5170cc9f3ea42c911a252b546f6f25f8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -493
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5170cc9f3ea42c911a252b546f6f25f8, type: 3}

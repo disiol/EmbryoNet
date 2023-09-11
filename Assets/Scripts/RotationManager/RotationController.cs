@@ -28,8 +28,7 @@ namespace RotationManager
         [SerializeField] private TMP_InputField menuZInput;
         [SerializeField] private Button decreaseZButton;
 
-        [Header("Rotation")] 
-        [SerializeField] private float currentRotationStep;
+        [Header("Rotation")] [SerializeField] private float currentRotationStep;
         [SerializeField] private float minRotation;
         [SerializeField] private float maxRotation;
 
@@ -50,7 +49,45 @@ namespace RotationManager
             menuYInput.onValueChanged.AddListener(OnYValueChanged);
             menuZInput.onValueChanged.AddListener(OnZValueChanged);
         }
-        
+
+
+        public void Update()
+        {
+            RotatiomByKese();
+        }
+
+        private void RotatiomByKese()
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                DecreaseZRotation();
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                IncreaseZRotation();
+            }
+
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                DecreaseYRotation();
+            }
+
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                IncreaseYRotation();
+            }
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                DecreaseXRotation();
+            }
+
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                IncreaseXRotation();
+            }
+        }
 
 
         // Handle X, Y, and Z rotation value changes
