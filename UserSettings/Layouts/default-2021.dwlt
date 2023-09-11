@@ -8,6 +8,30 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 0
+    y: 64
+    width: 1600
+    height: 836
+  m_ShowMode: 0
+  m_Title: Build Settings
+  m_RootView: {fileID: 4}
+  m_MinSize: {x: 640, y: 601}
+  m_MaxSize: {x: 4000, y: 4021}
+  m_Maximized: 0
+--- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -19,12 +43,62 @@ MonoBehaviour:
     width: 1600
     height: 811
   m_ShowMode: 4
-  m_Title: Game
-  m_RootView: {fileID: 2}
+  m_Title: Scene
+  m_RootView: {fileID: 5}
   m_MinSize: {x: 875, y: 492}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
---- !u!114 &2
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: BuildPlayerWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1600
+    height: 836
+  m_MinSize: {x: 640, y: 580}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 15}
+  m_Panes:
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 3}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1600
+    height: 836
+  m_MinSize: {x: 640, y: 601}
+  m_MaxSize: {x: 4000, y: 4021}
+  vertical: 0
+  controlID: 28916
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,9 +111,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 3}
-  - {fileID: 4}
-  - {fileID: 5}
+  - {fileID: 6}
+  - {fileID: 7}
+  - {fileID: 8}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -52,7 +126,7 @@ MonoBehaviour:
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &3
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &4
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,10 +161,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 6}
-  - {fileID: 7}
-  - {fileID: 8}
   - {fileID: 9}
+  - {fileID: 10}
+  - {fileID: 11}
+  - {fileID: 12}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -100,8 +174,8 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 41
---- !u!114 &5
+  controlID: 115
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,7 +196,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &6
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,97 +209,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 10}
-  - {fileID: 11}
+  - {fileID: 13}
+  - {fileID: 14}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 604
+    width: 982
     height: 761
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 129
---- !u!114 &7
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 604
-    y: 0
-    width: 305
-    height: 761
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 14}
-  m_Panes:
-  - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &8
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 909
-    y: 0
-    width: 279
-    height: 761
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 16}
-  m_Panes:
-  - {fileID: 16}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &9
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 1188
-    y: 0
-    width: 412
-    height: 761
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 15}
-  m_Panes:
-  - {fileID: 15}
-  - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  controlID: 116
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -236,22 +231,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: 
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 0
+    x: 982
     y: 0
-    width: 604
-    height: 273
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
+    width: 248
+    height: 761
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
-  - {fileID: 13}
-  m_Selected: 1
+  m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -268,18 +262,149 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 0
-    y: 273
-    width: 604
-    height: 488
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 17}
+    x: 1230
+    y: 0
+    width: 100
+    height: 761
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 17}
+  - {fileID: 20}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: Window
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1330
+    y: 0
+    width: 270
+    height: 761
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 16}
+  m_Panes:
+  - {fileID: 19}
+  - {fileID: 16}
+  m_Selected: 1
+  m_LastSelected: 0
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneView
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 982
+    height: 100
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 22}
+  m_Panes:
+  - {fileID: 22}
+  - {fileID: 17}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 100
+    width: 982
+    height: 661
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 21}
+  m_Panes:
+  - {fileID: 21}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12043, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 640, y: 580}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Build Settings
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 64
+    width: 1600
+    height: 815
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -299,9 +424,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1141
+    x: 1330
     y: 119
-    width: 458
+    width: 269
     height: 740
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -314,15 +439,15 @@ MonoBehaviour:
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
   currentStatusEntriesHasUpdate: 0
-  repositoryProgressHasUpdate: 1
-  appManagerProgressHasUpdate: 1
+  repositoryProgressHasUpdate: 0
+  appManagerProgressHasUpdate: 0
   changeTab: 3
   activeTab: 3
   initProjectView:
     hasCompletedInitialCheck: 0
     isUserDataPresent: 0
     lastCheckUserChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2023-09-06T17:28:20.810+03:00
       cacheType: 8
   branchesView:
     treeLocals:
@@ -401,190 +526,19 @@ MonoBehaviour:
     remoteBranches: []
   changesView:
     currentBranchHasUpdate: 0
-    currentStatusEntriesHasUpdate: 1
-    currentLocksHasUpdate: 1
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
     currentBranch: '[main]'
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
-        keys:
-        - 00000000000000001000000000000000
-        - 4bbfe0c52a2b9f4099e4ac06b5fcc5ea
-        - 04efe745573c437fbebd902673ff14b4
-        - 3147f8d53d49446b984d3827590f5dd9
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets/Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets/Scripts/RotationManager
-          label: RotationManager
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets/Scripts/RotationManager/RotationManager.cs
-          label: RotationManager.cs
-          level: 3
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets/Scripts/RotationManager/RotationManager.cs
-            fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
-            projectPath: Assets/Scripts/RotationManager/RotationManager.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
+        keys: []
+        values: []
       folders:
-        keys:
-        - Assets
-        - Assets/Scripts
-        - Assets/Scripts/RotationManager
-        - UserSettings
-        - UserSettings/Layouts
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets/Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets/Scripts/RotationManager
-          label: RotationManager
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings
-          label: UserSettings
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings/Layouts
-          label: Layouts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
+        keys: []
+        values: []
       checkedFileNodes:
         keys: []
         values: []
@@ -613,132 +567,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets
-        label: Assets
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets/Scripts
-        label: Scripts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets/Scripts/RotationManager
-        label: RotationManager
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets/Scripts/RotationManager/RotationManager.cs
-        label: RotationManager.cs
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets/Scripts/RotationManager/RotationManager.cs
-          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
-          projectPath: Assets/Scripts/RotationManager/RotationManager.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: UserSettings
-        label: UserSettings
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings/Layouts
-        label: Layouts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings/Layouts/default-2021.dwlt
-        label: default-2021.dwlt
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings/Layouts/default-2021.dwlt
-          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/UserSettings/Layouts/default-2021.dwlt
-          projectPath: UserSettings/Layouts/default-2021.dwlt
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
       selectedNode:
         path: 
         label: 
@@ -758,33 +586,562 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-    gitStatusEntries:
-    - path: Assets/Scripts/RotationManager/RotationManager.cs
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
-      projectPath: Assets/Scripts/RotationManager/RotationManager.cs
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: UserSettings/Layouts/default-2021.dwlt
-      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/UserSettings/Layouts/default-2021.dwlt
-      projectPath: UserSettings/Layouts/default-2021.dwlt
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    changedFilesText: 2 changed files
+    gitStatusEntries: []
+    changedFilesText: No changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-09-04T17:44:23.831+03:00
+      updatedTimeString: 2023-09-06T18:21:06.177+03:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-09-05T05:10:56.221+03:00
+      updatedTimeString: 2023-09-06T18:38:12.024+03:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2023-09-05T05:07:11.068+03:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
+    - commitID: 1d777eba5bf7c7558ef64c27812f8165b9def8fc
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: mace                ClearUI();
+      description: 
+      timeString: 2023-09-06T17:37:46.000+03:00
+      commitTimeString: 2023-09-06T17:37:46.000+03:00
+      changes:
+      - path: Assets/Scenes/Main.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+        projectPath: Assets/Scenes/Main.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/FileExplorer.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+        projectPath: Assets/Scripts/FileExplorer.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/FrameManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FrameManager.cs
+        projectPath: Assets/Scripts/FrameManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 17c271e93359d361c2a1acc51611b172d11d52bf
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: Fix progres bar
+      description: 
+      timeString: 2023-09-06T17:27:05.000+03:00
+      commitTimeString: 2023-09-06T17:27:05.000+03:00
+      changes:
+      - path: Assets/Scripts/FileExplorer.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+        projectPath: Assets/Scripts/FileExplorer.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/FrameManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FrameManager.cs
+        projectPath: Assets/Scripts/FrameManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/RotationManager/RotationManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
+        projectPath: Assets/Scripts/RotationManager/RotationManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 62aa86abf8b10de9ee411c842609eadd6dde6557
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: FileExplorer fix proges bar
+      description: 
+      timeString: 2023-09-06T17:00:06.000+03:00
+      commitTimeString: 2023-09-06T17:00:06.000+03:00
+      changes:
+      - path: Assets/Scenes/Main.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+        projectPath: Assets/Scenes/Main.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/FileExplorer.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+        projectPath: Assets/Scripts/FileExplorer.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: b19c81cc45a12f36405d03762c5b03a3649a2cab
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: mace show progres bar wen savewe
+      description: 
+      timeString: 2023-09-06T16:46:40.000+03:00
+      commitTimeString: 2023-09-06T16:46:40.000+03:00
+      changes:
+      - path: Assets/Scripts/Tolls/OrderedDictionary.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Tolls/OrderedDictionary.cs
+        projectPath: Assets/Scripts/Tolls/OrderedDictionary.cs
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets/Scripts/Tolls/OrderedDictionary.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Tolls/OrderedDictionary.cs.meta
+        projectPath: Assets/Scripts/Tolls/OrderedDictionary.cs.meta
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets/Scripts/Tolls/UnityMainThread.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Tolls/UnityMainThread.cs
+        projectPath: Assets/Scripts/Tolls/UnityMainThread.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Scripts/Tolls/UnityMainThread.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Tolls/UnityMainThread.cs.meta
+        projectPath: Assets/Scripts/Tolls/UnityMainThread.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: b74622d66c429d45f4b8f9ee3a1612fb13ec228d
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: Mace show Progres bar wen sawe
+      description: 
+      timeString: 2023-09-06T16:46:14.000+03:00
+      commitTimeString: 2023-09-06T16:46:14.000+03:00
+      changes:
+      - path: Assets/Scenes/Main.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+        projectPath: Assets/Scenes/Main.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/FileExplorer.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+        projectPath: Assets/Scripts/FileExplorer.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/FrameManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FrameManager.cs
+        projectPath: Assets/Scripts/FrameManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/RotationManager/RotationManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
+        projectPath: Assets/Scripts/RotationManager/RotationManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 1ec37661b3e43f069dca38ba8baae3916e891d5e
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: mace ArrowKeyScrolling
+      description: 
+      timeString: 2023-09-05T19:44:52.000+03:00
+      commitTimeString: 2023-09-05T19:44:52.000+03:00
+      changes:
+      - path: Assets/Scenes/Main.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+        projectPath: Assets/Scenes/Main.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/FileExplorer.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+        projectPath: Assets/Scripts/FileExplorer.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/RotationManager/RotationManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
+        projectPath: Assets/Scripts/RotationManager/RotationManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/Tolls/ArrowKeyScrolling.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Tolls/ArrowKeyScrolling.cs
+        projectPath: Assets/Scripts/Tolls/ArrowKeyScrolling.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/Scripts/Tolls/ArrowKeyScrolling.cs.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Tolls/ArrowKeyScrolling.cs.meta
+        projectPath: Assets/Scripts/Tolls/ArrowKeyScrolling.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF
+          - Fallback.asset
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/TextMesh
+          Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+        projectPath: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans
+          SDF - Fallback.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: ProjectSettings/ProjectSettings.asset
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/ProjectSettings/ProjectSettings.asset
+        projectPath: ProjectSettings/ProjectSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 02a6be16b446524025a1f6f5d7eae87ab983581f
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: fix scrol
+      description: 
+      timeString: 2023-09-05T17:13:43.000+03:00
+      commitTimeString: 2023-09-05T17:13:43.000+03:00
+      changes:
+      - path: UserSettings/Layouts/default-2021.dwlt
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/UserSettings/Layouts/default-2021.dwlt
+        projectPath: UserSettings/Layouts/default-2021.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: e157d6007cb346c8c6438da86ddf55f16bc485df
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: CrateNewDataFilePathAndDirectory
+      description: 
+      timeString: 2023-09-05T06:49:08.000+03:00
+      commitTimeString: 2023-09-05T06:49:08.000+03:00
+      changes:
+      - path: Assets/Scripts/RotationManager/RotationManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
+        projectPath: Assets/Scripts/RotationManager/RotationManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: a87f3f0267579e039613e1a6c4a234413a9261cf
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: CrateNewDataFilePath
+      description: 
+      timeString: 2023-09-05T06:43:50.000+03:00
+      commitTimeString: 2023-09-05T06:43:50.000+03:00
+      changes:
+      - path: Assets/Scenes/Main.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+        projectPath: Assets/Scenes/Main.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/FileExplorer.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+        projectPath: Assets/Scripts/FileExplorer.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/RotationManager/RotationManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
+        projectPath: Assets/Scripts/RotationManager/RotationManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/Tolls/JasonManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Tolls/JasonManager.cs
+        projectPath: Assets/Scripts/Tolls/JasonManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF
+          - Fallback.asset
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/TextMesh
+          Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+        projectPath: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans
+          SDF - Fallback.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 10c39ba53f2133ac46883be2213fafaeeda99266
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: Made to reset the edition of the embryo when opening a new file, stopped
+        working scrolling files.
+      description: 
+      timeString: 2023-09-04T17:17:18.000+03:00
+      commitTimeString: 2023-09-04T17:17:18.000+03:00
+      changes:
+      - path: Assets/Scenes/Main.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+        projectPath: Assets/Scenes/Main.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/FileExplorer.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+        projectPath: Assets/Scripts/FileExplorer.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/FrameManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FrameManager.cs
+        projectPath: Assets/Scripts/FrameManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/RotationManager/RotationManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
+        projectPath: Assets/Scripts/RotationManager/RotationManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: ProjectSettings/EditorBuildSettings.asset
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/ProjectSettings/EditorBuildSettings.asset
+        projectPath: ProjectSettings/EditorBuildSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: ProjectSettings/ProjectSettings.asset
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/ProjectSettings/ProjectSettings.asset
+        projectPath: ProjectSettings/ProjectSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 92f6bf8dd16ae63502a7cb2a5cecb8b4af8a6605
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: fix ScrollViewFilesList
+      description: 
+      timeString: 2023-09-02T18:58:20.000+03:00
+      commitTimeString: 2023-09-02T18:58:20.000+03:00
+      changes:
+      - path: Assets/Scenes/Main.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+        projectPath: Assets/Scenes/Main.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 8d600575b8a44c42d8e8a0fb2d54c5cac4173c03
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: '            SetColorOfSelectedButton();'
+      description: 
+      timeString: 2023-09-02T17:16:40.000+03:00
+      commitTimeString: 2023-09-02T17:16:40.000+03:00
+      changes:
+      - path: Assets/Perfabs/Arrows.prefab
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/Arrows.prefab
+        projectPath: Assets/Perfabs/Arrows.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Perfabs/ButtonItem.prefab
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/ButtonItem.prefab
+        projectPath: Assets/Perfabs/ButtonItem.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scenes/Main.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+        projectPath: Assets/Scenes/Main.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/FileExplorer.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+        projectPath: Assets/Scripts/FileExplorer.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/PatchContainer.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/PatchContainer.cs
+        projectPath: Assets/Scripts/PatchContainer.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: d4da786c4df98a417ca62986777b0d1c3962dae3
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: fix CrateFilesFromData
+      description: 
+      timeString: 2023-09-02T05:20:17.000+03:00
+      commitTimeString: 2023-09-02T05:20:17.000+03:00
+      changes:
+      - path: Assets/Scripts/RotationManager/RotationManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
+        projectPath: Assets/Scripts/RotationManager/RotationManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 4afa1d25a811b4c4f2657bb4c73952f6888994ed
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: Fix Rotation
+      description: 
+      timeString: 2023-09-02T05:13:40.000+03:00
+      commitTimeString: 2023-09-02T05:13:40.000+03:00
+      changes:
+      - path: Assets/Scenes/Main.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+        projectPath: Assets/Scenes/Main.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/RotationManager/RotationManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
+        projectPath: Assets/Scripts/RotationManager/RotationManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings/Layouts/default-2021.dwlt
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/UserSettings/Layouts/default-2021.dwlt
+        projectPath: UserSettings/Layouts/default-2021.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 93f05375fa6e424ca36b3de2297bbc6cd01f137b
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: Fix rotation. But naw didon worc Safe batton
+      description: 
+      timeString: 2023-09-02T02:56:41.000+03:00
+      commitTimeString: 2023-09-02T02:56:41.000+03:00
+      changes:
+      - path: Assets/Perfabs/CameraArrows.prefab
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/CameraArrows.prefab
+        projectPath: Assets/Perfabs/CameraArrows.prefab
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets/Perfabs/CameraArrows.prefab.meta
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/CameraArrows.prefab.meta
+        projectPath: Assets/Perfabs/CameraArrows.prefab.meta
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets/Scenes/Main.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+        projectPath: Assets/Scenes/Main.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/FrameManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FrameManager.cs
+        projectPath: Assets/Scripts/FrameManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/RotationManager/RotationController.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationController.cs
+        projectPath: Assets/Scripts/RotationManager/RotationController.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/RotationManager/RotationManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
+        projectPath: Assets/Scripts/RotationManager/RotationManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings/Layouts/default-2021.dwlt
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/UserSettings/Layouts/default-2021.dwlt
+        projectPath: UserSettings/Layouts/default-2021.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 647a7e4093ba07610ab7a63ad5a0e1a1752a101a
+      mergeA: 
+      mergeB: 
+      authorName: disiol
+      authorEmail: denisimus_games@ukr.net
+      commitEmail: denisimus_games@ukr.net
+      commitName: disiol
+      summary: DestroyAllChildrenImageObject(arrowsRawImage.transform);
+      description: 
+      timeString: 2023-08-31T22:37:45.000+03:00
+      commitTimeString: 2023-08-31T22:37:45.000+03:00
+      changes:
+      - path: Assets/Perfabs/ButtonItem.prefab
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/ButtonItem.prefab
+        projectPath: Assets/Perfabs/ButtonItem.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scenes/Main.unity
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+        projectPath: Assets/Scenes/Main.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets/Scripts/FrameManager.cs
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FrameManager.cs
+        projectPath: Assets/Scripts/FrameManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: ProjectSettings/SceneTemplateSettings.json
+        fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/ProjectSettings/SceneTemplateSettings.json
+        projectPath: ProjectSettings/SceneTemplateSettings.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
     - commitID: 25cff34e405343fca3d4fa12385dc9a42d8e0f3a
       mergeA: 
       mergeB: 
@@ -7885,14 +8242,555 @@ MonoBehaviour:
         workTreeStatus: 0
     statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 2023-08-31T22:37:28.254+03:00
+      updatedTimeString: 2023-09-06T18:13:32.271+03:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
       updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 5
     historyControl:
-      scroll: {x: 0, y: 3163}
+      scroll: {x: 0, y: 3803}
       entries:
+      - commitID: 1d777eba5bf7c7558ef64c27812f8165b9def8fc
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: mace                ClearUI();
+        description: 
+        timeString: 2023-09-06T17:37:46.000+03:00
+        commitTimeString: 2023-09-06T17:37:46.000+03:00
+        changes:
+        - path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/FileExplorer.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+          projectPath: Assets/Scripts/FileExplorer.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/FrameManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FrameManager.cs
+          projectPath: Assets/Scripts/FrameManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 17c271e93359d361c2a1acc51611b172d11d52bf
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: Fix progres bar
+        description: 
+        timeString: 2023-09-06T17:27:05.000+03:00
+        commitTimeString: 2023-09-06T17:27:05.000+03:00
+        changes:
+        - path: Assets/Scripts/FileExplorer.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+          projectPath: Assets/Scripts/FileExplorer.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/FrameManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FrameManager.cs
+          projectPath: Assets/Scripts/FrameManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/RotationManager/RotationManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
+          projectPath: Assets/Scripts/RotationManager/RotationManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 62aa86abf8b10de9ee411c842609eadd6dde6557
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: FileExplorer fix proges bar
+        description: 
+        timeString: 2023-09-06T17:00:06.000+03:00
+        commitTimeString: 2023-09-06T17:00:06.000+03:00
+        changes:
+        - path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/FileExplorer.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+          projectPath: Assets/Scripts/FileExplorer.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: b19c81cc45a12f36405d03762c5b03a3649a2cab
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: mace show progres bar wen savewe
+        description: 
+        timeString: 2023-09-06T16:46:40.000+03:00
+        commitTimeString: 2023-09-06T16:46:40.000+03:00
+        changes:
+        - path: Assets/Scripts/Tolls/OrderedDictionary.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Tolls/OrderedDictionary.cs
+          projectPath: Assets/Scripts/Tolls/OrderedDictionary.cs
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets/Scripts/Tolls/OrderedDictionary.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Tolls/OrderedDictionary.cs.meta
+          projectPath: Assets/Scripts/Tolls/OrderedDictionary.cs.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets/Scripts/Tolls/UnityMainThread.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Tolls/UnityMainThread.cs
+          projectPath: Assets/Scripts/Tolls/UnityMainThread.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Scripts/Tolls/UnityMainThread.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Tolls/UnityMainThread.cs.meta
+          projectPath: Assets/Scripts/Tolls/UnityMainThread.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: b74622d66c429d45f4b8f9ee3a1612fb13ec228d
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: Mace show Progres bar wen sawe
+        description: 
+        timeString: 2023-09-06T16:46:14.000+03:00
+        commitTimeString: 2023-09-06T16:46:14.000+03:00
+        changes:
+        - path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/FileExplorer.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+          projectPath: Assets/Scripts/FileExplorer.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/FrameManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FrameManager.cs
+          projectPath: Assets/Scripts/FrameManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/RotationManager/RotationManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
+          projectPath: Assets/Scripts/RotationManager/RotationManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 1ec37661b3e43f069dca38ba8baae3916e891d5e
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: mace ArrowKeyScrolling
+        description: 
+        timeString: 2023-09-05T19:44:52.000+03:00
+        commitTimeString: 2023-09-05T19:44:52.000+03:00
+        changes:
+        - path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/FileExplorer.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+          projectPath: Assets/Scripts/FileExplorer.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/RotationManager/RotationManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
+          projectPath: Assets/Scripts/RotationManager/RotationManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/Tolls/ArrowKeyScrolling.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Tolls/ArrowKeyScrolling.cs
+          projectPath: Assets/Scripts/Tolls/ArrowKeyScrolling.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/Scripts/Tolls/ArrowKeyScrolling.cs.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Tolls/ArrowKeyScrolling.cs.meta
+          projectPath: Assets/Scripts/Tolls/ArrowKeyScrolling.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF
+            - Fallback.asset
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/TextMesh
+            Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+          projectPath: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans
+            SDF - Fallback.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: ProjectSettings/ProjectSettings.asset
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/ProjectSettings/ProjectSettings.asset
+          projectPath: ProjectSettings/ProjectSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 02a6be16b446524025a1f6f5d7eae87ab983581f
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: fix scrol
+        description: 
+        timeString: 2023-09-05T17:13:43.000+03:00
+        commitTimeString: 2023-09-05T17:13:43.000+03:00
+        changes:
+        - path: UserSettings/Layouts/default-2021.dwlt
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/UserSettings/Layouts/default-2021.dwlt
+          projectPath: UserSettings/Layouts/default-2021.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: e157d6007cb346c8c6438da86ddf55f16bc485df
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: CrateNewDataFilePathAndDirectory
+        description: 
+        timeString: 2023-09-05T06:49:08.000+03:00
+        commitTimeString: 2023-09-05T06:49:08.000+03:00
+        changes:
+        - path: Assets/Scripts/RotationManager/RotationManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
+          projectPath: Assets/Scripts/RotationManager/RotationManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: a87f3f0267579e039613e1a6c4a234413a9261cf
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: CrateNewDataFilePath
+        description: 
+        timeString: 2023-09-05T06:43:50.000+03:00
+        commitTimeString: 2023-09-05T06:43:50.000+03:00
+        changes:
+        - path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/FileExplorer.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+          projectPath: Assets/Scripts/FileExplorer.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/RotationManager/RotationManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
+          projectPath: Assets/Scripts/RotationManager/RotationManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/Tolls/JasonManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/Tolls/JasonManager.cs
+          projectPath: Assets/Scripts/Tolls/JasonManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF
+            - Fallback.asset
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/TextMesh
+            Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+          projectPath: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans
+            SDF - Fallback.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 10c39ba53f2133ac46883be2213fafaeeda99266
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: Made to reset the edition of the embryo when opening a new file,
+          stopped working scrolling files.
+        description: 
+        timeString: 2023-09-04T17:17:18.000+03:00
+        commitTimeString: 2023-09-04T17:17:18.000+03:00
+        changes:
+        - path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/FileExplorer.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+          projectPath: Assets/Scripts/FileExplorer.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/FrameManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FrameManager.cs
+          projectPath: Assets/Scripts/FrameManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/RotationManager/RotationManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
+          projectPath: Assets/Scripts/RotationManager/RotationManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: ProjectSettings/EditorBuildSettings.asset
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/ProjectSettings/EditorBuildSettings.asset
+          projectPath: ProjectSettings/EditorBuildSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: ProjectSettings/ProjectSettings.asset
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/ProjectSettings/ProjectSettings.asset
+          projectPath: ProjectSettings/ProjectSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 92f6bf8dd16ae63502a7cb2a5cecb8b4af8a6605
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: fix ScrollViewFilesList
+        description: 
+        timeString: 2023-09-02T18:58:20.000+03:00
+        commitTimeString: 2023-09-02T18:58:20.000+03:00
+        changes:
+        - path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 8d600575b8a44c42d8e8a0fb2d54c5cac4173c03
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: '            SetColorOfSelectedButton();'
+        description: 
+        timeString: 2023-09-02T17:16:40.000+03:00
+        commitTimeString: 2023-09-02T17:16:40.000+03:00
+        changes:
+        - path: Assets/Perfabs/Arrows.prefab
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/Arrows.prefab
+          projectPath: Assets/Perfabs/Arrows.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Perfabs/ButtonItem.prefab
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/ButtonItem.prefab
+          projectPath: Assets/Perfabs/ButtonItem.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/FileExplorer.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FileExplorer.cs
+          projectPath: Assets/Scripts/FileExplorer.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/PatchContainer.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/PatchContainer.cs
+          projectPath: Assets/Scripts/PatchContainer.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: d4da786c4df98a417ca62986777b0d1c3962dae3
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: fix CrateFilesFromData
+        description: 
+        timeString: 2023-09-02T05:20:17.000+03:00
+        commitTimeString: 2023-09-02T05:20:17.000+03:00
+        changes:
+        - path: Assets/Scripts/RotationManager/RotationManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
+          projectPath: Assets/Scripts/RotationManager/RotationManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 4afa1d25a811b4c4f2657bb4c73952f6888994ed
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: Fix Rotation
+        description: 
+        timeString: 2023-09-02T05:13:40.000+03:00
+        commitTimeString: 2023-09-02T05:13:40.000+03:00
+        changes:
+        - path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/RotationManager/RotationManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
+          projectPath: Assets/Scripts/RotationManager/RotationManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings/Layouts/default-2021.dwlt
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/UserSettings/Layouts/default-2021.dwlt
+          projectPath: UserSettings/Layouts/default-2021.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 93f05375fa6e424ca36b3de2297bbc6cd01f137b
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: Fix rotation. But naw didon worc Safe batton
+        description: 
+        timeString: 2023-09-02T02:56:41.000+03:00
+        commitTimeString: 2023-09-02T02:56:41.000+03:00
+        changes:
+        - path: Assets/Perfabs/CameraArrows.prefab
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/CameraArrows.prefab
+          projectPath: Assets/Perfabs/CameraArrows.prefab
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets/Perfabs/CameraArrows.prefab.meta
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/CameraArrows.prefab.meta
+          projectPath: Assets/Perfabs/CameraArrows.prefab.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/FrameManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FrameManager.cs
+          projectPath: Assets/Scripts/FrameManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/RotationManager/RotationController.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationController.cs
+          projectPath: Assets/Scripts/RotationManager/RotationController.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/RotationManager/RotationManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/RotationManager/RotationManager.cs
+          projectPath: Assets/Scripts/RotationManager/RotationManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings/Layouts/default-2021.dwlt
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/UserSettings/Layouts/default-2021.dwlt
+          projectPath: UserSettings/Layouts/default-2021.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 647a7e4093ba07610ab7a63ad5a0e1a1752a101a
+        mergeA: 
+        mergeB: 
+        authorName: disiol
+        authorEmail: denisimus_games@ukr.net
+        commitEmail: denisimus_games@ukr.net
+        commitName: disiol
+        summary: DestroyAllChildrenImageObject(arrowsRawImage.transform);
+        description: 
+        timeString: 2023-08-31T22:37:45.000+03:00
+        commitTimeString: 2023-08-31T22:37:45.000+03:00
+        changes:
+        - path: Assets/Perfabs/ButtonItem.prefab
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Perfabs/ButtonItem.prefab
+          projectPath: Assets/Perfabs/ButtonItem.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scenes/Main.unity
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+          projectPath: Assets/Scenes/Main.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets/Scripts/FrameManager.cs
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scripts/FrameManager.cs
+          projectPath: Assets/Scripts/FrameManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: ProjectSettings/SceneTemplateSettings.json
+          fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/ProjectSettings/SceneTemplateSettings.json
+          projectPath: ProjectSettings/SceneTemplateSettings.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
       - commitID: 25cff34e405343fca3d4fa12385dc9a42d8e0f3a
         mergeA: 
         mergeB: 
@@ -15096,18 +15994,30 @@ MonoBehaviour:
             email: 
           lockedAtString: 
         gitFileStatus: 0
-        lockedAt: 
+        lockedAt: 1 Jan 0001, 02:02
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 
-      cacheType: 0
+      updatedTimeString: 2023-09-06T15:03:45.496+03:00
+      cacheType: 1
     lastLocksChangedEvent:
-      updatedTimeString: 
-      cacheType: 0
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      cacheType: 7
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 
-      cacheType: 0
+      updatedTimeString: 2023-09-06T18:13:34.119+03:00
+      cacheType: 6
     lockedFiles: []
-    gitStatusEntries: []
+    gitStatusEntries:
+    - path: Assets/Scenes/Main.unity
+      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/Assets/Scenes/Main.unity
+      projectPath: Assets/Scenes/Main.unity
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: ProjectSettings/ProjectSettings.asset
+      fullPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet/ProjectSettings/ProjectSettings.asset
+      projectPath: ProjectSettings/ProjectSettings.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
     currentUsername: 
     unlockFileMenuContent:
       m_Text: Release Lock
@@ -15134,13 +16044,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2023-09-04T16:32:34.303+03:00
+    updatedTimeString: 2023-09-06T18:21:06.177+03:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-09-04T17:17:36.226+03:00
+    updatedTimeString: 2023-09-06T18:21:19.774+03:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-09-04T21:18:31.551+03:00
+    updatedTimeString: 2023-09-06T18:35:28.694+03:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -15164,7 +16074,7 @@ MonoBehaviour:
   appManagerProgressMessage: Initialized
   connections: []
   primaryConnectionUsername: 
---- !u!114 &13
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15186,14 +16096,14 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 119
-    width: 603
+    width: 981
     height: 252
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
---- !u!114 &14
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15213,9 +16123,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 604
+    x: 982
     y: 119
-    width: 303
+    width: 246
     height: 740
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -15225,25 +16135,25 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e2590000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 96c0feffc6d7feff9469ffff1ec6ffff76c6fffff4ccffff00d7ffff52dcfffffc63000006640000146400002264000046640000dc640000e464000028750000367500005a750000f67500004a8b0000548b0000628b0000708b0000948b00000a8c0000308c0000
+      m_ExpandedIDs: d039f0ff203af0ff563cf0ff7a88f0ffca88f0fffc8af0ff288df0ff788df0ffaa8ff0ff18e5f0ff66e5f0ff8ae6f0ffeaecf0ff42edf0ff86eef0ff80f1f0ffd4f1f0ff1cf3f0ff16fbf0ff58fbf0ff8efdf0ff6801f1ffa85d0100c45d0100e85d0100286601004066010058660100626701002e75010046750100947501005076010078900100a8900100f6900100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: RightSide
-        m_OriginalName: RightSide
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 25620
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 7}
+        m_ClientGUIView: {fileID: 10}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -15251,7 +16161,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: cc95fe9b353c8daf3a91c3f9d251bd40
---- !u!114 &15
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15271,9 +16181,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1188
+    x: 1330
     y: 119
-    width: 411
+    width: 269
     height: 740
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -15293,7 +16203,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &16
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15313,9 +16223,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 909
+    x: 1230
     y: 119
-    width: 277
+    width: 98
     height: 740
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -15333,23 +16243,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Perfabs
+    - Assets
     m_Globs: []
     m_OriginalText: 
     m_FilterByTypeIntersection: 0
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Perfabs
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /home/denis/IT/unity/work/Matvey/New/EmbryoNet
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b65b0000
-    m_LastClickedID: 23478
-    m_ExpandedIDs: 00000000aa5b000000ca9a3b
+    m_SelectedIDs: ac5b0000
+    m_LastClickedID: 23468
+    m_ExpandedIDs: 00000000ac5b0000be5b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -15377,7 +16287,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000aa5b0000
+    m_ExpandedIDs: 00000000ac5b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -15404,7 +16314,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -15421,7 +16331,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 8}
+      m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -15432,8 +16342,8 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 123
---- !u!114 &17
+  m_DirectoriesAreaWidth: 50
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15454,9 +16364,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 392
-    width: 603
-    height: 467
+    y: 219
+    width: 981
+    height: 640
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -15504,10 +16414,10 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 603
-      height: 446
-    m_Scale: {x: 0.3140625, y: 0.3140625}
-    m_Translation: {x: 301.5, y: 223}
+      width: 981
+      height: 619
+    m_Scale: {x: 0.5109375, y: 0.5109375}
+    m_Translation: {x: 490.5, y: 309.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -15515,18 +16425,18 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -960
-      y: -710.04974
+      y: -605.7492
       width: 1920
-      height: 1420.0995
+      height: 1211.4984
     m_MinimalGUI: 1
-  m_defaultScale: 0.3140625
-  m_LastWindowPixelSize: {x: 603, y: 467}
+  m_defaultScale: 0.5109375
+  m_LastWindowPixelSize: {x: 981, y: 640}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &18
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15548,8 +16458,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 119
-    width: 750
-    height: 252
+    width: 981
+    height: 79
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -15571,7 +16481,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: -141, y: 149}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: -96}
       snapCorner: 1
       id: unity-grid-and-snap-toolbar
       index: 1
@@ -15785,9 +16695,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1895.6035, y: 807.2927, z: 0}
+    m_Target: {x: 1977.4346, y: 1080, z: 0}
     speed: 2
-    m_Value: {x: 1895.6035, y: 807.2927, z: 0}
+    m_Value: {x: 1977.4346, y: 1080, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -15838,9 +16748,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 229.5053
+    m_Target: 2253.1416
     speed: 2
-    m_Value: 229.5053
+    m_Value: 2253.1416
   m_Ortho:
     m_Target: 0
     speed: 2

@@ -50,6 +50,7 @@ namespace RotationManager
             menuYInput.onValueChanged.AddListener(OnYValueChanged);
             menuZInput.onValueChanged.AddListener(OnZValueChanged);
         }
+        
 
 
         // Handle X, Y, and Z rotation value changes
