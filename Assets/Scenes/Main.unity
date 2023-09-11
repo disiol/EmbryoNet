@@ -3361,7 +3361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollRect: {fileID: 1569463570}
-  scrollSpeed: 5
+  scrollSpeed: 2
 --- !u!1 &1572323118
 GameObject:
   m_ObjectHideFlags: 0

@@ -114,7 +114,6 @@ namespace RotationManager
             catch (Exception e)
             {
                 Debug.LogError(e);
-                PopUpWindowStatusShow("Please select an embryo");
             }
         }
 
@@ -230,7 +229,6 @@ namespace RotationManager
             catch (Exception e)
             {
                 Debug.LogError(e);
-                PopUpWindowStatusShow("Please select an embryo");
             }
         }
 

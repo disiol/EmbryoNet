@@ -53,10 +53,20 @@ namespace RotationManager
 
         public void Update()
         {
-            RotatiomByKese();
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                ResetRotationToZero();
+            }
+            RotationByKeys();
         }
 
-        private void RotatiomByKese()
+        private void ResetRotationToZero()
+        {
+            ResetMenuInputTextToZero();
+            UpdateRotation();
+        }
+
+        private void RotationByKeys()
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
@@ -149,7 +159,7 @@ namespace RotationManager
             UpdateRotation();
         }
 
-        public void ResetData()
+        public void ResetMenuInputTextToZero()
         {
             menuXInput.text = "0";
             menuYInput.text = "0";
