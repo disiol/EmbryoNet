@@ -229,6 +229,7 @@ namespace RotationManager
             catch (Exception e)
             {
                 Debug.LogError(e);
+                Debug.LogError(e.StackTrace);
             }
         }
 
