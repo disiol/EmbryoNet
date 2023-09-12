@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "126458757333",
+    "project_id": "embryonet-abef3",
+    "storage_bucket": "embryonet-abef3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126458757333:android:5160292f1910b78404e25c",
+        "android_client_info": {
+          "package_name": "com.Denisimus.it.EmbryoNet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsISY9Oxmb96Q83fIQLJt5gZ4y1oV04y4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
