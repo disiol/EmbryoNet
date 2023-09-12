@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &22243288 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2208343587346752995, guid: 5170cc9f3ea42c911a252b546f6f25f8, type: 3}
+  m_PrefabInstance: {fileID: 2208343586204927808}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &23243193
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +265,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23243193}
   m_CullTransparentMesh: 1
+--- !u!1 &35459824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 35459826}
+  - component: {fileID: 35459825}
+  m_Layer: 0
+  m_Name: FireBase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &35459825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35459824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0524022e6f84594b600830a9e915a29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &35459826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35459824}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1171.2827, y: 165.94516, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &96360060
 GameObject:
   m_ObjectHideFlags: 0
@@ -3131,6 +3180,7 @@ MonoBehaviour:
     source_name: 
   buttonPrefab: {fileID: 8617279262102592723, guid: 81068cbe9149be3ba8d93bc3a02a995d, type: 3}
   arrowsPreab: {fileID: 1729035227708477549, guid: 3dd4cb4e5572e6de09d61aa24ed76d8f, type: 3}
+  rotationMenu: {fileID: 22243288}
   arrowsRawImage: {fileID: 706011116}
   frameImageColor: {r: 0, g: 0, b: 0, a: 0.2784314}
   selectedFrameImageColor: {r: 0.74499124, g: 0.054703593, b: 0.19197376, a: 0.5176471}
@@ -4454,6 +4504,10 @@ PrefabInstance:
     - target: {fileID: 2208343587556610732, guid: 5170cc9f3ea42c911a252b546f6f25f8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208343587556610733, guid: 5170cc9f3ea42c911a252b546f6f25f8, type: 3}
+      propertyPath: maxRotation
+      value: 360
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5170cc9f3ea42c911a252b546f6f25f8, type: 3}

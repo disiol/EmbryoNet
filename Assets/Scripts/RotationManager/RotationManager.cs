@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using Firebase.Crashlytics;
 using Models;
 using SafeDadta;
 using TMPro;
@@ -57,6 +58,7 @@ namespace RotationManager
         private string _folderPath;
         private GameObject _panelProgressBar;
         private int _jasonManagerCurrentOrderJsonFile;
+        private Vector3 _newTargetRecordRotation;
 
         private void Start()
         {
@@ -221,15 +223,17 @@ namespace RotationManager
         {
             Debug.Log("SetNewRotation");
             GetCurentRotationArrows();
-            Vector3 newTargetRecordRotation = new Vector3(x, y, z);
+             _newTargetRecordRotation = new Vector3(x, y, z);
             try
             {
-                _rotationCameraArrows.transform.rotation = Quaternion.Euler(newTargetRecordRotation);
+                _rotationCameraArrows.transform.rotation = Quaternion.Euler(_newTargetRecordRotation);
             }
             catch (Exception e)
             {
                 Debug.LogError(e);
                 Debug.LogError(e.StackTrace);
+                Crashlytics.LogException(e);
+
             }
         }
 
@@ -248,17 +252,24 @@ namespace RotationManager
 
                     if (targetRecord != null)
                     {
-                        Vector3 recordOldRotation = targetRecord.rotation;
+                       
+                        // Отримуємо дельту між попередньою ротацією та новою ротацією
+                        Vector3 previousRotation = targetRecord.rotation;
 
-                        var deltaAngleX = Mathf.DeltaAngle(recordOldRotation.x, x);
-                        var deltaAngleY = Mathf.DeltaAngle(recordOldRotation.y, y);
-                        var deltaAngleZ = Mathf.DeltaAngle(recordOldRotation.z, z);
+                        Vector3 currentRotation = new Vector3(x,y,z);
+                        Vector3 deltaRotation = currentRotation - previousRotation;
 
+                        // Додаємо дельту до поточної ротації
+                        Vector3 newRotation = currentRotation + deltaRotation;
 
-                        Vector3 newTargetRecordRotation = new Vector3(recordOldRotation.x + deltaAngleX,
-                            recordOldRotation.y + deltaAngleY,
-                            recordOldRotation.z + deltaAngleZ);
-                        targetRecord.rotation = newTargetRecordRotation;
+                        // Перевіряємо, чи нова ротація більше або рівна 360 градусів і віднімаємо 360, якщо так
+                        newRotation.x = newRotation.x >= 360f ? newRotation.x - 360f : newRotation.x;
+                        newRotation.y = newRotation.y >= 360f ? newRotation.y - 360f : newRotation.y;
+                        newRotation.z = newRotation.z >= 360f ? newRotation.z - 360f : newRotation.z;
+
+                      
+                        _newTargetRecordRotation = currentRotation;
+                        targetRecord.rotation = currentRotation;
                     }
                 }
             }

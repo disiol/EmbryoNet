@@ -15,6 +15,7 @@ public class FrameManager : MonoBehaviour
 
     [SerializeField] private GameObject buttonPrefab;
     [SerializeField] private GameObject arrowsPreab;
+    [SerializeField] private GameObject rotationMenu;
     [SerializeField] private RawImage arrowsRawImage;
 
     [SerializeField] private Color frameImageColor;
@@ -35,6 +36,8 @@ public class FrameManager : MonoBehaviour
         _safeAndLoadData = GameObject.Find("Canvas/Panel").GetComponent<SafeAndLoadData>();
         _selectedDetectionID = _safeAndLoadData.LoadCurrentId();
         _arrows = GameObject.Find("Arrows");
+        rotationMenu.GetComponent<RotationController>().ResetMenuInputTextToZero();
+        
 
 
         if (_imageObject != null && _imageObject.sprite != null)
