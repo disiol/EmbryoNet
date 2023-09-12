@@ -79,7 +79,7 @@ public class FileExplorer : MonoBehaviour
 
         if (!Directory.Exists(_imageFolderPath))
         {
-            Debug.Log("_imageFolderPath: " + _imageFolderPath);
+            Debug.LogError("_imageFolderPath: " + _imageFolderPath  + "Image directory not found.");
 
             PopUpWindowShow("Image directory not found.");
             ClearButtons();

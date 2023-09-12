@@ -1,0 +1,14 @@
+[Type: Error]
+[Time: 9/12/2023 10:35:47 PM]
+[Message]: _imageFolderPath: /home/denis/IT/unity/work/Matvey/C001/64/imagesImage directory not found.
+[Stack Trace]:
+UnityEngine.Debug:LogError (object)
+FileExplorer:ShowFoldersAndJsonFiles (string) (at Assets/Scripts/FileExplorer.cs:82)
+FileExplorer:<OnLoadButtonClicked>b__16_0 (string[]) (at Assets/Scripts/FileExplorer.cs:64)
+SFB.StandaloneFileBrowserLinux/<>c:<OpenFolderPanelAsync>b__15_0 (string) (at Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs:72)
+SFB.StandaloneFileBrowserLinux:OpenFolderPanelAsync (string,string,bool,System.Action`1<string[]>) (at Assets/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs:68)
+SFB.StandaloneFileBrowser:OpenFolderPanelAsync (string,string,bool,System.Action`1<string[]>) (at Assets/StandaloneFileBrowser/StandaloneFileBrowser.cs:100)
+FileExplorer:OnLoadButtonClicked () (at Assets/Scripts/FileExplorer.cs:59)
+UnityEngine.EventSystems.EventSystem:Update () (at Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs:514)
+
+
